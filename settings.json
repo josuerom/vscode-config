@@ -3,11 +3,12 @@
     "extensions.ignoreRecommendations": true,
     "security.workspace.trust.untrustedFiles": "open",
     
-    "editor.fontFamily": "'Cascadia Code PL', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "'Cascadia Code PL', 'Menlo', 'Monaco', 'Courier New', monospace",
     "editor.fontSize": 13.5,
     "editor.fontWeight": "375",
     "editor.fontLigatures": true,
     "errorLens.fontFamily": "Cascadia Code",
+    "errorLens.fontSize": "13.5",
     "workbench.startupEditor": "none",
     "workbench.statusBar.visible": false,
     "editor.tabCompletion": "on",
@@ -22,8 +23,6 @@
     "editor.suggestSelection": "first",
     "terminal.integrated.cursorStyle": "line",
     "debug.terminal.clearBeforeReusing": true,
-    "terminal.integrated.fontFamily": "'JetBrains Mono'",
-    "terminal.integrated.fontSize": 12,
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,
@@ -46,19 +45,21 @@
             "icon": "terminal-cmd"
         },
         "GitBash": {
-            "path": "D:\\Program Files\\Git\bin\\bash.exe",
+            "path": "D:\\Program Files\\Git\\bin\\bash.exe",
             "icon": "terminal-bash",
             "color": "terminal.ansiGreen"
-        },
+        }
     },
-    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.defaultProfile.windows": "GitBash",
+    "terminal.integrated.fontFamily": "'JetBrains Mono'",
+    "terminal.integrated.fontSize": 14,
     "sync.quietSync": true,
     "sync.forceUpload": true,
     "sync.forceDownload": true,
     "sync.autoUpload": true,
     "sync.autoDownload": true,
     "editor.stickyScroll.enabled": true,
-    "workbench.iconTheme": "symbols",
+    "workbench.iconTheme": "material-icon-theme",
     "breadcrumbs.enabled": false,
     "editor.renderWhitespace": "none",
     "editor.renderControlCharacters": false,
@@ -113,5 +114,5 @@
             }
         }
     },
-
+    "material-icon-theme.showWelcomeMessage": false
 }
