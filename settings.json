@@ -1,0 +1,65 @@
+{
+    "workbench.colorTheme": "One Dark Pro Darker",
+    "kite.showWelcomeNotificationOnStartup": false,
+    "extensions.ignoreRecommendations": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    
+    "editor.fontFamily": "'Cascadia Code', Menlo, Monaco, 'Courier New', Courier, monospace",
+    "editor.fontSize": 13.5,
+    "editor.fontLigatures": true,
+    "oneDarkPro.bold": true,
+    "oneDarkPro.vivid": true,
+    "errorLens.fontFamily": "Cascadia Code",
+    "workbench.startupEditor": "none",
+    "workbench.statusBar.visible": true,
+    "editor.tabCompletion": "on",
+    "editor.tabSize": 3,
+    "editor.padding.top": 3,
+    "editor.padding.bottom": 0,
+    "files.autoSave": "onFocusChange",
+    "editor.wordWrap": "on",
+    "diffEditor.wordWrap": "on",
+    "editor.minimap.enabled": false,
+    "editor.linkedEditing": true,
+    "editor.suggestSelection": "first",
+    "terminal.integrated.cursorStyle": "line",
+    "debug.terminal.clearBeforeReusing": true,
+    "terminal.integrated.fontFamily": "'JetBrains Mono'",
+    "terminal.integrated.fontSize": 12,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "explorer.confirmDelete": false,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "GitBash": {
+            "path": "D:\\Program Files\\Git\bin\\bash.exe",
+            "icon": "terminal-bash",
+            "color": "terminal.ansiGreen"
+        },
+    },
+    "sync.quietSync": true,
+    "sync.forceUpload": true,
+    "sync.forceDownload": true,
+    "sync.autoUpload": true,
+    "sync.autoDownload": true,
+    "editor.guides.bracketPairs": true,
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "editor.stickyScroll.enabled": true,
+    "workbench.iconTheme": "symbols",
+}
