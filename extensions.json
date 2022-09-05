@@ -1,12 +1,6 @@
-// Presento las únicas 11-10 estensiones que manejo dentro del editor de VSCode Studio
+// Presento las únicas 10 extensiones que manejo dentro del editor de VSCode Studio
 {
-   "listExtensions": [
-      {
-         "extesionName": "CodeSnap",
-         "author": "adpyke",
-         "descripcion":  "Permite tomar capturas del código con estilos elegantes",
-         "opinion": "Es opcional debido a que mayormente es mucho mejor utilizar la plataforma https://carbon.now.sh/ que realiza lo mismo pero mejor"
-      },
+   "listOfExtensions": [
       {
          "extesionName": "Error Lens",
          "author": "Alexander",
@@ -40,17 +34,17 @@
       {
          "extesionName": "Auto Rename tag",   
          "author": "Jun Han",
-         "descripcion":  "Complemento de autocompletado instantaneo de etiquetas de apertura y cierre en HTML"
+         "descripcion":  "Complemento que permite realizar un renombrado de etiqueta inicial y final del archivo HTML"
       },
       {
          "extesionName": "Auto Close Tag",   
          "author": "Jun Han",
-         "descripcion":  "Complemento que permite realizar un renombrado de etiqueta inicial y final del archivo HTML"
+         "descripcion":  "Complemento de autocompletado instantaneo de etiquetas de apertura y cierre en HTML"
       },
       {
-         "extesionName": "Code Runner",   
-         "author": "Jun Han",
-         "descripcion":  "Permite compilar, ejecutar y debugiar variedades de lenguajes de programación"
+         "extesionName": "Vim",   
+         "author": "vscodevim",
+         "descripcion":  "Cambia todo los atajos de teclado y manejo del editor cambiandolo por todos los que se usan en el editor VIM"
       },
       {
          "extesionName": "Todo Tree",
