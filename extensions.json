@@ -1,0 +1,61 @@
+// Presento las únicas 11-10 estensiones que manejo dentro del editor de VSCode Studio
+{
+   "listExtensions": [
+      {
+         "extesionName": "CodeSnap",
+         "author": "adpyke",
+         "descripcion":  "Permite tomar capturas del código con estilos elegantes",
+         "opinion": "Es opcional debido a que mayormente es mucho mejor utilizar la plataforma https://carbon.now.sh/ que realiza lo mismo pero mejor"
+      },
+      {
+         "extesionName": "Error Lens",
+         "author": "Alexander",
+         "descripcion":  "Susbraya e indica las líneas donde haya errores"
+      },
+      {
+         "extesionName": "Kite AutoComplete AI Code",
+         "author": "Kite",
+         "descripcion":  "Entrega de sugerencias rápidas para múltiples lenguajes"
+      },
+      {
+         "extesionName": "Live Server",
+         "author": "Ritwick Dey",
+         "descripcion":  "Permite simular un servidor local en vivo para trabajar con HTML, CSS y JavaScript"
+      },
+      {
+         "extesionName": "Material Icon Theme",
+         "author": "Philipp Kief",
+         "descripcion":  "Añade iconos para directorios y archivos en la SideBar o árbol de archivos"
+      },
+      {
+         "extesionName": "Settings Sync",
+         "author": "Shan Khan",
+         "descripcion":  "Permite realizar copias de seguridad de la configuración de VSCode y guardarlas en GitHub"
+      },
+      {
+         "extesionName": "One Dark Pro",   
+         "author": "binaryify",
+         "descripcion":  "Complemento para tener un tema y resaltado de sintaxis coloreado"
+      },
+      {
+         "extesionName": "Auto Rename tag",   
+         "author": "Jun Han",
+         "descripcion":  "Complemento de autocompletado instantaneo de etiquetas de apertura y cierre en HTML"
+      },
+      {
+         "extesionName": "Auto Close Tag",   
+         "author": "Jun Han",
+         "descripcion":  "Complemento que permite realizar un renombrado de etiqueta inicial y final del archivo HTML"
+      },
+      {
+         "extesionName": "Code Runner",   
+         "author": "Jun Han",
+         "descripcion":  "Permite compilar, ejecutar y debugiar variedades de lenguajes de programación"
+      },
+      {
+         "extesionName": "Todo Tree",
+         "author": "Gruntfuggly",
+         "descripcion":  "Esta enfocada para asignarnos tareas, también para dejar recordatorios en los programas como comentarios resaltados"
+      }
+   ]
+}
