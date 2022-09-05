@@ -1,0 +1,11 @@
+[
+   {
+      "key": "shift shift",
+      "command": "workbench.action.toggleSidebarVisibility",
+   },
+   {
+      "key": "ctrl+b",
+      "command": "-workbench.action.toggleSidebarVisibility",
+   }
+   
+]
