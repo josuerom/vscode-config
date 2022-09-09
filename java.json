@@ -1,0 +1,115 @@
+{
+	"System.out.print()": {
+		"prefix": "s",
+		"body": [
+			"System.out.print($1);"
+		],
+		"description": "Standard data output"
+	},
+
+	"System.out.println()": {
+		"prefix": "ss",
+		"body": [
+			"System.out.println($1);"
+		],
+		"description": "Standard output with line break"
+	},
+
+	"System.out.prinf()": {
+		"prefix": "sf",
+		"body": [
+			"System.out.printf($1, $2);"
+		],
+		"description": "Formatted standard output"
+	},
+
+	"Scanner(System.in)": {
+		"prefix": "sc",
+		"body": [
+			"Scanner sc = new Scanner(System.in);$1"
+		],
+		"description": "Standard input using the Scanner method"
+	},
+
+	"BufferedReader(new InputStreamReader(System.in))": {
+		"prefix": "buffer",
+		"body": [
+			"BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));$1"
+		],
+		"description": "Improved standard input using the (BufferedReader, InputStreamReader, IOException) methods"
+	},
+
+	"Main method": {
+		"prefix": "main",
+		"body": [
+			"public static void main(String[] args) {",
+			"\t$1",
+			"}"
+		],
+		"description": "This is the main method that java executes"
+	},
+
+	"public static void nameMethod": {
+		"prefix": "psv",
+		"body": [
+			"public static void ${1:nameMethod}() {",
+			"\t$2",
+			"}"
+		],
+		"description": "Method I use most often"
+	},
+
+	"try {} catch()": {
+		"prefix": "tryc",
+		"body": [
+			"try {",
+			"\t$1",
+			"} catch ({$2:nameExeption} e) {",
+			"\te.printStackTrace();",
+			"}"
+		],
+		"description": "Methods for handling exceptions"
+	},
+
+	"import": {
+		"prefix": "im",
+		"body": [
+			"import java.$1;",
+		],
+		"description": "Import packages"
+	},
+
+	"JavaClass Template": {
+		"prefix": "javaclass",
+		"body": [
+			"package ${1:interfaz};\n",
+			"public class ${2:nameClass} {",
+			"\t$3",
+			"}"
+		],
+		"description": "JavaClass template"
+	},
+
+	"JavaMainClass Template": {
+		"prefix": "javamainclass",
+		"body": [
+			"package ${1:interfaz};\n",
+			"public class ${2:nameClass} {\n",
+			"\tpublic static void main(String[] args) {",
+			"\t\t$3",
+			"}"
+		],
+		"description": "JavaMainClass template"
+	},
+
+	"JavaDocs": {
+		"prefix": "doc",
+		"body": [
+			"/**",
+			" * @author josuerom",
+			" * @see $1/$2/2022 COL",
+			"*/"
+		],
+		"description": "JavaDocs template"
+	}
+}
