@@ -1,4 +1,12 @@
 {
+	/* Template for snippets in JSON format
+	"": {
+		"prefix": "",
+		"body": [
+			""
+		],
+	} */
+
 	"System.out.print()": {
 		"prefix": "s",
 		"body": [
@@ -59,7 +67,7 @@
 		"description": "Method I use most often"
 	},
 
-	"try {} catch()": {
+	"try catch": {
 		"prefix": "tryc",
 		"body": [
 			"try {",
@@ -69,6 +77,106 @@
 			"}"
 		],
 		"description": "Methods for handling exceptions"
+	},
+
+	"catch": {
+		"prefix": "cat",
+		"body": [
+			"catch ($1 e) {\n\t$2",
+			"}"
+		],
+	},
+
+	"if": {
+		"prefix": "if",
+		"body": [
+			"if (${1:condition}) {\n\t$2",
+			"}"
+		],
+	},
+
+	"if else": {
+		"prefix": "ifel",
+		"body": [
+			"if ($1) {\n\t$2",
+			"} else {\n\t$3",
+			"}"
+		],
+	},
+
+	"do while": {
+		"prefix": "do",
+		"body": [
+			"do {\n\t$1",
+			"} while ($2);"
+		],
+	},
+
+	"while": {
+		"prefix": "wh",
+		"body": [
+			"while ($1) {\n\t$2",
+			"}"
+		],
+	},
+
+	"for simple": {
+		"prefix": "for",
+		"body": [
+			"for ($1) {\n\t$2",
+			"}"
+		],
+	},
+
+	"for iterator": {
+		"prefix": "fori",
+		"body": [
+			"for (int ${1:i} = 0; ${1:i} < $2; ${1:i}++) {\n\t$3",
+			"}"
+		],
+	},
+
+	"for each": {
+		"prefix": "fore",
+		"body": [
+			"for (${1:int} e : $2) {\n\t$3",
+			"}"
+		],
+	},
+
+	"switch": {
+		"prefix": "sw",
+		"body": [
+			"switch ($1) {",
+			"\tcase 1: $2;",
+			"\t\tbreak;",
+			"\tdefault:",
+			"\t\tSystem.err.println('ERROR');",
+			"}"
+		],
+	},
+
+	"Ternary operator": {
+		"prefix": "oter",
+		"body": [
+			"${1:boolean name} = (${2:condition}) ? $3 : $4;"
+		],
+	},
+
+	"Object creation": {
+		"prefix": "obj",
+		"body": [
+			"${1:nameClass} ${2:value} = new ${1:nameConstructor}($3);"
+		],
+	},
+
+	"Constructor ()": {
+		"prefix": "constructor",
+		"body": [
+			"public ${1:nameClass}($2) {",
+			"\tthis.$3 = $3;",
+			"}"
+		],
 	},
 
 	"import": {
@@ -111,5 +219,12 @@
 			"*/"
 		],
 		"description": "JavaDocs template"
+	},
+
+	"Arrays()": {
+		"prefix": "arrays",
+		"body": [
+			"Arrays.$1($2);"
+		],
 	}
 }
