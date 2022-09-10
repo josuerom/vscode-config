@@ -1,4 +1,4 @@
-// Presento las únicas 10 extensiones que manejo dentro del editor de VSCode Studio
+// Presento las únicas extensiones que manejo dentro de Visual Studio Code
 {
    "listOfExtensions": [
       {
@@ -7,29 +7,29 @@
          "descripcion":  "Susbraya e indica las líneas donde haya errores"
       },
       {
-         "extesionName": "Kite AutoComplete AI Code",
-         "author": "Kite",
-         "descripcion":  "Entrega de sugerencias rápidas para múltiples lenguajes"
+         "extesionName": "IntelliCode",
+         "author": "Microsoft",
+         "descripcion":  "Entrega de sugerencias rápidas para múltiples lenguajes y contiene inteligencia artificial"
       },
       {
          "extesionName": "Live Server",
          "author": "Ritwick Dey",
-         "descripcion":  "Permite simular un servidor local en vivo para trabajar con HTML, CSS y JavaScript"
+         "descripcion":  "Permite simular un servidor local en vivo para solo trabajar con HTML revisando sus cambios instantaneos"
       },
       {
-         "extesionName": "Material Icon Theme",
-         "author": "Philipp Kief",
-         "descripcion":  "Añade iconos para directorios y archivos en la SideBar o árbol de archivos"
+         "extesionName": "Bearded Icons",
+         "author": "BeardedBear",
+         "descripcion":  "Añade iconos para directorios y archivos al SideBar o árbol de archivos"
       },
       {
          "extesionName": "Settings Sync",
          "author": "Shan Khan",
-         "descripcion":  "Permite realizar copias de seguridad de la configuración de VSCode y guardarlas en GitHub"
+         "descripcion":  "Permite realizar copias de seguridad de toda la configuración de VSCode y guardarlas en la nube"
       },
       {
-         "extesionName": "One Dark Pro",   
-         "author": "binaryify",
-         "descripcion":  "Complemento para tener un tema y resaltado de sintaxis coloreado"
+         "extesionName": "Gruvbox Glass",   
+         "author": "Jack Paget",
+         "descripcion":  "Complemento para tener un tema elegante como también un buen resaltado de sintaxis coloreado oscuro"
       },
       {
          "extesionName": "Auto Rename tag",   
@@ -42,14 +42,29 @@
          "descripcion":  "Complemento de autocompletado instantaneo de etiquetas de apertura y cierre en HTML"
       },
       {
-         "extesionName": "Vim",   
-         "author": "vscodevim",
-         "descripcion":  "Cambia todo los atajos de teclado y manejo del editor cambiandolo por todos los que se usan en el editor VIM"
+         "extesionName": "Trailing Space",
+         "author": "Shardul Mahadik",
+         "descripcion":  "Resalta con color rojo, las líneas que contenga espacios en blanco"
       },
       {
          "extesionName": "Todo Tree",
          "author": "Gruntfuggly",
-         "descripcion":  "Esta enfocada para asignarnos tareas, también para dejar recordatorios en los programas como comentarios resaltados"
+         "descripcion":  "Esta enfocada para asignarnos tareas, también para dejar recordatorios dentro del código fuente que realizamos que son comentarios resaltados"
+      },
+      {
+         "extesionName": "Markdown All in One",
+         "author": "Yu Zhang",
+         "descripcion":  "Permite en los archivos .md (markdown) escribir a la velocidad de la luz brindando una variedad de atajos para todo lo que contiene"
+      },
+      {
+         "extesionName": "CodeTime",
+         "author": "Software",
+         "descripcion":  "Permite trabajar bajo con un cronometroen marcha, temporizador o tiempo libre, es de mucha utilidad"
+      },
+      {
+         "extesionName": "Vibrancy Continued",
+         "author": "illixion",
+         "descripcion":  "Fondo con transparente para todo el editor de código"
       }
    ]
 }
