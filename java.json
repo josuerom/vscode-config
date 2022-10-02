@@ -1,12 +1,4 @@
 {
-	/* Template for snippets in JSON format
-	"": {
-		"prefix": "",
-		"body": [
-			""
-		],
-	} */
-
 	"System.out.print()": {
 		"prefix": "s",
 		"body": [
@@ -60,19 +52,27 @@
 	"public static void nameMethod": {
 		"prefix": "psv",
 		"body": [
-			"public static void ${1:nameMethod}() {",
-			"\t$2",
+			"public static void ${1:nameMethod}($2) {",
 			"}"
 		],
 		"description": "Method I use most often"
 	},
 
+	"Method template": {
+		"prefix": "method",
+		"body": [
+			"public ${1:static} ${2:void} ${3:name}($4) {",
+			"}"
+		],
+		"description": "Template for create methods"
+	},
+
 	"try catch": {
-		"prefix": "tryc",
+		"prefix": "try",
 		"body": [
 			"try {",
 			"\t$1",
-			"} catch ({$2:nameExeption} e) {",
+			"} catch (${2:Exeption} e) {",
 			"\te.printStackTrace();",
 			"}"
 		],
@@ -82,7 +82,7 @@
 	"catch": {
 		"prefix": "cat",
 		"body": [
-			"catch ($1 e) {\n\t$2",
+			"catch ($1 e) {",
 			"}"
 		],
 	},
@@ -90,7 +90,7 @@
 	"if": {
 		"prefix": "if",
 		"body": [
-			"if (${1:condition}) {\n\t$2",
+			"if (${1:condition}) {",
 			"}"
 		],
 	},
@@ -98,8 +98,8 @@
 	"if else": {
 		"prefix": "ifel",
 		"body": [
-			"if ($1) {\n\t$2",
-			"} else {\n\t$3",
+			"if ($1) {",
+			"} else {$2",
 			"}"
 		],
 	},
@@ -108,14 +108,14 @@
 		"prefix": "do",
 		"body": [
 			"do {\n\t$1",
-			"} while ($2);"
+			"} while (${2:condition});"
 		],
 	},
 
 	"while": {
 		"prefix": "wh",
 		"body": [
-			"while ($1) {\n\t$2",
+			"while ($1) {$2",
 			"}"
 		],
 	},
@@ -123,7 +123,7 @@
 	"for simple": {
 		"prefix": "for",
 		"body": [
-			"for ($1) {\n\t$2",
+			"for ($1) {$2",
 			"}"
 		],
 	},
@@ -151,7 +151,7 @@
 			"\tcase 1: $2;",
 			"\t\tbreak;",
 			"\tdefault:",
-			"\t\tSystem.err.println('ERROR');",
+			"\t\tSystem.err.println('ERROR. Debe elegir una de las opción válidas.');",
 			"}"
 		],
 	},
@@ -190,7 +190,6 @@
 	"JavaClass Template": {
 		"prefix": "javaclass",
 		"body": [
-			"package ${1:interfaz};\n",
 			"public class ${2:nameClass} {",
 			"\t$3",
 			"}"
@@ -201,10 +200,10 @@
 	"JavaMainClass Template": {
 		"prefix": "javamainclass",
 		"body": [
-			"package ${1:interfaz};\n",
-			"public class ${2:nameClass} {\n",
+			"public class ${1:nameClass} {\n",
 			"\tpublic static void main(String[] args) {",
-			"\t\t$3",
+			"\t\t$2",
+			"\t}",
 			"}"
 		],
 		"description": "JavaMainClass template"
@@ -226,5 +225,47 @@
 		"body": [
 			"Arrays.$1($2);"
 		],
-	}
+	},
+
+	"Plantilla Secundaria": {
+		"prefix": "inputstandard",
+		"body": [
+			"//$2package interfaz;",
+			"",
+			"import java.io.BufferedReader;",
+			"import java.io.IOException;",
+			"import java.io.InputStreamReader;",
+			"",
+			"/**",
+			" * @author josuerom",
+			"*/",
+			"public class ${1:nameClass} {\n",
+			"\tpublic static void main(String[] args) {",
+			"\t\tpc2Read();",
+			"\t}",
+			"\tpublic static void process() {",
+			"\t}",
+			"",
+			"\tpublic static void pc2Read() {",
+			"\t\tString vec[], line;",
+			"\t\tint n;",
+			"",
+			"\t\tBufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));",
+			"",
+			"\t\ttry {",
+			"\t\t\tline = buffer.readLine();",
+			"\t\t\tn = Integer.valueOf(line);",
+			"",
+			"\t\t\t$4${3:// empieza a codear desde aquí}",
+			"\t\t\tbuffer.close();",
+			"\t\t} catch (NullPointerException e) {",
+			"\t\t\te.printStackTrace();",
+			"\t\t} catch (IOException e) {",
+			"\t\t\te.printStackTrace();",
+			"\t\t}",
+			"\t}",
+			"}"
+		],
+		"description": "Template for programming"
+	},
 }
