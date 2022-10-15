@@ -1,13 +1,13 @@
 {
-	"Plantilla para competencias": {
+	"Plantilla c++ para competencias": {
 		"prefix": "cpp_template_to_compete",
 		"body": [
 			"/*",
-			" * @solution implemented for problem ${1:problemName}",
+			" * @solution implemented for the problem ${1:problemName}",
 			" * @author josuerom",
 			"*/",
+			"#pragma GCC optimize(\"Ofast\")",
 			"#include <bits/stdc++.h>\n",
-			"#pragma GCC optimize(\"03-unroll-loops\")",
 			"#define fastIO() ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);",
 			"#define all(vec) vec.begin(), vec.end()",
 			"#define rall(vec) vec.rbegin(), vec.rend()",
@@ -23,11 +23,11 @@
 			"#define mcd(a, b) __gcd(a, b);",
 			"#define isOrdered(vec) is_heap(all(vec))",
 			"",
-			"using namespaces std;",
-			"typedef unsigned long long int ll", //18^19
-			"typedef long long int lli", //9^18
-			"typedef unsigned int ui", //4^9
-			"typedef unsigned short int us", //65^3
+			"using namespace std;",
+			"typedef unsigned long long int ll; //18^19",
+			"typedef long long int lli; //9^18",
+			"typedef unsigned int ui; //4^9",
+			"typedef unsigned short int us; //65^3",
 			"",
 			"void solve() {",
 			"\t$3",
@@ -35,12 +35,14 @@
 			"",
 			"int main() {",
 			"\tfastIO();",
-			"\tshort tc;",
-			"\tcin >> tc;",
-			"\twhile (tc--) { solve();$2 }",
+			"\tshort t;",
+			"\tcin >> t;",
+			"\twhile (t--) {",
+			"\t\tsolve();$2",
+			"\t}",
 			"\treturn 0;",
 			"}",
 		],
-		"description": "Mi platilla de C++ para competencias"
+		"description": "Platilla de C++ para competencias"
 	}
 }
