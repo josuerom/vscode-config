@@ -1,4 +1,4 @@
-{ // @autor Josué Romero
+{ // @author josuerom
 	"System.out.print()": {
 		"prefix": "s",
 		"body": [
@@ -243,25 +243,23 @@
 			"\t\tpc2Read();",
 			"\t}",
 			"",
-			"\tpublic static void solve() {",
+			"\tpublic static void solve(${5:int int}Array) {",
 			"\t}",
 			"",
 			"\tpublic static void pc2Read() {",
-			"\t\tString strArr[], line;",
-			"\t\tint$3 intArr[], n;",
+			"\t\tString strArray[], line;",
+			"\t\t${3:int int}Array[], tc;",
 			"",
 			"\t\tBufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));",
 			"",
 			"\t\ttry {",
-			"\t\t\tn = Integer.valueOf(buffer.readLine());",
-			"\t\t\t",
-			"\t\t\twhile (n-- >= 1) {",
+			"\t\t\ttc = Integer.valueOf(buffer.readLine());\n",
+			"\t\t\twhile (tc-- >= 1) {",
 			"\t\t\t\tline = buffer.readLine();",
-			"\t\t\t\tintArr = Arrays.stream(line.substring(0).split(\" \")).map(String::trim)",
+			"\t\t\t\tint$4Array = Arrays.stream(line.substring(0).split(\" \")).map(String::trim)",
          		"\t\t\t\t\t.mapToInt(Integer::parseInt).toArray();",
-			"\t\t\t\tArrays.sort(vec);",
-			"\t\t\t\tsolve(vec);",
-			"\t\t\t\t$2$4",
+			"\t\t\t\t//Arrays.sort(vec);",
+			"\t\t\t\tsolve(int$4Array);$2",
 			"\t\t\t}",
 			"\t\t\tbuffer.close();",
 			"\t\t} catch (NullPointerException e) {",
@@ -272,6 +270,6 @@
 			"\t}",
 			"}"
 		],
-		"description": "Plantilla de JAVA pra competencias"
+		"description": "Plantilla de Java para competencias"
 	},
 }
