@@ -1,4 +1,4 @@
-{
+{ // @autor Josué Romero
 	"System.out.print()": {
 		"prefix": "s",
 		"body": [
@@ -243,24 +243,24 @@
 			"\t\tpc2Read();",
 			"\t}",
 			"",
-			"\tpublic static void solve($5) {",
+			"\tpublic static void solve() {",
 			"\t}",
 			"",
 			"\tpublic static void pc2Read() {",
-			"\t\tString arr[], line;",
-			"\t\tint$3 vec[], n;",
+			"\t\tString strArr[], line;",
+			"\t\tint$3 intArr[], n;",
 			"",
 			"\t\tBufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));",
 			"",
 			"\t\ttry {",
-			"\t\t\tline = buffer.readLine();",
-			"\t\t\tn = Integer.valueOf(line);",
+			"\t\t\tn = Integer.valueOf(buffer.readLine());",
 			"\t\t\t",
 			"\t\t\twhile (n-- >= 1) {",
 			"\t\t\t\tline = buffer.readLine();",
-			"\t\t\t\tvec = Arrays.stream(line.substring(0).split(\" \")).map(String::trim)",
+			"\t\t\t\tintArr = Arrays.stream(line.substring(0).split(\" \")).map(String::trim)",
          		"\t\t\t\t\t.mapToInt(Integer::parseInt).toArray();",
 			"\t\t\t\tArrays.sort(vec);",
+			"\t\t\t\tsolve(vec);",
 			"\t\t\t\t$2$4",
 			"\t\t\t}",
 			"\t\t\tbuffer.close();",
@@ -272,6 +272,6 @@
 			"\t}",
 			"}"
 		],
-		"description": "Template for competitive programming colombian"
+		"description": "Plantilla de JAVA pra competencias"
 	},
 }
