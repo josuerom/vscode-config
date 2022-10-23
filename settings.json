@@ -1,25 +1,24 @@
 {
-    "kite.showWelcomeNotificationOnStartup": false,
-    "extensions.ignoreRecommendations": true,
+
+    "terminal.integrated.gpuAcceleration": "off",
     "security.workspace.trust.untrustedFiles": "open",
-    
     "editor.fontFamily": "'Cascadia Code PL', 'Menlo', 'Monaco', 'Courier New', monospace",
     "editor.fontSize": 13.5,
     "editor.fontWeight": "375",
+    "extensions.ignoreRecommendations": true,
+    "workbench.editor.enablePreview": false,
     "editor.fontLigatures": true,
-    "errorLens.fontFamily": "Cascadia Code",
-    "errorLens.fontSize": "13.5",
     "workbench.startupEditor": "none",
-    "workbench.statusBar.visible": false,
     "editor.tabCompletion": "on",
     "editor.tabSize": 3,
-    "editor.padding.top": 3,
     "editor.padding.bottom": 0,
     "files.autoSave": "onFocusChange",
     "editor.wordWrap": "on",
     "diffEditor.wordWrap": "on",
     "editor.minimap.enabled": false,
     "editor.linkedEditing": true,
+    "workbench.layoutControl.enabled": false,
+    "window.menuBarVisibility": "compact",
     "editor.suggestSelection": "first",
     "terminal.integrated.cursorStyle": "line",
     "debug.terminal.clearBeforeReusing": true,
@@ -50,69 +49,40 @@
             "color": "terminal.ansiGreen"
         }
     },
-    "terminal.integrated.defaultProfile.windows": "GitBash",
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
     "terminal.integrated.fontFamily": "'JetBrains Mono'",
     "terminal.integrated.fontSize": 14,
-    "sync.quietSync": true,
-    "sync.forceUpload": true,
-    "sync.forceDownload": true,
-    "sync.autoUpload": true,
-    "sync.autoDownload": true,
     "editor.stickyScroll.enabled": true,
     "workbench.iconTheme": "material-icon-theme",
     "breadcrumbs.enabled": false,
     "editor.renderWhitespace": "none",
     "editor.renderControlCharacters": false,
-    "workbench.layoutControl.enabled": false,
-    "window.commandCenter": true,
     "workbench.sideBar.location": "right",
     "editor.cursorBlinking": "smooth",
 
-    "editor.tokenColorCustomizations": {
-        "[Default Dark+]": {
-            "variables": "#D6D1D0",
-            "textMateRules": [
-                {
-                    "scope": [
-                        "storage.type.object.array.java",
-                        "meta.method.identifier.java",
-                        "meta.method.java",
-                        "meta.class.body.java",
-                        "meta.class.java",
-                        "source.java"
-                    ],
-                    "settings": {
-                        "foreground": "#D6D1D0",
-                    },
-                },
-                {
-                    "scope": [
-                        "meta.method.body.java",
-                        "meta.method.java",
-                        "meta.class.body.java",
-                        "meta.class.java",
-                        "source.java"
-                    ],
-                    "settings": {
-                        "foreground": "#D6D1D0",
-                    },
-                }
-            ]
-        }
+    "php.validate.executablePath": "D:\\Program Files\\php-8.1.10\\php.exe",
+    "code-runner.runInTerminal": true,
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.executorMap": {
+        "java": "clear && cd $dir && java $fileName",
+        "c": "clear && cd $dir && gcc $fileName -o $fileNameWithoutExt && ./$dir $fileNameWithoutExt",
+        "cpp": "clear && cd $dir && g++ $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt",
+        "javascript": "node",
+        "typescript": "ts-node",
+        "php": "php $dir && java $fileName",
+        "python": "python -u",
+        "go": "go run",
+        "lua": "lua",
+        "bat": "cmd /c",
+        "r": "Rscript",
+        "dart": "dart",
+        "kotlin": "kotlin"
     },
-    "editor.semanticTokenColorCustomizations": {
-        "enabled": true,
-        "rules": {
-            "*.mutable": {
-                "underline": false
-            }
-        },
-        "[Default Dark+]": {
-            "rules": {
-                "property": "#E06C75",
-                "variable": "#D6D1D0"
-            }
-        }
-    },
-    "material-icon-theme.showWelcomeMessage": false
+    "workbench.activityBar.visible": false,
+    "debug.onTaskErrors": "debugAnyway",
+    "window.commandCenter": true,
+    "terminal.integrated.tabs.focusMode": "singleClick",
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "editor.inlineSuggest.enabled": true,
+    "editor.unicodeHighlight.invisibleCharacters": false,
 }
