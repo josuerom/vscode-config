@@ -1,10 +1,10 @@
-// Presento las únicas extensiones que manejo dentro de Visual Studio Code
+// Comparto las únicas 12 extensiones que manejo dentro de Visual Studio Code
 {
    "listOfExtensions": [
       {
-         "extesionName": "Error Lens",
-         "author": "Alexander",
-         "descripcion":  "Susbraya e indica las líneas donde haya errores"
+         "extesionName": "C/C++",
+         "author": "Microsoft",
+         "descripcion":  "Entrega sugerencias y autocompleta código para esos dos lenguajes"
       },
       {
          "extesionName": "IntelliCode",
@@ -17,29 +17,19 @@
          "descripcion":  "Permite simular un servidor local en vivo para solo trabajar con HTML revisando sus cambios instantaneos"
       },
       {
-         "extesionName": "Bearded Icons",
-         "author": "BeardedBear",
-         "descripcion":  "Añade iconos para directorios y archivos al SideBar o árbol de archivos"
-      },
-      {
          "extesionName": "Settings Sync",
          "author": "Shan Khan",
          "descripcion":  "Permite realizar copias de seguridad de toda la configuración de VSCode y guardarlas en la nube"
       },
       {
-         "extesionName": "Gruvbox Glass",   
-         "author": "Jack Paget",
-         "descripcion":  "Complemento para tener un tema elegante como también un buen resaltado de sintaxis coloreado oscuro"
+         "extesionName": "Code Runner",   
+         "author": "Jun Han",
+         "descripcion":  "Permite compilar y ejecutar múltiples lenguajes solo presionando Ctrl + Alt + N"
       },
       {
-         "extesionName": "Auto Rename tag",   
-         "author": "Jun Han",
-         "descripcion":  "Complemento que permite realizar un renombrado de etiqueta inicial y final del archivo HTML"
-      },
-      {
-         "extesionName": "Auto Close Tag",   
-         "author": "Jun Han",
-         "descripcion":  "Complemento de autocompletado instantaneo de etiquetas de apertura y cierre en HTML"
+         "extesionName": "Language Support for Java",   
+         "author": "Red Hat,
+         "descripcion":  "Entrega sugerencias y da soporte para trabajar con Java"
       },
       {
          "extesionName": "Trailing Space",
@@ -47,9 +37,9 @@
          "descripcion":  "Resalta con color rojo, las líneas que contenga espacios en blanco"
       },
       {
-         "extesionName": "Todo Tree",
-         "author": "Gruntfuggly",
-         "descripcion":  "Esta enfocada para asignarnos tareas, también para dejar recordatorios dentro del código fuente que realizamos que son comentarios resaltados"
+         "extesionName": "Material Icon Theme",
+         "author": "Philipp Kief",
+         "descripcion":  "Brinda muchos iconos para cada tipo de archivo o directorio"
       },
       {
          "extesionName": "Markdown All in One",
@@ -59,12 +49,17 @@
       {
          "extesionName": "CodeTime",
          "author": "Software",
-         "descripcion":  "Permite trabajar bajo con un cronometroen marcha, temporizador o tiempo libre, es de mucha utilidad"
+         "descripcion":  "Permite trabajar bajo con un cronometroen marcha, temporizador o tiempo libre, es de mucha utilidad en mi opinión"
       },
       {
          "extesionName": "Vibrancy Continued",
          "author": "illixion",
          "descripcion":  "Fondo con transparente para todo el editor de código"
+      },
+      {
+         "extesionName": "Seudev's VSCode Java snippets",
+         "author": "Seudev",
+         "descripcion":  "Incorpora una gran variedad de snippets para solo Java que con escribir algunos carácteres y presionar tab se autocompletará el bloque de código con más facilidad"
       }
    ]
 }
