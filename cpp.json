@@ -1,4 +1,58 @@
 {
+	"#ifdef ONLINE_JUDGE": {
+		"prefix": "ifdef",
+		"body": [
+			"#ifndef ONLINE_JUDGE",
+      	"\tfreopen(\"TEST/input.in\", \"r\", stdin);",
+      	"\tfreopen(\"TEST/output.ans\", \"w\", stdout);",
+   		"#endif"
+		]
+	},
+
+	"ios::sync_with_stdio(false)": {
+		"prefix": "ios",
+		"body": [
+			"ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);"
+		]
+	},
+
+	"using namespace std": {
+		"prefix": "using",
+		"body": [
+			"using namespace std;"
+		]
+	},
+
+	"return": {
+		"prefix": "re",
+		"body": [
+			"return$1;"
+		]
+	},
+
+	"for (int i = 0; i < vec.size(); i++)": {
+		"prefix": "fori",
+		"body": [
+			"for (int ${1:i} = 0; ${1:i} < ${2:vec.size()}; ${1:i}++) {",
+			"}",
+		]
+	},
+
+	"for (auto $e : vec)": {
+		"prefix": "fore",
+		"body": [
+			"for (auto &e : ${vector}) {",
+			"}",
+		]
+	},
+
+	"#include <bits/stdc++.h>": {
+		"prefix": "inc",
+		"body": [
+			"#include <bits/stdc++.h>"
+		]
+	},
+
 	"Plantilla c++ para competencias": {
 		"prefix": "cpp_template_to_compete",
 		"body": [
