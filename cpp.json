@@ -1,23 +1,23 @@
-{
+{ // @author josuerom
 	"#ifdef ONLINE_JUDGE": {
-		"prefix": "ifdef",
+		"prefix": "test",
 		"body": [
 			"#ifndef ONLINE_JUDGE",
-      	"\tfreopen(\"TEST/input.in\", \"r\", stdin);",
-      	"\tfreopen(\"TEST/output.ans\", \"w\", stdout);",
+      	"\tfreopen(\"TEST/$1input.txt\", \"r\", stdin);",
+      	"\tfreopen(\"TEST/$1output.txt\", \"w\", stdout);",
    		"#endif"
 		]
 	},
 
-	"ios::sync_with_stdio(false)": {
-		"prefix": "ios",
+	"ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);": {
+		"prefix": "io",
 		"body": [
-			"ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);"
+			"ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);\n"
 		]
 	},
 
-	"using namespace std": {
-		"prefix": "using",
+	"using namespace std;": {
+		"prefix": "u",
 		"body": [
 			"using namespace std;"
 		]
@@ -30,10 +30,17 @@
 		]
 	},
 
-	"for (int i = 0; i < vec.size(); i++)": {
+	"char or string getline()": {
+		"prefix": "readline",
+		"body": [
+			"cin.getline($1, ${2:size}, '\\n');"
+		]
+	},
+
+	"for (int i = 0; i < n; i++)": {
 		"prefix": "fori",
 		"body": [
-			"for (int ${1:i} = 0; ${1:i} < ${2:vec.size()}; ${1:i}++) {",
+			"for (int ${1:i} = 0; ${1:i} < ${2:n}; ${1:i}++) {",
 			"}",
 		]
 	},
@@ -47,31 +54,63 @@
 	},
 
 	"#include <bits/stdc++.h>": {
-		"prefix": "inc",
+		"prefix": "in",
 		"body": [
-			"#include <bits/stdc++.h>"
+			"#include <${1:bits/stdc++.h}>"
+		]
+	},
+
+	"typedef": {
+		"prefix": "typ",
+		"body": [
+			"typdef ${1:long long ll};"
+		]
+	},
+
+	"#define": {
+		"prefix": "de",
+		"body": [
+			"#define $1"
+		]
+	},
+
+	"void solve() { body }": {
+		"prefix": "solve",
+		"body": [
+			"void solve$1() {",
+			"}"
+		]
+	},
+
+	"function main": {
+		"prefix": "m",
+		"body": [
+			"int main() {",
+			"\t$1",
+			"\treturn 0;",
+			"}"
 		]
 	},
 
 	"Plantilla c++ para competencias": {
 		"prefix": "cpp_template_to_compete",
 		"body": [
-			"/*",
-			" * @solution implemented for the problem: ${1:problemName}",
+			"/**",
+			" * @problem ${1:problemName} - CodeForces",
 			" * @author josuerom",
 			"*/",
 			"//#pragma GCC optimize(\"03,unroll-loops\")",
 			"#include <bits/stdc++.h>\n",
-			"#define fastIO() ios::sync_with_stdio(false); cin.tie(0);",
-			"#define all(vec) vec.begin(), vec.end()",
-			"#define rall(vec) vec.rbegin(), vec.rend()",
-			"#define decimals(n) cout.setf(ios::fixed, ios::floatfield); cout.precision(n);",
-			"#define sort(vec) sort(vec.begin(), vec.end())",
-			"#define sortreverse(vec) reverse(vec.begin(), vec.end())",
+			"#define fastIO() ios::sync_with_stdio(false); cin.tie(nullptr);",
+			"#define all(vec) (vec).begin(), (vec).end()",
+			"#define rall(vec) (vec).rbegin(), (vec).rend()",
+			"#define decimals(n) cout.setf(ios::fixed, ios::floatfield); cout.precision(n+1);",
+			"#define sort(vec) sort((vec).begin(), (vec).end())",
+			"#define sortreverse(vec) reverse((vec).begin(), (vec).end())",
 			"#define fori(a, b, c) for(int (a) = (b); (a)<(c); (a)++)",
 			"#define fore(e, vec) for (auto &(e): (vec))",
 			"#define forr(i, vec) for(int i = (int)(vec).size()-1; i >= 0; i--)",
-			"#define size(vec) (int)(vec.size())",
+			"#define size(vec) (int)((vec).size())",
 			"#define module(a, b, mod) ((((a) % (mod)) + ((b) % (mod))) % (mod))",
 			"#define binarysearch(vec, key) sort(all(vec)); binary_search(all(vec), key);",
 			"#define mcd(a, b) gcd(a, b)",
@@ -83,21 +122,21 @@
 			"typedef unsigned long long int ull; //18^19",
 			"typedef long long int ll; //9^18",
 			"typedef unsigned int ui; //4^9",
-			"typedef unsigned short int us; //65^3",
+			"typedef unsigned short us; //65^3",
 			"",
-			"void solve() {$4",
-			"\t$2",
+			"void solve() {$5",
+			"\t$3",
 			"}",
 			"",
 			"int main() {",
 			"\tfastIO();",
-			"\t#ifdef LOCAL",
-			"\t\tfreopen(\".in\", \"r\", stdin);",
-			"\t\tfreopen(\".out\", \"w\", stdout);",
-			"\t#endif\n",
-			"\t${3:us} t=0;",
-			"\tcin >> t;",
-			"\twhile (t--) { solve(); }",
+			"\t#ifndef ONLINE_JUDGE",
+			"\t\tfreopen(\"input.txt\", \"r\", stdin);",
+			"\t\tfreopen(\"output.txt\", \"w\", stdout);",
+			"\t#endif",
+			"\t${2:us} t=0;",
+			"\tcin >> t;$4",
+			"\twhile (t--) solve();",
 			"\treturn 0;",
 			"}",
 		],
