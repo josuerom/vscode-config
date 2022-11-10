@@ -5,39 +5,32 @@
 			"#ifndef ONLINE_JUDGE",
       	"\tfreopen(\"test/$1input.txt\", \"r\", stdin);",
       	"\tfreopen(\"test/$1output.txt\", \"w\", stdout);",
-   		"#endif"
+   		"#endif$1"
 		]
 	},
 
 	"ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);": {
 		"prefix": "ioo",
 		"body": [
-			"ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);\n"
-		]
-	},
-
-	"using namespace std;": {
-		"prefix": "u",
-		"body": [
-			""
+			"ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);$1"
 		]
 	},
 
 	"#pragma GCC optimize": {
-		"prefix": "pra",
+		"prefix": "p",
 		"body": [
-			"#pragma GCC optimize(\"03,unroll-loops\")"
+			"#pragma GCC optimize(\"03,unroll-loops\")$1"
 		]
 	},
 
 	"DocC++": {
 		"prefix": "doc",
 		"body": [
-			"/************************************************",
-			"* @AUTHOR:               JOSUEROM               *",
-			"* @INSTITUTE:    MINUTE OF GOD UNIVERSITY       *",
-			"* @DATE:            $1/11/22 COLOMBIAN          *",
-			"************************************************/\n$2"
+			"/*****************************************************",
+			"* @AUTHOR:                 JOSUEROM                  *",
+			"* @INSTITUTE: MINUTE OF GOD UNIVERSITY OF COLOMBIA   *",
+			"* @DATE:                $1/11/22 $2               *",
+			"******************************************************/\n$3"
 		]
 	},
 
@@ -45,6 +38,13 @@
 		"prefix": "re",
 		"body": [
 			"return$1;"
+		]
+	},
+
+	"line break": {
+		"prefix": "n",
+		"body": [
+			"\"\\n\"$1"
 		]
 	},
 
@@ -74,13 +74,14 @@
 	"#include <bits/stdc++.h>": {
 		"prefix": "in",
 		"body": [
-			"#include <${1:bits/stdc++.h}>\n",
-			"#define SPEED_IO() ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr); cout.setf(ios::fixed); cout.precision(7)",
+			"#include <bits/stdc++.h>\n",
+			"#define SPEED_IO() ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);",
+			"#define TEST_CASE(a) while ((a)--) solve();",
 			"#define ull unsigned long long",
 			"#define ll long long",
 			"#define ui unsigned int",
 			"#define us unsigned short",
-			"using namespace std;\n$1"
+			"using namespace std;\n\n$1"
 		]
 	},
 
