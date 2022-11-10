@@ -1,16 +1,16 @@
 { // @author josuerom
 	"#ifdef ONLINE_JUDGE": {
-		"prefix": "test",
+		"prefix": "testing",
 		"body": [
 			"#ifndef ONLINE_JUDGE",
-      	"\tfreopen(\"TEST/$1input.txt\", \"r\", stdin);",
-      	"\tfreopen(\"TEST/$1output.txt\", \"w\", stdout);",
+      	"\tfreopen(\"test/$1input.txt\", \"r\", stdin);",
+      	"\tfreopen(\"test/$1output.txt\", \"w\", stdout);",
    		"#endif"
 		]
 	},
 
 	"ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);": {
-		"prefix": "io",
+		"prefix": "ioo",
 		"body": [
 			"ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);\n"
 		]
@@ -19,7 +19,25 @@
 	"using namespace std;": {
 		"prefix": "u",
 		"body": [
-			"using namespace std;"
+			""
+		]
+	},
+
+	"#pragma GCC optimize": {
+		"prefix": "pra",
+		"body": [
+			"#pragma GCC optimize(\"03,unroll-loops\")"
+		]
+	},
+
+	"DocC++": {
+		"prefix": "doc",
+		"body": [
+			"/************************************************",
+			"* @AUTHOR:               JOSUEROM               *",
+			"* @INSTITUTE:    MINUTE OF GOD UNIVERSITY       *",
+			"* @DATE:            $1/11/22 COLOMBIAN          *",
+			"************************************************/\n$2"
 		]
 	},
 
@@ -30,8 +48,8 @@
 		]
 	},
 
-	"char or string getline()": {
-		"prefix": "readline",
+	"getline() for char[]": {
+		"prefix": "getline",
 		"body": [
 			"cin.getline($1, ${2:size}, '\\n');"
 		]
@@ -56,7 +74,13 @@
 	"#include <bits/stdc++.h>": {
 		"prefix": "in",
 		"body": [
-			"#include <${1:bits/stdc++.h}>"
+			"#include <${1:bits/stdc++.h}>\n",
+			"#define SPEED_IO() ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr); cout.setf(ios::fixed); cout.precision(7)",
+			"#define ull unsigned long long",
+			"#define ll long long",
+			"#define ui unsigned int",
+			"#define us unsigned short",
+			"using namespace std;\n$1"
 		]
 	},
 
@@ -77,7 +101,7 @@
 	"void solve() { body }": {
 		"prefix": "solve",
 		"body": [
-			"void solve$1() {",
+			"void solve$1($2) {",
 			"}"
 		]
 	},
