@@ -42,7 +42,7 @@
 	},
 
 	"line break": {
-		"prefix": "n",
+		"prefix": "\\",
 		"body": [
 			"\"\\n\"$1"
 		]
