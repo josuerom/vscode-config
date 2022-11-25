@@ -31,7 +31,7 @@
 	},
 
 	"char or string getline()": {
-		"prefix": "readln",
+		"prefix": "rd",
 		"body": [
 			"cin.getline($1, ${2:size}, '\\n');"
 		]
@@ -48,8 +48,7 @@
 	"for (auto $e : vec)": {
 		"prefix": "fore",
 		"body": [
-			"for (auto &e : ${vector}) {",
-			"}",
+			"for (auto &e : ${1:vector}) cin >> e;",
 		]
 	},
 
@@ -84,7 +83,7 @@
 	},
 
 	"function main": {
-		"prefix": "m",
+		"prefix": "ma",
 		"body": [
 			"int main() {",
 			"\t$1",
@@ -98,15 +97,15 @@
 		"body": [
 			"/**************************************************",
 			" * @author:               josuerom                *",
-			" * @created:           $1/12/22 $2             *",
-			"**************************************************/"
+			" * @created:         ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}            *",
+			"**************************************************/",
 		]
 	},
 
 	"#pragma GCC optimize(\"03,unroll-loops\")": {
 		"prefix": "gcc",
 		"body": [
-			"#pragma GCC optimize(\"03,unroll-loops\")\n"
+			"#pragma GCC optimize(\"03,unroll-loops\")$1"
 		]
 	},
 
@@ -117,25 +116,56 @@
 		]
 	},
 
+   "Plantilla CodeForces": {
+		"prefix": "template.cpp",
+		"body": [
+			"/**************************************************",
+			" * @author:               josuerom                *",
+			" * @created:         ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}            *",
+			"**************************************************/",
+			"//$1#pragma GCC optimize(\"03,unroll-loops\")",
+			"#include <bits/stdc++.h>",
+			"",
+			"using namespace std;",
+			"#define ll long long",
+			"#define ui unsigned int",
+			"#define endl '\n'",
+			"void dbg_out() { cout << endl; }",
+			"template<typename Head, typename... Tail>",
+			"void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }",
+			"#define dbg(...) cout << \"(\" << #__VA_ARGS__ << \"):\", dbg_out(__VA_ARGS__)",
+			"",
+			"const ui MAX = 1e9;",
+			"const ui MIN = 1e4;",
+			"",
+			"int tc$2;",
+			"",
+			"int main() {",
+			"\tios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);",
+			"\t$3",
+			"\treturn 0;",
+			"}"
+		]
+	},
+
 	"Plantilla c++ para competencias": {
 		"prefix": "cpp_template_to_compete",
 		"body": [
-			"/****************************************************",
-			" * @author:                josuerom                 *",
-			" * @created:            $1/11/22 $2              *",
-			"****************************************************/",
-			"//$3#pragma GCC optimize(\"03,unroll-loops\")",
+			"/**************************************************",
+			" * @author:               josuerom                *",
+			" * @created:         ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}            *",
+			"**************************************************/",
+			"//$1#pragma GCC optimize(\"03,unroll-loops\")",
 			"#include <bits/stdc++.h>",
 			"",
 			"#define readArray(vec) void template<typename T> void read(vector<T>&(vec)){int n=(vec).size();for(auto&e:vec) cin >> e;}",
+			"#define SPEED_IO ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr); cerr.tie(nullptr);",
 			"#define PROGRAM_TIME cout << \"max time \" << (int)clock()/(CLOCKS_PER_SEC/10) << \" ms\\n\"",
-			"#define SPEED_IO ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);",
 			"#define VEREDICT(condition) cout << ((condition) ? \"YES\\n\" : \"NO\\n\") << endl",
 			"#define decimals(n) cout.setf(ios::fixed, ios::floatfield); cout.precision(n+1);",
 			"#define binarySearch(vec, key) sort(all(vec)); binary_search(all(vec), (key));",
 			"#define forr(i, vec) for(int i = (int)(vec).size()-1; i >= 0; i--)",
 			"#define mod(a, b, mod) ((((a) % (mod)) + ((b) % (mod))) % (mod))",
-			"#define TEST_CASE(tc) cin >> (tc); while((tc)--)",
 			"#define fori(i, b, c) for(int (i) = (b); (i) < (c); (i)++)",
 			"#define rall(vec) (vec).rbegin(), (vec).rend()",
 			"#define all(vec) (vec).begin(), (vec).end()",
@@ -145,33 +175,26 @@
 			"#define sz(vec) (int)(vec).size()",
 			"#define sort(vec) sort(all(vec))",
 			"#define mcd(a, b) gcd(a, b)",
-			"#define FINISH return 0",
-			"#define endl '\\n'",
-			"",
-			"#define bigint __int128_t",
 			"#define ull unsigned long long int",
 			"#define ll long long",
 			"#define ui unsigned int",
-			"#define us unsigned short",
-			"#define uc unsigned char",
-			"#define ld long double",
+			"#define endl '\\n'",
 			"using namespace std;",
 			"",
-			"const ll MAX = 1e9;",
-			"const ui MIN = 1e4;",
-			"const ui MOD = 1000000007;",
-			"const ld PI = 3.1415926535897932384626433832795;",
+			"void dbg_out() { cout << endl; }",
+			"template<typename Head, typename... Tail>",
+			"void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }",
+			"#define dbg(...) cout << \"[\" << #__VA_ARGS__ << \"]:\", dbg_out(__VA_ARGS__)",
 			"",
-			"ui t, n, m, c, i, j, ans$4;",
-			"//ll M[MAX][MAX], A[MIN];",
+			"const ui MAX = 1e9;",
+			"const ui MIN = 1e4;",
+			"",
+			"int tc$2;",
 			"",
 			"int main() {",
 			"\tSPEED_IO;",
-			"\tTEST_CASE(t) {",
-			"\t\t$5",
-			"\t}",
-			"\t//PROGRAM_TIME;",
-			"\tFINISH;",
+			"\t$3",
+			"\treturn 0;",
 			"}"
 		],
 		"description": "Plantilla de C++ para competencias"
