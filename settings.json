@@ -1,9 +1,8 @@
-{
-
+{//@author: josuerom
     "terminal.integrated.gpuAcceleration": "off",
     "security.workspace.trust.untrustedFiles": "open",
-    "editor.fontFamily": "'Cascadia Code PL', 'Menlo', 'Monaco', 'Courier New', monospace",
-    "editor.fontSize": 13.8,
+    "editor.fontFamily": "'Cascadia Code', 'Menlo', 'Monaco', 'Courier New', monospace",
+    "editor.fontSize": 14.8,
     "editor.fontWeight": "375",
     "extensions.ignoreRecommendations": true,
     "workbench.editor.enablePreview": false,
@@ -49,9 +48,9 @@
             "color": "terminal.ansiGreen"
         }
     },
-    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
     "terminal.integrated.fontFamily": "'JetBrains Mono'",
-    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontSize": 13.8,
     "editor.stickyScroll.enabled": true,
     "workbench.iconTheme": "material-icon-theme",
     "breadcrumbs.enabled": false,
@@ -65,8 +64,8 @@
     "code-runner.saveFileBeforeRun": true,
     "code-runner.executorMap": {
         "java": "clear && cd $dir && java $fileName",
-        "c": "clear && cd $dir && gcc $fileName -o $fileNameWithoutExt && .\\$dir $fileNameWithoutExt",
-        "cpp": "clear && cd $dir && g++ $fileName -o $fileNameWithoutExt && .\\$fileNameWithoutExt",
+        "c": "cls && cd $dir && gcc $fileName -o $fileNameWithoutExt && .\\$fileNameWithoutExt",
+        "cpp": "cls && cd $dir && g++ -std=c++20 -O2 -Wall $fileName -o $fileNameWithoutExt && .\\$fileNameWithoutExt",
         "javascript": "node",
         "typescript": "ts-node",
         "php": "php $dir && java $fileName",
@@ -78,11 +77,13 @@
         "dart": "dart",
         "kotlin": "kotlin"
     },
-    "workbench.activityBar.visible": false,
+    //"workbench.activityBar.visible": false,
+    //"window.commandCenter": true,
+    //"editor.inlineSuggest.enabled": true,
+    //"editor.unicodeHighlight.invisibleCharacters": false,
     "debug.onTaskErrors": "debugAnyway",
-    "window.commandCenter": true,
     "terminal.integrated.tabs.focusMode": "singleClick",
     "terminal.integrated.enableMultiLinePasteWarning": false,
-    "editor.inlineSuggest.enabled": true,
-    "editor.unicodeHighlight.invisibleCharacters": false,
+    "cph.general.menuChoices": "cpp java python",
+    "cph.language.cpp.SubmissionCompiler": "GNU G++20 11.2.0 (64 bit, winlibs)",
 }
