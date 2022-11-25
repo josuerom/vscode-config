@@ -3,34 +3,23 @@
 		"prefix": "testing",
 		"body": [
 			"#ifndef ONLINE_JUDGE",
-      	"\tfreopen(\"test/$1input.txt\", \"r\", stdin);",
-      	"\tfreopen(\"test/$1output.txt\", \"w\", stdout);",
-   		"#endif$1"
+      	"\tfreopen(\"input.txt\", \"r\", stdin);",
+      	"\tfreopen(\"output.txt\", \"w\", stdout);",
+   		"#endif"
 		]
 	},
 
 	"ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);": {
-		"prefix": "ioo",
+		"prefix": "speed",
 		"body": [
 			"ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);$1"
 		]
 	},
 
-	"#pragma GCC optimize": {
-		"prefix": "p",
+	"using namespace std;": {
+		"prefix": "u",
 		"body": [
-			"#pragma GCC optimize(\"03,unroll-loops\")$1"
-		]
-	},
-
-	"DocC++": {
-		"prefix": "doc",
-		"body": [
-			"/*****************************************************",
-			"* @AUTHOR:                 JOSUEROM                  *",
-			"* @INSTITUTE: MINUTE OF GOD UNIVERSITY OF COLOMBIA   *",
-			"* @DATE:                $1/11/22 $2               *",
-			"******************************************************/\n$3"
+			"using namespace std;$1"
 		]
 	},
 
@@ -41,15 +30,8 @@
 		]
 	},
 
-	"line break": {
-		"prefix": "\\",
-		"body": [
-			"\"\\n\"$1"
-		]
-	},
-
-	"getline() for char[]": {
-		"prefix": "getline",
+	"char or string getline()": {
+		"prefix": "readln",
 		"body": [
 			"cin.getline($1, ${2:size}, '\\n');"
 		]
@@ -74,21 +56,14 @@
 	"#include <bits/stdc++.h>": {
 		"prefix": "in",
 		"body": [
-			"#include <bits/stdc++.h>\n",
-			"#define SPEED_IO() ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);",
-			"#define TEST_CASE(a) while ((a)--) solve();",
-			"#define ull unsigned long long",
-			"#define ll long long",
-			"#define ui unsigned int",
-			"#define us unsigned short",
-			"using namespace std;\n\n$1"
+			"#include <bits/stdc++.h>\n"
 		]
 	},
 
 	"typedef": {
 		"prefix": "typ",
 		"body": [
-			"typdef ${1:long long ll};"
+			"typedef ${1:long long ll};"
 		]
 	},
 
@@ -102,7 +77,8 @@
 	"void solve() { body }": {
 		"prefix": "solve",
 		"body": [
-			"void solve$1($2) {",
+			"void solve() {",
+			"\t$1",
 			"}"
 		]
 	},
@@ -117,53 +93,86 @@
 		]
 	},
 
+	"@author": {
+		"prefix": "/",
+		"body": [
+			"/**************************************************",
+			" * @author:               josuerom                *",
+			" * @created:           $1/12/22 $2             *",
+			"**************************************************/"
+		]
+	},
+
+	"#pragma GCC optimize(\"03,unroll-loops\")": {
+		"prefix": "gcc",
+		"body": [
+			"#pragma GCC optimize(\"03,unroll-loops\")\n"
+		]
+	},
+
+	"program time()": {
+		"prefix": "time",
+		"body": [
+			"cout << \"max time \" << (float)clock()/(CLOCKS_PER_SEC/10) << \" ms\\n\";$1"
+		]
+	},
+
 	"Plantilla c++ para competencias": {
 		"prefix": "cpp_template_to_compete",
 		"body": [
-			"/**",
-			" * @problem ${1:problemName} - CodeForces",
-			" * @author josuerom",
-			"*/",
-			"//#pragma GCC optimize(\"03,unroll-loops\")",
-			"#include <bits/stdc++.h>\n",
-			"#define fastIO() ios::sync_with_stdio(false); cin.tie(nullptr);",
-			"#define all(vec) (vec).begin(), (vec).end()",
-			"#define rall(vec) (vec).rbegin(), (vec).rend()",
+			"/****************************************************",
+			" * @author:                josuerom                 *",
+			" * @created:            $1/11/22 $2              *",
+			"****************************************************/",
+			"//$3#pragma GCC optimize(\"03,unroll-loops\")",
+			"#include <bits/stdc++.h>",
+			"",
+			"#define readArray(vec) void template<typename T> void read(vector<T>&(vec)){int n=(vec).size();for(auto&e:vec) cin >> e;}",
+			"#define PROGRAM_TIME cout << \"max time \" << (int)clock()/(CLOCKS_PER_SEC/10) << \" ms\\n\"",
+			"#define SPEED_IO ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);",
+			"#define VEREDICT(condition) cout << ((condition) ? \"YES\\n\" : \"NO\\n\") << endl",
 			"#define decimals(n) cout.setf(ios::fixed, ios::floatfield); cout.precision(n+1);",
-			"#define sort(vec) sort((vec).begin(), (vec).end())",
-			"#define sortreverse(vec) reverse((vec).begin(), (vec).end())",
-			"#define fori(a, b, c) for(int (a) = (b); (a)<(c); (a)++)",
-			"#define fore(e, vec) for (auto &(e): (vec))",
+			"#define binarySearch(vec, key) sort(all(vec)); binary_search(all(vec), (key));",
 			"#define forr(i, vec) for(int i = (int)(vec).size()-1; i >= 0; i--)",
-			"#define size(vec) (int)((vec).size())",
-			"#define module(a, b, mod) ((((a) % (mod)) + ((b) % (mod))) % (mod))",
-			"#define binarysearch(vec, key) sort(all(vec)); binary_search(all(vec), key);",
+			"#define mod(a, b, mod) ((((a) % (mod)) + ((b) % (mod))) % (mod))",
+			"#define TEST_CASE(tc) cin >> (tc); while((tc)--)",
+			"#define fori(i, b, c) for(int (i) = (b); (i) < (c); (i)++)",
+			"#define rall(vec) (vec).rbegin(), (vec).rend()",
+			"#define all(vec) (vec).begin(), (vec).end()",
+			"#define fore(e, vec) for (auto &(e): (vec))",
+			"#define isOrdered(vec) is_sorted(all(vec))",
+			"#define rsort(vec) short(rall(vec))",
+			"#define sz(vec) (int)(vec).size()",
+			"#define sort(vec) sort(all(vec))",
 			"#define mcd(a, b) gcd(a, b)",
-			"#define isordered(vec) is_heap(all(vec))",
-			"#define read_array(vec) void template<typename T> void read(vector<T>& (vec)) { int n=(vec).size(); for(int i = 0; i < n; i++) { cin >> (vec)[i]; } }",
-			"#define length(vec) sizeof(vec)/sizeof(vec[0])",
+			"#define FINISH return 0",
+			"#define endl '\\n'",
 			"",
+			"#define bigint __int128_t",
+			"#define ull unsigned long long int",
+			"#define ll long long",
+			"#define ui unsigned int",
+			"#define us unsigned short",
+			"#define uc unsigned char",
+			"#define ld long double",
 			"using namespace std;",
-			"typedef unsigned long long int ull; //18^19",
-			"typedef long long int ll; //9^18",
-			"typedef unsigned int ui; //4^9",
-			"typedef unsigned short us; //65^3",
 			"",
-			"void solve() {$5",
-			"\t$3",
-			"}",
+			"const ll MAX = 1e9;",
+			"const ui MIN = 1e4;",
+			"const ui MOD = 1000000007;",
+			"const ld PI = 3.1415926535897932384626433832795;",
+			"",
+			"ui t, n, m, c, i, j, ans$4;",
+			"//ll M[MAX][MAX], A[MIN];",
 			"",
 			"int main() {",
-			"\tfastIO();",
-			"\t#ifndef ONLINE_JUDGE",
-			"\t\tfreopen(\"input.txt\", \"r\", stdin);",
-			"\t\tfreopen(\"output.txt\", \"w\", stdout);",
-			"\t#endif",
-			"\t${2:us} t=0;",
-			"\tcin >> t;$4",
-			"\twhile (t--) solve();",
-			"\treturn 0;",
-			"}",
+			"\tSPEED_IO;",
+			"\tTEST_CASE(t) {",
+			"\t\t$5",
+			"\t}",
+			"\t//PROGRAM_TIME;",
+			"\tFINISH;",
+			"}"
 		],
 		"description": "Plantilla de C++ para competencias"
 	}
