@@ -1,6 +1,6 @@
 { // @author josuerom
 	"#ifdef ONLINE_JUDGE": {
-		"prefix": "testing",
+		"prefix": "test",
 		"body": [
 			"#ifndef ONLINE_JUDGE",
       	"\tfreopen(\"input.txt\", \"r\", stdin);",
@@ -9,10 +9,10 @@
 		]
 	},
 
-	"ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);": {
-		"prefix": "speed",
+	"ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);": {
+		"prefix": "io",
 		"body": [
-			"ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);$1"
+			"ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);$1"
 		]
 	},
 
@@ -30,8 +30,8 @@
 		]
 	},
 
-	"char or string getline()": {
-		"prefix": "rd",
+	"read getline()": {
+		"prefix": "rdchar",
 		"body": [
 			"cin.getline($1, ${2:size}, '\\n');"
 		]
@@ -53,7 +53,7 @@
 	},
 
 	"#include <bits/stdc++.h>": {
-		"prefix": "in",
+		"prefix": "i",
 		"body": [
 			"#include <bits/stdc++.h>\n"
 		]
@@ -83,7 +83,7 @@
 	},
 
 	"function main": {
-		"prefix": "ma",
+		"prefix": "fm",
 		"body": [
 			"int main() {",
 			"\t$1",
@@ -93,12 +93,12 @@
 	},
 
 	"@author": {
-		"prefix": "/",
+		"prefix": "author",
 		"body": [
-			"/**************************************************",
-			" * @author:               josuerom                *",
-			" * @created:         ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}            *",
-			"**************************************************/",
+			"/**",
+			" *  author:  josuerom*",
+			" *  created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}*",
+			"**/",
 		]
 	},
 
@@ -112,18 +112,18 @@
 	"program time()": {
 		"prefix": "time",
 		"body": [
-			"cout << \"max time \" << (float)clock()/(CLOCKS_PER_SEC/10) << \" ms\\n\";$1"
+			"cout << \"max time: \" << (float)clock()/(CLOCKS_PER_SEC/100) << \" ms\\n\";$1"
 		]
 	},
 
    "Plantilla CodeForces": {
 		"prefix": "template.cpp",
 		"body": [
-			"/**************************************************",
-			" * @author:               josuerom                *",
-			" * @created:         ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}            *",
-			"**************************************************/",
-			"//$1#pragma GCC optimize(\"03,unroll-loops\")",
+			"/**",
+			" *  author:  josuerom",
+			" *  created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+			"**/",
+			"#pragma GCC optimize(\"03,unroll-loops\")",
 			"#include <bits/stdc++.h>",
 			"",
 			"#define VEREDICT(a) cout << ((a) ? \"YES\" : \"NO\") << endl",
@@ -140,11 +140,11 @@
 			"void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }",
 			"#define dbg(...) cout << \"(\" << #__VA_ARGS__ << \"):\", dbg_out(__VA_ARGS__)",
 			"",
-			"int $2;",
+			"int tt$1;",
 			"",
 			"int main() {",
 			"\tios::sync_with_stdio(false); cin.tie(0);",
-			"\t$3",
+			"\t$2",
 			"\treturn 0;",
 			"}"
 		]
@@ -153,11 +153,11 @@
 	"Plantilla c++ para competencias": {
 		"prefix": "cpp_template_to_compete",
 		"body": [
-			"/**************************************************",
-			" * @author:               josuerom                *",
-			" * @created:         ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}            *",
-			"**************************************************/",
-			"//$1#pragma GCC optimize(\"03,unroll-loops\")",
+			"/**",
+			" *  author:  josuerom",
+			" *  created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+			"**/",
+			"#pragma GCC optimize(\"03,unroll-loops\")",
 			"#include <bits/stdc++.h>",
 			"",
 			"#define readArray(vec) void template<typename T> void read(vector<T>&(vec)){int n=(vec).size();for(auto&e:vec) cin >> e;}",
@@ -188,11 +188,11 @@
 			"#define dbg(...) cout << \"[\" << #__VA_ARGS__ << \"]:\", dbg_out(__VA_ARGS__)",
 			"",
 			"const ll MAX = 1e9;",
-			"int $2;",
+			"int $1;",
 			"",
 			"int main() {",
 			"\tSPEED_IO;",
-			"\t$3",
+			"\t$2",
 			"\treturn 0;",
 			"}"
 		],
