@@ -18,7 +18,7 @@
 	"System.out.prinf()": {
 		"prefix": "sf",
 		"body": [
-			"System.out.printf($1, $2);"
+			"System.out.printf(\"%$1\", $2);"
 		],
 		"description": "Formatted standard output"
 	},
@@ -40,7 +40,7 @@
 	},
 
 	"Main method": {
-		"prefix": "main",
+		"prefix": "fm",
 		"body": [
 			"public static void main(String[] args) {",
 			"\t$1",
@@ -90,8 +90,7 @@
 	"if": {
 		"prefix": "if",
 		"body": [
-			"if (${1:condition}) {",
-			"}"
+			"if (${1:condition}) $2"
 		],
 	},
 
@@ -131,7 +130,7 @@
 	"for iterator": {
 		"prefix": "fori",
 		"body": [
-			"for (int ${1:i} = 0; ${1:i} < $2; ${1:i}++) {\n\t$3",
+			"for (int ${1:i} = 0; ${1:i} < $2; ${1:i}++) {",
 			"}"
 		],
 	},
@@ -210,11 +209,11 @@
 	},
 
 	"JavaDocs": {
-		"prefix": "doc",
+		"prefix": "author",
 		"body": [
 			"/**",
-			"  *   author: josuerom",
-			"  *  created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+			" *  author:  josuerom",
+			" *  created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
 			"**/"
 		],
 		"description": "JavaDocs template"
@@ -228,17 +227,17 @@
 	},
 
 	"Read Int Scanner()": {
-		"prefix": "read",
+		"prefix": "rd",
 		"body": [
 			"sc.nextInt();"
 		],
 	},
 
 	"Plantilla No. 2": {
-		"prefix": "template.java",
+		"prefix": "template1.java",
 		"body": [
 			"/**",
-			" *   author: josuerom",
+			" *  author:  josuerom",
 			" *  created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
 			"**/",
 			"import java.util.*;",
@@ -254,11 +253,11 @@
 	},
 
 	"Plantilla No. 1": {
-		"prefix": "java_template_to_compete",
+		"prefix": "template2.java",
 		"body": [
 			"/**",
-			" *   author: josuerom",
-			" *  created: ${CURRENT_DATE}/${CURRENT_MONTH_NAME_SHORT}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+			" *  author:  josuerom",
+			" *  created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
 			"**/",
 			"import java.io.BufferedReader;",
 			"import java.io.IOException;",

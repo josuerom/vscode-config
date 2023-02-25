@@ -1,18 +1,18 @@
 { // @author josuerom
 	"#ifdef ONLINE_JUDGE": {
-		"prefix": "test",
+		"prefix": "ifndef",
 		"body": [
-			"#ifndef ONLINE_JUDGE",
-      	"\tfreopen(\"input.txt\", \"r\", stdin);",
-      	"\tfreopen(\"output.txt\", \"w\", stdout);",
-   		"#endif"
+		"#ifndef ONLINE_JUDGE",
+      		"\tfreopen(\"input.txt\", \"r\", stdin);",
+      		"\tfreopen(\"output.txt\", \"w\", stdout);",
+   		"#endif$1"
 		]
 	},
 
 	"ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);": {
 		"prefix": "io",
 		"body": [
-			"ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);$1"
+			"ios::sync_with_stdio(false); cin.tie(0);$1"
 		]
 	},
 
@@ -30,10 +30,17 @@
 		]
 	},
 
-	"read getline()": {
+	"read char[]": {
 		"prefix": "rdchar",
 		"body": [
 			"cin.getline($1, ${2:size}, '\\n');"
+		]
+	},
+
+	"read string": {
+		"prefix": "rds",
+		"body": [
+			"getline(cin, ${1:string});"
 		]
 	},
 
@@ -52,17 +59,28 @@
 		]
 	},
 
+	"while tests case": {
+		"prefix": "tc",
+		"body": [
+			"int tt;",
+			"cin >> tt;",
+			"while (tt-- > 0) {",
+			"\t$1",
+			"}",
+		]
+	},
+
 	"#include <bits/stdc++.h>": {
 		"prefix": "i",
 		"body": [
-			"#include <bits/stdc++.h>\n"
+			"#include <bits/stdc++.h>$1"
 		]
 	},
 
 	"typedef": {
 		"prefix": "typ",
 		"body": [
-			"typedef ${1:long long ll};"
+			"typedef ${1:long long ll};$1"
 		]
 	},
 
@@ -97,7 +115,7 @@
 		"body": [
 			"/**",
 			" *  author:  josuerom*",
-			" *  created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}*",
+			" *  created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
 			"**/",
 		]
 	},
@@ -117,7 +135,7 @@
 	},
 
    "Plantilla CodeForces": {
-		"prefix": "template.cpp",
+		"prefix": "template1.cpp",
 		"body": [
 			"/**",
 			" *  author:  josuerom",
@@ -125,33 +143,28 @@
 			"**/",
 			"#pragma GCC optimize(\"03,unroll-loops\")",
 			"#include <bits/stdc++.h>",
+			"using namespace std;",
 			"",
-			"#define VEREDICT(a) cout << ((a) ? \"YES\" : \"NO\") << endl",
-			"#define TESTCASE(tt) cin >> (tt); while ((tt)--)",
+			"void dbg_out() { cout << endl; }",
+			"template<typename Head, typename... Tail>",
+			"void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }",
+			"#define dbg(...) cout << \"(\" << #__VA_ARGS__ << \"):\", dbg_out(__VA_ARGS__)",
 			"#define all(vec) vec.begin(), vec.end()",
 			"#define rall(vec) vec.rbegin(), vec.rend()",
 			"#define sz(vec) (int) vec.size()",
 			"#define ll long long",
 			"#define endl '\\n'",
 			"",
-			"using namespace std;",
-			"void dbg_out() { cout << endl; }",
-			"template<typename Head, typename... Tail>",
-			"void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }",
-			"#define dbg(...) cout << \"(\" << #__VA_ARGS__ << \"):\", dbg_out(__VA_ARGS__)",
-			"",
-			"int tt$1;",
-			"",
 			"int main() {",
 			"\tios::sync_with_stdio(false); cin.tie(0);",
-			"\t$2",
+			"\t$1",
 			"\treturn 0;",
 			"}"
 		]
 	},
 
 	"Plantilla c++ para competencias": {
-		"prefix": "cpp_template_to_compete",
+		"prefix": "template2.cpp",
 		"body": [
 			"/**",
 			" *  author:  josuerom",
