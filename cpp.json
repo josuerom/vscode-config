@@ -59,6 +59,14 @@
 			"for (auto &e : ${1:vector}) cin >> e;",
 		]
 	},
+	
+	"while ()": {
+		"prefix": "wh",
+		"body": [
+			"while ($1) {",
+			"}"
+		]
+	},
 
 	"while tests case": {
 		"prefix": "tc",
