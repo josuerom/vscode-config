@@ -12,9 +12,9 @@
          "descripcion":  "Entrega de sugerencias rápidas para múltiples lenguajes y contiene inteligencia artificial"
       },
       {
-         "extesionName": "Default Theme",
-         "author": "DEMO",
-         "descripcion":  "Brinda un tema ligero y sencillo, a mi me gusta mucho el resaltado de la sintaxis"
+         "extesionName": "Super Default Dark Theme",
+         "author": "shpiglify",
+         "descripcion":  "Brinda un tema ligero y sencillo, el color de sintaxis me gusta mucho"
       },
       {
          "extesionName": "Settings Sync",
@@ -52,9 +52,9 @@
          "descripcion":  "Permite trabajar bajo con un cronometroen marcha, temporizador o tiempo libre, es de mucha utilidad en mi opinión"
       },
       {
-         "extesionName": "Vibrancy Continued",
-         "author": "illixion",
-         "descripcion":  "Fondo con transparente para todo el editor de código"
+         "extesionName": "vscode-pdf",
+         "author": "tomoki1207",
+         "descripcion":  "Visualizados de documentos PDF dentro del editor"
       },
       {
          "extesionName": "Seudev's VSCode Java snippets",
