@@ -1,7 +1,7 @@
 { //@author: josuerom
   "terminal.integrated.gpuAcceleration": "off",
   "security.workspace.trust.untrustedFiles": "open",
-  "editor.fontFamily": "'Cascadia Code', 'Menlo', 'Monaco', 'Courier New', monospace",
+  "editor.fontFamily": "'Cascadia Code', 'JetBrains Mono', 'UbuntuMono NF', 'Courier New', monospace",
   "editor.fontSize": 14.8,
   "editor.fontWeight": "375",
   "extensions.ignoreRecommendations": true,
@@ -68,9 +68,9 @@
     "kotlin": "kotlin -u"
   },
   //"workbench.activityBar.visible": false,
-  //"window.commandCenter": true,
-  //"editor.inlineSuggest.enabled": true,
-  //"editor.unicodeHighlight.invisibleCharacters": false,
+  "window.commandCenter": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.unicodeHighlight.invisibleCharacters": false,
   "debug.onTaskErrors": "debugAnyway",
   "terminal.integrated.tabs.focusMode": "singleClick",
   "terminal.integrated.enableMultiLinePasteWarning": false,
