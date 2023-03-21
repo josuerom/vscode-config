@@ -10,14 +10,15 @@
 	},
 
 	"ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);": {
-		"prefix": "io",
+		"prefix": "ioc",
 		"body": [
-			"ios::sync_with_stdio(false); cin.tie(0);$1"
+			"ios::sync_with_stdio(false);",
+			"cin.tie(0); cout.tie(0);$1"
 		]
 	},
 
 	"using namespace std;": {
-		"prefix": "u",
+		"prefix": "uu",
 		"body": [
 			"using namespace std;$1"
 		]
@@ -33,7 +34,7 @@
 	"read char[]": {
 		"prefix": "rdchar",
 		"body": [
-			"cin.getline($1, ${2:size}, '\\n');"
+			"cin.getline($1, ${2:n}, '\\n');"
 		]
 	},
 
@@ -64,14 +65,14 @@
 		"body": [
 			"int tt;",
 			"cin >> tt;",
-			"while (tt-- > 0) {",
+			"while (tt--) {",
 			"\t$1",
 			"}",
 		]
 	},
 
 	"#include <bits/stdc++.h>": {
-		"prefix": "i",
+		"prefix": "ii",
 		"body": [
 			"#include <bits/stdc++.h>$1"
 		]
@@ -151,12 +152,13 @@
 			"#define dbg(...) cout << \"(\" << #__VA_ARGS__ << \"):\", dbg_out(__VA_ARGS__)",
 			"#define all(vec) vec.begin(), vec.end()",
 			"#define rall(vec) vec.rbegin(), vec.rend()",
-			"#define sz(vec) (int) vec.size()",
+			"#define sz(vec) (int) (vec).size()",
 			"#define ll long long",
 			"#define endl '\\n'",
 			"",
 			"int main() {",
-			"\tios::sync_with_stdio(false); cin.tie(0);",
+			"\tios::sync_with_stdio(false);",
+			"\tcin.tie(0); cout.tie(0);",
 			"\t$1",
 			"\treturn 0;",
 			"}"
