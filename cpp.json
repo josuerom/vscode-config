@@ -2,18 +2,18 @@
 	"#ifdef ONLINE_JUDGE": {
 		"prefix": "ifndef",
 		"body": [
-		"#ifndef ONLINE_JUDGE",
-      		"\tfreopen(\"input.txt\", \"r\", stdin);",
-      		"\tfreopen(\"output.txt\", \"w\", stdout);",
+			"#ifndef ONLINE_JUDGE",
+      		"\tfreopen(\"sample/inp.in\", \"r\", stdin);",
+      		"\tfreopen(\"sample/out.ans\", \"w\", stdout);",
    		"#endif$1"
 		]
 	},
 
-	"ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);": {
+	"ios::sync_with_stdio(false); cin.tie(0);": {
 		"prefix": "ioc",
 		"body": [
 			"ios::sync_with_stdio(false);",
-			"cin.tie(0); cout.tie(0);$1"
+			"cin.tie(0);$1"
 		]
 	},
 
@@ -27,19 +27,19 @@
 	"return": {
 		"prefix": "re",
 		"body": [
-			"return$1;"
+			"return $1;"
 		]
 	},
 
 	"read char[]": {
 		"prefix": "rdchar",
 		"body": [
-			"cin.getline($1, ${2:n}, '\\n');"
+			"cin.getline($1, ${2:size}, '\\n');"
 		]
 	},
 
 	"read string": {
-		"prefix": "rds",
+		"prefix": "rdstr",
 		"body": [
 			"getline(cin, ${1:string});"
 		]
@@ -59,21 +59,13 @@
 			"for (auto &e : ${1:vector}) cin >> e;",
 		]
 	},
-	
-	"while ()": {
-		"prefix": "wh",
-		"body": [
-			"while ($1) {",
-			"}"
-		]
-	},
 
 	"while tests case": {
-		"prefix": "tc",
+		"prefix": "tt",
 		"body": [
 			"int tt;",
 			"cin >> tt;",
-			"while (tt--) {",
+			"while (tt-- > 0) {",
 			"\t$1",
 			"}",
 		]
@@ -100,6 +92,20 @@
 		]
 	},
 
+	"cin": {
+		"prefix": "ci",
+		"body": [
+			"cin >> $1"
+		]
+	},
+
+	"cout": {
+		"prefix": "co",
+		"body": [
+			"cout << $1 << '\\n';"
+		]
+	},
+
 	"void solve() { body }": {
 		"prefix": "solve",
 		"body": [
@@ -123,16 +129,17 @@
 		"prefix": "author",
 		"body": [
 			"/**",
-			" *  author:  josuerom*",
+			" *  author:  josuerom",
 			" *  created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
 			"**/",
 		]
 	},
 
-	"#pragma GCC optimize(\"03,unroll-loops\")": {
+	"#pragma GCC": {
 		"prefix": "gcc",
 		"body": [
-			"#pragma GCC optimize(\"03,unroll-loops\")$1"
+			"#pragma GCC optimize(\"03,unroll-loops\")$1",
+			"#pragma GCC target(\"avx2,bmi,bmi2,lzcnt,popcnt\")$1",
 		]
 	},
 
@@ -143,7 +150,7 @@
 		]
 	},
 
-   "Plantilla CodeForces": {
+	"Template 1 CP": {
 		"prefix": "template1.cpp",
 		"body": [
 			"/**",
@@ -151,18 +158,46 @@
 			" *  created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
 			"**/",
 			"#pragma GCC optimize(\"03,unroll-loops\")",
+			"#pragma GCC target(\"avx2,bmi,bmi2,lzcnt,popcnt\")",
+			"",
 			"#include <bits/stdc++.h>",
 			"using namespace std;",
 			"",
-			"void dbg_out() { cout << endl; }",
+			"#ifdef LOCAL",
+			"#include \"data/debug.h\"",
+			"#else",
+			"#define debug(...) 42",
+			"#endif",
+			"",
+			"int main() {",
+			"\tios::sync_with_stdio(false);",
+			"\tcin.tie(0);",
+			"#ifndef ONLINE_JUDGE",
+			"\tfreopen(\"sample/inp.in\", \"r\", stdin);",
+			"\t//freopen(\"sample/out.ans\", \"w\", stdout);",
+			"#endif",
+			"\t$1",
+			"\treturn 0;",
+			"}",
+		]
+	},
+
+   "Template 2 CP": {
+		"prefix": "template2.cpp",
+		"body": [
+			"/**",
+			" *  author:  josuerom",
+			" *  created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+			"**/",
+			"#include <bits/stdc++.h>",
+			"",
+			"void dbg_out() { cout << '\\n'; }",
 			"template<typename Head, typename... Tail>",
 			"void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }",
-			"#define dbg(...) cout << \"(\" << #__VA_ARGS__ << \"):\", dbg_out(__VA_ARGS__)",
-			"#define all(vec) vec.begin(), vec.end()",
-			"#define rall(vec) vec.rbegin(), vec.rend()",
-			"#define sz(vec) (int) (vec).size()",
+			"#define debug(...) cout << \"(\" << #__VA_ARGS__ << \"):\", dbg_out(__VA_ARGS__)",
+			"#define sz(a) (int) (a).size()",
+			"#define ull unsigned long long",
 			"#define ll long long",
-			"#define endl '\\n'",
 			"",
 			"int main() {",
 			"\tios::sync_with_stdio(false);",
@@ -173,20 +208,21 @@
 		]
 	},
 
-	"Plantilla c++ para competencias": {
-		"prefix": "template2.cpp",
+	"Template 3 CP": {
+		"prefix": "template3.cpp",
 		"body": [
 			"/**",
 			" *  author:  josuerom",
 			" *  created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
 			"**/",
 			"#pragma GCC optimize(\"03,unroll-loops\")",
+			"#pragma GCC target(\"avx2,bmi,bmi2,lzcnt,popcnt\")",
 			"#include <bits/stdc++.h>",
 			"",
 			"#define readArray(vec) void template<typename T> void read(vector<T>&(vec)){int n=(vec).size();for(auto&e:vec) cin >> e;}",
 			"#define SPEED_IO ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr); cerr.tie(nullptr);",
 			"#define PROGRAM_TIME cout << \"max time \" << (int)clock()/(CLOCKS_PER_SEC/10) << \" ms\\n\"",
-			"#define VEREDICT(condition) cout << ((condition) ? \"YES\\n\" : \"NO\\n\") << endl",
+			"#define VEREDICT(condition) cout << ((condition) ? \"YES\\n\" : \"NO\\n\") << '\\n'",
 			"#define decimals(n) cout.setf(ios::fixed, ios::floatfield); cout.precision(n+1);",
 			"#define binarySearch(vec, key) sort(all(vec)); binary_search(all(vec), (key));",
 			"#define forr(i, vec) for(int i = (int)(vec).size()-1; i >= 0; i--)",
@@ -205,16 +241,20 @@
 			"#define endl '\\n'",
 			"using namespace std;",
 			"",
-			"void dbg_out() { cout << endl; }",
+			"void dbg_out() { cout << '\\n'; }",
 			"template<typename Head, typename... Tail>",
 			"void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }",
-			"#define dbg(...) cout << \"[\" << #__VA_ARGS__ << \"]:\", dbg_out(__VA_ARGS__)",
+			"#define debug(...) cout << \"(\" << #__VA_ARGS__ << \"):\", dbg_out(__VA_ARGS__)",
 			"",
-			"const ll MAX = 1e9;",
+			"const int MAX = 1e9;",
 			"int $1;",
 			"",
 			"int main() {",
 			"\tSPEED_IO;",
+			"#ifndef ONLINE_JUDGE",
+      		"\tfreopen(\"sample/inp.in\", \"r\", stdin);",
+      		"\t//freopen(\"sample/out.ans\", \"w\", stdout);",
+   		"#endif$1",
 			"\t$2",
 			"\treturn 0;",
 			"}"
