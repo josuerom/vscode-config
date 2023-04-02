@@ -62,7 +62,7 @@
     "cpp": "cls && cd $dir && g++ -std=c++20 -O2 -Wall $fileName -o $fileNameWithoutExt && .\\$fileNameWithoutExt",
     "c": "cls && cd $dir && gcc $fileName -o $fileNameWithoutExt && .\\$fileNameWithoutExt",
     "java": "cls && cd $dir && java $fileName",
-    "python": "cls && python3 -u",
+    "python": "cls && cd $dir && python3 $fileName",
     "javascript": "node $dir/$fileName",
     "typescript": "node $dir/$fileName",
     "kotlin": "kotlin -u"
@@ -95,4 +95,6 @@
       "path": "D:\\Program Files\\Java\\jdk-16.0.2\\bin",
     },
   ],
+  "git.enableSmartCommit": true,
+  "git.autofetch": true,
 }
