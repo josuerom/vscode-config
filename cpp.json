@@ -4,7 +4,7 @@
 		"body": [
 			"#ifndef ONLINE_JUDGE",
       		"\tfreopen(\"sample/inp.in\", \"r\", stdin);",
-      		"\tfreopen(\"sample/out.ans\", \"w\", stdout);",
+      		"\t//freopen(\"sample/out.ans\", \"w\", stdout);",
    		"#endif$1"
 		]
 	},
@@ -39,7 +39,7 @@
 	},
 
 	"read string": {
-		"prefix": "rdstr",
+		"prefix": "rds",
 		"body": [
 			"getline(cin, ${1:string});"
 		]
@@ -65,7 +65,7 @@
 		"body": [
 			"int tt;",
 			"cin >> tt;",
-			"while (tt-- > 0) {",
+			"while (tt--) {",
 			"\t$1",
 			"}",
 		]
@@ -138,7 +138,7 @@
 	"#pragma GCC": {
 		"prefix": "gcc",
 		"body": [
-			"#pragma GCC optimize(\"03,unroll-loops\")$1",
+			"#pragma GCC optimize(\"03,unroll-loops\")",
 			"#pragma GCC target(\"avx2,bmi,bmi2,lzcnt,popcnt\")$1",
 		]
 	},
@@ -201,7 +201,7 @@
 			"",
 			"int main() {",
 			"\tios::sync_with_stdio(false);",
-			"\tcin.tie(0); cout.tie(0);",
+			"\tcin.tie(nullptr); cout.tie(nullptr);",
 			"\t$1",
 			"\treturn 0;",
 			"}"
