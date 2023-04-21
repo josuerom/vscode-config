@@ -1,11 +1,11 @@
 { // @author josuerom
 	"#ifdef ONLINE_JUDGE": {
-		"prefix": "ifndef",
+		"prefix": "online_judge",
 		"body": [
 			"#ifndef ONLINE_JUDGE",
-      		"\tfreopen(\"sample/inp.in\", \"r\", stdin);",
-      		"\t//freopen(\"sample/out.ans\", \"w\", stdout);",
-   		"#endif$1"
+      		"\tfreopen(\"sample/input.in\", \"r\", stdin);",
+      		"\t//$1freopen(\"sample/output.ans\", \"w\", stdout);",
+   		"#endif"
 		]
 	},
 
@@ -93,14 +93,14 @@
 	},
 
 	"cin": {
-		"prefix": "ci",
+		"prefix": "cii",
 		"body": [
-			"cin >> $1"
+			"cin >> $1;"
 		]
 	},
 
 	"cout": {
-		"prefix": "co",
+		"prefix": "coo",
 		"body": [
 			"cout << $1 << '\\n';"
 		]
@@ -150,6 +150,13 @@
 		]
 	},
 
+	"data/debug.h": {
+		"prefix": "data/debug.h",
+		"body": [
+			"#include \"data\\debug.h\""
+		]
+	},
+
 	"Template 1 CP": {
 		"prefix": "template1.cpp",
 		"body": [
@@ -164,18 +171,12 @@
 			"using namespace std;",
 			"",
 			"#ifdef LOCAL",
-			"#include \"data/debug.h\"",
-			"#else",
-			"#define debug(...) 42",
+			"\t#include \"data/debug.h",
 			"#endif",
 			"",
 			"int main() {",
 			"\tios::sync_with_stdio(false);",
 			"\tcin.tie(0);",
-			"#ifndef ONLINE_JUDGE",
-			"\tfreopen(\"sample/inp.in\", \"r\", stdin);",
-			"\t//freopen(\"sample/out.ans\", \"w\", stdout);",
-			"#endif",
 			"\t$1",
 			"\treturn 0;",
 			"}",
@@ -189,15 +190,20 @@
 			" *  author:  josuerom",
 			" *  created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
 			"**/",
+			"#pragma GCC optimize(\"03,unroll-loops\")",
+			"#pragma GCC target(\"avx2,bmi,bmi2,lzcnt,popcnt\")",
+			"",
 			"#include <bits/stdc++.h>",
 			"",
 			"void dbg_out() { cout << '\\n'; }",
 			"template<typename Head, typename... Tail>",
 			"void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }",
 			"#define debug(...) cout << \"(\" << #__VA_ARGS__ << \"):\", dbg_out(__VA_ARGS__)",
-			"#define sz(a) (int) (a).size()",
+			"#define all(a) (a).begin(), (a).end()",
+			"#define sz(a) int((a).size())",
 			"#define ull unsigned long long",
 			"#define ll long long",
+			"using namespace std;",
 			"",
 			"int main() {",
 			"\tios::sync_with_stdio(false);",
@@ -243,22 +249,23 @@
 			"#define ll long long",
 			"#define endl '\\n'",
 			"",
+			"clock_t startTime;",
+			"double getCurrentTime() {",
+			"\treturn (double) (clock() - startTime)/CLOCKS_PER_SEC;",
+			"}",
+			"",
 			"#ifdef LOCAL",
-			"#include \"data/debug.h",
-			"#else",
-			"#define debug(...) 42",
+			"\t#include \"data/debug.h",
 			"#endif",
 			"",
-			"const int MAX = 1e9;",
-			"int $1;",
+			"const int MAX = 1e6;",
 			"",
 			"int main() {",
+			"\tstartTime = clock();",
+      	"\t//freopen(\"sample/input.in\", \"r\", stdin);",
 			"\tSPEED_IO;",
-			"#ifndef ONLINE_JUDGE",
-      		"\tfreopen(\"sample/inp.in\", \"r\", stdin);",
-      		"\t//freopen(\"sample/out.ans\", \"w\", stdout);",
-   		"#endif$1",
-			"\t$2",
+			"\t$1",
+			"\t//printf(\"time = %.5lf\n\", getCurrentTime());",
 			"\tEND;",
 			"}"
 		],
