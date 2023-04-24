@@ -1,0 +1,135 @@
+y{
+	"input()": {
+		"prefix": "in",
+		"body": [
+			"input($1)"
+		],
+	},
+	"print()": {
+		"prefix": "pr",
+		"body": [
+			"print($1)"
+		],
+	},
+	"if": {
+		"prefix": "if",
+		"body": [
+			"if $1:",
+			"\t$2"
+		],
+	},
+	"ifel": {
+		"prefix": "ifel",
+		"body": [
+			"if $1:",
+			"\t",
+			"else $2:",
+			"\t"
+		],
+	},
+	"fori": {
+		"prefix": "for",
+		"body": [
+			"for $1 in $2:",
+			"\t"
+		],
+	},
+	"while": {
+		"prefix": "wh",
+		"body": [
+			"while $1:",
+			"\t$2"
+		],
+	},
+	"test cases": {
+		"prefix": "tc",
+		"body": [
+			"tc = int(input())$1"
+		],
+	},
+	"read line str": {
+		"prefix": "rds",
+		"body": [
+			"line = input(\"\")",
+			"a, b = line.split(' ')"
+		],
+	},
+	"read line int": {
+		"prefix": "rdi",
+		"body": [
+			"a, b$1 = map(${2:int},input().split())"
+		],
+	},
+	"read line list int": {
+		"prefix": "rdli",
+		"body": [
+			"L = list(map(int,input().split()))"
+		],
+	},
+	"complexity": {
+		"prefix": "com",
+		"body": [
+			"#     @author: josuerom",
+			"# @complexity: O($1)",
+		],
+	},
+	"@PythonDocs": {
+		"prefix": "author",
+		"body": [
+			"\"\"\"",
+			"\t author: josuerom",
+			"\tcreated: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+			"\"\"\"",
+		],
+	},
+	"template 1 codeforces.com": {
+		"prefix": "template1",
+		"body": [
+			"\"\"\"",
+			"    @author: josuerom",
+			"   @created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+			"\"\"\"",
+			"from math import *",
+			"import sys",
+			"cin = lambda: sys.stdin.readline().strip()",
+			"cout = sys.stdout.write\n",
+			"def solve():",
+			"\t$1 = map(int, cin().split(' '))",
+			"\t$2",
+			"",
+			"for i in range(int(cin())):",
+			"\tsolve()",
+			""
+		],
+	},
+	"template 2 vjudge.net": {
+		"prefix": "template2",
+		"body": [
+			"\"\"\"",
+			"     author: josuerom",
+			"    created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+			" complexity: O()",
+			"\"\"\"",
+			"tc = int(input())",
+			"",
+			"while tc > 0:",
+			"\t$1",
+			"\ttc -= 1",
+			"",
+		],
+	},
+	"def": {
+		"prefix": "me",
+		"body": [
+			"def $1():",
+			"\t$2",
+		],
+	},
+	"function main": {
+		"prefix": "fm",
+		"body": [
+			"if __name__ == '__main__':",
+			"\t$1"
+		],
+	},
+}
