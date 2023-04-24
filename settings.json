@@ -1,9 +1,9 @@
 { //@author: josuerom
   "terminal.integrated.gpuAcceleration": "off",
   "security.workspace.trust.untrustedFiles": "open",
-  "editor.fontFamily": "'Cascadia Code', 'JetBrains Mono', 'UbuntuMono NF', 'Courier New', monospace",
+  "editor.fontFamily": "'Cascadia Code', 'JetBrains Mono', 'UbuntuMono NF', monospace",
   "editor.fontSize": 14.8,
-  "editor.fontWeight": "375",
+  "editor.fontWeight": "370",
   "extensions.ignoreRecommendations": true,
   "workbench.editor.enablePreview": false,
   "editor.fontLigatures": true,
@@ -38,29 +38,26 @@
         "${env:windir}\\System32\\cmd.exe"
       ],
       "args": [],
-        "icon": "terminal-cmd"
-      },
-      "GitBash": {
-        "path": "D:\\Program Files\\Git\\bin\\bash.exe",
-        "icon": "terminal-bash",
-        "color": "terminal.ansiGreen"
+      "icon": "terminal-cmd"
+    },
+    "GitBash": {
+      "path": "D:\\Program Files\\Git\\bin\\bash.exe",
+      "icon": "terminal-bash",
+      "color": "terminal.ansiGreen"
     }
   },
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
   "terminal.integrated.fontFamily": "'JetBrains Mono'",
   "terminal.integrated.fontSize": 13.8,
-  "editor.stickyScroll.enabled": true,
-  "editor.renderWhitespace": "none",
-  "editor.renderControlCharacters": false,
-  "workbench.sideBar.location": "right",
-  "editor.cursorBlinking": "expand",
-
+  "terminal.integrated.tabs.focusMode": "singleClick",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.cursorBlinking": true,
   "code-runner.runInTerminal": true,
   "code-runner.saveFileBeforeRun": true,
   "code-runner.executorMap": {
-    "cpp": "cls && cd $dir && g++ -std=c++20 -O2 -Wall -DLOCAL $fileName -o $fileNameWithoutExt && .\\$fileNameWithoutExt",
-    "c": "cls && cd $dir && gcc -std=c20 -O2 -Wall -DLOCAL $fileName -o $fileNameWithoutExt && .\\$fileNameWithoutExt",
-    "java": "cls && cd $dir && java Xmx<256M>  $fileName",
+    "cpp": "cls && cd $dir && g++ -std=c++20 -O2 -Wall -Djosuerom $fileName -o $fileNameWithoutExt && .\\$fileNameWithoutExt",
+    "c": "cls && cd $dir && gcc -std=c20 -O2 -Wall -Djosuerom $fileName -o $fileNameWithoutExt && .\\$fileNameWithoutExt",
+    "java": "cls && cd $dir && java $fileName",
     "python": "cls && cd $dir && python3 $fileName",
     "javascript": "node $dir/$fileName",
     "typescript": "node $dir/$fileName",
@@ -70,27 +67,36 @@
   "cph.general.menuChoices": "cpp java c python",
   "cph.language.java.SubmissionCompiler": "Java 1.8.0_241",
   "cph.language.cpp.SubmissionCompiler": "GNU G++20 11.2.0 (64 bit, winlibs)",
-  "cph.language.java.Command": "java",
   "cph.language.python.SubmissionCompiler": "Python 3.7.2",
   "cph.general.autoShowJudge": false,
   "cph.general.firstTime": false,
-
+  //"workbench.statusBar.visible": false,
   //"workbench.activityBar.visible": false,
   "window.commandCenter": true,
+  "workbench.sideBar.location": "right",
+  "workbench.editor.showTabs": false,
+  "editor.scrollbar.vertical": "hidden",
+  "editor.overviewRulerBorder": false,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.stickyScroll.enabled": true,
+  "editor.renderWhitespace": "none",
+  "editor.renderControlCharacters": false,
+  "editor.cursorBlinking": "expand",
   "editor.inlineSuggest.enabled": true,
   "editor.unicodeHighlight.invisibleCharacters": false,
-  "debug.onTaskErrors": "debugAnyway",
-  "terminal.integrated.tabs.focusMode": "singleClick",
-  "terminal.integrated.enableMultiLinePasteWarning": false,
-  "terminal.integrated.cursorBlinking": true,
+  "editor.cursorSmoothCaretAnimation": "on",
   "editor.linkedEditing": true,
   "editor.guides.bracketPairs": true,
+  "editor.matchBrackets": false,
+  "editor.formatOnSave": true,
+  "editor.glyphMargin": false,
+  "breadcrumbs.enable": false,
+  "debug.onTaskErrors": "debugAnyway",
   "breadcrumbs.enabled": false,
-  "editor.cursorSmoothCaretAnimation": "on",
   "java.configuration.runtimes": [
     {
       "name": "JavaSE-19",
-      "path": "D:\\Program Files\\Compilers\\jdk-19.0.2",
+      "path": "D:\\Program Files\\Compilers\\Java-19.0.2",
       "default": true
     }
   ],
@@ -99,4 +105,5 @@
   "git.confirmSync": false,
   "workbench.iconTheme": "material-icon-theme",
   "redhat.telemetry.enabled": false,
+  "git.openRepositoryInParentFolders": "never",
 }
