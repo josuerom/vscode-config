@@ -1,0 +1,102 @@
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontFamily": "'Cascadia Code', 'JetBrains Mono', 'UbuntuMono NF', monospace",
+  "terminal.integrated.gpuAcceleration": "off",
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.fontSize": 16,
+  "editor.fontWeight": "370",
+  "extensions.ignoreRecommendations": true,
+  "workbench.editor.enablePreview": false,
+  "editor.fontLigatures": true,
+  "workbench.startupEditor": "none",
+  "editor.tabCompletion": "on",
+  "editor.tabSize": 3,
+  "editor.padding.bottom": 0,
+  "files.autoSave": "onFocusChange",
+  "editor.wordWrap": "on",
+  "diffEditor.wordWrap": "on",
+  "editor.minimap.enabled": false,
+  "workbench.layoutControl.enabled": false,
+  "window.menuBarVisibility": "compact",
+  "editor.suggestSelection": "first",
+  "terminal.integrated.cursorStyle": "line",
+  "debug.terminal.clearBeforeReusing": true,
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "explorer.confirmDelete": false,
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "GitBash": {
+      "path": "D:\\Program Files\\Git\\bin\\bash.exe",
+      "icon": "terminal-bash",
+      "color": "terminal.ansiGreen"
+    }
+  },
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.fontFamily": "'JetBrains Mono'",
+  "terminal.integrated.fontSize": 15.5,
+  "terminal.integrated.tabs.focusMode": "singleClick",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.cursorBlinking": true,
+  "code-runner.runInTerminal": true,
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.executorMap": {
+    "cpp": "clear && cd $dir && g++ -std=c++20 -O2 -Wall -Djosuerom $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt",
+    "c": "clear && cd $dir && gcc -std=c20 -O2 -Wall -Djosuerom $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt",
+    "java": "clear && cd $dir && java $fileName",
+    "python": "clear && cd $dir && python3 $fileName",
+    "javascript": "node $dir/$fileName",
+    "typescript": "node $dir/$fileName",
+    "kotlin": "clear && cd $dir && kotlin -u $fileName"
+  },
+  "code-runner.temporaryFileName": "fileTempError",
+  //"workbench.statusBar.visible": false,
+  //"workbench.activityBar.visible": false,
+  "window.commandCenter": true,
+  "workbench.sideBar.location": "right",
+  "workbench.editor.showTabs": false,
+  "editor.scrollbar.vertical": "hidden",
+  "editor.overviewRulerBorder": false,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.stickyScroll.enabled": true,
+  "editor.renderWhitespace": "none",
+  "editor.renderControlCharacters": false,
+  "editor.cursorBlinking": "expand",
+  "editor.inlineSuggest.enabled": true,
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.linkedEditing": true,
+  "editor.guides.bracketPairs": true,
+  "editor.matchBrackets": "never",
+  "editor.glyphMargin": false,
+  "breadcrumbs.enable": false,
+  "debug.onTaskErrors": "debugAnyway",
+  "breadcrumbs.enabled": false,
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-19",
+      "path": "/usr/lib/jvm/java-19-openjdk-amd64/",
+      "default": true
+    }
+  ],
+  "git.enableSmartCommit": true,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "redhat.telemetry.enabled": false,
+  "git.openRepositoryInParentFolders": "never",
+}
