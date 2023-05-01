@@ -1,5 +1,5 @@
 { //@author: josuerom
-  "workbench.colorTheme": "Palenight (Mild Contrast)",
+  //"workbench.colorTheme": "Palenight (Mild Contrast)",
   "workbench.iconTheme": "material-icon-theme",
   "editor.fontFamily": "'Cascadia Code', 'JetBrains Mono', 'UbuntuMono NF', monospace",
   "terminal.integrated.gpuAcceleration": "off",
@@ -57,13 +57,13 @@
   "code-runner.runInTerminal": true,
   "code-runner.saveFileBeforeRun": true,
   "code-runner.executorMap": {
-    "cpp": "clear && cd $dir && g++ -std=c++20 -O2 -Wall -Djosuerom $fileName -o $fileNameWithoutExt && .\\$fileNameWithoutExt",
-    "c": "clear && cd $dir && gcc -std=c20 -O2 -Wall -Djosuerom $fileName -o $fileNameWithoutExt && .\\$fileNameWithoutExt",
-    "java": "clear && cd $dir && java $fileName",
-    "python": "clear && cd $dir && python3 $fileName",
+    "cpp": "cls && cd $dir && g++ $fileName -o $fileNameWithoutExt.exe -std=c++20 -O2 -Wall -Wl,--stack=268435456 -Wextra -pedantic -Wshadow -Weffc++ -Wformat=2 -Wfloat-equal -Wconversion -Djosuerom -fdiagnostics-color=always && $fileNameWithoutExt.exe",
+    "c": "cls && cd $dir && gcc -std=c20 -O2 -Wall -Djosuerom $fileName -o $fileNameWithoutExt.exe && $fileNameWithoutExt.exe",
+    "java": "cls && cd $dir && java $fileName",
+    "python": "cls && cd $dir && python3 $fileName",
     "javascript": "node $dir/$fileName",
     "typescript": "node $dir/$fileName",
-    "kotlin": "clear && cd $dir && kotlin -u $fileName"
+    "kotlin": "cls && cd $dir && kotlin -u $fileName"
   },
   "code-runner.temporaryFileName": "fileTempError",
   //"workbench.statusBar.visible": false,
@@ -90,8 +90,8 @@
   "breadcrumbs.enabled": false,
   "java.configuration.runtimes": [
     {
-      "name": "JavaSE-19",
-      "path": "D:\\Program Files\\Compilers\\Java-19.0.2",
+      "name": "OpenJDK-19",
+      "path": "D:\\Program Files\\Compilers\\Java-19.0.2\\bin",
       "default": true
     }
   ],
