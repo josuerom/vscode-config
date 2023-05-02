@@ -1,5 +1,4 @@
-// Comparto las únicas 12 extensiones que manejo dentro de Visual Studio Code
-{
+{ // Comparto las únicas 12 extensiones que manejo dentro de Visual Studio Code
    "listOfExtensions": [
       {
          "extesionName": "C/C++",
@@ -7,9 +6,9 @@
          "descripcion":  "Entrega sugerencias y autocompleta código para esos dos lenguajes"
       },
       {
-         "extesionName": "IntelliCode",
-         "author": "Microsoft",
-         "descripcion":  "Entrega de sugerencias rápidas para múltiples lenguajes y contiene inteligencia artificial"
+         "extesionName": "Whiteboard",
+         "author": "",
+         "descripcion":  ""
       },
       {
          "extesionName": "Super Default Dark Theme",
