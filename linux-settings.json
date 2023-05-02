@@ -4,7 +4,7 @@
   "terminal.integrated.gpuAcceleration": "off",
   "security.workspace.trust.untrustedFiles": "open",
   "editor.fontSize": 16,
-  "editor.fontWeight": "370",
+  "editor.fontWeight": "372",
   "extensions.ignoreRecommendations": true,
   "workbench.editor.enablePreview": false,
   "editor.fontLigatures": true,
@@ -56,8 +56,7 @@
   "code-runner.runInTerminal": true,
   "code-runner.saveFileBeforeRun": true,
   "code-runner.executorMap": {
-    "cpp": "clear && cd $dir && g++ $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt -std=c++20 -O2 -Wall -Djosuerom -Wextra -pedantic -Wshadow -Weffc++ -Wformat=2 -Wfloat-equal",
-    "c": "clear && cd $dir && gcc $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt -std=c20 -O2 -Wall -Djosuerom -Wextra -pedantic -Wshadow -Weffc++ -Wformat=2 -Wfloat-equal",
+    "cpp": "clear && cd $dir && g++ $fileName --std=c++20 -o sol -O2 -Wall -Djosuerom -Wextra -pedantic -Wshadow -Weffc++ -Wformat=2 -Wfloat-equal -Wconversion && ./sol",
     "java": "clear && cd $dir && java $fileName",
     "python": "clear && cd $dir && python3 $fileName",
     "javascript": "node $dir/$fileName",
@@ -84,12 +83,11 @@
   "editor.guides.bracketPairs": true,
   "editor.matchBrackets": "never",
   "editor.glyphMargin": false,
-  "breadcrumbs.enable": false,
   "debug.onTaskErrors": "debugAnyway",
   "breadcrumbs.enabled": false,
   "java.configuration.runtimes": [
     {
-      "name": "JavaSE-19",
+      "name": "OpenJDK-19",
       "path": "/usr/lib/jvm/java-19-openjdk-amd64/",
       "default": true
     }
