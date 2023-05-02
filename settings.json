@@ -5,7 +5,7 @@
   "terminal.integrated.gpuAcceleration": "off",
   "security.workspace.trust.untrustedFiles": "open",
   "editor.fontSize": 14.8,
-  "editor.fontWeight": "370",
+  "editor.fontWeight": "373",
   "extensions.ignoreRecommendations": true,
   "workbench.editor.enablePreview": false,
   "editor.fontLigatures": true,
@@ -57,7 +57,7 @@
   "code-runner.runInTerminal": true,
   "code-runner.saveFileBeforeRun": true,
   "code-runner.executorMap": {
-    "cpp": "cls && cd $dir && g++ $fileName -o $fileNameWithoutExt.exe -std=c++20 -O2 -Wall -Wl,--stack=268435456 -Wextra -pedantic -Wshadow -Weffc++ -Wformat=2 -Wfloat-equal -Wconversion -Djosuerom -fdiagnostics-color=always && $fileNameWithoutExt.exe",
+    "cpp": "cls && cd $dir && g++ $fileName --std=c++20 -o sol.exe -O2 -Wall -Wl,--stack=256000000 -Wextra -pedantic -Wshadow -Weffc++ -Wformat=2 -Wfloat-equal -Wconversion -Djosuerom -fdiagnostics-color=always && sol.exe",
     "c": "cls && cd $dir && gcc -std=c20 -O2 -Wall -Djosuerom $fileName -o $fileNameWithoutExt.exe && $fileNameWithoutExt.exe",
     "java": "cls && cd $dir && java $fileName",
     "python": "cls && cd $dir && python3 $fileName",
@@ -85,7 +85,6 @@
   "editor.guides.bracketPairs": true,
   "editor.matchBrackets": false,
   "editor.glyphMargin": false,
-  "breadcrumbs.enable": false,
   "debug.onTaskErrors": "debugAnyway",
   "breadcrumbs.enabled": false,
   "java.configuration.runtimes": [
