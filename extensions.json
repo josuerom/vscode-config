@@ -6,14 +6,14 @@
          "descripcion":  "Entrega sugerencias y autocompleta código para esos dos lenguajes"
       },
       {
-         "extesionName": "Whiteboard",
-         "author": "",
-         "descripcion":  ""
+         "extesionName": "tldraw",
+         "author": "tldraw",
+         "descripcion":  "Pizarra que nos permite dibujar y realizar anotaciones, la extension de los archivos es .tldraw"
       },
       {
-         "extesionName": "Super Default Dark Theme",
-         "author": "shpiglify",
-         "descripcion":  "Brinda un tema ligero y sencillo, el color de sintaxis me gusta mucho"
+         "extesionName": "vscode-pdf",
+         "author": "tomoki1207",
+         "descripcion":  "Nos permite visualizar archivos PDF dentro de VSCode"
       },
       {
          "extesionName": "Settings Sync",
@@ -51,9 +51,9 @@
          "descripcion":  "Permite trabajar bajo con un cronometroen marcha, temporizador o tiempo libre, es de mucha utilidad en mi opinión"
       },
       {
-         "extesionName": "vscode-pdf",
-         "author": "tomoki1207",
-         "descripcion":  "Visualizados de documentos PDF dentro del editor"
+         "extesionName": "Gruvbox Theme",
+         "author": "jdinhlife",
+         "descripcion":  "Tema para el editor"
       },
       {
          "extesionName": "Seudev's VSCode Java snippets",
