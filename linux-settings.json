@@ -30,16 +30,15 @@
   "explorer.confirmDelete": false,
   "terminal.integrated.defaultProfile.linux": "bash",
   "terminal.integrated.fontFamily": "'Cascadia Code'",
-  "terminal.integrated.fontSize": 15.5,
+  "terminal.integrated.fontSize": 16,
   "terminal.integrated.tabs.focusMode": "singleClick",
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.cursorBlinking": true,
   "code-runner.runInTerminal": true,
   "code-runner.saveFileBeforeRun": true,
   "code-runner.executorMap": {
-    "cpp": "clear && cd $dir && g++ $fileName -o sol.out -std=c++20 -O2 -Wall -Wextra -pedantic -Weffc++ -Djosuerom -Wno-unused-result -Wno-char-subscripts -Wshadow -Wfloat-equal -Wconversion -Wformat-signedness -Wvla -Wduplicated-cond -Wlogical-op -Wredundant-decls -ggdb3 -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -D_FORTIFY_SOURCE=2  -fsanitize=address -fsanitize=undefined -fdiagnostics-color=always && ./sol.out",
-    // "cpp": "clear && cd $dir && g++ $fileName -o sol -std=c++11 -Wall -Wextra -pedantic -Weffc++ -Wconversion -Djosuerom -fdiagnostics-color=always && ./sol.out",
-    //"java": "clear && cd $dir && java $fileName",
+    "cpp": "clear && cd $dir && g++ $fileName -o sol.out -std=c++20 -O2 -Wall -Wextra -Wshadow -Wpedantic -Weffc++ -Djosuerom -Wno-unused-result -Wno-char-subscripts -Wfloat-equal -Wconversion -Wformat-signedness -Wvla -Wduplicated-cond -Wlogical-op -Wredundant-decls -ggdb3 -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -D_FORTIFY_SOURCE=2 -fsanitize=address -fsanitize=undefined -fdiagnostics-color=always && ./sol.out",
+    // "cpp": "clear && cd $dir && g++ $fileName -o sol -std=c++11 -Wall -Wextra -Wshadow -Wpedantic -Weffc++ -Wconversion -Djosuerom -fdiagnostics-color=always && ./sol.out",
     "java": "clear && cd $dir && javac -source 1.8 -target 1.8 -g:none -Xlint:deprecation $fileName && java -Xmx256M -Xss64M -DDEBUG=true -XX:-UseStringDeduplication -verbose:gc $fileNameWithoutExt",
     "python": "clear && cd $dir && python3 $fileName",
     "javascript": "node $dir/$fileName",
@@ -70,8 +69,8 @@
   "breadcrumbs.enabled": false,
   "java.configuration.runtimes": [
     {
-      "name": "OpenJDK-19",
-      "path": "usr/lib/jvm/java-19-openjdk-amd64/bin/",
+      "name": "Java-19",
+      "path": "usr/lib/jvm/java-19-openjdk-amd64",
       "default": true
     }
   ],
@@ -80,4 +79,11 @@
   "git.confirmSync": false,
   "redhat.telemetry.enabled": false,
   "git.openRepositoryInParentFolders": "never",
+  "editor.formatOnPaste": true,
+  // settigns cph submit for codeforces
+  "cph.general.menuChoices": "cpp java",
+  "cph.general.timeOut": 1000,
+  "cph.language.cpp.SubmissionCompiler": "GNU G++20 11.2.0 (64 bit, winlibs)",
+  "cph.language.java.SubmissionCompiler": "Java 1.8.0_241",
+  "cph.language.cpp.Args": "-std=c++20 -O2 -Wall -Wextra -Wshadow -Wpedantic -Djosuerom -Wconversion -fsanitize=address",
 }
