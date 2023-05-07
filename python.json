@@ -1,4 +1,4 @@
-{
+{ // @author: josuerom
 	"input()": {
 		"prefix": "in",
 		"body": [
@@ -88,9 +88,9 @@
 			"cin = lambda: sys.stdin.readline().strip()",
 			"cout = sys.stdout.write\n",
 			"for i in range(int(cin())):$1",
-			"\tsolve()",
+			"\tsolution()",
 			"",
-			"def solve():",
+			"def solution():",
 			"\t$2 = map(int, cin().split(' '))",
 			"\t# cout(f\"{ans}\\n\")",
 		],
