@@ -149,17 +149,6 @@
 			"}"
 		],
 	},
-	"switch": {
-		"prefix": "sw",
-		"body": [
-			"switch ($1) {",
-			"\tcase 1: $2;",
-			"\t\tbreak;",
-			"\tdefault:",
-			"\t\tSystem.err.println('ERROR. Debe elegir una de las opción válidas.');",
-			"}"
-		],
-	},
 	"Ternary operator": {
 		"prefix": "ter",
 		"body": [
@@ -226,19 +215,19 @@
 	"Read Int Scanner()": {
 		"prefix": "rdi",
 		"body": [
-			"sc.nextInt();"
+			"fr.readInt();"
 		],
 	},
 	"Read String Scanner()": {
 		"prefix": "rds",
 		"body": [
-			"sc.nextLine();"
+			"fr.readLine();"
 		],
 	},
 	"Read String-N Scanner()": {
 		"prefix": "rdn",
 		"body": [
-			"sc.next();"
+			"fr.next();"
 		],
 	},
 	"Check execution time": {
@@ -308,8 +297,8 @@
 			"\t\tinvFactorials[factorials.length-1] = exp(factorials[factorials.length-1], MOD-2);",
 			"\t\tfor (int i = invFactorials.length-2; i >= 0; i--) invFactorials[i] = mul(invFactorials[i+1], i+1);",
 			"\t}",
-			"\tstatic long nCk(int n, int k) {",
-			"\t\treturn mul(factorials[n], mul(invFactorials[k], invFactorials[n-k]));",
+			"\tstatic long nCr(int n, int r) {",
+			"\t\treturn mul(factorials[n], mul(invFactorials[r], invFactorials[n-r]));",
 			"\t}\n",
 			"\tstatic class FastReader {",
 			"\t\tBufferedReader br;",
@@ -385,9 +374,9 @@
 		"prefix": "template3.java",
 		"body": [
 			"/*",
-			"  problem: $1",
-			"   author: josuerom",
-			"  created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}",
+			"   problem: $1",
+			"    author: josuerom",
+			"   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}",
 			"*/",
 			"import java.util.Scanner;\n",
 			"public class ${TM_FILENAME_BASE} {",
@@ -414,8 +403,8 @@
 			"public class ${TM_FILENAME_BASE} {",
 			"\tpublic static void main(String[] args) {",
 			"\t\tScanner sc = new Scanner(System.in);",
-			"\t\tint tt = sc.nextInt();",
-			"\t\twhile (tt-- > 0) {",
+			"\t\tint tc = sc.nextInt();",
+			"\t\twhile (tc-- > 0) {",
 			"\t\t\tint n = sc.nextInt();",
 			"\t\t\tint[] vi = new int[n];",
 			"\t\t\tfor (int i = 0; i < n$1; i++) {",
