@@ -1,10 +1,10 @@
-{ // @author: josuerom
+{ //@author: josuerom
   "workbench.iconTheme": "material-icon-theme",
-  "editor.fontFamily": "'Cascadia Code', 'JetBrains Mono', 'UbuntuMono NF', monospace",
+  "editor.fontFamily": "'JetBrains Mono', 'UbuntuMono NF', monospace",
   "terminal.integrated.gpuAcceleration": "off",
   "security.workspace.trust.untrustedFiles": "open",
-  "editor.fontSize": 16,
-  "editor.fontWeight": "372",
+  "editor.fontSize": 15,
+  "editor.fontWeight": "370",
   "extensions.ignoreRecommendations": true,
   "workbench.editor.enablePreview": false,
   "editor.fontLigatures": true,
@@ -28,27 +28,8 @@
     "**/.factorypath": true
   },
   "explorer.confirmDelete": false,
-  "terminal.integrated.profiles.windows": {
-    "PowerShell": {
-      "source": "PowerShell",
-      "icon": "terminal-powershell"
-    },
-    "Command Prompt": {
-      "path": [
-        "${env:windir}\\Sysnative\\cmd.exe",
-        "${env:windir}\\System32\\cmd.exe"
-      ],
-      "args": [],
-      "icon": "terminal-cmd"
-    },
-    "GitBash": {
-      "path": "D:\\Program Files\\Git\\bin\\bash.exe",
-      "icon": "terminal-bash",
-      "color": "terminal.ansiGreen"
-    }
-  },
   "terminal.integrated.defaultProfile.linux": "bash",
-  "terminal.integrated.fontFamily": "'JetBrains Mono'",
+  "terminal.integrated.fontFamily": "'Cascadia Code'",
   "terminal.integrated.fontSize": 15.5,
   "terminal.integrated.tabs.focusMode": "singleClick",
   "terminal.integrated.enableMultiLinePasteWarning": false,
@@ -56,8 +37,10 @@
   "code-runner.runInTerminal": true,
   "code-runner.saveFileBeforeRun": true,
   "code-runner.executorMap": {
-    "cpp": "clear && cd $dir && g++ $fileName --std=c++20 -o sol -O2 -Wall -Djosuerom -Wextra -pedantic -Wshadow -Weffc++ -Wformat=2 -Wfloat-equal -Wconversion && ./sol",
-    "java": "clear && cd $dir && java $fileName",
+    "cpp": "clear && cd $dir && g++ $fileName -o sol.out -std=c++20 -O2 -Wall -Wextra -pedantic -Weffc++ -Djosuerom -Wno-unused-result -Wno-char-subscripts -Wshadow -Wfloat-equal -Wconversion -Wformat-signedness -Wvla -Wduplicated-cond -Wlogical-op -Wredundant-decls -ggdb3 -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -D_FORTIFY_SOURCE=2  -fsanitize=address -fsanitize=undefined -fdiagnostics-color=always && ./sol.out",
+    // "cpp": "clear && cd $dir && g++ $fileName -o sol -std=c++11 -Wall -Wextra -pedantic -Weffc++ -Wconversion -Djosuerom -fdiagnostics-color=always && ./sol.out",
+    //"java": "clear && cd $dir && java $fileName",
+    "java": "clear && cd $dir && javac -source 1.8 -target 1.8 -g:none -Xlint:deprecation $fileName && java -Xmx256M -Xss64M -DDEBUG=true -XX:-UseStringDeduplication -verbose:gc $fileNameWithoutExt",
     "python": "clear && cd $dir && python3 $fileName",
     "javascript": "node $dir/$fileName",
     "typescript": "node $dir/$fileName",
@@ -88,7 +71,7 @@
   "java.configuration.runtimes": [
     {
       "name": "OpenJDK-19",
-      "path": "/usr/lib/jvm/java-19-openjdk-amd64/",
+      "path": "usr/lib/jvm/java-19-openjdk-amd64/bin/",
       "default": true
     }
   ],
