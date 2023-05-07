@@ -166,35 +166,8 @@
 		]
 	},
 
-	"Template 1 CP": {
+   "Template 1 PC": {
 		"prefix": "template1.cpp",
-		"body": [
-			"/**",
-			" *   author:  josuerom",
-			" *   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
-			"**/",
-			"#pragma GCC optimize(\"03,unroll-loops\")",
-			"#pragma GCC target(\"avx2,bmi,bmi2,lzcnt,popcnt\")",
-			"",
-			"#include <bits/stdc++.h>",
-			"",
-			"using namespace std;",
-			"",
-			"#ifdef josuerom",
-			"\t#include \"data/debug.h\"",
-			"#endif",
-			"",
-			"int main() {",
-			"\tios::sync_with_stdio(false);",
-			"\tcin.tie(0);",
-			"\t$1",
-			"\treturn 0;",
-			"}",
-		]
-	},
-
-   "Template 2 CP": {
-		"prefix": "template2.cpp",
 		"body": [
 			"/**",
 			" *   author:  josuerom",
@@ -212,7 +185,7 @@
 			"#endif",
 			"",
 			"#define all(a) (a).begin(),(a).end()",
-			"#define sz(a) (int) (a).size()",
+			"#define size(a) (int) (a).size()",
 			"#define len(a) int(size((a)))",
 			"#define ll long long",
 			"#define pb push_back",
@@ -229,8 +202,8 @@
 		]
 	},
 
-	"Template 3 CP": {
-		"prefix": "template3.cpp",
+	"Template 2 PC": {
+		"prefix": "template2.cpp",
 		"body": [
 			"/**",
 			" *   author:  josuerom",
@@ -286,5 +259,27 @@
 			"}"
 		],
 		"description": "Plantilla de C++ para competencias"
-	}
+	},
+
+	"Template 3 Free": {
+		"prefix": "template3.cpp",
+		"body": [
+			"/**",
+			" *   author:  josuerom",
+			" *   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+			"**/",
+			"#include <bits/stdc++.h>",
+			"using namespace std;\n",
+			"constexpr int MAX = (int) 1e6+7;",
+			"int $1\n",
+			"void solve($3) {",
+			"}\n",
+			"int main() {",
+			"\tios::sync_with_stdio(false);",
+			"\tcin.tie(0); cout.tie(0);",
+			"\t$2",
+			"\treturn 0;",
+			"}"
+		]
+	},
 }
