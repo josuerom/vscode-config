@@ -158,14 +158,14 @@
 	"Object creation": {
 		"prefix": "obj",
 		"body": [
-			"${1:nameClass} ${2:value} = new ${1:nameConstructor}($3);"
+			"${1:nameClass} ${2:name} = new ${1:nameConstructor}($3);"
 		],
 	},
 	"Constructor ()": {
 		"prefix": "const",
 		"body": [
-			"public ${1:nameClass}($2) {",
-			"\tthis.$3 = $3;",
+			"public ${TM_FILENAME_BASE}($1) {",
+			"\tthis.$2 = $2;",
 			"}"
 		],
 	},
@@ -200,8 +200,8 @@
 		"prefix": "author",
 		"body": [
 			"/**",
-			" *  author:  josuerom",
-			" *  created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+			" *   author:  josuerom",
+			" *   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
 			"**/"
 		],
 		"description": "Encabezado"
@@ -213,21 +213,33 @@
 		],
 	},
 	"Read Int Scanner()": {
-		"prefix": "rdi",
+		"prefix": "ri",
 		"body": [
 			"fr.readInt();"
 		],
 	},
 	"Read String Scanner()": {
-		"prefix": "rds",
+		"prefix": "rs",
 		"body": [
 			"fr.readLine();"
 		],
 	},
 	"Read String-N Scanner()": {
-		"prefix": "rdn",
+		"prefix": "rn",
 		"body": [
 			"fr.next();"
+		],
+	},
+	"Read Long Scanner()": {
+		"prefix": "rl",
+		"body": [
+			"fr.readLong();"
+		],
+	},
+	"Read Double Scanner()": {
+		"prefix": "rd",
+		"body": [
+			"fr.readDouble();"
 		],
 	},
 	"Check execution time": {
@@ -241,8 +253,8 @@
 		"prefix": "template1.java",
 		"body": [
 			"/**",
-			" *   author: josuerom",
-			" *  created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+			" *   author:  josuerom",
+			" *   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
 			"**/",
 			"import java.io.BufferedReader;",
 			"import java.io.IOException;",
@@ -259,7 +271,7 @@
 			"\t\tFastReader fr = new FastReader();",
 			"\t\tPrintWriter pw = new PrintWriter(System.out);",
 			"\t\t$1",
-			"\t\t// pr.println(ans);",
+			"\t\t// pw.println(ans);",
 			"\t\tpw.flush(); pw.close();",
 			"\t}\n",
 			"\tstatic final Random random = new Random();",
@@ -320,6 +332,12 @@
 			"\t\t\tcatch (IOException e) { e.printStackTrace(); }",
 			"\t\t\treturn line;",
 			"\t\t}\n",
+			"\t\tdouble readDouble() {",
+			"\t\t\treturn Double.parseDouble(next());",
+			"\t\t}",
+			"\t\tlong readLong() {",
+			"\t\t\treturn Long.parseLong(next());",
+			"\t\t}",
 			"\t\tint readInt() {",
 			"\t\t\treturn Integer.parseInt(next());",
 			"\t\t}",
@@ -339,8 +357,8 @@
 		"prefix": "template2.java",
 		"body": [
 			"/**",
-			" *  author:  josuerom",
-			" *  created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+			" *   author:  josuerom",
+			" *   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
 			"**/",
 			"import java.util.Scanner;",
 			"import java.util.Arrays;\n",
@@ -396,8 +414,8 @@
 		"prefix": "template4.java",
 		"body": [
 			"/**",
-			" *  author:  josuerom",
-			" *  created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+			" *   author:  josuerom",
+			" *   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
 			"**/",
 			"import java.util.Scanner;\n",
 			"public class ${TM_FILENAME_BASE} {",
