@@ -1,5 +1,4 @@
 { //@author: josuerom
-  //"workbench.colorTheme": "Palenight (Mild Contrast)",
   "workbench.iconTheme": "material-icon-theme",
   "editor.fontFamily": "'Cascadia Code', 'JetBrains Mono', 'UbuntuMono NF', monospace",
   "terminal.integrated.gpuAcceleration": "off",
@@ -57,12 +56,12 @@
   "code-runner.runInTerminal": true,
   "code-runner.saveFileBeforeRun": true,
   "code-runner.executorMap": {
-    "cpp": "cls && cd $dir && g++ $fileName --std=c++20 -o sol.exe -O2 -Wall -Wl,--stack=256000000 -Wextra -pedantic -Wshadow -Weffc++ -Wformat=2 -Wfloat-equal -Wconversion -Djosuerom -fdiagnostics-color=always && sol.exe",
-    "c": "cls && cd $dir && gcc -std=c20 -O2 -Wall -Djosuerom $fileName -o $fileNameWithoutExt.exe && $fileNameWithoutExt.exe",
-    "java": "cls && cd $dir && java $fileName",
+    "cpp": "cls && cd $dir && g++ $fileName -o sol.exe -std=c++20 -O2 -Wall -Wextra -Wl,--stack=256000000 -pedantic -Wshadow -Weffc++ -Wfloat-equal -Wconversion -Djosuerom -Wformat=2 -Wformat-signedness -Wvla -Wduplicated-cond -Wlogical-op -Wredundant-decls -ggdb3 -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -D_FORTIFY_SOURCE=2 -fsanitize=address -fsanitize=undefined -fdiagnostics-color=always && sol.exe",
+    // "cpp": "cls && cd $dir && g++ $fileName -o sol.exe -std=c++11 -Wall -Wextra -pedantic -Weffc++ -Wconversion -Djosuerom -fdiagnostics-color=always && sol.exe",
+    "java": "cls && cd $dir && javac -source 1.8 -target 1.8 -g:none -Xlint:deprecation $fileName && java -Xmx256M -Xss64M -DDEBUG=true -XX:-UseStringDeduplication -verbose:gc $fileNameWithoutExt",
     "python": "cls && cd $dir && python3 $fileName",
-    "javascript": "node $dir/$fileName",
-    "typescript": "node $dir/$fileName",
+    "javascript": "cls && cd $dir && node $dir/$fileName",
+    "typescript": "cls && cd $dir && node $dir/$fileName",
     "kotlin": "cls && cd $dir && kotlin -u $fileName"
   },
   "code-runner.temporaryFileName": "fileTempError",
