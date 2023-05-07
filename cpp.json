@@ -136,8 +136,8 @@
 		"prefix": "author",
 		"body": [
 			"/**",
-			" *  author:  josuerom",
-			" *  created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+			" *   author:  josuerom",
+			" *   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
 			"**/",
 		]
 	},
@@ -170,8 +170,8 @@
 		"prefix": "template1.cpp",
 		"body": [
 			"/**",
-			" *  author:  josuerom",
-			" *  created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+			" *   author:  josuerom",
+			" *   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
 			"**/",
 			"#pragma GCC optimize(\"03,unroll-loops\")",
 			"#pragma GCC target(\"avx2,bmi,bmi2,lzcnt,popcnt\")",
@@ -197,8 +197,8 @@
 		"prefix": "template2.cpp",
 		"body": [
 			"/**",
-			" *  author:  josuerom",
-			" *  created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+			" *   author:  josuerom",
+			" *   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
 			"**/",
 			"#pragma GCC optimize(\"03,unroll-loops\")",
 			"#pragma GCC target(\"avx2,bmi,bmi2,lzcnt,popcnt\")",
@@ -233,8 +233,8 @@
 		"prefix": "template3.cpp",
 		"body": [
 			"/**",
-			" *  author:  josuerom",
-			" *  created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+			" *   author:  josuerom",
+			" *   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
 			"**/",
 			"#pragma GCC optimize(\"03,unroll-loops\")",
 			"#pragma GCC target(\"avx2,bmi,bmi2,lzcnt,popcnt\")",
