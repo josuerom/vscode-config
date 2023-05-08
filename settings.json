@@ -1,4 +1,4 @@
-{ //@author: josuerom
+{ // @author: josuerom
   "workbench.iconTheme": "material-icon-theme",
   "editor.fontFamily": "'Cascadia Code', 'JetBrains Mono', 'UbuntuMono NF', monospace",
   "terminal.integrated.gpuAcceleration": "off",
@@ -59,14 +59,15 @@
   "code-runner.executorMap": {
     "cpp": "cls && cd $dir && g++ $fileName -o sol.exe -std=c++20 -O2 -Wall -Wextra -Wl,--stack=256000000 -pedantic -Wshadow -Weffc++ -Wfloat-equal -Wconversion -Djosuerom -Wformat=2 -Wvla -Wduplicated-cond -Wlogical-op -Wredundant-decls -ggdb3 -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -D_FORTIFY_SOURCE=2 && sol.exe",
     // "cpp": "cls && cd $dir && g++ $fileName -o sol.exe -std=c++11 -Wall -Wextra -pedantic -Weffc++ -Wconversion -Djosuerom && sol.exe",
-    "java": "cls && cd $dir && javac -source 1.8 -target 1.8 -g:none -Xlint:deprecation -d .class $fileName && java -Xmx256M -Xss64M -DDEBUG=true -XX:-UseStringDeduplication -verbose:gc .class\\$fileNameWithoutExt",
+    "java": "cls && cd $dir && javac -source 1.8 -target 1.8 -g:none -Xlint:deprecation -d .class $fileName && cd .class && java -Xmx256M -Xss64M -DDEBUG=true -XX:-UseStringDeduplication -verbose:gc $fileNameWithoutExt",
+    // "java": "cls && cd $dir && java -Xmx256M -Xss64M -DDEBUG=true -XX:-UseStringDeduplication -verbose:gc $fileName",
     "python": "cls && cd $dir && python3 $fileName",
     "javascript": "cls && cd $dir && node $fileName",
     "typescript": "cls && cd $dir && node $fileName",
     "kotlin": "cls && cd $dir && kotlin $fileName"
   },
-  //"workbench.statusBar.visible": false,
-  //"workbench.activityBar.visible": false,
+  // "workbench.statusBar.visible": false,
+  // "workbench.activityBar.visible": false,
   "window.commandCenter": true,
   "workbench.sideBar.location": "right",
   "workbench.editor.showTabs": false,
@@ -82,14 +83,14 @@
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.linkedEditing": true,
   "editor.guides.bracketPairs": true,
-  "editor.matchBrackets": false,
+  "editor.matchBrackets": "never",
   "editor.glyphMargin": false,
   "debug.onTaskErrors": "debugAnyway",
   "breadcrumbs.enabled": false,
   "java.configuration.runtimes": [
     {
-      "name": "Java-19",
-      "path": "D:\\Program Files\\Compilers\\Jdk-19.0.1\\bin",
+      "name": "OpenJdk-19",
+      "path": "D:\\Program Files\\Compilers\\Jdk-19.0.1\\",
       "default": true
     }
   ],
