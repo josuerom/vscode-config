@@ -57,7 +57,7 @@
   "code-runner.runInTerminal": true,
   "code-runner.saveFileBeforeRun": true,
   "code-runner.executorMap": {
-    "cpp": "cls && cd $dir && g++ $fileName -o sol.exe -std=c++20 -O2 -Wall -Wextra -Wl,--stack=256000000 -pedantic -Wshadow -Weffc++ -Wfloat-equal -Wconversion -Djosuerom -Wformat=2 -Wvla -Wduplicated-cond -Wlogical-op -Wredundant-decls -ggdb3 -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -D_FORTIFY_SOURCE=2 && sol.exe",
+    "cpp": "cls && cd $dir && g++ -std=c++20 -march=native -Wall -Wextra -Wl,--stack=256000000 -Wpedantic -Wshadow -Weffc++ -Wfloat-equal -Wconversion -Djosuerom -Wformat=2 -Wvla -Wduplicated-cond -Wredundant-decls -ggdb3 -D_GLIBCXX_DEBUG $fileName -o sol.exe && sol.exe",
     // "cpp": "cls && cd $dir && g++ $fileName -o sol.exe -std=c++11 -Wall -Wextra -pedantic -Weffc++ -Wconversion -Djosuerom && sol.exe",
     "java": "cls && cd $dir && javac -source 1.8 -target 1.8 -g:none -Xlint:deprecation -d .class $fileName && cd .class && java -Xmx256M -Xss64M -DDEBUG=true -XX:-UseStringDeduplication -verbose:gc $fileNameWithoutExt",
     // "java": "cls && cd $dir && java -Xmx256M -Xss64M -DDEBUG=true -XX:-UseStringDeduplication -verbose:gc $fileName",
