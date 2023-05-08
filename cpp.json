@@ -181,7 +181,7 @@
 			"using namespace std;",
 			"",
 			"#ifdef josuerom",
-			"\t#define \"data/debug.h\"",
+			"\t#include \"data/debug.h\"",
 			"#endif",
 			"",
 			"#define all(a) (a).begin(),(a).end()",
