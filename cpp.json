@@ -3,9 +3,9 @@
 		"prefix": "online",
 		"body": [
 			"#ifndef ONLINE_JUDGE",
-      		"\tfreopen(\"sample/input\", \"r\", stdin);",
-      		"\t// freopen(\"sample/output\", \"w\", stdout);",
-   		"#endif"
+			"\tfreopen(\"sample/input\", \"r\", stdin);",
+			"\t// freopen(\"sample/output\", \"w\", stdout);",
+			"#endif"
 		]
 	},
 
@@ -32,16 +32,16 @@
 	},
 
 	"read char[]": {
-		"prefix": "rdc",
+		"prefix": "rac",
 		"body": [
 			"cin.getline($1, $2, '\\n');"
 		]
 	},
 
 	"read string": {
-		"prefix": "rds",
+		"prefix": "rs",
 		"body": [
-			"getline(cin, $1);"
+			"getline(cin, s$1);"
 		]
 	},
 
@@ -107,14 +107,14 @@
 	},
 
 	"size": {
-		"prefix": "si",
+		"prefix": "sz",
 		"body": [
-			"int(size($1));"
+			"int($1.size());"
 		]
 	},
 
 	"void solve() { body }": {
-		"prefix": "solve",
+		"prefix": "fsol",
 		"body": [
 			"void solve() {",
 			"\t$1",
@@ -145,8 +145,8 @@
 	"#pragma GCC": {
 		"prefix": "gcc",
 		"body": [
-			"#pragma GCC optimize(\"03,unroll-loops\")",
-			"#pragma GCC target(\"avx2,bmi,bmi2,lzcnt,popcnt\")$1",
+			"#pragma GCC optimize(\"0fast,unroll-loops,fast-math,no-stack-protector\")",
+			"#pragma GCC target(\"avx2\")",
 		]
 	},
 
@@ -158,7 +158,7 @@
 	},
 
 	"data/debug.h": {
-		"prefix": "debug.h",
+		"prefix": "josuerom",
 		"body": [
 			"#ifdef josuerom",
 			"\t#include \"data\\debug.h\"",
@@ -167,25 +167,25 @@
 	},
 
    "Template 1 PC": {
-		"prefix": "template1.cpp",
+		"prefix": "tem1.cpp",
 		"body": [
 			"/**",
 			" *   author:  josuerom",
 			" *   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
 			"**/",
-			"#pragma GCC optimize(\"03,unroll-loops\")",
-			"#pragma GCC target(\"avx2,bmi,bmi2,lzcnt,popcnt\")",
+			"#pragma GCC optimize(\"0fast,unroll-loops,fast-math,no-stack-protector\")",
+			"#pragma GCC target(\"avx2\")",
 			"",
 			"#include <bits/stdc++.h>",
 			"",
 			"using namespace std;",
 			"",
 			"#ifdef josuerom",
-			"\t#include \"data/debug.h\"",
+			"\t#define \"data/debug.h\"",
 			"#endif",
 			"",
-			"#define all(a) (a).begin(),(a).end()",
-			"#define len(a) (int) (a).size()",
+			"#define all(x) (x).begin(),(x).end()",
+			"#define len(x) (int) (x).size()",
 			"#define ll long long",
 			"#define pb push_back",
 			"#define mp make_pair",
@@ -202,14 +202,14 @@
 	},
 
 	"Template 2 PC": {
-		"prefix": "template2.cpp",
+		"prefix": "tem2.cpp",
 		"body": [
 			"/**",
 			" *   author:  josuerom",
 			" *   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
 			"**/",
-			"#pragma GCC optimize(\"03,unroll-loops\")",
-			"#pragma GCC target(\"avx2,bmi,bmi2,lzcnt,popcnt\")",
+			"#pragma GCC optimize(\"0fast,unroll-loops, fast-math,no-stack-protector\")",
+			"#pragma GCC target(\"avx2\")",
 			"",
 			"#include <bits/stdc++.h>",
 			"using namespace std;",
@@ -218,7 +218,7 @@
 			"#define PROGRAM_TIME cout.precision(4); cout << \"max time \" << (int)clock()/(CLOCKS_PER_SEC/10) << \" ms\\n\"",
 			"#define SPEED_IO ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr); cerr.tie(nullptr);",
 			"#define VEREDICT(condition) cout << ((condition) ? \"YES\" : \"NO\") << '\\n'",
-			"#define decimals(n) cout.setf(ios::fixed, ios::floatfield); cout.precision(n+1);",
+			"#define decimals(n) cout.setf(ios::fixed, ios::floatfield); cout.precision(n);",
 			"#define binarySearch(vec, key) sort(all(vec)); binary_search(all(vec), (key));",
 			"#define forr(i, vec) for(int i = (int)(vec).size()-1; i >= 0; i--)",
 			"#define mod(a, b, mod) ((((a) % (mod)) + ((b) % (mod))) % (mod))",
@@ -230,8 +230,8 @@
 			"#define isOrdered(vec) is_sorted(all(vec))",
 			"#define rsort(vec) short(rall(vec))",
 			"#define ull unsigned long long int",
-			"#define len(a) (int)(a).size()",
-			"#define sort(a) sort(all(a))",
+			"#define sz(vec) (int)(vec).size()",
+			"#define sort(vec) sort(all(vec))",
 			"#define mcd(a, b) gcd(a, b)",
 			"#define ll long long",
 			"#define endl '\\n'",
@@ -242,10 +242,10 @@
 			"}",
 			"",
 			"#ifdef josuerom",
-			"\t#include \"data/debug.h\"",
+			"\t#include \"debug.h\"",
 			"#endif",
 			"",
-			"const int MAX = 1e6$2+10;",
+			"const int MAX = 1e6$2+7;",
 			"",
 			"int main() {",
 			"\tstartTime = clock();",
@@ -261,7 +261,7 @@
 	},
 
 	"Template 3 Free": {
-		"prefix": "template3.cpp",
+		"prefix": "tem3.cpp",
 		"body": [
 			"/**",
 			" *   author:  josuerom",
@@ -269,8 +269,8 @@
 			"**/",
 			"#include <bits/stdc++.h>\n",
 			"using namespace std;",
-			"constexpr int MAX = (int) 1e6+7;\n",
-			"void solve($2) {",
+			"constexpr int MAX = (int) 1e6$2+7;\n",
+			"void solve($3) {",
 			"}\n",
 			"int main() {",
 			"\tios::sync_with_stdio(false);",
