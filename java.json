@@ -129,9 +129,8 @@
 	"read test cases": {
 		"prefix": "tt",
 		"body": [
-			"int tt = fr.readInt();",
+			"int tt = fr.readInt$1();",
 			"while (tt-- > 0) {",
-			"\t$1",
 			"}"
 		],
 	},
@@ -212,6 +211,12 @@
 			"Arrays.$1($2);"
 		],
 	},
+	"Arrays.toString()": {
+		"prefix": "tostr",
+		"body": [
+			"Arrays.toString($1)"
+		],
+	},
 	"Read Int Scanner()": {
 		"prefix": "ri",
 		"body": [
@@ -250,7 +255,7 @@
 		],
 	},
 	"Template 1 for more efficient solutions": {
-		"prefix": "template1.java",
+		"prefix": "tem1.java",
 		"body": [
 			"/**",
 			" *   author:  josuerom",
@@ -353,7 +358,7 @@
 		"description": "Plantilla para soluciones más rápidas en java 1.8.0_241",
 	},
 	"Template 2 with use of Scanner": {
-		"prefix": "template2.java",
+		"prefix": "tem2.java",
 		"body": [
 			"/**",
 			" *   author:  josuerom",
@@ -380,28 +385,26 @@
 			"\t\t\t}",
 			"\t\t\tsolution(vi);",
 			"\t\t}",
-			"\t\tsc.close();",
-			"\t\tSystem.out.close();",
+			"\t\tsc.close(); System.out.close();",
 			"\t}",
 			"}"
 		],
 		"description": "Plantilla estructurada para depurar valores",
 	},
 	"Template 3 for quick explanations": {
-		"prefix": "template3.java",
+		"prefix": "tem3.java",
 		"body": [
 			"/*",
-			"   problem: $1",
-			"    author: josuerom",
-			"   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}",
+			"   author: josuerom",
+			"  problem: $1",
+			"  created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}",
 			"*/",
 			"import java.util.Scanner;\n",
 			"public class ${TM_FILENAME_BASE} {",
 			"\tpublic static void main(String[] args) {",
 			"\t\tScanner sc = new Scanner(System.in);",
 			"\t\t$2",
-			"\t\tsc.close();",
-			"\t\tSystem.out.close();",
+			"\t\tsc.close(); System.out.close();",
 			"\t}",
 			"}"
 		],
