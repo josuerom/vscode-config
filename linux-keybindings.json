@@ -33,4 +33,20 @@
       "key": "ctrl+[Semicolon]",
       "command": "workbench.action.terminal.newInActiveWorkspace"
    },
+   {
+      "key": "ctrl+alt+c",
+      "command": "code-runner.stop"
+   },
+   {
+      "key": "ctrl+alt+m",
+      "command": "-code-runner.stop"
+   },
+   {
+      "key": "ctrl+alt+m",
+      "command": "code-runner.runByLanguage"
+   },
+   {
+      "key": "ctrl+alt+j",
+      "command": "-code-runner.runByLanguage"
+   },
 ]
