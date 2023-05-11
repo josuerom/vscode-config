@@ -57,8 +57,10 @@
   "code-runner.runInTerminal": true,
   "code-runner.saveFileBeforeRun": true,
   "code-runner.executorMap": {
-    "cpp": "cls && cd $dir && g++ -std=c++20 -march=native -Wall -Wextra -Wl,--stack=256000000 -Wpedantic -Wshadow -Weffc++ -Wfloat-equal -Wconversion -Djosuerom -Wformat=2 -Wvla -Wduplicated-cond -Wredundant-decls -ggdb3 -D_GLIBCXX_DEBUG $fileName -o sol.exe && sol.exe",
+    "cpp": "cls && cd $dir && g++ -std=c++20 -march=native -Wall -Wextra -Wl,--stack=256000000 -Wpedantic -Wshadow -Weffc++ -Wfloat-equal -Wconversion -Djosuerom -Wformat=2 -Wvla -Wduplicated-cond -Wredundant-decls -ggdb3 -D_GLIBCXX_DEBUG $fileName -o .class\\sol.exe && .class\\sol.exe",
     // "cpp": "cls && cd $dir && g++ $fileName -o sol.exe -std=c++11 -Wall -Wextra -pedantic -Weffc++ -Wconversion -Djosuerom && sol.exe",
+    "sol.exe": "cls && cd $dir && .class\\sol.exe",
+    "sol.class": "cls && cd $dir && java .class\\$fileNameWithoutExt",
     "java": "cls && cd $dir && javac -source 1.8 -target 1.8 -g:none -Xlint:deprecation -d .class $fileName && cd .class && java -Xmx256M -Xss64M -DDEBUG=true -XX:-UseStringDeduplication -verbose:gc $fileNameWithoutExt",
     // "java": "cls && cd $dir && java -Xmx256M -Xss64M -DDEBUG=true -XX:-UseStringDeduplication -verbose:gc $fileName",
     "python": "cls && cd $dir && python3 $fileName",
@@ -99,4 +101,7 @@
   "git.confirmSync": false,
   "redhat.telemetry.enabled": false,
   "git.openRepositoryInParentFolders": "never",
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.defaultLanguage": "cpp java",
+  "code-runner.fileDirectoryAsCwd": true,
 }
