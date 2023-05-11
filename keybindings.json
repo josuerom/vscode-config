@@ -19,5 +19,25 @@
   {
      "key": "ctrl+alt+d",
      "command": "-cph.judgeView.focus"
-  }
+},
+{
+   "key": "ctrl+alt+m",
+   "command": "code-runner.runByLanguage"
+},
+{
+   "key": "ctrl+alt+j",
+   "command": "-code-runner.runByLanguage"
+},
+{
+   "key": "ctrl+alt+m",
+   "command": "-code-runner.stop"
+},
+{
+   "key": "ctrl+shift+c",
+   "command": "code-runner.stop"
+},
+{
+   "key": "ctrl+alt+k",
+   "command": "-code-runner.runCustomCommand"
+}
 ]
