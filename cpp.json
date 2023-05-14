@@ -34,7 +34,7 @@
 	"read char[]": {
 		"prefix": "rac",
 		"body": [
-			"cin.getline($1, $2, '\\n');"
+			"cin.getline($1, N$2, '\\n');"
 		]
 	},
 
@@ -56,7 +56,7 @@
 	"for (auto $e : vec)": {
 		"prefix": "fore",
 		"body": [
-			"for (auto &e : ${1:vector}) cin >> e;",
+			"for (auto &e : ${1:array}) cin >> e;",
 		]
 	},
 
@@ -109,7 +109,7 @@
 	"size": {
 		"prefix": "sz",
 		"body": [
-			"int($1.size());"
+			"(int) $1.size();"
 		]
 	},
 
@@ -145,7 +145,7 @@
 	"#pragma GCC": {
 		"prefix": "gcc",
 		"body": [
-			"#pragma GCC optimize(\"03,unroll-loops,fast-math,no-stack-protector\")",
+			"#pragma GCC optimize(\"03,unroll-loops\")",
 			"#pragma GCC target(\"avx2\")",
 		]
 	},
@@ -153,7 +153,12 @@
 	"program time()": {
 		"prefix": "time",
 		"body": [
-			"cout << \"max time: \" << (float)clock()/(CLOCKS_PER_SEC/100) << \" ms\\n\";$1"
+			"clock_t startTime;",
+			"double getCurrentTime() {",
+			"\treturn (double) (clock() - startTime)/CLOCKS_PER_SEC;",
+			"}",
+			"\tstartTime = clock();",
+			"\t// printf(\"\\ntime = %.5lf\\n\", getCurrentTime());"
 		]
 	},
 
@@ -161,32 +166,32 @@
 		"prefix": "josuerom",
 		"body": [
 			"#ifdef josuerom",
-			"\t#include \"data\\debug.h\"",
+			"\t#include \"debug.h\"",
 			"#endif"
 		]
 	},
 
-   "Template 1 PC": {
+   "Codeforces": {
 		"prefix": "tem1.cpp",
 		"body": [
 			"/**",
 			" *   author:  josuerom",
 			" *   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
 			"**/",
-			"#pragma GCC optimize(\"03,unroll-loops,fast-math,no-stack-protector\")",
+			"#pragma GCC optimize(\"03,unroll-loops\")",
 			"#pragma GCC target(\"avx2\")",
 			"",
 			"#include <bits/stdc++.h>",
-			"",
 			"using namespace std;",
 			"",
 			"#ifdef josuerom",
-			"\t#include \"data/debug.h\"",
+			"\t#include \"debug.h\"",
 			"#endif",
 			"",
 			"#define all(x) (x).begin(),(x).end()",
+			"#define ull unsigned long long int",
 			"#define len(x) (int) (x).size()",
-			"#define ll long long",
+			"#define ll long long int",
 			"#define pb push_back",
 			"#define mp make_pair",
 			"#define ss second",
@@ -201,66 +206,86 @@
 		]
 	},
 
-	"Template 2 PC": {
+	"Competitive Programming": {
 		"prefix": "tem2.cpp",
 		"body": [
 			"/**",
 			" *   author:  josuerom",
 			" *   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
 			"**/",
-			"#pragma GCC optimize(\"0fast,unroll-loops, fast-math,no-stack-protector\")",
+			"#pragma GCC optimize(\"03,unroll-loops\")",
 			"#pragma GCC target(\"avx2\")",
 			"",
-			"#include <bits/stdc++.h>",
-			"using namespace std;",
+			"#include <bits/stdc++.h>	  		//			 ░░░░░██╗░█████╗░░██████╗██╗░░░██╗███████╗██████╗░░█████╗░███╗░░░███╗",
+			"using namespace std; 			  	//			 ░░░░░██║██╔══██╗██╔════╝██║░░░██║██╔════╝██╔══██╗██╔══██╗████╗░████║",
+			"											//			 ░░░░░██║██║░░██║╚█████╗░██║░░░██║█████╗░░██████╔╝██║░░██║██╔████╔██║",
+			"#ifdef josuerom   					//			 ██╗░░██║██║░░██║░╚═══██╗██║░░░██║██╔══╝░░██╔══██╗██║░░██║██║╚██╔╝██║",
+			"   #include \"debug.h\"				//			 ╚█████╔╝╚█████╔╝██████╔╝╚██████╔╝███████╗██║░░██║╚█████╔╝██║░╚═╝░██║",
+			"#endif									//			 ░╚════╝░░╚════╝░╚═════╝░░╚═════╝░╚══════╝╚═╝░░╚═╝░╚════╝░╚═╝░░░░░╚═╝",
 			"",
-			"#define readArray(vec) void template<typename T> void read(vector<T>&(vec)){int n=(vec).size();for(auto&e:vec) cin >> e;}",
-			"#define PROGRAM_TIME cout.precision(4); cout << \"max time \" << (int)clock()/(CLOCKS_PER_SEC/10) << \" ms\\n\"",
-			"#define SPEED_IO ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr); cerr.tie(nullptr);",
+			"#define readArray(x) void template<typename T> void read(xtor<T>&(x)){int n=(x).size();for(auto&e:x) cin >> e;}",
+			"#define SPEED_IO() ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr); cerr.tie(nullptr);",
 			"#define VEREDICT(condition) cout << ((condition) ? \"YES\" : \"NO\") << '\\n'",
 			"#define decimals(n) cout.setf(ios::fixed, ios::floatfield); cout.precision(n);",
 			"#define binarySearch(vec, key) sort(all(vec)); binary_search(all(vec), (key));",
 			"#define forr(i, vec) for(int i = (int)(vec).size()-1; i >= 0; i--)",
+			"#define uniq(x) sort(all(x)); (x).erase(unique(all(x)),(x).end())",
 			"#define mod(a, b, mod) ((((a) % (mod)) + ((b) % (mod))) % (mod))",
 			"#define fori(i, b, c) for(int (i) = (b); (i) < (c); (i)++)",
-			"#define TC(tt) int (tt); cin >> (tt); while((tt)--)",
-			"#define rall(vec) (vec).rbegin(), (vec).rend()",
-			"#define all(vec) (vec).begin(), (vec).end()",
+			"#define memset(a, v) memset((a),(v), sizeof(a))",
+			"#define countbits(x) __builtin_popcountll(x)",
+			"#define TC int tt; cin >> tt; while((tt)--)",
 			"#define fore(e, vec) for (auto &(e): (vec))",
 			"#define isOrdered(vec) is_sorted(all(vec))",
-			"#define rsort(vec) short(rall(vec))",
+			"#define rall(x) (x).rbegin(),(x).rend()",
+			"#define lbd(x, y) lower_bound(all(x), y)",
+			"#define ubd(x, y) upper_bound(all(x), y)",
+			"#define log(x) 63 - __builtin_clzll(x)",
+			"#define all(x) (x).begin(),(x).end()",
 			"#define ull unsigned long long int",
-			"#define sz(vec) (int)(vec).size()",
-			"#define sort(vec) sort(all(vec))",
-			"#define mcd(a, b) gcd(a, b)",
-			"#define ll long long",
-			"#define endl '\\n'",
+			"#define PI 3.14159265358979323846L;",
+			"#define E 2.71828182845904523536L;",
+			"#define mcm(a, b) (a*b)/gcd(a, b)",
+			"#define mcd(a, b) (int) gcd(a, b)",
+			"#define rsort(x) short(rall(x))",
+			"#define len(x) (int)(x).size()",
+			"#define sort(x) sort(all(x))",
+			"#define lowbit(x) (x & (-x))",
+			"#define MOD (int) 1000000007",
+			"#define sbl(x, b) (x << b)",
+			"#define sbr(x, b) (x >> b)",
+			"#define ll long long int",
+			"#define MAX (int) 1e6+7",
+			"#define eb emplace_back",
+			"#define mxe max_element",
+			"#define mne min_element",
+			"#define vi vector<int>",
+			"#define END return 0",
+			"#define pb push_back",
+			"#define mb make_pair",
+			"#define ss second",
+			"#define ff first",
 			"",
 			"clock_t startTime;",
 			"double getCurrentTime() {",
 			"\treturn (double) (clock() - startTime)/CLOCKS_PER_SEC;",
 			"}",
 			"",
-			"#ifdef josuerom",
-			"\t#include \"debug.h\"",
-			"#endif",
-			"",
-			"const int MAX = 1e6$2+7;",
-			"",
+			"$1",
 			"int main() {",
 			"\tstartTime = clock();",
-      	"\t// freopen(\"sample/input\", \"r\", stdin);",
-      	"\t// freopen(\"sample/output\", \"w\", stdout);",
-			"\tSPEED_IO;",
-			"\t$1$3",
-			"\t//printf(\"time = %.5lf\n\", getCurrentTime());",
-			"\tEND;",
+			"\tSPEED_IO();",
+			"\t$2",
+      	"\t#ifdef josuerom",
+			"\t\tprintf(\"\\ntime = %.5lf\\n\", getCurrentTime());",
+      	"\t#endif",
+			"\treturn 0;",
 			"}"
 		],
 		"description": "Plantilla de C++ para competencias"
 	},
 
-	"Template 3 Free": {
+	"Team 2 Bits()": {
 		"prefix": "tem3.cpp",
 		"body": [
 			"/**",
@@ -268,16 +293,11 @@
 			" *   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
 			"**/",
 			"#include <bits/stdc++.h>\n",
-			"using namespace std;",
-			"constexpr int MAX = (int) 1e6$2+7;\n",
-			"void solve($3) {",
-			"}\n",
+			"using namespace std;\n",
 			"int main() {",
 			"\tios::sync_with_stdio(false);",
-			"\tcin.tie(0); cout.tie(0);",
-			"\tint tt;$1",
-			"\tcin >> tt;",
-			"\twhile (tt--) solve();",
+			"\tcin.tie(0);",
+			"\t$1",
 			"\treturn 0;",
 			"}"
 		]
