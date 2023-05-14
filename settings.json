@@ -1,6 +1,6 @@
 { // @author: josuerom
   "workbench.iconTheme": "material-icon-theme",
-  "editor.fontFamily": "'Cascadia Code', 'JetBrains Mono', 'UbuntuMono NF', monospace",
+  "editor.fontFamily": "'Cascadia Code', 'JetBrains Mono', 'UbuntuMono NF'",
   "terminal.integrated.gpuAcceleration": "off",
   "security.workspace.trust.untrustedFiles": "open",
   "editor.fontSize": 13.8,
