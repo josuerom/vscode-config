@@ -6,38 +6,38 @@
    {
       "key": "ctrl+b",
       "command": "-workbench.action.toggleSidebarVisibility",
-  },
-  {
-     "key": "n",
-     "command": "explorer.newFile",
-     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-     "key": "ctrl+shift+z",
-     "command": "cph.judgeView.focus"
-  },
-  {
-     "key": "ctrl+alt+d",
-     "command": "-cph.judgeView.focus"
-},
-{
-   "key": "ctrl+alt+m",
-   "command": "code-runner.runByLanguage"
-},
-{
-   "key": "ctrl+alt+j",
-   "command": "-code-runner.runByLanguage"
-},
-{
-   "key": "ctrl+alt+m",
-   "command": "-code-runner.stop"
-},
-{
-   "key": "ctrl+shift+c",
-   "command": "code-runner.stop"
-},
-{
-   "key": "ctrl+alt+k",
-   "command": "-code-runner.runCustomCommand"
-}
+   },
+   {
+      "key": "n",
+      "command": "explorer.newFile",
+      "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+   },
+   {
+      "key": "ctrl+shift+z",
+      "command": "cph.judgeView.focus"
+   },
+   {
+      "key": "ctrl+alt+d",
+      "command": "-cph.judgeView.focus"
+   },
+   {
+      "key": "ctrl+alt+m",
+      "command": "code-runner.runByLanguage"
+   },
+   {
+      "key": "ctrl+alt+j",
+      "command": "-code-runner.runByLanguage"
+   },
+   {
+      "key": "ctrl+alt+m",
+      "command": "-code-runner.stop"
+   },
+   {
+      "key": "ctrl+shift+c",
+      "command": "code-runner.stop"
+   },
+   {
+      "key": "ctrl+alt+k",
+      "command": "-code-runner.runCustomCommand"
+   }
 ]
