@@ -91,8 +91,8 @@
   "breadcrumbs.enabled": false,
   "java.configuration.runtimes": [
     {
-      "name": "OpenJdk-19",
-      "path": "D:\\Program Files\\Compilers\\Jdk-19.0.1\\",
+      "name": "Jdk-19.0.1",
+      "path": "D:\\Program Files\\Compilers\\Jdk-19.0.1\\bin\\",
       "default": true
     }
   ],
