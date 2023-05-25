@@ -47,7 +47,7 @@
       "color": "terminal.ansiGreen"
     }
   },
-  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "terminal.integrated.defaultProfile.windows": "GitBash",
   "terminal.integrated.fontFamily": "'JetBrains Mono'",
   "terminal.integrated.fontSize": 13.8,
   "terminal.integrated.tabs.focusMode": "singleClick",
@@ -57,13 +57,12 @@
   "code-runner.runInTerminal": true,
   "code-runner.saveFileBeforeRun": true,
   "code-runner.executorMap": {
-    "cpp": "cls && cd $dir && g++ $fileName -o build\\sol.exe -std=c++20 -march=native -Wall -Wextra -Wl,--stack=256000000 -Wpedantic -Wshadow -Weffc++ -Wfloat-equal -Wconversion -Djosuerom -Wformat=2 -Wvla -Wduplicated-cond -Wredundant-decls -ggdb3 -D_GLIBCXX_DEBUG",
-    // "cpp": "cls && cd $dir && g++ $fileName -o build\\sol.exe -std=c++11 -Wall -Wextra -pedantic -Weffc++ -Wconversion -Djosuerom",
-    "sol.exe": "cls && $dirbuild\\sol.exe",
-    "sol.class": "cls && cd $dirbuild && java -Xmx256M -Xss64M -DDEBUG=true -XX:-UseStringDeduplication $fileNameWithoutExt",
-    "java": "cls && cd $dir && javac -d build $fileName && echo JAVAC: Compilacion exitosa",
-    // "java": "cls && cd $dir && java -Xmx256M -Xss64M -DDEBUG=true -XX:-UseStringDeduplication -verbose:gc $fileName",
-    "python": "cls && cd $dir && python3 $fileName",
+    // "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\build\\sol.exe -std=c++11 -Wall -Wextra -pedantic -Weffc++ -Wconversion -Djosuerom",
+    "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\build\\sol.exe -std=c++20 -march=native -Wall -Wextra -Wl,--stack=256000000 -Wpedantic -Wshadow -Weffc++ -Wfloat-equal -Wconversion -Djosuerom -Wformat=2 -Wvla -Wduplicated-cond -Wredundant-decls -ggdb3 -D_GLIBCXX_DEBUG",
+    "java": "cls && cd $dir && javac -d d:\\workspace\\build $fileName",
+    "sol.exe": "cls && d:\\workspace\\build\\sol.exe",
+    "sol.class": "cls && cd d:\\workspace\\build && java $fileNameWithoutExt",
+    "python": "cls && cd $dir && python $fileName",
     "javascript": "cls && cd $dir && node $fileName",
     "typescript": "cls && cd $dir && node $fileName",
     "kotlin": "cls && cd $dir && kotlin $fileName"

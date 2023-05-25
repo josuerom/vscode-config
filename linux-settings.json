@@ -27,7 +27,6 @@
     "**/.settings": true,
     "**/.factorypath": true
   },
-  "explorer.confirmDelete": false,
   "terminal.integrated.defaultProfile.linux": "bash",
   "terminal.integrated.fontFamily": "'Cascadia Code'",
   "terminal.integrated.fontSize": 16,
@@ -37,17 +36,18 @@
   "code-runner.runInTerminal": true,
   "code-runner.saveFileBeforeRun": true,
   "code-runner.executorMap": {
-    "cpp": "clear && cd $dir && g++ $fileName -o build/sol.out -std=c++20 -Wall -Wextra -Wshadow -Wpedantic -Weffc++ -Djosuerom -Wno-unused-result -Wno-char-subscripts -Wfloat-equal -Wconversion -Wformat-signedness -Wvla -Wduplicated-cond -Wlogical-op -Wredundant-decls -ggdb3 -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -D_FORTIFY_SOURCE=2 -fsanitize=address -fdiagnostics-color=always",
-    // "cpp": "clear && cd $dir && g++ $fileName -o build/sol.out -std=c++11 -Wall -Wextra -Wshadow -Wpedantic -Weffc++ -Wconversion -Djosuerom",
-    "sol.out": "clear && $dirbuild/sol.out",
-    "sol.class": "clear && cd $dirbuild && java -Xss64M -Xss256M -Xmx1G -XX:+UseParallelGC -XX:-UseStringDeduplication -XX:+UseCompressedOops $fileNameWithoutExt",
-    "java": "clear && cd $dir && javac -d build $fileName && exit",
+    // "cpp": "clear && cd $dir && g++ $fileName -o ~/workspace/build/sol.out -std=c++11 -Wall -Wextra -Wshadow -Wpedantic -Weffc++ -Wconversion -Djosuerom",
+    "cpp": "clear && cd $dir && g++ $fileName -o ~/workspace/build/sol.out -std=c++20 -Wall -Wextra -Wshadow -Wpedantic -Weffc++ -Djosuerom -Wno-unused-result -Wno-char-subscripts -Wfloat-equal -Wconversion -Wformat-signedness -Wvla -Wduplicated-cond -Wlogical-op -Wredundant-decls -ggdb3 -D_GLIBCXX_DEBUG -D_FORTIFY_SOURCE=2",
+    "java": "clear && cd $dir && javac -d ~/workspace/build $fileName",
+    "sol.out": "clear && ~/workspace/build/sol.out",
+    "sol.class": "clear && cd ~/workspace/build && java $fileNameWithoutExt",
     "python": "clear && cd $dir && python3 $fileName",
     "javascript": "node $dir/$fileName",
     "typescript": "node $dir/$fileName",
-    "kotlin": "clear && cd $dir && kotlin -u $fileName"
+    "kotlin": "clear && cd $dir && kotlin $fileName"
   },
   "code-runner.temporaryFileName": "fileTempError",
+  "explorer.confirmDelete": false,
   //"workbench.statusBar.visible": false,
   //"workbench.activityBar.visible": false,
   "window.commandCenter": true,
