@@ -47,7 +47,7 @@
       "color": "terminal.ansiGreen"
     }
   },
-  "terminal.integrated.defaultProfile.windows": "GitBash",
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
   "terminal.integrated.fontFamily": "'JetBrains Mono'",
   "terminal.integrated.fontSize": 13.8,
   "terminal.integrated.tabs.focusMode": "singleClick",
@@ -58,7 +58,7 @@
   "code-runner.saveFileBeforeRun": true,
   "code-runner.executorMap": {
     // "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\build\\sol.exe -std=c++11 -Wall -Wextra -pedantic -Weffc++ -Wconversion -Djosuerom",
-    "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\build\\sol.exe -std=c++20 -march=native -Wall -Wextra -Wl,--stack=256000000 -Wpedantic -Wshadow -Weffc++ -Wfloat-equal -Wconversion -Djosuerom -Wformat=2 -Wvla -Wduplicated-cond -Wredundant-decls -ggdb3 -D_GLIBCXX_DEBUG",
+    "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\build\\sol.exe -std=c++20 -march=native -Wall -Wextra -Wpedantic -Wshadow -Weffc++ -Wfloat-equal -Wconversion -Djosuerom -Wformat=2 -Wvla -Wduplicated-cond -Wredundant-decls -ggdb3 -D_GLIBCXX_DEBUG",
     "java": "cls && cd $dir && javac -d d:\\workspace\\build $fileName",
     "sol.exe": "cls && d:\\workspace\\build\\sol.exe",
     "sol.class": "cls && cd d:\\workspace\\build && java $fileNameWithoutExt",
