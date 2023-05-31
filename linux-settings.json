@@ -36,15 +36,13 @@
   "code-runner.runInTerminal": true,
   "code-runner.saveFileBeforeRun": true,
   "code-runner.executorMap": {
-    // "cpp": "clear && cd $dir && g++ $fileName -o ~/workspace/build/sol.out -std=c++11 -Wall -Wextra -Wshadow -Wpedantic -Weffc++ -Wconversion -Djosuerom",
-    "cpp": "clear && cd $dir && g++ $fileName -o ~/workspace/build/sol.out -std=c++20 -Wall -Wextra -Wshadow -Wpedantic -Weffc++ -Djosuerom -Wno-unused-result -Wno-char-subscripts -Wfloat-equal -Wconversion -Wformat-signedness -Wvla -Wduplicated-cond -Wlogical-op -Wredundant-decls -ggdb3 -D_GLIBCXX_DEBUG -D_FORTIFY_SOURCE=2",
+    "cpp": "clear && cd $dir && g++ $fileName -o ~/workspace/build/sol.out -Wall -Wextra -Wshadow -Wpedantic -Weffc++ -Wvla -Djosuerom",
     "java": "clear && cd $dir && javac -d ~/workspace/build $fileName",
     "sol.out": "clear && ~/workspace/build/sol.out",
     "sol.class": "clear && cd ~/workspace/build && java $fileNameWithoutExt",
     "python": "clear && cd $dir && python3 $fileName",
     "javascript": "node $dir/$fileName",
-    "typescript": "node $dir/$fileName",
-    "kotlin": "clear && cd $dir && kotlin $fileName"
+    "typescript": "node $dir/$fileName"
   },
   "code-runner.temporaryFileName": "fileTempError",
   "explorer.confirmDelete": false,

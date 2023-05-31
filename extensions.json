@@ -1,4 +1,4 @@
-{ // Comparto las únicas 12 extensiones que manejo dentro de Visual Studio Code
+{ // Comparto las únicas extensiones que manejo dentro de Visual Studio Code
    "listOfExtensions": [
       {
          "extesionName": "C/C++",
@@ -14,11 +14,6 @@
          "extesionName": "vscode-pdf",
          "author": "tomoki1207",
          "descripcion":  "Nos permite visualizar archivos PDF dentro de VSCode"
-      },
-      {
-         "extesionName": "Settings Sync",
-         "author": "Shan Khan",
-         "descripcion":  "Permite realizar copias de seguridad de toda la configuración de VSCode y guardarlas en la nube"
       },
       {
          "extesionName": "Code Runner",   
@@ -49,11 +44,6 @@
          "extesionName": "CodeTime",
          "author": "Software",
          "descripcion":  "Permite trabajar bajo con un cronometroen marcha, temporizador o tiempo libre, es de mucha utilidad en mi opinión"
-      },
-      {
-         "extesionName": "Gruvbox Theme",
-         "author": "jdinhlife",
-         "descripcion":  "Tema para el editor"
       },
       {
          "extesionName": "Seudev's VSCode Java snippets",
