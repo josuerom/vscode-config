@@ -1,4 +1,5 @@
 { // @author: josuerom
+  "workbench.colorTheme": "Default Theme",
   "workbench.iconTheme": "material-icon-theme",
   "editor.fontFamily": "'Cascadia Code', 'JetBrains Mono', 'UbuntuMono NF', monospace",
   "terminal.integrated.gpuAcceleration": "off",
@@ -57,9 +58,9 @@
   "code-runner.runInTerminal": true,
   "code-runner.saveFileBeforeRun": true,
   "code-runner.executorMap": {
-    "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\build\\sol.exe -march=native -Wall -Wextra -Wpedantic -Wshadow -Weffc++ -Wvla -Djosuerom",
+    "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\build\\vs-sol.exe -march=native -Wall -Wextra -Wpedantic -Wshadow -Weffc++ -Wvla -Djosuerom",
     "java": "cls && cd $dir && javac -d d:\\workspace\\build $fileName",
-    "sol.exe": "cls && d:\\workspace\\build\\sol.exe",
+    "sol.exe": "cls && d:\\workspace\\build\\vs-sol.exe",
     "sol.class": "cls && cd d:\\workspace\\build && java $fileNameWithoutExt",
     "python": "cls && cd $dir && python $fileName",
     "javascript": "cls && cd $dir && node $fileName",
