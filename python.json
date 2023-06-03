@@ -1,12 +1,42 @@
 { // @author: josuerom
-	"input()": {
-		"prefix": "in",
+	"read int": {
+		"prefix": "ri",
 		"body": [
-			"input($1)"
+			"int(input())"
+		],
+	},
+  "read str": {
+		"prefix": "rs",
+		"body": [
+			"input("")"
+		],
+	},
+  "read decimal": {
+		"prefix": "rd",
+		"body": [
+			"float(input())"
+		],
+	},
+  "read all line": {
+		"prefix": "rd",
+		"body": [
+			"s = input().split(" ")"
+		],
+	},
+  "read list int": {
+		"prefix": "rli",
+		"body": [
+			"$1 = map(${2:int}, input().split(" "))"
+		],
+	},
+  "read char array": {
+		"prefix": "rac",
+		"body": [
+			"$1 = map(${2:int}, input().split(""))"
 		],
 	},
 	"print()": {
-		"prefix": "pr",
+		"prefix": "pp",
 		"body": [
 			"print($1)"
 		],
@@ -47,85 +77,59 @@
 			"tt = int(input())$1"
 		],
 	},
-	"read line str": {
-		"prefix": "rdar",
-		"body": [
-			"line = cin(\"\")",
-			"$1 = line.split(' ')"
-		],
-	},
-	"read line int": {
-		"prefix": "map",
-		"body": [
-			"$1 = map(${2:int}, cin().split())"
-		],
-	},
-	"read line list int": {
-		"prefix": "list",
-		"body": [
-			"L = list(map(int, cin().split()))"
-		],
-	},
 	"complexity": {
 		"prefix": "com",
 		"body": [
-			"#\tauthor: josuerom",
-			"#\tcomplexity: O($1)",
+			"#   author: josuerom - complexity: O($1)",
 		],
 	},
 	"@PythonDocs": {
 		"prefix": "author",
 		"body": [
-			"#\tauthor: josuerom - created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+			"#   author: josuerom - created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
 		],
 	},
-	"template 1 codeforces.com": {
-		"prefix": "template1",
+	"template 1 cp": {
+		"prefix": "tem1",
 		"body": [
-			"#\tauthor: josuerom - created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
-			"from math import *",
-			"import sys\n",
-			"cin = lambda: sys.stdin.readline().strip()",
-			"cout = sys.stdout.write\n",
-			"for i in range(int(cin())):$1",
-			"\tsolution()",
+			"#   author: josuerom - created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
 			"",
-			"def solution():",
-			"\t$2 = map(int, cin().split(' '))",
-			"\t# cout(f\"{ans}\\n\")",
+      "def solve(self):",
+      "\t$1",
+      "",
+      "if __name__ == '__main__':",
+      "\ttt = int(input())",
+      "\twhile tt > 0:",
+      "\t\tsolve()",
+      "\t\ttt -= 1",
 		],
 	},
-	"template 2 vjudge.net": {
-		"prefix": "template2",
+	"template 2 free": {
+		"prefix": "tem2",
 		"body": [
-			"#\tauthor: josuerom - created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
-			"\tcomplexity: O()",
-			"tt = int(input())",
-			"",
-			"while tt > 0:",
-			"\t$1",
-			"\ttt -= 1",
-		],
-	},
-	"template 3 free": {
-		"prefix": "template3",
-		"body": [
-			"#\tauthor: josuerom - created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+			"#   author: josuerom - created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
 			"$1"
 		],
 	},
 	"def": {
-		"prefix": "me",
+		"prefix": "def",
 		"body": [
 			"def $1():",
 			"\t$2",
+		],
+	},
+	"def solve()": {
+		"prefix": "fsol",
+		"body": [
+			"def solve(self):",
+			"\t$1",
 		],
 	},
 	"function main": {
 		"prefix": "fm",
 		"body": [
 			"if __name__ == '__main__':",
-			"\t$1"
+			"\tsolve()"
 		],
 	},
 }
