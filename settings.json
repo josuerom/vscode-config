@@ -1,6 +1,5 @@
 { // @author: josuerom
-  "workbench.colorTheme": "Default Theme",
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Theme Flat",
   "editor.fontFamily": "'Cascadia Code', 'JetBrains Mono', 'UbuntuMono NF', monospace",
   "terminal.integrated.gpuAcceleration": "off",
   "security.workspace.trust.untrustedFiles": "open",
@@ -49,8 +48,8 @@
     }
   },
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
-  "terminal.integrated.fontFamily": "'JetBrains Mono'",
-  "terminal.integrated.fontSize": 13.8,
+  "terminal.integrated.fontFamily": "JetBrains Mono",
+  "terminal.integrated.fontSize": 14,
   "terminal.integrated.tabs.focusMode": "singleClick",
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.cursorBlinking": true,
@@ -58,13 +57,17 @@
   "code-runner.runInTerminal": true,
   "code-runner.saveFileBeforeRun": true,
   "code-runner.executorMap": {
-    "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\build\\vs-sol.exe -march=native -Wall -Wextra -Wpedantic -Wshadow -Weffc++ -Wvla -Djosuerom",
+    "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\build\\vs-sol.exe -march=native -Wall -Wextra -Wpedantic -Wshadow -Wvla -Djosuerom",
     "java": "cls && cd $dir && javac -d d:\\workspace\\build $fileName",
-    "sol.exe": "cls && d:\\workspace\\build\\vs-sol.exe",
-    "sol.class": "cls && cd d:\\workspace\\build && java $fileNameWithoutExt",
+    "sol.exe": "cls && d: && d:\\workspace\\build\\vs-sol.exe",
+    "sol.class": "cls && d: && cd d:\\workspace\\build && java -Xmx512M -Xss64M -DONLINE_JUDGE=true $fileNameWithoutExt",
+    "sol.exe input file": "cls && d: && d:\\workspace\\build\\vs-sol.exe < d:\\workspace\\sample\\input",
+    "sol.class input file": "cls && d: && cd d:\\workspace\\build && java -Xmx512M -Xss64M -DONLINE_JUDGE=true $fileNameWithoutExt < d:\\workspace\\sample\\input",
+    "input file": "cls && d: && notepad d:\\workspace\\sample\\input",
     "python": "cls && cd $dir && python $fileName",
     "javascript": "cls && cd $dir && node $fileName",
-    "typescript": "cls && cd $dir && node $fileName"
+    "typescript": "cls && cd $dir && node $fileName",
+    "kotlin": "cls && cd $dir && kotlin $fileName"
   },
   // "workbench.statusBar.visible": false,
   // "workbench.activityBar.visible": false,
@@ -102,4 +105,11 @@
   "code-runner.clearPreviousOutput": true,
   "code-runner.defaultLanguage": "cpp java",
   "code-runner.fileDirectoryAsCwd": true,
+  // configuration CPH
+  "cph.general.menuChoices": "cpp java",
+  //"cph.general.defaultLanguage": "java",
+  "cph.general.saveLocation": "D:\\Workspace\\build",
+  "cph.language.cpp.Args": "-march=native -Wall -Wextra -Wpedantic -Wshadow -Wvla -Djosuerom",
+  "cph.language.java.Args": "-Xmx512M -Xss64M -Xlint:deprecation -DONLINE_JUDGE=true",
+  "cph.language.java.SubmissionCompiler": "Java 1.8.0_241",
 }
