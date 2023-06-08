@@ -68,7 +68,7 @@
     "run c++ input file": "cls && d: && d:\\workspace\\build\\vs-sol.exe < d:\\workspace\\sample\\input",
     "run java input file": "cls && d: && cd d:\\workspace\\build && java -Xmx512M -Xss64M -DONLINE_JUDGE=true $fileNameWithoutExt < d:\\workspace\\sample\\input",
     "python": "cls && cd $dir && python $fileName",
-    "open input file": "cls && d: && notepad d:\\workspace\\sample\\input",
+    "open input file": "cls && d: && notepad d:\\workspace\\sample\\input.txt",
     "javascript": "cls && cd $dir && node $fileName",
     "typescript": "cls && cd $dir && node $fileName",
   },
