@@ -1,9 +1,9 @@
-{ // Comparto las únicas extensiones que manejo dentro de Visual Studio Code
+{ // Comparto las únicas extensiones que manejo dentro de VSCode
    "listOfExtensions": [
       {
-         "extesionName": "C/C++",
-         "author": "Microsoft",
-         "descripcion":  "Entrega sugerencias y autocompleta código para esos dos lenguajes"
+         "extesionName": "Palenight Theme",
+         "author": "Olaolu Olawuyi",
+         "descripcion":  "Esquema de color para el editor"
       },
       {
          "extesionName": "tldraw",
@@ -43,12 +43,12 @@
       {
          "extesionName": "CodeTime",
          "author": "Software",
-         "descripcion":  "Permite trabajar bajo con un cronometroen marcha, temporizador o tiempo libre, es de mucha utilidad en mi opinión"
+         "descripcion":  "Permite trabajar bajo un cronometro en marcha, temporizador o tiempo libre, la utilizo"
       },
       {
          "extesionName": "Seudev's VSCode Java snippets",
          "author": "Seudev",
-         "descripcion":  "Incorpora una gran variedad de snippets para solo Java que con escribir algunos carácteres y presionar tab se autocompletará el bloque de código con más facilidad"
+         "descripcion":  "Incorpora una gran variedad de snippets solo para java que con escribir algunos carácteres y presionar TAb se autocompletará el bloque de código con más facilidad"
       }
    ]
 }
