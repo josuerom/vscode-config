@@ -328,7 +328,7 @@
       "**/",
     ]
   },
-  "Template 1 Codeforces": {
+  "Template 1 for codeforces": {
     "prefix": "tem1",
     "body": [
       "/**",
@@ -447,7 +447,7 @@
     ],
     "description": "Plantilla para soluciones efectivas y rápidas",
   },
-  "Template 2 With All": {
+  "Template 2 with all": {
     "prefix": "tem2",
     "body": [
       "/**",
@@ -481,9 +481,9 @@
       "\t}",
       "}"
     ],
-    "description": "Plantilla estructurada para la CP (competitive programming)",
+    "description": "Plantilla estructurada para la CP(competitive programming)",
   },
-  "Template 3 Simple": {
+  "Template 3 simple and ligth": {
     "prefix": "tem3",
     "body": [
       "/**",
@@ -504,7 +504,7 @@
     ],
     "description": "Plantilla sencilla y liviana",
   },
-  "Template 2 Bits()": {
+  "Template 4 team 2 bits()": {
     "prefix": "tem4",
     "body": [
       "/**",
