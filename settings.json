@@ -115,13 +115,14 @@
   "git.confirmSync": false,
   "git.openRepositoryInParentFolders": "never",
 
-  //"cph.general.defaultLanguage": "java",
+  // "cph.general.defaultLanguage": "java",
+  // "cph.general.defaultLanguageTemplateFileLocation": "C:\\Users\\jr3\\templates\\temp-java",
   "cph.general.menuChoices": "cpp java python",
   "cph.language.java.SubmissionCompiler": "Java 1.8.0_241",
   "cph.language.cpp.SubmissionCompiler": "GNU G++17 7.3.0",
   "cph.language.python.SubmissionCompiler": "Python 3.7.2",
   "cph.general.saveLocation": "D:\\Workspace\\build",
-  //"cph.general.defaultLanguageTemplateFileLocation": "C:\\Users\\jr3\\templates\\temp-java",
+  "cph.general.timeOut": 3000,
   "cph.language.cpp.Args": "-march=native -Wall -Wextra -Wpedantic -Wshadow -Wvla -Djosuerom",
   "cph.language.java.Args": "-Xmx512M -Xss64M -DONLINE_JUDGE=true",
 }
