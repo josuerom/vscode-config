@@ -174,7 +174,7 @@
       "\treturn (double) (clock() - startTime)/CLOCKS_PER_SEC;",
       "}",
       "\t${1:startTime = clock();",
-      "\tcout << \"time = \" << setprecision(5) << getCurrentTime() << \"ms\\n\";}"
+      "\tcout << \"time: \" << setprecision(5) << getCurrentTime() << \" ms\\n\";}"
     ]
   },
   "data/debug.h": {
@@ -296,11 +296,11 @@
       "\tSPEED_IO();",
       "\t$3",
       "\t#ifdef josuerom",
-      "\t\tcout << \"time = \" << setprecision(5) << getCurrentTime() << \"ms\\n\";",
+      "\t\tcout << \"time: \" << setprecision(5) << getCurrentTime() << \" ms\\n\";",
       "\t#endif",
       "}"
     ],
-    "description": "Plantilla de con todo para competencias"
+    "description": "Plantilla con todo para competir"
   },
   "Template 3 Simple": {
     "prefix": "tem3",
