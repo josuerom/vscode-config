@@ -76,6 +76,7 @@
   // "workbench.statusBar.visible": false,
   // "workbench.activityBar.visible": false,
   "workbench.colorTheme": "Palenight Operator",
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   "workbench.layoutControl.enabled": false,
@@ -120,7 +121,7 @@
   "cph.language.cpp.SubmissionCompiler": "GNU G++17 7.3.0",
   "cph.language.python.SubmissionCompiler": "Python 3.7.2",
   "cph.general.saveLocation": "D:\\Workspace\\build",
-  //"cph.general.defaultLanguageTemplateFileLocation": C:\\Users\\jr3\\templates\\temp-java",
+  //"cph.general.defaultLanguageTemplateFileLocation": "C:\\Users\\jr3\\templates\\temp-java",
   "cph.language.cpp.Args": "-march=native -Wall -Wextra -Wpedantic -Wshadow -Wvla -Djosuerom",
   "cph.language.java.Args": "-Xmx512M -Xss64M -DONLINE_JUDGE=true",
 }

@@ -1,52 +1,52 @@
 [
    {
-   "key": "shift shift",
-   "command": "workbench.action.toggleSidebarVisibility",
+      "key": "shift shift",
+      "command": "workbench.action.toggleSidebarVisibility",
    },
    {
-   "key": "ctrl+b",
-   "command": "-workbench.action.toggleSidebarVisibility",
+      "key": "ctrl+b",
+      "command": "-workbench.action.toggleSidebarVisibility",
    },
    {
-   "key": "n",
-   "command": "explorer.newFile",
-   "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+      "key": "n",
+      "command": "explorer.newFile",
+      "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
    },
    {
-   "key": "ctrl+shift+z",
-   "command": "cph.judgeView.focus"
+      "key": "ctrl+shift+z",
+      "command": "cph.judgeView.focus"
    },
    {
-   "key": "ctrl+alt+d",
-   "command": "-cph.judgeView.focus"
+      "key": "ctrl+alt+d",
+      "command": "-cph.judgeView.focus"
    },
    {
-   "key": "ctrl+shift+c",
-   "command": "-workbench.action.terminal.openNativeConsole",
-   "when": "!terminalFocus"
+      "key": "ctrl+shift+c",
+      "command": "-workbench.action.terminal.openNativeConsole",
+      "when": "!terminalFocus"
    },
    {
-   "key": "ctrl+shift+[Semicolon]",
-   "command": "workbench.action.createTerminalEditorSide"
+      "key": "ctrl+shift+[Semicolon]",
+      "command": "workbench.action.createTerminalEditorSide"
    },
    {
-   "key": "ctrl+[Semicolon]",
-   "command": "workbench.action.terminal.newInActiveWorkspace"
+      "key": "ctrl+[Semicolon]",
+      "command": "workbench.action.terminal.newInActiveWorkspace"
    },
    {
-   "key": "ctrl+alt+c",
-   "command": "code-runner.stop"
+      "key": "ctrl+alt+c",
+      "command": "code-runner.stop"
    },
    {
-   "key": "ctrl+alt+m",
-   "command": "-code-runner.stop"
+      "key": "ctrl+alt+m",
+      "command": "-code-runner.stop"
    },
    {
-   "key": "ctrl+alt+m",
-   "command": "code-runner.runByLanguage"
+      "key": "ctrl+alt+m",
+      "command": "code-runner.runByLanguage"
    },
    {
-   "key": "ctrl+alt+j",
-   "command": "-code-runner.runByLanguage"
+      "key": "ctrl+alt+j",
+      "command": "-code-runner.runByLanguage"
    },
 ]
