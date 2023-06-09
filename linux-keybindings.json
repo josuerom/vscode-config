@@ -49,4 +49,30 @@
       "key": "ctrl+alt+j",
       "command": "-code-runner.runByLanguage"
    },
+   {
+      "key": "ctrl+alt+m",
+      "command": "-code-runner.stop"
+   },
+   {
+      "key": "ctrl+shift+c",
+      "command": "code-runner.stop"
+   },
+   {
+      "key": "ctrl+alt+k",
+      "command": "-code-runner.runCustomCommand"
+   },
+   {
+      "key": "ctrl+alt+f",
+      "command": "editor.action.formatDocument",
+      "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+   },
+   {
+      "key": "shift+alt+f",
+      "command": "-editor.action.formatDocument",
+      "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+   },
+   {
+      "key": "ctrl+shift+z",
+      "command": "cph.judgeView.focus"
+   }
 ]
