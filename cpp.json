@@ -113,11 +113,13 @@
     ]
   },
   "void solve() { body }": {
-    "prefix": "fsol",
+    "prefix": "fs",
     "body": [
+      "",
       "void solve() {",
       "\t$1",
-      "}"
+      "}",
+      ""
     ]
   },
   "function main": {
