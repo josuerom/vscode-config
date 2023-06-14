@@ -4,8 +4,8 @@
   "debug.terminal.clearBeforeReusing": true,
   "extensions.ignoreRecommendations": true,
   "security.workspace.trust.untrustedFiles": "open",
-  "redhat.telemetry.enabled": false,
   "explorer.confirmDelete": false,
+  // "redhat.telemetry.enabled": false,
 
   "window.commandCenter": true,
   "window.menuBarVisibility": "compact",
@@ -31,7 +31,7 @@
       "icon": "terminal-cmd"
     },
     "GitBash": {
-      "path": "D:\\Program Files\\Git\\bin\\bash.exe",
+      "path": "d:\\program files\\git\\bin\\bash.exe",
       "icon": "terminal-bash",
       "color": "terminal.ansiGreen"
     }
@@ -40,7 +40,7 @@
   "java.configuration.runtimes": [
     {
       "name": "JavaSE-19",
-      "path": "D:\\Program Files\\Compilers\\Jdk-19.0.1\\",
+      "path": "d:\\program files\\compilers\\jdk-19.0.1\\",
       "default": true
     }
   ],
@@ -54,19 +54,19 @@
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.gpuAcceleration": "off",
 
-  "code-runner.temporaryFileName": "fileTempError",
+  "code-runner.temporaryFileName": "tempErrorFile",
   "code-runner.runInTerminal": true,
   "code-runner.saveFileBeforeRun": true,
   "code-runner.clearPreviousOutput": true,
   "code-runner.defaultLanguage": "cpp java",
   "code-runner.fileDirectoryAsCwd": true,
   "code-runner.executorMap": {
-    "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\build\\vs-sol.exe -march=native -Wall -Wextra -Wpedantic -Wshadow -Wvla -Djosuerom",
+    "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\build\\vs-sol.exe -std=c++17 -march=native -Wall -Wextra -Wshadow -Wvla -Djosuerom",
     "java": "cls && cd $dir && javac -d d:\\workspace\\build $fileName",
     "run c++": "cls && d: && d:\\workspace\\build\\vs-sol.exe",
     "run java": "cls && d: && cd d:\\workspace\\build && java -Xmx512M -Xss64M -DONLINE_JUDGE=true $fileNameWithoutExt",
-    "run c++ input file": "cls && d: && d:\\workspace\\build\\vs-sol.exe < d:\\workspace\\sample\\input",
-    "run java input file": "cls && d: && cd d:\\workspace\\build && java -Xmx512M -Xss64M -DONLINE_JUDGE=true $fileNameWithoutExt < d:\\workspace\\sample\\input.in",
+    "run c++ INP": "cls && d: && d:\\workspace\\build\\vs-sol.exe < d:\\workspace\\sample\\input",
+    "run java INP": "cls && d: && cd d:\\workspace\\build && java -Xmx512M -Xss64M -DONLINE_JUDGE=true $fileNameWithoutExt < d:\\workspace\\sample\\input.in",
     "python": "cls && cd $dir && python $fileName",
     "open input file": "cls && d: && notepad d:\\workspace\\sample\\input",
     "javascript": "cls && cd $dir && node $fileName",
@@ -75,7 +75,7 @@
 
   // "workbench.statusBar.visible": false,
   // "workbench.activityBar.visible": false,
-  "workbench.colorTheme": "Monokai",
+  "workbench.colorTheme": "Sublime MavensMate Monokai",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
@@ -115,12 +115,8 @@
   "git.confirmSync": false,
   "git.openRepositoryInParentFolders": "never",
 
-  "cph.general.menuChoices": "cpp java",
-  "cph.language.java.SubmissionCompiler": "Java 1.8.0_241",
-  "cph.language.cpp.SubmissionCompiler": "GNU G++17 7.3.0",
-  "cph.general.saveLocation": "D:\\Workspace\\build",
-  "cph.language.cpp.Args": "-Wall -Djosuerom -DLOCAL",
-  "cph.general.autoShowJudge": false,
-  "cph.general.firstTime": false,
-  "cph.general.ignoreSTDERROR": true,
+  "catalyst.default.layoutRatio": 45,
+  "catalyst.default.saveLocation": "d:\\workspace\\build",
+  "catalyst.default.theme": "Light",
+  "catalyst.lang.cpp.args": "-std=c++17 -march=native -Wall -Wextra -Wshadow -Wvla -Djosuerom",
 }
