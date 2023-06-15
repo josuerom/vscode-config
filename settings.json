@@ -115,8 +115,9 @@
   "git.confirmSync": false,
   "git.openRepositoryInParentFolders": "never",
 
-  "catalyst.default.layoutRatio": 48,
+  "catalyst.default.layoutRatio": 56,
   "catalyst.default.saveLocation": "d:\\workspace\\build",
   "catalyst.default.theme": "Light",
-  "catalyst.lang.cpp.args": "-std=c++17 -march=native -Wall -Wextra -Wshadow -Wvla -DLOCAL",
+  "catalyst.lang.cpp.args": "-std=c++17 -march=native -Wall -Wextra -Wshadow -Wvla",
+  "catalyst.lang.java.args": "-Xmx512M -Xss64M -DONLINE_JUDGE=true",
 }
