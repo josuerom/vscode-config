@@ -1,4 +1,4 @@
-[
+[ // @author josuerom
    {
       "key": "shift shift",
       "command": "workbench.action.toggleSidebarVisibility",
