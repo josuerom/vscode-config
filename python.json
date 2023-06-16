@@ -20,7 +20,7 @@
   "read N": {
     "prefix": "rn",
     "body": [
-      "N = int(input())"
+      "n = int(input())"
     ],
   },
   "read list of strings": {
@@ -48,11 +48,21 @@
     ],
   },
   "read test case": {
-    "prefix": "rtc",
+    "prefix": "tc",
     "body": [
       "tc = int(input())",
       "while tc > 0:",
       "\t$1",
+      "\ttc -= 1",
+    ],
+  },
+  "read test case call solve()": {
+    "prefix": "tt",
+    "body": [
+      "tt = int(input())",
+      "while tt > 0:",
+      "\t$1",
+      "\tsolve($2)",
       "\ttc -= 1",
     ],
   },
