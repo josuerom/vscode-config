@@ -45,7 +45,7 @@
   ],
 
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
-  "terminal.integrated.fontFamily": "JetBrains Mono",
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.tabs.focusMode": "singleClick",
   "terminal.integrated.enableMultiLinePasteWarning": false,
@@ -53,31 +53,31 @@
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.gpuAcceleration": "off",
 
-  "code-runner.temporaryFileName": "tempErrorFile",
   "code-runner.runInTerminal": true,
   "code-runner.saveFileBeforeRun": true,
-  "code-runner.clearPreviousOutput": true,
-  "code-runner.defaultLanguage": "java python cpp",
-  "code-runner.fileDirectoryAsCwd": true,
+  "code-runner.clearPreviousOutput": false,
+  "code-runner.preserveFocus": false,
+  "code-runner.cwd": "C:\\Users\\estef\\VisualJava",
+  "code-runner.temporaryFileName": "tempErrorFile",
   "code-runner.executorMap": {
+    // para lenguajes compilados
     "cpp": "cls && cd $dir && g++ $fileName -o C:\\Users\\estef\\VisualJava\\vs-sol.exe -std=c++17 -march=native -Wall -Wextra -Wshadow -Wvla -Djosuerom && C:\\Users\\estef\\VisualJava\\vs-sol.exe",
     "java": "cls && cd $dir && javac -d C:\\Users\\estef\\VisualJava $fileName && cd C:\\Users\\estef\\VisualJava && java -Xmx512M -Xss64M -XX:+UseG1GC -DDEBUG=true $fileNameWithoutExt",
     "run java": "cls && cd C:\\Users\\estef\\VisualJava && java -Xmx512M -Xss64M -XX:+UseG1GC -DDEBUG=true $fileNameWithoutExt",
-    "run c++": "cls && C:\\Users\\estef\\VisualJava\\vs-sol.exe",
+    "run cpp": "cls && C:\\Users\\estef\\VisualJava\\vs-sol.exe",
+    // para lenguajes interpretados
     "python": "cls && cd $dir && python -OO -S -B -W error $fileName",
     "javascript": "cls && cd $dir && node $fileName",
     "typescript": "cls && cd $dir && node $fileName",
   },
 
-  // "workbench.statusBar.visible": false,
-  // "workbench.activityBar.visible": false,
   "workbench.sideBar.location": "left",
   "workbench.startupEditor": "none",
   "workbench.layoutControl.enabled": false,
   "workbench.editor.enablePreview": false,
   "workbench.editor.showTabs": true,
 
-  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
   "editor.fontSize": 13.8,
   "editor.fontWeight": "373",
   "editor.fontLigatures": true,
@@ -117,7 +117,7 @@
   "catalyst.lang.python.args": "-OO -S -B",
 
   "cph.general.defaultLanguage": "java",
-  //"cph.general.menuChoices": "java python cpp",
+  // "cph.general.menuChoices": "java python cpp",
   "cph.general.timeOut": 3000,
   "cph.general.ignoreSTDERROR": true,
   "cph.language.java.SubmissionCompiler": "Java 1.8.0_241",
