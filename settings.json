@@ -41,7 +41,7 @@
 
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
-  "terminal.integrated.fontSize": 13.5,
+  "terminal.integrated.fontSize": 14,
   "terminal.integrated.tabs.focusMode": "singleClick",
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.cursorBlinking": true,
@@ -66,15 +66,15 @@
 
   "workbench.colorTheme": "Default Dark Modern",
   "workbench.iconTheme": "",
-  "workbench.sideBar.location": "right",
+  "workbench.sideBar.location": "left",
   "workbench.startupEditor": "none",
   "workbench.layoutControl.enabled": false,
   "workbench.editor.enablePreview": false,
-  "workbench.editor.showTabs": false,
+  "workbench.editor.showTabs": true,
 
   "editor.fontFamily": "JetBrainsMono Nerd Font",
-  "editor.fontSize": 13,
-  "editor.fontWeight": "200",
+  "editor.fontSize": 13.2,
+  "editor.fontWeight": "50",
   "editor.fontLigatures": true,
   "editor.tabCompletion": "on",
   "editor.tabSize": 3,
@@ -103,13 +103,6 @@
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.openRepositoryInParentFolders": "never",
-
-  "catalyst.default.layoutRatio": 55,
-  "catalyst.default.saveLocation": "C:\\Users\\estef\\VisualJava",
-  "catalyst.default.theme": "Dark",
-  "catalyst.lang.cpp.args": "-std=c++17 -march=native -Wall -Wextra -Wshadow -Wvla",
-  "catalyst.lang.java.runtime.args": "-Xmx512M -Xss64M -XX:+UseG1GC -DDEBUG=true",
-  "catalyst.lang.python.args": "-OO -S -B",
 
   "cph.general.defaultLanguage": "java",
   // "cph.general.menuChoices": "java python cpp",
