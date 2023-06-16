@@ -31,7 +31,7 @@
       "icon": "terminal-cmd"
     },
     "GitBash": {
-      "path": "d:\\program files\\git\\bin\\bash.exe",
+      "path": "c:\\program files\\git\\bin\\bash.exe",
       "icon": "terminal-bash",
       "color": "terminal.ansiGreen"
     }
@@ -39,8 +39,8 @@
 
   "java.configuration.runtimes": [
     {
-      "name": "JavaSE-19",
-      "path": "d:\\program files\\compilers\\jdk-19.0.1\\",
+      "name": "JavaSE-17",
+      "path": "C:\\Program Files\\Java\\jdk-17\\",
       "default": true
     }
   ],
@@ -58,32 +58,28 @@
   "code-runner.runInTerminal": true,
   "code-runner.saveFileBeforeRun": true,
   "code-runner.clearPreviousOutput": true,
-  "code-runner.defaultLanguage": "cpp java",
+  "code-runner.defaultLanguage": "java python cpp",
   "code-runner.fileDirectoryAsCwd": true,
   "code-runner.executorMap": {
-    "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\build\\vs-sol.exe -std=c++17 -march=native -Wall -Wextra -Wshadow -Wvla -Djosuerom",
-    "java": "cls && cd $dir && javac -d d:\\workspace\\build $fileName",
-    "run c++": "cls && d: && d:\\workspace\\build\\vs-sol.exe",
-    "run java": "cls && d: && cd d:\\workspace\\build && java -Xmx512M -Xss64M -DONLINE_JUDGE=true $fileNameWithoutExt",
-    "run c++ INP": "cls && d: && d:\\workspace\\build\\vs-sol.exe < d:\\workspace\\sample\\input",
-    "run java INP": "cls && d: && cd d:\\workspace\\build && java -Xmx512M -Xss64M -DONLINE_JUDGE=true $fileNameWithoutExt < d:\\workspace\\sample\\input.in",
-    "python": "cls && cd $dir && python $fileName",
-    "open input file": "cls && d: && notepad d:\\workspace\\sample\\input",
+    "cpp": "cls && cd $dir && g++ $fileName -o C:\\Users\\estef\\VisualJava\\vs-sol.exe -std=c++17 -march=native -Wall -Wextra -Wshadow -Wvla -Djosuerom && C:\\Users\\estef\\VisualJava\\vs-sol.exe",
+    "java": "cls && cd $dir && javac -d C:\\Users\\estef\\VisualJava $fileName && cd C:\\Users\\estef\\VisualJava && java -Xmx512M -Xss64M -XX:+UseG1GC -DDEBUG=true $fileNameWithoutExt",
+    "run program java": "cls && cd C:\\Users\\estef\\VisualJava && java -Xmx512M -Xss64M -XX:+UseG1GC -DDEBUG=true $fileNameWithoutExt",
+    "run program c++": "cls && C:\\Users\\estef\\VisualJava\\vs-sol.exe",
+    "python": "cls && cd $dir && python -OO -S -B $fileName",
     "javascript": "cls && cd $dir && node $fileName",
     "typescript": "cls && cd $dir && node $fileName",
   },
 
   // "workbench.statusBar.visible": false,
   // "workbench.activityBar.visible": false,
-  "workbench.colorTheme": "Sublime MavensMate Monokai",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.sideBar.location": "right",
+  "workbench.sideBar.location": "left",
   "workbench.startupEditor": "none",
   "workbench.layoutControl.enabled": false,
   "workbench.editor.enablePreview": false,
-  "workbench.editor.showTabs": false,
+  "workbench.editor.showTabs": true,
 
-  "editor.fontFamily": "'Cascadia Code', 'JetBrains Mono', 'UbuntuMono Nerd Font'",
+  "editor.fontFamily": "JetBrains Mono",
   "editor.fontSize": 13.8,
   "editor.fontWeight": "373",
   "editor.fontLigatures": true,
@@ -115,9 +111,10 @@
   "git.confirmSync": false,
   "git.openRepositoryInParentFolders": "never",
 
-  "catalyst.default.layoutRatio": 56,
-  "catalyst.default.saveLocation": "d:\\workspace\\build",
-  "catalyst.default.theme": "Light",
+  "catalyst.default.layoutRatio": 55,
+  "catalyst.default.saveLocation": "C:\\Users\\estef\\VisualJava",
+  "catalyst.default.theme": "Dark",
   "catalyst.lang.cpp.args": "-std=c++17 -march=native -Wall -Wextra -Wshadow -Wvla",
-  "catalyst.lang.java.args": "-Xmx512M -Xss64M -DONLINE_JUDGE=true",
+  "catalyst.lang.java.args": "-Xmx512M -Xss64M -XX:+UseG1GC -DDEBUG=true",
+  "catalyst.lang.python.args": "-OO -S -B",
 }
