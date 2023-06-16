@@ -10,7 +10,7 @@
   "window.menuBarVisibility": "compact",
 
   "files.exclude": {
-    "**/.classpath": true,
+      "**/.classpath": true,
     "**/.project": true,
     "**/.settings": true,
     "**/.factorypath": true
@@ -29,11 +29,6 @@
       "args": [],
       "icon": "terminal-cmd"
     },
-    "GitBash": {
-      "path": "c:\\program files\\git\\bin\\bash.exe",
-      "icon": "terminal-bash",
-      "color": "terminal.ansiGreen"
-    }
   },
 
   "java.configuration.runtimes": [
@@ -46,7 +41,7 @@
 
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
-  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontSize": 13.5,
   "terminal.integrated.tabs.focusMode": "singleClick",
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.cursorBlinking": true,
@@ -60,26 +55,26 @@
   "code-runner.cwd": "C:\\Users\\estef\\VisualJava",
   "code-runner.temporaryFileName": "tempErrorFile",
   "code-runner.executorMap": {
-    // para lenguajes compilados
     "cpp": "cls && cd $dir && g++ $fileName -o C:\\Users\\estef\\VisualJava\\vs-sol.exe -std=c++17 -march=native -Wall -Wextra -Wshadow -Wvla -Djosuerom && C:\\Users\\estef\\VisualJava\\vs-sol.exe",
     "java": "cls && cd $dir && javac -d C:\\Users\\estef\\VisualJava $fileName && cd C:\\Users\\estef\\VisualJava && java -Xmx512M -Xss64M -XX:+UseG1GC -DDEBUG=true $fileNameWithoutExt",
     "run java": "cls && cd C:\\Users\\estef\\VisualJava && java -Xmx512M -Xss64M -XX:+UseG1GC -DDEBUG=true $fileNameWithoutExt",
     "run cpp": "cls && C:\\Users\\estef\\VisualJava\\vs-sol.exe",
-    // para lenguajes interpretados
     "python": "cls && cd $dir && python -OO -S -B -W error $fileName",
     "javascript": "cls && cd $dir && node $fileName",
     "typescript": "cls && cd $dir && node $fileName",
   },
 
-  "workbench.sideBar.location": "left",
+  "workbench.colorTheme": "Default Dark Modern",
+  "workbench.iconTheme": "",
+  "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   "workbench.layoutControl.enabled": false,
   "workbench.editor.enablePreview": false,
-  "workbench.editor.showTabs": true,
+  "workbench.editor.showTabs": false,
 
   "editor.fontFamily": "JetBrainsMono Nerd Font",
-  "editor.fontSize": 13.8,
-  "editor.fontWeight": "373",
+  "editor.fontSize": 13,
+  "editor.fontWeight": "200",
   "editor.fontLigatures": true,
   "editor.tabCompletion": "on",
   "editor.tabSize": 3,
