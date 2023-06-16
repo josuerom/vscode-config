@@ -1,0 +1,125 @@
+{ // @author: josuerom
+  "files.autoSave": "onFocusChange",
+  "diffEditor.wordWrap": "on",
+  "debug.terminal.clearBeforeReusing": true,
+  "extensions.ignoreRecommendations": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "explorer.confirmDelete": false,
+
+  "window.commandCenter": true,
+  "window.menuBarVisibility": "compact",
+
+  "files.exclude": {
+      "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+  },
+
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-20",
+      "path": "d:\\program files\\compilers\\jdk-20\\",
+      "default": true
+    }
+  ],
+
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+  "terminal.integrated.fontSize": 13.5,
+  "terminal.integrated.tabs.focusMode": "singleClick",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.gpuAcceleration": "off",
+
+  "code-runner.runInTerminal": true,
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.clearPreviousOutput": false,
+  "code-runner.preserveFocus": false,
+  "code-runner.cwd": "d:\\workspace\\build",
+  "code-runner.temporaryFileName": "tempErrorFile",
+  "code-runner.executorMap": {
+    "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\build\\vs-sol.exe -std=c++17 -march=native -Wall -Wextra -Wshadow -Wvla -Djosuerom && d:\\workspace\\build\\vs-sol.exe",
+    "java": "cls && cd $dir && javac -d d:\\workspace\\build $fileName && cd d:\\workspace\\build && java -Xmx512M -Xss64M -XX:+UseG1GC -DDEBUG=true $fileNameWithoutExt",
+    "run java": "cls && cd d:\\workspace\\build && java -Xmx512M -Xss64M -XX:+UseG1GC -DDEBUG=true $fileNameWithoutExt",
+    "run cpp": "cls && d:\\workspace\\build\\vs-sol.exe",
+
+    "python": "cls && cd $dir && python -OO -S -B $fileName",
+    "javascript": "cls && cd $dir && node $fileName",
+    "typescript": "cls && cd $dir && node $fileName",
+  },
+
+  "workbench.colorTheme": "Default Dark Modern",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.sideBar.location": "right",
+  "workbench.startupEditor": "none",
+  "workbench.layoutControl.enabled": false,
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.showTabs": false,
+
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.fontSize": 13,
+  "editor.fontWeight": "200",
+  "editor.fontLigatures": true,
+  "editor.tabCompletion": "on",
+  "editor.tabSize": 3,
+  "editor.padding.bottom": 0,
+  "editor.suggestSelection": "first",
+  "editor.wordWrap": "on",
+  "editor.minimap.enabled": false,
+  "editor.scrollbar.vertical": "hidden",
+  "editor.overviewRulerBorder": false,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.stickyScroll.enabled": true,
+  "editor.renderWhitespace": "none",
+  "editor.renderControlCharacters": false,
+  "editor.cursorBlinking": "expand",
+  "editor.inlineSuggest.enabled": true,
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.linkedEditing": true,
+  "editor.guides.bracketPairs": true,
+  "editor.matchBrackets": "never",
+  "editor.glyphMargin": false,
+  "debug.onTaskErrors": "debugAnyway",
+  "breadcrumbs.enabled": false,
+
+  "git.enableSmartCommit": true,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.openRepositoryInParentFolders": "never",
+
+  "catalyst.default.layoutRatio": 55,
+  "catalyst.default.saveLocation": "d:\\workspace\\build",
+  "catalyst.default.theme": "Dark",
+  "catalyst.lang.cpp.args": "-std=c++17 -march=native -Wall -Wextra -Wshadow -Wvla",
+  "catalyst.lang.java.runtime.args": "-Xmx512M -Xss64M -XX:+UseG1GC -DLOCAL=1",
+  "catalyst.lang.python.args": "-OO -S -B",
+
+  "cph.general.defaultLanguage": "java",
+  // "cph.general.menuChoices": "java python cpp",
+  "cph.general.timeOut": 3000,
+  "cph.general.ignoreSTDERROR": true,
+  "cph.language.java.SubmissionCompiler": "Java 1.8.0_241",
+  "cph.language.python.SubmissionCompiler": "Python 3.7.2",
+  "cph.general.saveLocation": "d:\\workspace\\build",
+  "cph.language.cpp.Args": "-march=native -Wall -Wextra -Wshadow -Wvla",
+  "cph.language.java.Args": "-Xmx512M -Xss64M -XX:+UseG1GC -DLOCAL=1",
+  "cph.language.python.Args": "-OO -S -B",
+}
