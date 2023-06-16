@@ -26,16 +26,8 @@
       "when": "!terminalFocus"
    },
    {
-      "key": "ctrl+shift+[Semicolon]",
+      "key": "ctrl+alt+[Semicolon]",
       "command": "workbench.action.createTerminalEditorSide"
-   },
-   {
-      "key": "ctrl+[Semicolon]",
-      "command": "workbench.action.terminal.newInActiveWorkspace"
-   },
-   {
-      "key": "ctrl+alt+c",
-      "command": "code-runner.stop"
    },
    {
       "key": "ctrl+alt+m",
@@ -54,7 +46,7 @@
       "command": "-code-runner.stop"
    },
    {
-      "key": "ctrl+shift+c",
+      "key": "ctrl+alt+c",
       "command": "code-runner.stop"
    },
    {
@@ -74,5 +66,87 @@
    {
       "key": "ctrl+shift+z",
       "command": "cph.judgeView.focus"
+   },
+   {
+      "key": "ctrl+alt+enter",
+      "command": "catalyst.runAllTestCases"
+   },
+   {
+      "key": "ctrl+enter",
+      "command": "-catalyst.runAllTestCases"
+   },
+   {
+      "key": "ctrl+k ctrl+c",
+      "command": "-editor.action.addCommentLine",
+      "when": "editorTextFocus && !editorReadonly"
+   },
+   {
+      "key": "ctrl+k ctrl+u",
+      "command": "-editor.action.removeCommentLine",
+      "when": "editorTextFocus && !editorReadonly"
+   },
+   {
+      "key": "ctrl+shift+]",
+      "command": "editor.action.commentLine",
+      "when": "editorTextFocus && !editorReadonly"
+   },
+   {
+      "key": "ctrl+shift+7",
+      "command": "-editor.action.commentLine",
+      "when": "editorTextFocus && !editorReadonly"
+   },
+   {
+      "key": "ctrl+k ctrl+shift+7",
+      "command": "-editor.foldAllBlockComments",
+      "when": "editorTextFocus && foldingEnabled"
+   },
+   {
+      "key": "ctrl+shift+[",
+      "command": "editor.action.blockComment",
+      "when": "editorTextFocus && !editorReadonly"
+   },
+   {
+      "key": "ctrl+shift+a",
+      "command": "-editor.action.blockComment",
+      "when": "editorTextFocus && !editorReadonly"
+   },
+   {
+      "key": "ctrl+d",
+      "command": "editor.action.addSelectionToNextFindMatch",
+      "when": "editorFocus"
+   },
+   {
+      "key": "ctrl+d",
+      "command": "-editor.action.addSelectionToNextFindMatch",
+      "when": "editorFocus"
+   },
+   {
+      "key": "ctrl+[Backquote]",
+      "command": "-workbench.action.terminal.focusTabs",
+      "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported || terminalHasBeenCreated && terminalTabsFocus || terminalProcessSupported && terminalTabsFocus"
+   },
+   {
+      "key": "ctrl+[Semicolon]",
+      "command": "workbench.action.terminal.toggleTerminal"
+   },
+   {
+      "key": "ctrl+shift+f",
+      "command": "editor.action.formatSelection",
+      "when": "editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
+   },
+   {
+      "key": "ctrl+k ctrl+f",
+      "command": "-editor.action.formatSelection",
+      "when": "editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
+   },
+   {
+      "key": "ctrl+shift+i",
+      "command": "-editor.action.formatDocument",
+      "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+   },
+   {
+      "key": "ctrl+shift+i",
+      "command": "-editor.action.formatDocument.none",
+      "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
    }
 ]
