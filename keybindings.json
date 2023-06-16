@@ -57,5 +57,15 @@
   {
     "key": "ctrl+enter",
     "command": "-catalyst.runAllTestCases"
+  },
+  {
+    "key": "ctrl+oem_7",
+    "command": "editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+a",
+    "command": "-editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly"
   }
 ]
