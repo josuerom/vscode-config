@@ -33,10 +33,10 @@
   "code-runner.cwd": "/home/jr3/workspace/build",
   "code-runner.temporaryFileName": "tempErrorFile",
   "code-runner.executorMap": {
-    "cpp": "clear && cd $dir && g++ $fileName -o /home/jr3/workspace/buildvs-sol.exe -std=c++17 -march=native -Wall -Wextra -Wshadow -Wvla -Djosuerom && /home/jr3/workspace/buildvs-sol.exe",
-    "java": "clear && cd $dir && javac -d ~/workspace/build $fileName && cd ~/workspace/build && java -Xmx512M -Xss64M -XX:+UseG1GC -DLOCAL=1 $fileNameWithoutExt",
+    "cpp": "clear && cd $dir && g++ $fileName -o /home/jr3/workspace/build/vs-sol.exe -std=c++17 -march=native -Wall -Wextra -Wshadow -Wvla -Djosuerom && /home/jr3/workspace/build/vs-sol.exe",
+    "java": "clear && cd $dir && javac -d /home/jr3/workspace/build $fileName && cd /home/jr3/workspace/build && java -Xmx512M -Xss64M -XX:+UseG1GC -DLOCAL=1 $fileNameWithoutExt",
     "run java": "clear && cd ~/workspace/build && java -Xmx512M -Xss64M -XX:+UseG1GC -DLOCAL=1 $fileNameWithoutExt",
-    "run cpp": "clear && /home/jr3/workspace/buildvs-sol.exe",
+    "run cpp": "clear && /home/jr3/workspace/build/vs-sol.exe",
 
     "python": "clear && cd $dir && python -OO -S -B $fileName",
     "javascript": "clear && cd $dir && node $fileName",
