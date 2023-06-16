@@ -1,4 +1,4 @@
-{ //@author: josuerom
+{ // @author josuerom
   "files.autoSave": "onFocusChange",
   "diffEditor.wordWrap": "on",
   "debug.terminal.clearBeforeReusing": true,
