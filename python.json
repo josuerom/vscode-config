@@ -1,4 +1,4 @@
-{ // @author: josuerom
+{ // @author josuerom
   "read int": {
     "prefix": "ri",
     "body": [
