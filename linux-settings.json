@@ -11,8 +11,8 @@
 
   "java.configuration.runtimes": [
     {
-      "name": "JavaSE-20",
-      "path": "/usr/bin/java",
+      "name": "JavaSE-11",
+      "path": "/usr/lib/jvm/java-11-openjdk-amd64/",
       "default": true
     }
   ],
@@ -46,9 +46,6 @@
   "workbench.colorTheme": "Default Dark Modern",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.productIconTheme": "fluent-icons",
-  // "workbench.activityBar.visible": false,
-  // "workbench.statusBar.visible": false,
-  "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   "workbench.layoutControl.enabled": false,
   "workbench.editor.enablePreview": false,
@@ -87,7 +84,6 @@
   "git.openRepositoryInParentFolders": "never",
 
   "catalyst.default.layoutRatio": 55,
-  "catalyst.default.saveLocation": "/home/jr3/workspace/build",
   "catalyst.default.theme": "Dark",
   "catalyst.lang.cpp.args": "-std=c++17 -march=native -Wall -Wextra -Wshadow -Wvla -Djosuerom",
   "catalyst.lang.java.runtime.args": "-Xmx512M -Xss64M -XX:+UseG1GC -DLOCAL=1",
@@ -102,4 +98,6 @@
   "cph.language.cpp.Args": "-march=native -Wall -Wextra -Wshadow -Wvla -Djosuerom",
   "cph.language.java.Args": "-Xmx512M -Xss64M -XX:+UseG1GC -DLOCAL=1",
   "cph.language.python.Args": "-OO -S -B",
+  "workbench.sideBar.location": "right",
+  "catalyst.default.showEditorial": false,
 }
