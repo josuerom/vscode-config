@@ -29,7 +29,7 @@
       "command": "-code-runner.stop"
    },
    {
-      "key": "ctrl+shift+c",
+      "key": "ctrl+alt+c",
       "command": "code-runner.stop"
    },
    {
@@ -49,5 +49,13 @@
    {
       "key": "ctrl+shift+z",
       "command": "cph.judgeView.focus"
+   },
+   {
+      "key": "ctrl+alt+enter",
+      "command": "catalyst.runAllTestCases"
+   },
+   {
+      "key": "ctrl+enter",
+      "command": "-catalyst.runAllTestCases"
    }
 ]
