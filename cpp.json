@@ -34,7 +34,7 @@
     ]
   },
   "read string": {
-    "prefix": "rl",
+    "prefix": "rln",
     "body": [
       "getline(cin, s$1);"
     ]
@@ -46,6 +46,13 @@
       "}",
     ]
   },
+  "for (int i = n; i >= 0; i--)": {
+    "prefix": "forr",
+    "body": [
+      "for (int ${1:i} = $2; ${1:i} >= 0; ${1:i}--) {",
+      "}",
+    ]
+  },
   "for (auto $e : vec)": {
     "prefix": "fore",
     "body": [
@@ -53,21 +60,22 @@
     ]
   },
   "read tests case": {
-    "prefix": "tc",
+    "prefix": "tt",
     "body": [
       "int tt;",
       "cin >> tt;",
       "while (tt--) {",
       "\t$1",
+      "\tsolve($2);",
       "}",
     ]
   },
   "read tests case and solve()": {
-    "prefix": "tt",
+    "prefix": "tc",
     "body": [
-      "int tt;",
-      "cin >> tt;",
-      "while (tt--) solve();",
+      "int tc;",
+      "cin >> tc;",
+      "while (tc--) solve();",
     ]
   },
   "#include <bits/stdc++.h>": {
@@ -115,11 +123,8 @@
   "void solve() { body }": {
     "prefix": "fs",
     "body": [
-      "",
-      "void solve() {",
-      "\t$1",
-      "}",
-      ""
+      "\n${1:void} solve($2) {",
+      "}\n",
     ]
   },
   "function main": {
@@ -159,7 +164,7 @@
     ]
   },
   "style josuerom": {
-    "prefix": "style_josuerom",
+    "prefix": "style",
     "body": [
       "/**",
       "   ░░█ █▀█ █▀ █░█ █▀▀ █▀█ █▀█ █▀▄▀█",
@@ -194,12 +199,6 @@
       "#endif"
     ]
   },
-  "begin(), end()": {
-    "prefix": "beg",
-    "body": [
-      "begin($1), end($1)",
-    ]
-  },
   "Template 1 for codeforces": {
     "prefix": "tem1",
     "body": [
@@ -207,17 +206,13 @@
       " *   author:  josuerom",
       " *   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
       "**/",
-      "#pragma GCC optimize(\"O3,unroll-loops\")",
-      "",
-      "#include <bits/stdc++.h>",
-      "using namespace std;",
-      "",
+      "#include <bits/stdc++.h>\n",
+      "using namespace std;\n",
       "#ifdef josuerom",
       "#include \"debug.h\"",
       "#else",
       "#define debug(...) 42",
-      "#endif",
-      "",
+      "#endif\n",
       "#define rall(x) (x).rbegin(),(x).rend()",
       "#define all(x) (x).begin(),(x).end()",
       "#define ull unsigned long long int",
@@ -226,8 +221,7 @@
       "#define pb push_back",
       "#define mp make_pair",
       "#define se second",
-      "#define fi first",
-      "",
+      "#define fi first\n",
       "int main() {",
       "\tios::sync_with_stdio(false);",
       "\tcin.tie(nullptr); cout.tie(nullptr);",
@@ -244,8 +238,7 @@
       " *   author:  josuerom",
       " *   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
       "**/",
-      "#pragma GCC optimize(\"O3,unroll-loops\")",
-      "",
+      "#pragma GCC optimize(\"O3,unroll-loops\")\n",
       "#include <bits/stdc++.h>             //          ██╗░█████╗░░██████╗██╗░░░██╗███████╗██████╗░░█████╗░███╗░░░███╗",
       "using namespace std;                 //          ██║██╔══██╗██╔════╝██║░░░██║██╔════╝██╔══██╗██╔══██╗████╗░████║",
       "                                     //          ██║██║░░██║╚█████╗░██║░░░██║█████╗░░██████╔╝██║░░██║██╔████╔██║",
@@ -294,15 +287,12 @@
       "#define pb push_back",
       "#define mb make_pair",
       "#define se second",
-      "#define fi first",
-      "",
+      "#define fi first\n",
       "clock_t startTime;",
       "double getCurrentTime() {",
       "\treturn (double) (clock() - startTime)/CLOCKS_PER_SEC;",
-      "}",
-      "",
-      "const int MAX = 1e$1;",
-      "",
+      "}\n",
+      "const int MAX = 1e$1;\n",
       "int main() {",
       "\tstartTime = clock();",
       "\tSPEED_IO();",
@@ -322,10 +312,8 @@
       "   █▄█ █▄█ ▄█ █▄█ ██▄ █▀▄ █▄█ █░▀░█",
       "   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
       "**/",
-      "#include <bits/stdc++.h>",
-      "",
-      "using namespace std;",
-      "",
+      "#include <bits/stdc++.h>\n",
+      "using namespace std;\n",
       "int main() {",
       "\tios::sync_with_stdio(false);",
       "\tcin.tie(nullptr); cout.tie(nullptr);",
