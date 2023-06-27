@@ -22,7 +22,7 @@
     ]
   },
   "return": {
-    "prefix": "re",
+    "prefix": "rr",
     "body": [
       "return$1;"
     ]
@@ -34,22 +34,22 @@
     ]
   },
   "read string": {
-    "prefix": "rln",
+    "prefix": "rl",
     "body": [
       "getline(cin, s$1);"
+    ]
+  },
+  "read n": {
+    "prefix": "rni",
+    "body": [
+      "int n;",
+      "cin >> n;"
     ]
   },
   "for (int i = 0; i < n; i++)": {
     "prefix": "fori",
     "body": [
       "for (int ${1:i} = 0; ${1:i} < ${2:n}; ${1:i}++) {",
-      "}",
-    ]
-  },
-  "for (int i = n; i >= 0; i--)": {
-    "prefix": "forr",
-    "body": [
-      "for (int ${1:i} = $2; ${1:i} >= 0; ${1:i}--) {",
       "}",
     ]
   },
@@ -60,22 +60,21 @@
     ]
   },
   "read tests case": {
-    "prefix": "tt",
+    "prefix": "tc",
     "body": [
       "int tt;",
       "cin >> tt;",
       "while (tt--) {",
       "\t$1",
-      "\tsolve($2);",
       "}",
     ]
   },
   "read tests case and solve()": {
-    "prefix": "tc",
+    "prefix": "tt",
     "body": [
-      "int tc;",
-      "cin >> tc;",
-      "while (tc--) solve();",
+      "int tt;",
+      "cin >> tt;",
+      "while (tt--) solve();",
     ]
   },
   "#include <bits/stdc++.h>": {
@@ -114,6 +113,18 @@
       "cout << $1 << '\\n';"
     ]
   },
+  "scanf": {
+    "prefix": "scc",
+    "body": [
+      "scanf(\"%d$1\", &$2);"
+    ]
+  },
+  "printf": {
+    "prefix": "prr",
+    "body": [
+      "printf(\"%d$1\", $2);"
+    ]
+  },
   "size": {
     "prefix": "sz",
     "body": [
@@ -123,8 +134,9 @@
   "void solve() { body }": {
     "prefix": "fs",
     "body": [
-      "\n${1:void} solve($2) {",
-      "}\n",
+      "\nvoid solve() {",
+      "\t$1",
+      "}\n"
     ]
   },
   "function main": {
@@ -136,7 +148,7 @@
     ]
   },
   "@author": {
-    "prefix": "author",
+    "prefix": "@",
     "body": [
       "/**",
       " *   author:  josuerom",
@@ -206,7 +218,7 @@
       " *   author:  josuerom",
       " *   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
       "**/",
-      "#include <bits/stdc++.h>\n",
+      "#include <bits/stdc++.h>",
       "using namespace std;\n",
       "#ifdef josuerom",
       "#include \"debug.h\"",
@@ -216,16 +228,22 @@
       "#define rall(x) (x).rbegin(),(x).rend()",
       "#define all(x) (x).begin(),(x).end()",
       "#define ull unsigned long long int",
-      "#define len(x) (int)(x).size()",
+      "#define rsort(x) sort(rall(x))",
+      "#define sort(x) sort(all(x))",
       "#define ll long long int",
       "#define pb push_back",
       "#define mp make_pair",
       "#define se second",
       "#define fi first\n",
+      "$2\n",
+      "${3:void} solve() {",
+      "}\n",
       "int main() {",
       "\tios::sync_with_stdio(false);",
       "\tcin.tie(nullptr); cout.tie(nullptr);",
-      "\t$1",
+      "\tint tt = 1;",
+      "\tcin >> tt;$1",
+      "\twhile (tt--) solve();",
       "\treturn 0;",
       "}"
     ],
@@ -238,7 +256,8 @@
       " *   author:  josuerom",
       " *   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
       "**/",
-      "#pragma GCC optimize(\"O3,unroll-loops\")\n",
+      "#pragma GCC optimize(\"O3,unroll-loops\")",
+      "",
       "#include <bits/stdc++.h>             //          ██╗░█████╗░░██████╗██╗░░░██╗███████╗██████╗░░█████╗░███╗░░░███╗",
       "using namespace std;                 //          ██║██╔══██╗██╔════╝██║░░░██║██╔════╝██╔══██╗██╔══██╗████╗░████║",
       "                                     //          ██║██║░░██║╚█████╗░██║░░░██║█████╗░░██████╔╝██║░░██║██╔████╔██║",
@@ -253,14 +272,14 @@
       "#define VEREDICT(condition) cout << ((condition) ? \"YES\" : \"NO\") << '\\n'",
       "#define decimals(n) cout.setf(ios::fixed, ios::floatfield); cout.precision(n);",
       "#define binarySearch(vec, key) sort(all(vec)); binary_search(all(vec), (key));",
-      "#define FORR(i, vec) for(int (i) = (int)(vec).size()-1; (i) >= 0; (i)--)",
+      "#define forr(i, vec) for(int i = (int)(vec).size()-1; i >= 0; i--)",
       "#define uniq(x) sort(all(x)); (x).erase(unique(all(x)),(x).end())",
       "#define mod(a, b, mod) ((((a) % (mod)) + ((b) % (mod))) % (mod))",
-      "#define FORI(i, b, c) for(int (i) = (b); (i) < (c); (i)++)",
+      "#define fori(i, b, c) for(int (i) = (b); (i) < (c); (i)++)",
       "#define memset(a, v) memset((a),(v), sizeof(a))",
       "#define countbits(x) __builtin_popcountll(x)",
-      "#define TC int tt; cin >> tt; while(tt--)",
-      "#define FORE(e, vec) for (auto &(e): (vec))",
+      "#define TC int tt; cin >> tt; while((tt)--)",
+      "#define fore(e, vec) for (auto &(e): (vec))",
       "#define isOrdered(vec) is_sorted(all(vec))",
       "#define rall(x) (x).rbegin(),(x).rend()",
       "#define lbd(x, y) lower_bound(all(x), y)",
@@ -276,23 +295,27 @@
       "#define len(x) (int)(x).size()",
       "#define sort(x) sort(all(x))",
       "#define lowbit(x) (x & (-x))",
+      "#define MOD (int) 1000000007",
       "#define sbl(x, b) (x << b)",
       "#define sbr(x, b) (x >> b)",
       "#define ll long long int",
       "#define eb emplace_back",
       "#define mxe max_element",
       "#define mne min_element",
-      "#define MOD 1000000007",
+      "#define vi vector<int>",
       "#define END return 0",
       "#define pb push_back",
       "#define mb make_pair",
       "#define se second",
-      "#define fi first\n",
+      "#define fi first",
+      "",
       "clock_t startTime;",
       "double getCurrentTime() {",
       "\treturn (double) (clock() - startTime)/CLOCKS_PER_SEC;",
-      "}\n",
-      "const int MAX = 1e$1;\n",
+      "}",
+      "",
+      "const int MAX = 1e$1;",
+      "",
       "int main() {",
       "\tstartTime = clock();",
       "\tSPEED_IO();",
@@ -312,8 +335,10 @@
       "   █▄█ █▄█ ▄█ █▄█ ██▄ █▀▄ █▄█ █░▀░█",
       "   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
       "**/",
-      "#include <bits/stdc++.h>\n",
-      "using namespace std;\n",
+      "#include <bits/stdc++.h>",
+      "",
+      "using namespace std;",
+      "",
       "int main() {",
       "\tios::sync_with_stdio(false);",
       "\tcin.tie(nullptr); cout.tie(nullptr);",
@@ -335,10 +360,16 @@
       "#pragma GCC optimize(\"O3,unroll-loops,unsafe-loop-optimizations,inline-functions,-march=native\")\n",
       "#include <bits/stdc++.h>",
       "using namespace std;\n",
+      "#ifdef josuerom",
+      "#include \"debug.h\"",
+      "#else",
+      "#define debug(...) 42",
+      "#endif\n",
       "#define rall(x) (x).rbegin(),(x).rend()",
       "#define all(x) (x).begin(),(x).end()",
       "#define ull unsigned long long int",
-      "#define len(x) (int)(x).size()",
+      "#define rsort(x) sort(rall(x))",
+      "#define sort(x) sort(all(x))",
       "#define ll long long int",
       "#define pb push_back",
       "#define mp make_pair",
