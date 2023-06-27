@@ -5,9 +5,13 @@
   "extensions.ignoreRecommendations": true,
   "security.workspace.trust.untrustedFiles": "open",
   "explorer.confirmDelete": false,
+  "redhat.telemetry.enabled": false,
+  "debug.onTaskErrors": "debugAnyway",
+  "breadcrumbs.enabled": false,
 
   "window.commandCenter": true,
   "window.menuBarVisibility": "compact",
+  "window.zoomLevel": 0,
 
   "files.exclude": {
       "**/.classpath": true,
@@ -33,8 +37,8 @@
 
   "java.configuration.runtimes": [
     {
-      "name": "JavaSE-20",
-      "path": "d:\\program files\\compilers\\jdk-20\\",
+      "name": "JavaSE-16",
+      "path": "d:\\program files\\compilers\\jdk-16\\",
       "default": true
     }
   ],
@@ -50,35 +54,42 @@
 
   "code-runner.runInTerminal": true,
   "code-runner.saveFileBeforeRun": true,
-  "code-runner.clearPreviousOutput": false,
+  "code-runner.showExecutionMessage": false,
+  "code-runner.showRunCommandInEditorContextMenu": false,
+  "code-runner.clearPreviousOutput": true,
   "code-runner.preserveFocus": false,
   "code-runner.cwd": "d:\\workspace\\build",
   "code-runner.temporaryFileName": "tempErrorFile",
   "code-runner.executorMap": {
     "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\build\\vs-sol.exe -std=c++17 -march=native -Wall -Wextra -Wshadow -Wvla -Djosuerom && d:\\workspace\\build\\vs-sol.exe",
-    "java": "cls && cd $dir && javac -d d:\\workspace\\build $fileName && cd d:\\workspace\\build && java -Xmx512M -Xss64M -XX:+UseG1GC -DDEBUG=true $fileNameWithoutExt",
-    "run java": "cls && cd d:\\workspace\\build && java -Xmx512M -Xss64M -XX:+UseG1GC -DDEBUG=true $fileNameWithoutExt",
+    "java": "cls && cd $dir && javac -d d:\\workspace\\build $fileName && cd d:\\workspace\\build && java -Xmx512M -Xss64M -XX:+UseG1GC -Dflag=1 $fileNameWithoutExt",
     "run cpp": "cls && d:\\workspace\\build\\vs-sol.exe",
-
+    "run java": "cls && cd $dir && java -Xmx512M -Xss64M -XX:+UseG1GC -Dflag=1 $fileNameWithoutExt",
+    "run cpp INP": "cls && d:\\workspace\\build\\vs-sol.exe < $dirinput",
+    "run java INP": "cls && java -Xmx512M -Xss64M -XX:+UseG1GC -Dflag=1 $fileNameWithoutExt < $dirinput",
     "python": "cls && cd $dir && python -OO -S -B $fileName",
     "javascript": "cls && cd $dir && node $fileName",
     "typescript": "cls && cd $dir && node $fileName",
   },
 
-  // "workbench.colorTheme": "Default Dark Modern",
-  // "workbench.activityBar.visible": false,
-  "workbench.colorTheme": "Monokai Pro",
-  "workbench.iconTheme": "Monokai Pro Icons",
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#0c8a7377",
+    "editorLineNumber.activeForeground": "#ffccee",
+    "editor.selectionBackground": "#ffffff5d"
+  },
+
+  "workbench.colorTheme": "Default Dark Modern",
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.productIconTheme": "fluent-icons",
   "workbench.startupEditor": "none",
-  "workbench.statusBar.visible": false,
   "workbench.sideBar.location": "right",
+  "workbench.statusBar.visible": true,
   "workbench.layoutControl.enabled": false,
   "workbench.editor.enablePreview": false,
   "workbench.editor.showTabs": false,
 
   "editor.fontFamily": "Cascadia Code",
-  "editor.fontSize": 13.8,
+  "editor.fontSize": 14,
   "editor.fontWeight": "350",
   "editor.fontLigatures": true,
   "editor.tabCompletion": "on",
@@ -101,21 +112,20 @@
   "editor.guides.bracketPairs": true,
   "editor.matchBrackets": "never",
   "editor.glyphMargin": false,
-  "debug.onTaskErrors": "debugAnyway",
-  "breadcrumbs.enabled": false,
+  "editor.accessibilitySupport": "off",
+  "editor.hover.sticky": false,
 
   "git.enableSmartCommit": true,
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.openRepositoryInParentFolders": "never",
 
-  "cph.general.menuChoices": "cpp java python",
+  "cph.general.menuChoices": "cpp java",
   "cph.general.timeOut": 3000,
-  "cph.general.ignoreSTDERROR": true,
+  "cph.language.cpp.SubmissionCompiler": "GNU G++17 9.2.0 (64 bit, msys 2)",
   "cph.language.java.SubmissionCompiler": "Java 1.8.0_241",
   "cph.language.python.SubmissionCompiler": "Python 3.7.2",
   "cph.general.saveLocation": "d:\\workspace\\build",
-  "cph.language.cpp.Args": "-std=c++17 -march=native -Wall -Wextra -Wshadow -Wvla",
-  "cph.language.java.Args": "-Xmx512M -Xss64M -XX:+UseG1GC -DLOCAL=1 -D_DEBUG",
+  "cph.language.cpp.Args": "-march=native -Wall -Wextra -Wshadow -Wvla",
   "cph.language.python.Args": "-OO -S -B",
 }
