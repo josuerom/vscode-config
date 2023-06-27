@@ -147,6 +147,18 @@
       "}"
     ]
   },
+  "set const MAX": {
+    "prefix": "MAX",
+    "body": [
+      "const int MAX = $1;"
+    ]
+  },
+  "set int[]": {
+    "prefix": "ar",
+    "body": [
+      "int a[MAX$1];"
+    ]
+  },
   "@author": {
     "prefix": "@",
     "body": [
@@ -382,6 +394,6 @@
       "\treturn 0;",
       "}"
     ],
-    "description": "Plantilla del equipo 2 bits UNIMINUTO"
+    "description": "Plantilla del equipo 2 Bits UNIMINUTO"
   },
 }
