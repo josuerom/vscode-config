@@ -30,11 +30,11 @@
   "read char[]": {
     "prefix": "rac",
     "body": [
-      "cin.getline($1, N$2, '\\n');"
+      "cin.getline(s$1, n$2, '\\n');"
     ]
   },
   "read string": {
-    "prefix": "rl",
+    "prefix": "rln",
     "body": [
       "getline(cin, s$1);"
     ]
@@ -49,14 +49,21 @@
   "for (int i = 0; i < n; i++)": {
     "prefix": "fori",
     "body": [
-      "for (int ${1:i} = 0; ${1:i} < ${2:n}; ${1:i}++) {",
-      "}",
+      "for (int ${1:i} = 0; ${1:i} < $2; ${1:i}++) {",
+      "}"
+    ]
+  },
+  "for (int i = n; i >= 0; i--)": {
+    "prefix": "forr",
+    "body": [
+      "for (int ${1:i} = $2; ${1:i} >= 0; ${1:i}--) {",
+      "}"
     ]
   },
   "for (auto $e : vec)": {
     "prefix": "fore",
     "body": [
-      "for (auto &e : ${1:array}) cin >> e;",
+      "for (auto &e : $1) cin >> e;"
     ]
   },
   "read tests case": {
@@ -131,14 +138,6 @@
       "(int) $1.size();$2"
     ]
   },
-  "void solve() { body }": {
-    "prefix": "fs",
-    "body": [
-      "\nvoid solve() {",
-      "\t$1",
-      "}\n"
-    ]
-  },
   "function main": {
     "prefix": "fm",
     "body": [
@@ -148,7 +147,7 @@
     ]
   },
   "set const MAX": {
-    "prefix": "MAX",
+    "prefix": "setc",
     "body": [
       "const int MAX = $1;"
     ]
@@ -156,10 +155,10 @@
   "set int[]": {
     "prefix": "ar",
     "body": [
-      "int a[MAX$1];"
+      "int a[$1];"
     ]
   },
-  "@author": {
+  "Header": {
     "prefix": "@",
     "body": [
       "/**",
@@ -213,16 +212,6 @@
       "\tcout << \"time \" << setprecision(5) << getCurrentTime() << \" ms\\n\";}"
     ]
   },
-  "data/debug.h": {
-    "prefix": "josuerom",
-    "body": [
-      "#ifdef josuerom",
-      "#include \"debug.h\"",
-      "#else",
-      "#define debug(...) 42",
-      "#endif"
-    ]
-  },
   "Template 1 for codeforces": {
     "prefix": "tem1",
     "body": [
@@ -248,7 +237,7 @@
       "#define se second",
       "#define fi first\n",
       "$2\n",
-      "${3:void} solve() {",
+      "void$3 solve() {",
       "}\n",
       "int main() {",
       "\tios::sync_with_stdio(false);",
@@ -364,33 +353,32 @@
     "prefix": "tem4",
     "body": [
       "/**",
-      "    █▀█ 　 █▀▀▄ ─▀─ ▀▀█▀▀ █▀▀ 　 ▄▀ ▀▄",
-      "    ─▄▀ 　 █▀▀▄ ▀█▀ ──█── ▀▀█ 　 █─ ─█",
-      "    █▄▄ 　 ▀▀▀─ ▀▀▀ ──▀── ▀▀▀ 　 ▀▄ ▄▀",
-      "    created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+      "   █▀█  █▀▀▄ ─▀─ ▀▀█▀▀ █▀▀ ▄▀ ▀▄",
+      "   ─▄▀  █▀▀▄ ▀█▀ ──█── ▀▀█ █─ ─█",
+      "   █▄▄  ▀▀▀─ ▀▀▀ ──▀── ▀▀▀ ▀▄ ▄▀",
+      "   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
       "**/",
       "#pragma GCC optimize(\"O3,unroll-loops,unsafe-loop-optimizations,inline-functions,-march=native\")\n",
       "#include <bits/stdc++.h>",
       "using namespace std;\n",
-      "#ifdef josuerom",
-      "#include \"debug.h\"",
+      "#ifdef 2BITS",
+      "#include \"../debug.h\"",
       "#else",
       "#define debug(...) 42",
       "#endif\n",
       "#define rall(x) (x).rbegin(),(x).rend()",
       "#define all(x) (x).begin(),(x).end()",
-      "#define ull unsigned long long int",
       "#define rsort(x) sort(rall(x))",
-      "#define sort(x) sort(all(x))",
-      "#define ll long long int",
-      "#define pb push_back",
-      "#define mp make_pair",
-      "#define se second",
-      "#define fi first\n",
+      "#define sort(x) sort(all(x))\n",
+      "$2\n",
+      "void$3 solve() {",
+      "}\n",
       "int main() {",
       "\tios::sync_with_stdio(false);",
       "\tcin.tie(nullptr); cout.tie(nullptr);",
-      "\t$1",
+      "\tint tt = 1;",
+      "\tcin >> tt;$1",
+      "\twhile (tt--) solve();",
       "\treturn 0;",
       "}"
     ],
