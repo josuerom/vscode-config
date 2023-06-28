@@ -90,7 +90,7 @@
 
   "editor.fontFamily": "Cascadia Code",
   "editor.fontSize": 14,
-  "editor.fontWeight": "350",
+  "editor.fontWeight": "340",
   "editor.fontLigatures": true,
   "editor.tabCompletion": "on",
   "editor.tabSize": 3,
