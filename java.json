@@ -23,7 +23,13 @@
   "System ternary operator": {
     "prefix": "sst",
     "body": [
-      "System.out.println(($1) ? $2 : $3);"
+      "System.out.println($1 ? $2 : $3);"
+    ],
+  },
+  "System veredict Y/N": {
+    "prefix": "ssv",
+    "body": [
+      "System.out.println($1 ? \"YES\" : \"NO\");"
     ],
   },
   "pw.print()": {
@@ -50,7 +56,7 @@
   "Print ternary operator": {
     "prefix": "ppt",
     "body": [
-      "pw.println(($1) ? $2 : $3);"
+      "pw.println($1 ? $2 : $3);"
     ],
   },
   "Print veredict Y/N": {
@@ -59,19 +65,18 @@
       "pw.println($1 ? \"YES\" : \"NO\");"
     ],
   },
+  "Return ternary operator": {
+    "prefix": "rot",
+    "body": [
+      "${1:boolean} $2 = ($3) ? $4 : $5;"
+    ],
+  },
   "Scanner(System.in)": {
     "prefix": "sc",
     "body": [
       "Scanner sc = new Scanner(System.in);$1"
     ],
     "description": "Standard input using the Scanner method"
-  },
-  "BufferedReader(new InputStreamReader(System.in))": {
-    "prefix": "buffer",
-    "body": [
-      "BufferedReader br = new BufferedReader(new InputStreamReader(System.in));$1"
-    ],
-    "description": "Improved standard input using the (BufferedReader, InputStreamReader, IOException) methods"
   },
   "main() method": {
     "prefix": "fm",
@@ -83,7 +88,7 @@
     "description": "This is the main method that java executes"
   },
   "solve() method": {
-    "prefix": "fs",
+    "prefix": "fsol",
     "body": [
       "static ${1:void} solve($2) {",
       "}"
@@ -98,7 +103,7 @@
     "description": "Method I use most often"
   },
   "Method template": {
-    "prefix": "cme",
+    "prefix": "temf",
     "body": [
       "public ${1:static} ${2:void} ${3:name}($4) {",
       "}"
@@ -169,12 +174,6 @@
       "}"
     ],
   },
-  "Ternary operator": {
-    "prefix": "oter",
-    "body": [
-      "${1:boolean} $2 = ($3) ? $4 : $5;"
-    ],
-  },
   "Object creation": {
     "prefix": "obj",
     "body": [
@@ -226,14 +225,8 @@
     ],
     "description": "Encabezado"
   },
-  "Array": {
-    "prefix": "ar",
-    "body": [
-      "${1:int}[] $2 = new ${1:int}[n$3];"
-    ],
-  },
   "Arrays()": {
-    "prefix": "arr",
+    "prefix": "ar",
     "body": [
       "Arrays.$1($2);"
     ],
@@ -244,38 +237,32 @@
       "Arrays.toString($1)"
     ],
   },
-  "Read Int": {
+  "Read int": {
     "prefix": "ri",
     "body": [
-      "fr.readInt();"
+      "int $1 = fr.readInt();"
     ],
   },
-  "Read String Line": {
+  "Read String line": {
     "prefix": "rln",
     "body": [
-      "fr.readLine();"
+      "String ln = fr.readLine();"
     ],
   },
-  "Read String Next": {
-    "prefix": "rn",
-    "body": [
-      "fr.next();"
-    ],
-  },
-  "Read Long": {
+  "Read long": {
     "prefix": "rl",
     "body": [
-      "fr.readLong();"
+      "long $1 = fr.readLong();"
     ],
   },
-  "Read Double": {
+  "Read double": {
     "prefix": "rd",
     "body": [
-      "fr.readDouble();"
+      "double $1 = fr.readDouble();"
     ],
   },
-  "Read n": {
-    "prefix": "rni",
+  "Read int n": {
+    "prefix": "rn",
     "body": [
       "int n = fr.readInt();"
     ],
@@ -283,25 +270,19 @@
   "Read int array": {
     "prefix": "rai",
     "body": [
-      "fr.readArrayInt($1);"
+      "int[] $2 = fr.readArray($1);"
     ],
   },
   "Read long array": {
     "prefix": "ral",
     "body": [
-      "fr.readArrayLong($1);"
-    ],
-  },
-  "Read double array": {
-    "prefix": "rad",
-    "body": [
-      "fr.readArrayDouble($1);"
+      "long[] $2 = fr.readArrayLong($1);"
     ],
   },
   "Read char[] array": {
     "prefix": "rac",
     "body": [
-      "fr.next().toCharArray();"
+      "char[] $2 = fr.next().toCharArray();"
     ],
   },
   "Check execution time": {
@@ -324,8 +305,8 @@
   "read test cases with Scanner": {
     "prefix": "tc",
     "body": [
-      "int tt = sc.nextInt();",
-      "while (tt-- > 0) {",
+      "int t = sc.nextInt();",
+      "while (t-- > 0) {",
       "\t$1",
       "\tsolve($2);",
       "}"
@@ -375,18 +356,18 @@
       "import java.util.StringTokenizer;",
       "import static java.lang.Math.*;\n",
       "public class ${TM_FILENAME_BASE} {",
-      "\tpublic static void main(String[] authorJosuerom) {",
-      "\t\t${1:solve();}",
-      "\t\tpw.flush(); pw.close();",
-      "\t}\n",
-      "\tstatic void solve($3) {",
-      "\t}\n",
       "\tstatic FastReader fr = new FastReader();",
       "\tstatic PrintWriter pw = new PrintWriter(System.out);",
       "\tstatic final Random random = new Random();",
       "\tstatic final int MOD = 1_000_000_007;",
       "\tstatic final int MAX = 1_000_007;",
       "\tstatic final boolean DEBUG = true;\n",
+      "\tpublic static void main(String[] authorJosuerom) {",
+      "\t\t${1:solve();}",
+      "\t\tfr.close(); pw.close();",
+      "\t}\n",
+      "\tstatic void solve($3) {",
+      "\t}\n",
       "\tstatic void ruffleSort(int[] a) {",
       "\t\tint n = a.length;",
       "\t\tfor (int i = 0; i < n; i++) {",
@@ -431,6 +412,10 @@
       "\t\t\tbr = new BufferedReader(new InputStreamReader(System.in));",
       "\t\t\tst = new StringTokenizer(\"\");",
       "\t\t}\n",
+      "\t\tvoid close() {",
+      "\t\t\ttry { br.close(); }",
+      "\t\t\tcatch (IOException e) { e.printStackTrace(); }",
+      "\t\t}\n",
       "\t\tString next() {",
       "\t\t\twhile (!st.hasMoreTokens()) {",
       "\t\t\t\ttry { st = new StringTokenizer(br.readLine()); }",
@@ -447,17 +432,12 @@
       "\t\tdouble readDouble() { return Double.parseDouble(next()); }",
       "\t\tlong readLong() { return Long.parseLong(next()); }",
       "\t\tint readInt() { return Integer.parseInt(next()); }\n",
-      "\t\tdouble[] readArrayDouble(int N) {",
-      "\t\t\tdouble[] a = new double[N];",
-      "\t\t\tfor (int i = 0; i < N; i++) { a[i] = readDouble(); }",
-      "\t\t\treturn a;",
-      "\t\t}",
       "\t\tlong[] readArrayLong(int N) {",
       "\t\t\tlong[] a = new long[N];",
       "\t\t\tfor (int i = 0; i < N; i++) { a[i] = readLong(); }",
       "\t\t\treturn a;",
       "\t\t}",
-      "\t\tint[] readArrayInt(int N) {",
+      "\t\tint[] readArray(int N) {",
       "\t\t\tint[] a = new int[N];",
       "\t\t\tfor (int i = 0; i < N; i++) { a[i] = readInt(); }",
       "\t\t\treturn a;",
@@ -482,12 +462,12 @@
       "\tpublic static void main(String[] authorJosuerom) {",
       "\t\treadInput();",
       "\t}\n",
-      "\tstatic void solve($3) {",
-      "\t}\n",
       "\tstatic void readInput() {",
       "\t\tScanner sc = new Scanner(System.in);",
       "\t\t$1",
       "\t\tsc.close(); System.out.close();",
+      "\t}\n",
+      "\tstatic void solve($3) {",
       "\t}",
       "}"
     ],
@@ -505,8 +485,7 @@
       "\tpublic static void main(String[] josuerom) {",
       "\t\tScanner sc = new Scanner(System.in);",
       "\t\t$1",
-      "\t\tsc.close();",
-      "\t\tSystem.out.close();",
+      "\t\tsc.close(); System.out.close();",
       "\t}",
       "}"
     ],
@@ -530,18 +509,18 @@
       "import java.util.StringTokenizer;",
       "import static java.lang.Math.*;\n",
       "public class ${TM_FILENAME_BASE} {",
-      "\tpublic static void main(String[] authorJosuerom) {",
-      "\t\t${1:solve();}",
-      "\t\tpw.flush(); pw.close();",
-      "\t}\n",
-      "\tstatic void solve($3) {",
-      "\t}\n",
       "\tstatic FastReader fr = new FastReader();",
       "\tstatic PrintWriter pw = new PrintWriter(System.out);",
       "\tstatic final Random random = new Random();",
       "\tstatic final int MOD = 1_000_000_007;",
       "\tstatic final int MAX = 1_000_007;",
       "\tstatic final boolean DEBUG = true;\n",
+      "\tpublic static void main(String[] authorJosuerom) {",
+      "\t\t${1:solve();}",
+      "\t\tfr.close(); pw.close();",
+      "\t}\n",
+      "\tstatic void solve($3) {",
+      "\t}\n",
       "\tstatic void ruffleSort(int[] a) {",
       "\t\tint n = a.length;",
       "\t\tfor (int i = 0; i < n; i++) {",
@@ -586,6 +565,10 @@
       "\t\t\tbr = new BufferedReader(new InputStreamReader(System.in));",
       "\t\t\tst = new StringTokenizer(\"\");",
       "\t\t}\n",
+      "\t\tvoid close() {",
+      "\t\t\ttry { br.close(); }",
+      "\t\t\tcatch (IOException e) { e.printStackTrace(); }",
+      "\t\t}\n",
       "\t\tString next() {",
       "\t\t\twhile (!st.hasMoreTokens()) {",
       "\t\t\t\ttry { st = new StringTokenizer(br.readLine()); }",
@@ -602,17 +585,12 @@
       "\t\tdouble readDouble() { return Double.parseDouble(next()); }",
       "\t\tlong readLong() { return Long.parseLong(next()); }",
       "\t\tint readInt() { return Integer.parseInt(next()); }\n",
-      "\t\tdouble[] readArrayDouble(int N) {",
-      "\t\t\tdouble[] a = new double[N];",
-      "\t\t\tfor (int i = 0; i < N; i++) { a[i] = readDouble(); }",
-      "\t\t\treturn a;",
-      "\t\t}",
       "\t\tlong[] readArrayLong(int N) {",
       "\t\t\tlong[] a = new long[N];",
       "\t\t\tfor (int i = 0; i < N; i++) { a[i] = readLong(); }",
       "\t\t\treturn a;",
       "\t\t}",
-      "\t\tint[] readArrayInt(int N) {",
+      "\t\tint[] readArray(int N) {",
       "\t\t\tint[] a = new int[N];",
       "\t\t\tfor (int i = 0; i < N; i++) { a[i] = readInt(); }",
       "\t\t\treturn a;",
