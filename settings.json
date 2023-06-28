@@ -1,4 +1,5 @@
-{ // @author: josuerom
+{
+  // @author: josuerom
   "files.autoSave": "onFocusChange",
   "diffEditor.wordWrap": "on",
   "debug.terminal.clearBeforeReusing": true,
@@ -14,7 +15,7 @@
   "window.zoomLevel": 0,
 
   "files.exclude": {
-      "**/.classpath": true,
+    "**/.classpath": true,
     "**/.project": true,
     "**/.settings": true,
     "**/.factorypath": true
@@ -32,7 +33,7 @@
       ],
       "args": [],
       "icon": "terminal-cmd"
-    },
+    }
   },
 
   "java.configuration.runtimes": [
@@ -44,8 +45,8 @@
   ],
 
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
-  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
-  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontFamily": "JetBrains Mono",
+  "terminal.integrated.fontSize": 13.8,
   "terminal.integrated.tabs.focusMode": "singleClick",
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.cursorBlinking": true,
@@ -61,24 +62,19 @@
   "code-runner.cwd": "d:\\workspace\\build",
   "code-runner.temporaryFileName": "tempErrorFile",
   "code-runner.executorMap": {
-    "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\build\\vs-sol.exe -std=c++17 -march=native -Wall -Wextra -Wshadow -Wvla -Djosuerom -D2BITS && d:\\workspace\\build\\vs-sol.exe",
-    "java": "cls && cd $dir && javac -d d:\\workspace\\build $fileName && cd d:\\workspace\\build && java -Xmx512M -Xss64M -XX:+UseG1GC -DJR=1 $fileNameWithoutExt",
+    "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\build\\vs-sol.exe -std=c++17 -march=native -Wall -Wextra -Wshadow -Wvla -Djosuerom -D_2BITS && d:\\workspace\\build\\vs-sol.exe",
+    "java": "cls && cd $dir && javac -d d:\\workspace\\build $fileName && cd d:\\workspace\\build && java -Xmx512M -Xss64M -XX:+UseG1GC $fileNameWithoutExt",
     "run cpp": "cls && d:\\workspace\\build\\vs-sol.exe",
-    "run java": "cls && cd $dir && java -Xmx512M -Xss64M -XX:+UseG1GC -DJR=1 $fileNameWithoutExt",
+    "run java": "cls && cd $dir && java -Xmx512M -Xss64M -XX:+UseG1GC $fileNameWithoutExt",
     "run cpp INP": "cls && d:\\workspace\\build\\vs-sol.exe < $dirinput",
-    "run java INP": "cls && java -Xmx512M -Xss64M -XX:+UseG1GC -DJR=1 $fileNameWithoutExt < $dirinput",
+    "run java INP": "cls && java -Xmx512M -Xss64M -XX:+UseG1GC $fileNameWithoutExt < $dirinput",
     "python": "cls && cd $dir && python -OO -S -B $fileName",
     "javascript": "cls && cd $dir && node $fileName",
-    "typescript": "cls && cd $dir && node $fileName",
+    "typescript": "cls && cd $dir && node $fileName"
   },
 
-  "workbench.colorCustomizations": {
-    "statusBar.background": "#0c8a7377",
-    "editorLineNumber.activeForeground": "#ffccee",
-    "editor.selectionBackground": "#ffffff5d"
-  },
-
-  "workbench.colorTheme": "Default Dark Modern",
+  // "workbench.colorTheme": "Default Dark Modern",
+  "workbench.colorTheme": "Sublime Monokai",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.productIconTheme": "fluent-icons",
   "workbench.startupEditor": "none",
@@ -88,9 +84,8 @@
   "workbench.editor.enablePreview": false,
   "workbench.editor.showTabs": false,
 
-  "editor.fontFamily": "Cascadia Code",
-  "editor.fontSize": 14,
-  "editor.fontWeight": "340",
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontSize": 13.2,
   "editor.fontLigatures": true,
   "editor.tabCompletion": "on",
   "editor.tabSize": 3,
@@ -123,9 +118,6 @@
   "cph.general.menuChoices": "cpp java python",
   "cph.general.timeOut": 3000,
   "cph.general.saveLocation": "d:\\workspace\\build",
-  "cph.language.cpp.Args": "-march=native -Wall -Wextra -Wshadow -Wvla -Djosuerom -D2BITS",
+  "cph.language.cpp.Args": "-march=native -Wall -Wextra -Wshadow -Wvla -Djosuerom -D_2BITS",
   "cph.language.python.Args": "-OO -S -B",
-
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "redhat.java",
 }
