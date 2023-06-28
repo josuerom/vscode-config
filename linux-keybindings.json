@@ -1,172 +1,98 @@
 [ // @author josuerom
-   {
-      "key": "shift shift",
-      "command": "workbench.action.toggleSidebarVisibility",
-   },
-   {
-      "key": "ctrl+b",
-      "command": "-workbench.action.toggleSidebarVisibility",
-   },
-   {
-      "key": "n",
-      "command": "explorer.newFile",
-      "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
-   },
-   {
-      "key": "ctrl+shift+z",
-      "command": "cph.judgeView.focus"
-   },
-   {
-      "key": "ctrl+alt+d",
-      "command": "-cph.judgeView.focus"
-   },
-   {
-      "key": "ctrl+shift+c",
-      "command": "-workbench.action.terminal.openNativeConsole",
-      "when": "!terminalFocus"
-   },
-   {
-      "key": "ctrl+alt+[Semicolon]",
-      "command": "workbench.action.createTerminalEditorSide"
-   },
-   {
-      "key": "ctrl+alt+m",
-      "command": "-code-runner.stop"
-   },
-   {
-      "key": "ctrl+alt+m",
-      "command": "code-runner.runByLanguage"
-   },
-   {
-      "key": "ctrl+alt+j",
-      "command": "-code-runner.runByLanguage"
-   },
-   {
-      "key": "ctrl+alt+m",
-      "command": "-code-runner.stop"
-   },
-   {
-      "key": "ctrl+alt+c",
-      "command": "code-runner.stop"
-   },
-   {
-      "key": "ctrl+alt+k",
-      "command": "-code-runner.runCustomCommand"
-   },
-   {
-      "key": "ctrl+alt+f",
-      "command": "editor.action.formatDocument",
-      "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
-   },
-   {
-      "key": "shift+alt+f",
-      "command": "-editor.action.formatDocument",
-      "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
-   },
-   {
-      "key": "ctrl+shift+z",
-      "command": "cph.judgeView.focus"
-   },
-   {
-      "key": "ctrl+alt+enter",
-      "command": "catalyst.runAllTestCases"
-   },
-   {
-      "key": "ctrl+enter",
-      "command": "-catalyst.runAllTestCases"
-   },
-   {
-      "key": "ctrl+k ctrl+c",
-      "command": "-editor.action.addCommentLine",
-      "when": "editorTextFocus && !editorReadonly"
-   },
-   {
-      "key": "ctrl+k ctrl+u",
-      "command": "-editor.action.removeCommentLine",
-      "when": "editorTextFocus && !editorReadonly"
-   },
-   {
-      "key": "ctrl+shift+]",
-      "command": "editor.action.commentLine",
-      "when": "editorTextFocus && !editorReadonly"
-   },
-   {
-      "key": "ctrl+shift+7",
-      "command": "-editor.action.commentLine",
-      "when": "editorTextFocus && !editorReadonly"
-   },
-   {
-      "key": "ctrl+k ctrl+shift+7",
-      "command": "-editor.foldAllBlockComments",
-      "when": "editorTextFocus && foldingEnabled"
-   },
-   {
-      "key": "ctrl+shift+[",
-      "command": "editor.action.blockComment",
-      "when": "editorTextFocus && !editorReadonly"
-   },
-   {
-      "key": "ctrl+shift+a",
-      "command": "-editor.action.blockComment",
-      "when": "editorTextFocus && !editorReadonly"
-   },
-   {
-      "key": "ctrl+d",
-      "command": "editor.action.addSelectionToNextFindMatch",
-      "when": "editorFocus"
-   },
-   {
-      "key": "ctrl+d",
-      "command": "-editor.action.addSelectionToNextFindMatch",
-      "when": "editorFocus"
-   },
-   {
-      "key": "ctrl+[Backquote]",
-      "command": "-workbench.action.terminal.focusTabs",
-      "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported || terminalHasBeenCreated && terminalTabsFocus || terminalProcessSupported && terminalTabsFocus"
-   },
-   {
-      "key": "ctrl+[Semicolon]",
-      "command": "workbench.action.terminal.toggleTerminal"
-   },
-   {
-      "key": "ctrl+shift+f",
-      "command": "editor.action.formatSelection",
-      "when": "editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
-   },
-   {
-      "key": "ctrl+k ctrl+f",
-      "command": "-editor.action.formatSelection",
-      "when": "editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
-   },
-   {
-      "key": "ctrl+shift+i",
-      "command": "-editor.action.formatDocument",
-      "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
-   },
-   {
-      "key": "ctrl+shift+i",
-      "command": "-editor.action.formatDocument.none",
-      "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
-   },
-   {
-      "key": "shift+alt+up",
-      "command": "editor.action.copyLinesUpAction",
-      "when": "editorTextFocus && !editorReadonly"
-   },
-   {
-      "key": "ctrl+shift+alt+up",
-      "command": "-editor.action.copyLinesUpAction",
-      "when": "editorTextFocus && !editorReadonly"
-   },
-   {
-      "key": "shift+alt+down",
-      "command": "editor.action.copyLinesDownAction",
-      "when": "editorTextFocus && !editorReadonly"
-   },
-   {
-      "key": "ctrl+shift+alt+down",
-      "command": "-editor.action.copyLinesDownAction",
-      "when": "editorTextFocus && !editorReadonly"
-   }
+  {
+    "key": "shift shift",
+    "command": "workbench.action.toggleSidebarVisibility",
+  },
+  {
+    "key": "ctrl+b",
+    "command": "-workbench.action.toggleSidebarVisibility",
+  },
+  {
+    "key": "n",
+    "command": "explorer.newFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "ctrl+alt+d",
+    "command": "-cph.judgeView.focus"
+  },
+  {
+    "key": "ctrl+alt+m",
+    "command": "code-runner.runByLanguage"
+  },
+  {
+    "key": "ctrl+alt+j",
+    "command": "-code-runner.runByLanguage"
+  },
+  {
+    "key": "ctrl+alt+m",
+    "command": "-code-runner.stop"
+  },
+  {
+    "key": "ctrl+alt+c",
+    "command": "code-runner.stop"
+  },
+  {
+    "key": "ctrl+alt+k",
+    "command": "-code-runner.runCustomCommand"
+  },
+  {
+    "key": "ctrl+alt+f",
+    "command": "editor.action.formatDocument",
+    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+  },
+  {
+    "key": "shift+alt+f",
+    "command": "-editor.action.formatDocument",
+    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+  },
+  {
+    "key": "ctrl+shift+z",
+    "command": "cph.judgeView.focus"
+  },
+  {
+    "key": "ctrl+alt+enter",
+    "command": "catalyst.runAllTestCases"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "-catalyst.runAllTestCases"
+  },
+  {
+    "key": "ctrl+oem_7",
+    "command": "editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+a",
+    "command": "-editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+oem_comma",
+    "command": "workbench.action.openApplicationSettingsJson"
+  },
+  {
+    "key": "ctrl+alt+oem_3",
+    "command": "workbench.action.terminal.openNativeConsole",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+c",
+    "command": "-workbench.action.terminal.openNativeConsole",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+oem_3",
+    "command": "workbench.action.createTerminalEditorSide"
+  },
+  {
+    "key": "ctrl+shift+oem_3",
+    "command": "-workbench.action.terminal.new",
+    "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+  },
+  {
+    "key": "ctrl+alt+v",
+    "command": "code-runner.runCustomCommand"
+  }
 ]
