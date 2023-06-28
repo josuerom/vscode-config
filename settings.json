@@ -125,4 +125,7 @@
   "cph.general.saveLocation": "d:\\workspace\\build",
   "cph.language.cpp.Args": "-march=native -Wall -Wextra -Wshadow -Wvla -Djosuerom -D2BITS",
   "cph.language.python.Args": "-OO -S -B",
+
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "redhat.java",
 }
