@@ -20,6 +20,12 @@
     ],
     "description": "Formatted standard output"
   },
+  "System ternary operator": {
+    "prefix": "sst",
+    "body": [
+      "System.out.println(($1) ? $2 : $3);"
+    ],
+  },
   "pw.print()": {
     "prefix": "p",
     "body": [
@@ -41,6 +47,18 @@
     ],
     "description": "Printf standard output"
   },
+  "Print ternary operator": {
+    "prefix": "ppt",
+    "body": [
+      "pw.println(($1) ? $2 : $3);"
+    ],
+  },
+  "Print veredict Y/N": {
+    "prefix": "ppv",
+    "body": [
+      "pw.println($1 ? \"YES\" : \"NO\");"
+    ],
+  },
   "Scanner(System.in)": {
     "prefix": "sc",
     "body": [
@@ -58,7 +76,7 @@
   "main() method": {
     "prefix": "fm",
     "body": [
-      "public static void main(String[] args) {",
+      "public static void main(String[] authorJosuerom) {",
       "\t$1",
       "}"
     ],
@@ -67,7 +85,7 @@
   "solve() method": {
     "prefix": "fs",
     "body": [
-      "public static ${1:void} solve($2) {",
+      "static ${1:void} solve($2) {",
       "}"
     ]
   },
@@ -80,7 +98,7 @@
     "description": "Method I use most often"
   },
   "Method template": {
-    "prefix": "me",
+    "prefix": "cme",
     "body": [
       "public ${1:static} ${2:void} ${3:name}($4) {",
       "}"
@@ -92,18 +110,11 @@
     "body": [
       "try {",
       "\t$1",
-      "} catch (${2:Exeption} e) {",
+      "} catch ($2 e) {",
       "\te.printStackTrace();",
       "}"
     ],
     "description": "Methods for handling exceptions"
-  },
-  "catch": {
-    "prefix": "cat",
-    "body": [
-      "catch ($1 e) {",
-      "}"
-    ],
   },
   "if": {
     "prefix": "if",
@@ -127,34 +138,34 @@
     "prefix": "do",
     "body": [
       "do {\n\t$1",
-      "} while (${2:condition});"
+      "} while ($2);"
     ],
   },
   "while": {
     "prefix": "wh",
     "body": [
-      "while ($1) {$2",
+      "while ($1) {",
       "}"
     ],
   },
   "for iterator": {
     "prefix": "fori",
     "body": [
-      "for (int ${1:i} = 0; ${1:i} < $2; ${1:i}++) {$3",
+      "for (int ${1:i} = 0; ${1:i} < $2; ${1:i}++) {",
       "}"
     ],
   },
   "for reverse iterator": {
     "prefix": "forr",
     "body": [
-      "for (int ${1:i} = $2; ${1:i} >= 0$3; ${1:i}--) {$4",
+      "for (int ${1:i} = $2; ${1:i} >= 0; ${1:i}--) {",
       "}"
     ],
   },
   "for each": {
     "prefix": "fore",
     "body": [
-      "for (${1:int} e : $2) {$3",
+      "for (${1:int} e : $2) {",
       "}"
     ],
   },
@@ -164,18 +175,6 @@
       "${1:boolean} $2 = ($3) ? $4 : $5;"
     ],
   },
-  "Print ternary operator": {
-    "prefix": "ppt",
-    "body": [
-      "pw.println(($1) ? $2 : $3);"
-    ],
-  },
-  "Print veredict Y/N": {
-    "prefix": "ppv",
-    "body": [
-      "pw.println(($1) ? \"YES\" : \"NO\");"
-    ],
-  },
   "Object creation": {
     "prefix": "obj",
     "body": [
@@ -183,7 +182,7 @@
     ],
   },
   "Constructor ()": {
-    "prefix": "const",
+    "prefix": "truc",
     "body": [
       "public ${TM_FILENAME_BASE}($1) {",
       "\tthis.$2 = $2;",
@@ -217,8 +216,8 @@
     ],
     "description": "JavaMainClass template"
   },
-  "JavaDocs": {
-    "prefix": "author",
+  "Header": {
+    "prefix": "@",
     "body": [
       "/**",
       " *   author:  josuerom",
@@ -352,7 +351,7 @@
     ],
   },
   "style josuerom": {
-    "prefix": "style_josuerom",
+    "prefix": "style",
     "body": [
       "/**",
       "   ░░█ █▀█ █▀ █░█ █▀▀ █▀█ █▀█ █▀▄▀█",
@@ -517,10 +516,10 @@
     "prefix": "tem4",
     "body": [
       "/**",
-      "    █▀█ 　 █▀▀▄ ─▀─ ▀▀█▀▀ █▀▀ 　 ▄▀ ▀▄",
-      "    ─▄▀ 　 █▀▀▄ ▀█▀ ──█── ▀▀█ 　 █─ ─█",
-      "    █▄▄ 　 ▀▀▀─ ▀▀▀ ──▀── ▀▀▀ 　 ▀▄ ▄▀",
-      "    created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+      "   █▀█  █▀▀▄ ─▀─ ▀▀█▀▀ █▀▀ ▄▀ ▀▄",
+      "   ─▄▀  █▀▀▄ ▀█▀ ──█── ▀▀█ █─ ─█",
+      "   █▄▄  ▀▀▀─ ▀▀▀ ──▀── ▀▀▀ ▀▄ ▄▀",
+      "   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
       "**/",
       "import java.io.BufferedReader;",
       "import java.io.IOException;",
