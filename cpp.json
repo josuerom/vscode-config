@@ -242,7 +242,8 @@
       "\t\tsolve();",
       "\t}",
       "#else",
-      "\twhile (tt--) solve();",
+      "\twhile (tt--)",
+      "\t\tsolve();",
       "#endif",
       "\treturn 0;",
       "}"
