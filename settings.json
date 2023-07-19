@@ -9,18 +9,14 @@
   "debug.onTaskErrors": "debugAnyway",
   "breadcrumbs.enabled": false,
   "redhat.telemetry.enabled": false,
-
   "window.commandCenter": true,
   "window.menuBarVisibility": "compact",
-  "window.zoomLevel": 0,
-
   "files.exclude": {
     "**/.classpath": true,
     "**/.project": true,
     "**/.settings": true,
     "**/.factorypath": true
   },
-
   "terminal.integrated.profiles.windows": {
     "PowerShell": {
       "source": "PowerShell",
@@ -35,7 +31,6 @@
       "icon": "terminal-cmd"
     }
   },
-
   "java.configuration.runtimes": [
     {
       "name": "JavaSE-16",
@@ -43,20 +38,16 @@
       "default": true
     }
   ],
-
   "[java]": {
-    "editor.formatOnSave": false,
+    "editor.formatOnSave": true,
     "editor.formatOnPaste": true,
-  },
-  "[cpp]": {
-    "editor.formatOnSave": false,
-    "editor.formatOnPaste": true,
+    "editor.defaultFormatter": "redhat.java"
   },
   "[python]": {
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true,
+    "editor.defaultFormatter": "ms-python.autopep8",
   },
-
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
   "terminal.integrated.fontFamily": "JetBrains Mono",
   "terminal.integrated.fontSize": 14,
@@ -65,7 +56,6 @@
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.gpuAcceleration": "off",
-
   "code-runner.runInTerminal": true,
   "code-runner.saveFileBeforeRun": true,
   "code-runner.showExecutionMessage": false,
@@ -85,9 +75,8 @@
     "javascript": "cls && cd $dir && node $fileName",
     "typescript": "cls && cd $dir && tsc && node $fileName"
   },
-
   "workbench.colorTheme": "Default Dark Modern",
-  // "workbench.colorTheme": "Sublime Monokai",
+  // "workbench.colorTheme": "Monokai",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "none",
   "workbench.sideBar.location": "right",
@@ -95,9 +84,8 @@
   "workbench.layoutControl.enabled": false,
   "workbench.editor.enablePreview": false,
   "workbench.editor.showTabs": false,
-
   "editor.fontFamily": "JetBrains Mono",
-  "editor.fontSize": 13.2,
+  "editor.fontSize": 14.5,
   "editor.fontLigatures": true,
   "editor.tabCompletion": "on",
   "editor.tabSize": 3,
@@ -121,15 +109,20 @@
   "editor.glyphMargin": false,
   "editor.accessibilitySupport": "off",
   "editor.hover.sticky": false,
-
   "git.enableSmartCommit": true,
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.openRepositoryInParentFolders": "never",
-
   "cph.general.menuChoices": "cpp java python",
-  "cph.general.timeOut": 3000,
   "cph.general.saveLocation": "d:\\workspace\\build",
-  "cph.language.cpp.Args": "-Wall -Wextra -Wvla -Djosuerom -D_2BITS",
+  "cph.language.cpp.Args": "-Wall -Wextra -Wvla",
   "cph.language.python.Args": "-OO -S -B",
+  "python.formatting.provider": "none",
+  "update.showReleaseNotes": false,
+  "notebook.formatOnSave.enabled": true,
+  "workbench.editor.labelFormat": "short",
+  "C_Cpp.autocompleteAddParentheses": true,
+  "C_Cpp.default.cppStandard": "c++20",
+  "C_Cpp.clang_format_sortIncludes": true,
+  "C_Cpp.formatting": "clangFormat",
 }
