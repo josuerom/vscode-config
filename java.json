@@ -261,12 +261,6 @@
       "double $1 = io.nextDouble();"
     ],
   },
-  "Read int n": {
-    "prefix": "rni",
-    "body": [
-      "int n = io.nextInt();"
-    ],
-  },
   "Read int array": {
     "prefix": "rarr",
     "body": [
@@ -316,12 +310,12 @@
     "prefix": "signature",
     "body": [
       "/**",
-      "\t\t\t░░░░░██╗░█████╗░░██████╗██╗░░░██╗███████╗██████╗░░█████╗░███╗░░░███╗",
-      "\t\t\t░░░░░██║██╔══██╗██╔════╝██║░░░██║██╔════╝██╔══██╗██╔══██╗████╗░████║",
-      "\t\t\t░░░░░██║██║░░██║╚█████╗░██║░░░██║█████╗░░██████╔╝██║░░██║██╔████╔██║",
-      "\t\t\t██╗░░██║██║░░██║░╚═══██╗██║░░░██║██╔══╝░░██╔══██╗██║░░██║██║╚██╔╝██║",
-      "\t\t\t╚█████╔╝╚█████╔╝██████╔╝╚██████╔╝███████╗██║░░██║╚█████╔╝██║░╚═╝░██║",
-      "\t\t\t░╚════╝░░╚════╝░╚═════╝░░╚═════╝░╚══════╝╚═╝░░╚═╝░╚════╝░╚═╝░░░░░╚═╝",
+      "\t\t░░░░░██╗░█████╗░░██████╗██╗░░░██╗███████╗██████╗░░█████╗░███╗░░░███╗",
+      "\t\t░░░░░██║██╔══██╗██╔════╝██║░░░██║██╔════╝██╔══██╗██╔══██╗████╗░████║",
+      "\t\t░░░░░██║██║░░██║╚█████╗░██║░░░██║█████╗░░██████╔╝██║░░██║██╔████╔██║",
+      "\t\t██╗░░██║██║░░██║░╚═══██╗██║░░░██║██╔══╝░░██╔══██╗██║░░██║██║╚██╔╝██║",
+      "\t\t╚█████╔╝╚█████╔╝██████╔╝╚██████╔╝███████╗██║░░██║╚█████╔╝██║░╚═╝░██║",
+      "\t\t░╚════╝░░╚════╝░╚═════╝░░╚═════╝░╚══════╝╚═╝░░╚═╝░╚════╝░╚═╝░░░░░╚═╝",
       "**/",
     ],
   },
@@ -405,6 +399,14 @@
       "      public double nextDouble() {",
       "         return Double.parseDouble(next());",
       "      }",
+      "",
+      "      public int[] readArray(int n) {",
+      "         int[] a = new int[n];",
+      "         for (int i = 0; i < n; i++) {",
+      "            a[i] = readInt();",
+      "         }",
+      "         return a;",
+      "      }",
       "   }",
       "}"
     ],
@@ -413,6 +415,10 @@
   "Template 2 simple and ligth": {
     "prefix": "tem2",
     "body": [
+      "/**",
+      "   ░░█ █▀█ █▀ █░█ █▀▀ █▀█ █▀█ █▀▄▀█",
+      "   █▄█ █▄█ ▄█ █▄█ ██▄ █▀▄ █▄█ █░▀░█",
+      "**/",
       "import java.util.Scanner;\n",
       "public class ${TM_FILENAME_BASE} {",
       "\tpublic static void main(String[] authorJosuerom) {",
@@ -446,12 +452,12 @@
       "public class ${TM_FILENAME_BASE} {",
       "   public static void main(String[] twoBits) {",
       "      $1",
-      "      fr.close();",
-      "      pw.close();",
+      "      in.close();",
+      "      out.close();",
       "   }",
       "",
-      "   static FastReader fr = new FastReader();",
-      "   static PrintWriter pw = new PrintWriter(System.out);",
+      "   static FastReader in = new FastReader();",
+      "   static PrintWriter out = new PrintWriter(System.out);",
       "   static final int MAX = 1_000_007;",
       "   static final boolean DEBUG = true;",
       "",
