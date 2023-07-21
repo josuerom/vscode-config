@@ -35,34 +35,34 @@
   "pw.print()": {
     "prefix": "p",
     "body": [
-      "pw.print($1);"
+      "io.print($1);"
     ],
     "description": "Print standard output"
   },
   "pw.println()": {
     "prefix": "pp",
     "body": [
-      "pw.println($1);"
+      "io.println($1);"
     ],
     "description": "Println standard output"
   },
   "pw.printf()": {
     "prefix": "pf",
     "body": [
-      "pw.printf(\"%$1\", $2);"
+      "io.printf(\"%$1\", $2);"
     ],
     "description": "Printf standard output"
   },
   "Print ternary operator": {
     "prefix": "ppt",
     "body": [
-      "pw.println($1 ? $2 : $3);"
+      "io.println($1 ? $2 : $3);"
     ],
   },
   "Print veredict Y/N": {
     "prefix": "ppv",
     "body": [
-      "pw.println($1 ? \"YES\" : \"NO\");"
+      "io.println($1 ? \"YES\" : \"NO\");"
     ],
   },
   "Return ternary operator": {
@@ -225,64 +225,58 @@
     ],
     "description": "Encabezado"
   },
-  "Arrays()": {
-    "prefix": "ar",
-    "body": [
-      "Arrays.$1($2);"
-    ],
-  },
   "Arrays.toString()": {
     "prefix": "tostr",
     "body": [
       "Arrays.toString($1)"
     ],
   },
+  "Set static array": {
+    "prefix": "arr",
+    "body": [
+      "{$1:int} $2 = new {$1:int}[$3];"
+    ],
+  },
   "Read int": {
     "prefix": "ri",
     "body": [
-      "int $1 = fr.readInt();"
+      "int $1 = io.nextInt();"
     ],
   },
   "Read String line": {
     "prefix": "rln",
     "body": [
-      "String ln = fr.readLine();"
+      "String ln = io.nextLine();"
     ],
   },
   "Read long": {
     "prefix": "rl",
     "body": [
-      "long $1 = fr.readLong();"
+      "long $1 = io.nextLong();"
     ],
   },
   "Read double": {
     "prefix": "rd",
     "body": [
-      "double $1 = fr.readDouble();"
+      "double $1 = io.nextDouble();"
     ],
   },
   "Read int n": {
     "prefix": "rni",
     "body": [
-      "int n = fr.readInt();"
+      "int n = io.nextInt();"
     ],
   },
   "Read int array": {
-    "prefix": "rai",
+    "prefix": "rarr",
     "body": [
-      "int[] $2 = fr.readArray($1);"
-    ],
-  },
-  "Read long array": {
-    "prefix": "ral",
-    "body": [
-      "long[] $2 = fr.readArrayLong($1);"
+      "int[] $2 = io.readArray($1);"
     ],
   },
   "Read char[] array": {
     "prefix": "rac",
     "body": [
-      "char[] $2 = fr.next().toCharArray();"
+      "char[] $2 = io.next().toCharArray();"
     ],
   },
   "Check execution time": {
@@ -295,7 +289,7 @@
   "read test cases": {
     "prefix": "tt",
     "body": [
-      "int tt = fr.readInt();",
+      "int tt = io.nextInt();",
       "while (tt-- > 0) {",
       "\t$1",
       "\tsolve($2);",
@@ -414,7 +408,7 @@
       "   }",
       "}"
     ],
-    "description": "Plantilla buena y corta",
+    "description": "Plantilla efectiva y efizaz",
   },
   "Template 2 simple and ligth": {
     "prefix": "tem2",
@@ -429,7 +423,7 @@
       "\t}",
       "}",
     ],
-    "description": "Plantilla sencilla y liviana CP",
+    "description": "Plantilla sencilla y liviana",
   },
   "Template 3 team 2 Bits()": {
     "prefix": "tem3",
