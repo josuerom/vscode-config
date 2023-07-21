@@ -183,12 +183,12 @@
     "prefix": "signature",
     "body": [
       "/**",
-      "\t\t\t░░░░░██╗░█████╗░░██████╗██╗░░░██╗███████╗██████╗░░█████╗░███╗░░░███╗",
-      "\t\t\t░░░░░██║██╔══██╗██╔════╝██║░░░██║██╔════╝██╔══██╗██╔══██╗████╗░████║",
-      "\t\t\t░░░░░██║██║░░██║╚█████╗░██║░░░██║█████╗░░██████╔╝██║░░██║██╔████╔██║",
-      "\t\t\t██╗░░██║██║░░██║░╚═══██╗██║░░░██║██╔══╝░░██╔══██╗██║░░██║██║╚██╔╝██║",
-      "\t\t\t╚█████╔╝╚█████╔╝██████╔╝╚██████╔╝███████╗██║░░██║╚█████╔╝██║░╚═╝░██║",
-      "\t\t\t░╚════╝░░╚════╝░╚═════╝░░╚═════╝░╚══════╝╚═╝░░╚═╝░╚════╝░╚═╝░░░░░╚═╝",
+      "\t\t░░░░░██╗░█████╗░░██████╗██╗░░░██╗███████╗██████╗░░█████╗░███╗░░░███╗",
+      "\t\t░░░░░██║██╔══██╗██╔════╝██║░░░██║██╔════╝██╔══██╗██╔══██╗████╗░████║",
+      "\t\t░░░░░██║██║░░██║╚█████╗░██║░░░██║█████╗░░██████╔╝██║░░██║██╔████╔██║",
+      "\t\t██╗░░██║██║░░██║░╚═══██╗██║░░░██║██╔══╝░░██╔══██╗██║░░██║██║╚██╔╝██║",
+      "\t\t╚█████╔╝╚█████╔╝██████╔╝╚██████╔╝███████╗██║░░██║╚█████╔╝██║░╚═╝░██║",
+      "\t\t░╚════╝░░╚════╝░╚═════╝░░╚═════╝░╚══════╝╚═╝░░╚═╝░╚════╝░╚═╝░░░░░╚═╝",
       "**/",
     ]
   },
@@ -227,8 +227,8 @@
       "#define ll      long long int",
       "#define mp      make_pair",
       "#define se      second",
-      "#define fi      first$2",
-      "",
+      "#define fi      first",
+      "$2",
       "void solve() {$3",
       "}\n",
       "int main() {",
@@ -248,7 +248,7 @@
       "\treturn 0;",
       "}"
     ],
-    "description": "Plantilla óptima enfocada para codeforces"
+    "description": "Plantilla efectiva y eficaz para la CP"
   },
   "Template 2 with all": {
     "prefix": "tem2",
@@ -331,20 +331,22 @@
       "#include <iostream>\n",
       "using namespace std;\n",
       "int main() {",
+      "\tios::sync_with_stdio(false);",
+      "\tcin.tie(nullptr); cout.tie(nullptr);",
       "\t$1",
       "\treturn 0;",
       "}",
     ],
     "description": "Plantilla estándar simple"
   },
-  "Template 4 team 2 bits()": {
+  "Template 4 team 2 Bits()": {
     "prefix": "tem4",
     "body": [
       "/**",
-      "   █▀█  █▀▀▄ ─▀─ ▀▀█▀▀ █▀▀ ▄▀ ▀▄",
-      "   ─▄▀  █▀▀▄ ▀█▀ ──█── ▀▀█ █─ ─█",
-      "   █▄▄  ▀▀▀─ ▀▀▀ ──▀── ▀▀▀ ▀▄ ▄▀",
-      "   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+      " *  █▀█  █▀▀▄ ─▀─ ▀▀█▀▀ █▀▀ ▄▀ ▀▄",
+      " *  ─▄▀  █▀▀▄ ▀█▀ ──█── ▀▀█ █─ ─█",
+      " *  █▄▄  ▀▀▀─ ▀▀▀ ──▀── ▀▀▀ ▀▄ ▄▀",
+      " *  created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
       "**/",
       "#include <bits/stdc++.h>\n",
       "using namespace std;\n",
@@ -353,8 +355,8 @@
       "#else",
       "#define debug(...) 42",
       "#endif\n",
-      "$2\n",
-      "void$3 solve() {",
+      "$2",
+      "void solve() {$3",
       "}\n",
       "int main() {",
       "\tios::sync_with_stdio(false);",
