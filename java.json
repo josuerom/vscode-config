@@ -264,7 +264,7 @@
   "Read int array": {
     "prefix": "rarr",
     "body": [
-      "int[] $2 = io.readArray($1);"
+      "int[] $1 = io.readArray($2);"
     ],
   },
   "Read char[] array": {
@@ -293,8 +293,8 @@
   "read test cases with Scanner": {
     "prefix": "tc",
     "body": [
-      "int tt = sc.nextInt();",
-      "while (tt-- > 0) {",
+      "int tc = sc.nextInt();",
+      "while (tc-- > 0) {",
       "\t$1",
       "\tsolve($2);",
       "}"
@@ -403,7 +403,7 @@
       "      public int[] readArray(int n) {",
       "         int[] a = new int[n];",
       "         for (int i = 0; i < n; i++) {",
-      "            a[i] = readInt();",
+      "            a[i] = io.nextInt();",
       "         }",
       "         return a;",
       "      }",
@@ -412,27 +412,8 @@
     ],
     "description": "Plantilla efectiva y efizaz",
   },
-  "Template 2 simple and ligth": {
+  "Template 2 team 2 Bits()": {
     "prefix": "tem2",
-    "body": [
-      "/**",
-      "   ░░█ █▀█ █▀ █░█ █▀▀ █▀█ █▀█ █▀▄▀█",
-      "   █▄█ █▄█ ▄█ █▄█ ██▄ █▀▄ █▄█ █░▀░█",
-      "**/",
-      "import java.util.Scanner;\n",
-      "public class ${TM_FILENAME_BASE} {",
-      "\tpublic static void main(String[] authorJosuerom) {",
-      "\t\tScanner sc = new Scanner(System.in);",
-      "\t\t$1",
-      "\t\tsc.close();",
-      "\t\tSystem.out.close();",
-      "\t}",
-      "}",
-    ],
-    "description": "Plantilla sencilla y liviana",
-  },
-  "Template 3 team 2 Bits()": {
-    "prefix": "tem3",
     "body": [
       "/**",
       " *  █▀█  █▀▀▄ ─▀─ ▀▀█▀▀ █▀▀ ▄▀ ▀▄",
@@ -533,5 +514,23 @@
       "}"
     ],
     "description": "Plantilla del equipo 2 Bits() RPC",
+  },
+  "Template 3 simple and ligth": {
+    "prefix": "tem3",
+    "body": [
+      "/**",
+      "   ░░█ █▀█ █▀ █░█ █▀▀ █▀█ █▀█ █▀▄▀█",
+      "   █▄█ █▄█ ▄█ █▄█ ██▄ █▀▄ █▄█ █░▀░█",
+      "**/",
+      "import java.util.Scanner;\n",
+      "public class ${TM_FILENAME_BASE} {",
+      "\tpublic static void main(String[] authorJosuerom) {",
+      "\t\tScanner sc = new Scanner(System.in);",
+      "\t\t$1",
+      "\t\tSystem.exit(0);",
+      "\t}",
+      "}",
+    ],
+    "description": "Plantilla sencilla y liviana",
   }
 }
