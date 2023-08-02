@@ -1,7 +1,7 @@
 [ // @author josuerom
   {
-    "key": "shift shift",
     "command": "workbench.action.toggleSidebarVisibility",
+    "key": "shift shift",
   },
   {
     "key": "ctrl+b",
@@ -37,62 +37,84 @@
     "command": "-code-runner.runCustomCommand"
   },
   {
-    "key": "ctrl+alt+f",
-    "command": "editor.action.formatDocument",
-    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
-  },
-  {
-    "key": "shift+alt+f",
-    "command": "-editor.action.formatDocument",
-    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
-  },
-  {
     "key": "ctrl+shift+z",
     "command": "cph.judgeView.focus"
   },
   {
-    "key": "ctrl+alt+enter",
-    "command": "catalyst.runAllTestCases"
+    "key": "ctrl+shift+[Comma]",
+    "command": "workbench.action.openApplicationSettingsJson"
   },
   {
-    "key": "ctrl+enter",
-    "command": "-catalyst.runAllTestCases"
+    "key": "ctrl+shift+[Semicolon]",
+    "command": "workbench.action.createTerminalEditorSide"
   },
   {
-    "key": "ctrl+oem_7",
+    "key": "ctrl+[Semicolon]",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "ctrl+shift+[",
+    "command": "-editor.action.outdentLines",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+[",
     "command": "editor.action.blockComment",
     "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "shift+alt+a",
+    "key": "ctrl+shift+a",
     "command": "-editor.action.blockComment",
     "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "ctrl+shift+oem_comma",
-    "command": "workbench.action.openApplicationSettingsJson"
+    "key": "ctrl+]",
+    "command": "editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "ctrl+alt+oem_3",
-    "command": "workbench.action.terminal.openNativeConsole",
-    "when": "!terminalFocus"
+    "key": "ctrl+shift+7",
+    "command": "-editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "ctrl+shift+c",
-    "command": "-workbench.action.terminal.openNativeConsole",
-    "when": "!terminalFocus"
+    "key": "shift+alt+down",
+    "command": "-editor.action.insertCursorBelow",
+    "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+shift+oem_3",
-    "command": "workbench.action.createTerminalEditorSide"
+    "key": "shift+alt+down",
+    "command": "-notebook.cell.copyDown",
+    "when": "notebookEditorFocused && !inputFocus"
   },
   {
-    "key": "ctrl+shift+oem_3",
-    "command": "-workbench.action.terminal.new",
-    "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+    "key": "shift+alt+up",
+    "command": "-editor.action.insertCursorAbove",
+    "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+alt+v",
-    "command": "code-runner.runCustomCommand"
-  }
+    "key": "shift+alt+up",
+    "command": "-notebook.cell.copyUp",
+    "when": "notebookEditorFocused && !inputFocus"
+  },
+  {
+    "key": "shift+alt+up",
+    "command": "editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+alt+up",
+    "command": "-editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+down",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+alt+down",
+    "command": "-editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
 ]
