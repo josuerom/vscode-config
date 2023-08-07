@@ -21,13 +21,13 @@
     "description": "Formatted standard output"
   },
   "System ternary operator": {
-    "prefix": "sst",
+    "prefix": "sot",
     "body": [
       "System.out.println($1 ? $2 : $3);"
     ],
   },
   "System veredict Y/N": {
-    "prefix": "ssv",
+    "prefix": "sotv",
     "body": [
       "System.out.println($1 ? \"YES\" : \"NO\");"
     ],
@@ -54,13 +54,13 @@
     "description": "Printf standard output"
   },
   "Print ternary operator": {
-    "prefix": "ppt",
+    "prefix": "pot",
     "body": [
       "io.println($1 ? $2 : $3);"
     ],
   },
   "Print veredict Y/N": {
-    "prefix": "ppv",
+    "prefix": "potv",
     "body": [
       "io.println($1 ? \"YES\" : \"NO\");"
     ],
@@ -87,13 +87,6 @@
     ],
     "description": "This is the main method that java executes"
   },
-  "solve() method": {
-    "prefix": "fsol",
-    "body": [
-      "static ${1:void} solve($2) {",
-      "}"
-    ]
-  },
   "public static void nameMethod": {
     "prefix": "psv",
     "body": [
@@ -115,7 +108,7 @@
     "body": [
       "try {",
       "\t$1",
-      "} catch ($2 e) {",
+      "} catch (IOException e) {",
       "\te.printStackTrace();",
       "}"
     ],
@@ -208,7 +201,7 @@
     "prefix": "mainclass",
     "body": [
       "public class ${TM_FILENAME_BASE} {",
-      "\tpublic static void main(String[] args) {",
+      "\tpublic static void main(String[] authorJosuerom) {",
       "\t\t$1",
       "\t}",
       "}"
@@ -225,6 +218,13 @@
     ],
     "description": "Encabezado"
   },
+  "Update date": {
+    "prefix": "@date",
+    "body": [
+      " *   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+    ],
+    "description": "Fecha y hora"
+  },
   "Arrays.toString()": {
     "prefix": "tostr",
     "body": [
@@ -234,7 +234,7 @@
   "Set static array": {
     "prefix": "arr",
     "body": [
-      "{$1:int} $2 = new {$1:int}[$3];"
+      "${1:int}[] $2 = new ${1:int}[$3];"
     ],
   },
   "Read int": {
@@ -262,7 +262,7 @@
     ],
   },
   "Read int array": {
-    "prefix": "rarr",
+    "prefix": "ra",
     "body": [
       "int[] $1 = io.readArray($2);"
     ],
@@ -271,13 +271,6 @@
     "prefix": "rac",
     "body": [
       "char[] $2 = io.next().toCharArray();"
-    ],
-  },
-  "Check execution time": {
-    "prefix": "time",
-    "body": [
-      "long start = System.currentTimeMillis();",
-      "System.err.println(\"time: \" + System.currentTimeMillis()-start);"
     ],
   },
   "read test cases": {
@@ -293,34 +286,15 @@
   "read test cases with Scanner": {
     "prefix": "tc",
     "body": [
-      "int tc = sc.nextInt();",
-      "while (tc-- > 0) {",
+      "int T = sc.nextInt();",
+      "while (T-- > 0) {",
       "\t$1",
       "\tsolve($2);",
       "}"
     ],
   },
-  "set hour and date": {
-    "prefix": "date",
-    "body": [
-      " *   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}"
-    ],
-  },
-  "signature": {
-    "prefix": "signature",
-    "body": [
-      "/**",
-      "\t\t░░░░░██╗░█████╗░░██████╗██╗░░░██╗███████╗██████╗░░█████╗░███╗░░░███╗",
-      "\t\t░░░░░██║██╔══██╗██╔════╝██║░░░██║██╔════╝██╔══██╗██╔══██╗████╗░████║",
-      "\t\t░░░░░██║██║░░██║╚█████╗░██║░░░██║█████╗░░██████╔╝██║░░██║██╔████╔██║",
-      "\t\t██╗░░██║██║░░██║░╚═══██╗██║░░░██║██╔══╝░░██╔══██╗██║░░██║██║╚██╔╝██║",
-      "\t\t╚█████╔╝╚█████╔╝██████╔╝╚██████╔╝███████╗██║░░██║╚█████╔╝██║░╚═╝░██║",
-      "\t\t░╚════╝░░╚════╝░╚═════╝░░╚═════╝░╚══════╝╚═╝░░╚═╝░╚════╝░╚═╝░░░░░╚═╝",
-      "**/",
-    ],
-  },
   "style josuerom": {
-    "prefix": "style",
+    "prefix": "josuerom",
     "body": [
       "/**",
       "   ░░█ █▀█ █▀ █░█ █▀▀ █▀█ █▀█ █▀▄▀█",
@@ -339,13 +313,12 @@
       "import java.util.*;",
       "import static java.lang.Math.*;\n",
       "public class ${TM_FILENAME_BASE} {",
-      "   static FastReader io = new FastReader();\n",
       "   public static void main(String[] authorJosuerom) {",
       "      $1",
       "      io.close();",
       "      System.exit(0);",
-      "   }",
-      "",
+      "   }\n",
+      "   static FastReader io = new FastReader();\n",
       "   public static void solve($3) {",
       "   }",
       "",
@@ -421,54 +394,49 @@
       " *  █▄▄  ▀▀▀─ ▀▀▀ ──▀── ▀▀▀ ▀▄ ▄▀",
       " *  created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
       " **/",
-      "import java.io.BufferedReader;",
-      "import java.io.IOException;",
-      "import java.io.InputStreamReader;",
-      "import java.util.StringTokenizer;",
-      "import static java.lang.Math.*;",
-      "import java.util.*;\n",
+      "import java.io.*;",
+      "import java.util.*;",
+      "import static java.lang.Math.*;\n",
       "public class ${TM_FILENAME_BASE} {",
-      "   public static void main(String[] _2Bits) {",
+      "   public static void main(String[] Team2Bits) {",
       "      $1",
-      "      in.close();",
+      "      io.close();",
       "      System.exit(0);",
+      "   }\n",
+      "   static FastReader io = new FastReader();\n",
+      "   public static void solve($3) {",
       "   }",
       "",
-      "   static FastReader in = new FastReader();",
-      "   static final int N = 1_000_007;",
-      "",
-      "   static void solve($3) {",
-      "   }",
-      "",
-      "   static class FastReader {",
-      "      BufferedReader br;",
-      "      StringTokenizer st;",
+      "   static class FastReader extends PrintWriter {",
+      "      private BufferedReader br;",
+      "      private StringTokenizer st;",
       "",
       "      public FastReader() {",
-      "         br = new BufferedReader(new InputStreamReader(System.in));",
-      "         st = new StringTokenizer(\"\");",
+      "         this(System.in, System.out);",
       "      }",
       "",
-      "      void close() {",
+      "      public FastReader(InputStream i, OutputStream o) {",
+      "         super(o);",
+      "         br = new BufferedReader(new InputStreamReader(i));",
+      "      }",
+      "",
+      "      public FastReader(String problemName) throws IOException {",
+      "         super(problemName + \".out\");",
+      "         br = new BufferedReader(new FileReader(problemName + \".in\"));",
+      "      }",
+      "",
+      "      public String next() {",
       "         try {",
-      "            br.close();",
-      "         } catch (IOException e) {",
+      "            while (st == null || !st.hasMoreTokens())",
+      "               st = new StringTokenizer(br.readLine());",
+      "            return st.nextToken();",
+      "         } catch (Exception e) {",
       "            e.printStackTrace();",
       "         }",
+      "         return null;",
       "      }",
       "",
-      "      String next() {",
-      "         while (!st.hasMoreTokens()) {",
-      "            try {",
-      "               st = new StringTokenizer(br.readLine());",
-      "            } catch (IOException e) {",
-      "               e.printStackTrace();",
-      "            }",
-      "         }",
-      "         return st.nextToken();",
-      "      }",
-      "",
-      "      String nextLine() {",
+      "      public String nextLine() {",
       "         String line = null;",
       "         try {",
       "            line = br.readLine();",
@@ -478,29 +446,29 @@
       "         return line;",
       "      }",
       "",
-      "      double nextDouble() {",
-      "         return Double.parseDouble(next());",
-      "      }",
-      "",
-      "      long nextLong() {",
-      "         return Long.parseLong(next());",
-      "      }",
-      "",
-      "      int nextInt() {",
+      "      public int nextInt() {",
       "         return Integer.parseInt(next());",
       "      }",
       "",
-      "      int[] readArray(int n) {",
+      "      public long nextLong() {",
+      "         return Long.parseLong(next());",
+      "      }",
+      "",
+      "      public double nextDouble() {",
+      "         return Double.parseDouble(next());",
+      "      }",
+      "",
+      "      public int[] readArray(int n) {",
       "         int[] a = new int[n];",
       "         for (int i = 0; i < n; i++) {",
-      "            a[i] = in.nextInt();",
+      "            a[i] = io.nextInt();",
       "         }",
       "         return a;",
       "      }",
       "   }",
       "}"
     ],
-    "description": "Plantilla del equipo 2 Bits() RPC",
+    "description": "Plantilla equipo 2 Bits RPC",
   },
   "Template 3 simple and ligth": {
     "prefix": "tem3",
