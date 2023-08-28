@@ -67,9 +67,9 @@
   "read tests case": {
     "prefix": "tc",
     "body": [
-      "int tt;",
-      "cin >> tt;",
-      "while (tt--) {",
+      "int tc;",
+      "cin >> tc;",
+      "while (tc--) {",
       "\t$1",
       "}",
     ]
@@ -134,7 +134,13 @@
   "cout ternary operator": {
     "prefix": "cot",
     "body": [
-      "cout << ($1 ? $2 : $3) << br;"
+      "cout << ($1 ? $2 : $3) << endl;"
+    ]
+  },
+  "cout ternary operator": {
+    "prefix": "coov",
+    "body": [
+      "cout << ($1 ? \"YES\" : \"NO\") << endl;"
     ]
   },
   "printf ternary operator": {
@@ -364,8 +370,6 @@
       " *   author:  josuerom",
       " *   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
       "**/",
-      "// #pragma GCC optimize(\"Ofast\")",
-      "// #pragma GCC target(\"sse,sse2,sse3,ssse3,sse4.1,sse4.2,sse4a,avx,avx2,popcnt,tune=native\")",
       "#include <iostream>",
       "#include <cstdio>",
       "#include <cstdlib>",
@@ -402,7 +406,7 @@
       "using pii = pair<int, int>;",
       "using pll = pair<ll, ll>;",
       "mt19937_64 rng(chrono::steady_clock::now().time_since_epoch().count());",
-      "ll randomN(ll B) {",
+      "ll randomNumber(ll B) {",
       "   return (ull)rng() % B;",
       "}",
       "",
@@ -433,7 +437,7 @@
       "  return 0;",
       "}"
     ],
-    "description": "Plantilla C++ 17 Um_nik CF"
+    "description": "Plantilla Um_nik CF std=c++17"
   }
   "Template 6 by JHelper": {
     "prefix": "tem6",
