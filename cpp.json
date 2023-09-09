@@ -98,7 +98,7 @@
   "typedef": {
     "prefix": "typ",
     "body": [
-      "typedef ${1:long long ll};$1"
+      "typedef ${1:long long ll};"
     ]
   },
   "#define": {
@@ -116,7 +116,7 @@
   "cout": {
     "prefix": "coo",
     "body": [
-      "cout << $1 << br;"
+      "cout << $1 << '\\n';"
     ]
   },
   "scanf": {
@@ -205,11 +205,11 @@
       "#else",
       "#define debug(...) 42",
       "#endif\n",
-      "#define ull     unsigned long long int",
-      "#define ll      long long int",
-      "#define mp      make_pair",
-      "#define se      second",
-      "#define fi      first\n",
+      "#define ull   unsigned long long int",
+      "#define ll    long long int",
+      "#define mp    make_pair",
+      "#define se    second",
+      "#define fi    first\n",
       "clock_t startTime;",
 		  "double getSolutionTime() {",
 		  "\treturn (double) (clock() - startTime) / CLOCKS_PER_SEC;",
@@ -226,7 +226,7 @@
       "#ifdef josuerom",
       "\t\tcout << \"------ Case #\" << nc << \" ------\\n\";",
       "\t\tsolve();",
-		"\t\tcout << \"time \" << setprecision(5) << getSolutionTime() << \" ms\\n\";",
+		  "\t\tcout << \"time \" << setprecision(5) << getSolutionTime() << \" ms\\n\";",
       "#else",
       "\t\tsolve();",
       "#endif",
