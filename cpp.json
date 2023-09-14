@@ -43,19 +43,21 @@
   "for (int i = 0; i < n; i++)": {
     "prefix": "fori",
     "body": [
-      "for (int ${1:i} = 0; ${1:i} < $2; ${1:i}++) $3",
+      "for (int ${1:i} = 0; ${1:i} < $2; ${1:i}++)$3",
     ]
   },
   "for (int i = n; i >= 0; i--)": {
     "prefix": "forr",
     "body": [
-      "for (int ${1:i} = $2; ${1:i} >= 0; ${1:i}--) $3",
+      "for (int ${1:i} = $2; ${1:i} >= 0; ${1:i}--)$3",
     ]
   },
   "for (auto $e : vec)": {
     "prefix": "fore",
     "body": [
-      "for (auto &e : $1) $2",
+      "for (auto &e : $1)",
+      "\tcout << e << endl;",
+      "cout << endl;",
     ]
   },
   "while": {
@@ -98,7 +100,7 @@
   "typedef": {
     "prefix": "typ",
     "body": [
-      "typedef ${1:long long int ll};"
+      "typedef ${1:long long ll};$1"
     ]
   },
   "#define": {
@@ -116,19 +118,19 @@
   "cout": {
     "prefix": "coo",
     "body": [
-      "cout << $1 << '\\n';"
+      "cout << $1 << br;"
     ]
   },
   "scanf": {
     "prefix": "sc",
     "body": [
-      "scanf(\"%$1\", &$2);"
+      "scanf(\"%d$1\", &$2);"
     ]
   },
   "printf": {
     "prefix": "pr",
     "body": [
-      "printf(\"%$1\\n\", $2);"
+      "printf(\"%d$1\", $2);"
     ]
   },
   "cout ternary operator": {
@@ -162,7 +164,7 @@
     ]
   },
   "Header": {
-    "prefix": "@",
+    "prefix": "author",
     "body": [
       "/**",
       " *   author:  josuerom",
@@ -171,7 +173,7 @@
     ]
   },
   "set hour and date": {
-    "prefix": "@date",
+    "prefix": "date",
     "body": [
       " *   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}"
     ]
@@ -205,7 +207,7 @@
       "#else",
       "#define debug(...) 42",
       "#endif\n",
-      "#define ll   long long int",
+      "#define ll   long long",
       "#define pb   push_back",
       "#define mp   make_pair",
       "#define se   second",
@@ -333,23 +335,17 @@
       "#else",
       "#define debug(...) 42",
       "#endif\n",
-      "clock_t startTime;",
-      "double getSolutionTime() {",
-      "   return (double)(clock() - startTime) / CLOCKS_PER_SEC;",
-      "}\n$2",
       "void solve() {$3",
       "}\n",
       "int main() {",
-      "\tstartTime = clock();",
       "\tios::sync_with_stdio(false);",
       "\tcin.tie(nullptr); cout.tie(nullptr);",
       "\tint tt = 1;",
       "\tcin >> tt;$1",
       "\tfor (int nc = 1; nc <= tt; nc++) {",
       "#ifdef _2BITS",
-      "\t\tcout << \"------ Case #\" << nc << \" ------\\n\";",
+      "\t\tcout << \"--- Case #\" << nc << \" ---\\n\";",
       "\t\tsolve();",
-      "\t\tcout << \"time \" << setprecision(5) << getSolutionTime() << \" ms\\n\";",
       "#else",
       "\t\tsolve();",
       "#endif",
@@ -377,6 +373,7 @@
       "#include <unordered_set>",
       "#include <unordered_map>",
       "#include <queue>",
+      "#include <stack>",
       "#include <ctime>",
       "#include <cassert>",
       "#include <complex>",
@@ -385,7 +382,6 @@
       "#include <chrono>",
       "#include <random>",
       "#include <bitset>",
-      "#include <array>",
       "#include <climits>",
       "using namespace std;",
       "",
@@ -395,7 +391,7 @@
       "\t#define eprintf(...) 42",
       "#endif",
       "",
-      "using ll = long long int;",
+      "using ll = long long;",
       "using ld = long double;",
       "using uint = unsigned int;",
       "using ull = unsigned long long int;",
@@ -406,9 +402,10 @@
       "   return (ull)rng() % B;",
       "}",
       "",
-      "#define mp      make_pair",
-      "#define se      second",
-      "#define fi      first",
+      "#define pb   push_back",
+      "#define mp   make_pair",
+      "#define se   second",
+      "#define fi   first",
       "",
       "clock_t startTime;",
       "double getCurrentTime() {",
