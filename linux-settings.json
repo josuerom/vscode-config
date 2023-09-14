@@ -14,7 +14,7 @@
   "java.configuration.runtimes": [
     {
       "name": "JavaSE-11",
-      "path": "/usr/lib/jvm/java-11-openjdk-amd64/",
+      "path": "/usr/lib/jvm/java-11-openjdk-11.0.20.0.8-1.fc38.x86_64/",
       "default": true
     }
   ],
@@ -22,11 +22,6 @@
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true,
     "editor.defaultFormatter": "redhat.java"
-  },
-  "[python]": {
-    "editor.formatOnSave": true,
-    "editor.formatOnPaste": true,
-    "editor.defaultFormatter": "ms-python.autopep8",
   },
   "terminal.integrated.defaultProfile.linux": "bash",
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
@@ -53,6 +48,7 @@
     "python": "clear && cd $dir && python -OO -S -B $fileName",
     "javascript": "clear && cd $dir && node $fileName",
     "typescript": "clear && cd $dir && node $fileName",
+    "workbench.colorTheme": "Default Dark Modern",
   },
   "workbench.colorTheme": "Default Dark Modern",
   // "workbench.colorTheme": "Monokai",
@@ -64,7 +60,7 @@
   "workbench.editor.enablePreview": false,
   "workbench.editor.showTabs": false,
   "editor.fontFamily": "JetBrainsMono Nerd Font",
-  "editor.fontSize": 14,
+  "editor.fontSize": 14.20,
   "editor.fontLigatures": true,
   "editor.tabCompletion": "on",
   "editor.tabSize": 3,
@@ -92,16 +88,7 @@
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.openRepositoryInParentFolders": "never",
-  "python.formatting.provider": "none",
   "update.showReleaseNotes": false,
   "notebook.formatOnSave.enabled": true,
   "workbench.editor.labelFormat": "short",
-  "C_Cpp.autocompleteAddParentheses": true,
-  "C_Cpp.default.cppStandard": "c++20",
-  "C_Cpp.clang_format_sortIncludes": true,
-  "C_Cpp.formatting": "clangFormat",
-  "cph.general.menuChoices": "cpp java",
-  "cph.general.saveLocation": "/home/josuerom/workspace/bin",
-  "cph.general.timeOut": 1000,
-  "cph.language.cpp.Args": "-std=c++17 -march=native -Wall -Wextra -Wshadow -Wvla -Djosuerom",
 }
