@@ -122,13 +122,13 @@
     ]
   },
   "scanf": {
-    "prefix": "sc",
+    "prefix": "ss",
     "body": [
       "scanf(\"%d$1\", &$2);"
     ]
   },
   "printf": {
-    "prefix": "pr",
+    "prefix": "pp",
     "body": [
       "printf(\"%d$1\", $2);"
     ]
@@ -158,7 +158,7 @@
     ]
   },
   "set int[]": {
-    "prefix": "ar",
+    "prefix": "arr",
     "body": [
       "int a[$1];"
     ]
@@ -394,7 +394,7 @@
       "using ll = long long;",
       "using ld = long double;",
       "using uint = unsigned int;",
-      "using ull = unsigned long long int;",
+      "using ull = unsigned long long;",
       "using pii = pair<int, int>;",
       "using pll = pair<ll, ll>;",
       "mt19937_64 rng(chrono::steady_clock::now().time_since_epoch().count());",
@@ -408,7 +408,7 @@
       "#define fi   first",
       "",
       "clock_t startTime;",
-      "double getCurrentTime() {",
+      "double getSolutionTime() {",
       "   return (double)(clock() - startTime) / CLOCKS_PER_SEC;",
       "}",
       "$2",
@@ -420,14 +420,14 @@
       "   int T = 1;",
       "   scanf(\"%d\", &T);$1",
       "   for (int i = 1; i <= T; i++) {",
-      "      eprintf(\"------ Case #%d ------\\n\", i);",
+      "      eprintf(\"--- Case #%d ---\\n\", i);",
       "      solve();",
-      "      eprintf(\"time %.5lf ms\\n\", getCurrentTime());",
+      "      eprintf(\"time %.5lf ms\\n\", getSolutionTime());",
       "  }",
       "  return 0;",
       "}"
     ],
-    "description": "Plantilla Um_nik CF std=c++17"
+    "description": "Plantilla Um_nik C++17"
   },
   "Template 6 by JHelper": {
     "prefix": "tem6",
