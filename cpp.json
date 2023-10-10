@@ -76,6 +76,13 @@
       "while ($1) $2",
     ]
   },
+  "function preCal": {
+    "prefix": "funpre",
+    "body": [
+      "function<int$1(int, int)> preCalculate = [&](int a, int b) {",
+      "};"
+    ]
+  },
   "read tests case": {
     "prefix": "tc",
     "body": [
