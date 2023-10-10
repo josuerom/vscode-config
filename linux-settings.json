@@ -40,7 +40,7 @@
   "code-runner.cwd": "/home/josuerom/workspace/bin",
   "code-runner.temporaryFileName": "tempErrorFile",
   "code-runner.executorMap": {
-    "cpp": "clear && cd $dir && g++ $fileName -o ~/workspace/bin/vs-sol.out -std=c++17 -march=native -Wall -Wextra -Wvla -Djosuerom -D_2BITS && ~/workspace/bin/vs-sol.out",
+    "cpp": "clear && cd $dir && g++ $fileName -o ~/workspace/bin/vs-sol.out -std=c++17 -march=native -Wall -Wextra -pedantic -Werror -Weffc++ -Wno-sign-conversion -Wvla -Djosuerom -D_2BITS -D_GLIBCXX_DEBUG_PEDANTIC && ~/workspace/bin/vs-sol.out",
     "java": "clear && cd $dir && java $fileName",
     "run cpp": "clear && ~/workspace/bin/vs-sol.out",
     "run java INP": "clear && java $fileNameWithoutExt < $dirsamples/in1",
