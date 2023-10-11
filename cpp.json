@@ -12,7 +12,7 @@
     "prefix": "ioc",
     "body": [
       "ios::sync_with_stdio(false);",
-      "cin.tie(nullptr); cout.tie(nullptr);"
+      "cin.tie(0);"
     ]
   },
   "using namespace std;": {
@@ -59,7 +59,7 @@
     "body": [
       "for (auto &e : $1)",
       "\tcout << e << \" \";",
-      "cout << endl;",
+      "cout << br;",
     ]
   },
   "for (auto $e : vp)": {
@@ -67,7 +67,7 @@
     "body": [
       "for (auto &e : $1)",
       "\tcout << e.fi <<\", \"<< e.se << '\\n';",
-      "cout << endl;",
+      "cout << br;",
     ]
   },
   "while": {
@@ -79,7 +79,7 @@
   "function preCal": {
     "prefix": "funpre",
     "body": [
-      "function<int$1(int, int)> preCalculate = [&](int a, int b) {",
+      "function<int$1(int)> preCalculate = [&](int n) {",
       "};"
     ]
   },
@@ -98,8 +98,9 @@
     "body": [
       "int tt;",
       "cin >> tt;",
-      "while (tt--)",
+      "while (tt--) {",
       "\tsolve();",
+      "}",
     ]
   },
   "#include <bits/stdc++.h>": {
@@ -135,7 +136,7 @@
   "cout": {
     "prefix": "coo",
     "body": [
-      "cout << $1 << br;"
+      "cout << $1;"
     ]
   },
   "scanf": {
@@ -153,13 +154,13 @@
   "cout ternary operator": {
     "prefix": "cot",
     "body": [
-      "cout << ($1 ? $2 : $3) << endl;"
+      "cout << ($1 ? $2 : $3) << br;"
     ]
   },
   "cout ternary operator": {
     "prefix": "coov",
     "body": [
-      "cout << ($1 ? \"YES\" : \"NO\") << endl;"
+      "cout << ($1 ? \"YES\" : \"NO\") << br;"
     ]
   },
   "printf ternary operator": {
@@ -178,12 +179,6 @@
     "prefix": "N",
     "body": [
       "const int N = 1e$1 + 7;"
-    ]
-  },
-  "set int[]": {
-    "prefix": "arr",
-    "body": [
-      "int a[$1];"
     ]
   },
   "Header": {
@@ -213,7 +208,7 @@
   "#pragma GCC": {
     "prefix": "gcc",
     "body": [
-      "#pragma GCC optimize(\"O3,unroll-loops\")",
+      "#pragma GCC optimize(\"Ofast\")",
     ]
   },
   "Template 1 for codeforces": {
@@ -230,16 +225,15 @@
       "#else",
       "#define debug(...) 42",
       "#endif\n",
-      "#define ll   long long",
-      "#define pb   push_back",
-      "#define mp   make_pair",
-      "#define se   second",
-      "#define fi   first\n$3",
+      "#define ll  long long",
+      "#define pb  push_back",
+      "#define br  '\\n'",
+      "\n$3\n",
       "void solve() {",
       "}\n",
       "int main() {",
       "\tios::sync_with_stdio(false);",
-      "\tcin.tie(nullptr); cout.tie(nullptr);",
+      "\tcin.tie(0);",
       "\tint tt = 1;",
       "\tcin >> tt;$1",
       "\tfor (int nc = 1; nc <= tt; nc++) {",
@@ -255,78 +249,8 @@
     ],
     "description": "Plantilla efectiva y eficaz para la CP"
   },
-  "Template 2 with all": {
+  "Template 2 Ultra Light": {
     "prefix": "tem2",
-    "body": [
-      "#pragma GCC optimize(\"O3,unroll-loops,unsafe-loop-optimizations,inline-functions,-march=native\")\n",
-      "#include <bits/stdc++.h>             //          ██╗░█████╗░░██████╗██╗░░░██╗███████╗██████╗░░█████╗░███╗░░░███╗",
-      "using namespace std;                 //          ██║██╔══██╗██╔════╝██║░░░██║██╔════╝██╔══██╗██╔══██╗████╗░████║",
-      "                                     //          ██║██║░░██║╚█████╗░██║░░░██║█████╗░░██████╔╝██║░░██║██╔████╔██║",
-      "#ifdef josuerom                      //     ██╗░░██║██║░░██║░╚═══██╗██║░░░██║██╔══╝░░██╔══██╗██║░░██║██║╚██╔╝██║",
-      "#include \"debug.h\"                   //     ╚█████╔╝╚█████╔╝██████╔╝╚██████╔╝███████╗██║░░██║╚█████╔╝██║░╚═╝░██║",
-      "#else                                //      ╚════╝░░╚════╝░╚═════╝░░╚═════╝░╚══════╝╚═╝░░╚═╝░╚════╝░╚═╝░░░░░╚═╝",
-      "#define debug(...) 42                //                         created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
-      "#endif\n",
-      "#define IO_SPEED            ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);",
-      "#define decimals(n)         cout.setf(ios::fixed, ios::floatfield); cout.precision(n);",
-      "#define uniq(v)             sort(all(v)); (v).erase(unique(all(v)),(v).end())",
-      "#define forr(i, v)          for(int (i) = (int)(v).size()-1; (i) >= 0; (i)--)",
-      "#define mod(a, b)           ((((a) % (MOD)) + ((b) % (MOD))) % (MOD))",
-      "#define VEREDICT(cond)      cout << ((cond) ? \"YES\" : \"NO\") << '\\n'",
-      "#define fori(i, b, n)       for(int (i) = (b); (i) < (n); (i)++)",
-      "#define binary_search(v, k) sort(v); binary_search(all(v), (k))",
-      "#define mcm(a, b)           ((a) * (b)) / gcd((a), (b))",
-      "#define memset(ar, n)       memset((ar),(n),sizeof(ar))",
-      "#define rall(v)             (v).rbegin(),(v).rend()",
-      "#define PI                  3.14159265358979323846L",
-      "#define EULER               2.71828182845904523536L",
-      "#define count_bits(n)       __builtin_popcountll(n)",
-      "#define lbd(v, n)           lower_bound(all(v), (n))",
-      "#define ubd(v, n)           upper_bound(all(v), (n))",
-      "#define ull                 unsigned long long int",
-      "#define all(v)              (v).begin(),(v).end()",
-      "#define fore(e, va)         for (auto &(e): (va))",
-      "#define mxe(v)              max_element(all(v))",
-      "#define mne(v)              min_element(all(v))",
-      "#define log(n)              __builtin_clzll(n)",
-      "#define is_ordered(v)       is_sorted(all(v))",
-      "#define lowbit(x)           ((x) & ((-x)))",
-      "#define rsort(v)            sort(rall(v))",
-      "#define mcd(a, b)           gcd((a), (b))",
-      "#define ll                  long long int",
-      "#define sort(v)             sort(all(v))",
-      "#define eb                  emplace_back",
-      "#define sbl(a, b)           ((a) << (b))",
-      "#define sbr(a, b)           ((a) >> (b))",
-      "#define pf                  push_front",
-      "#define MOD                 1000000007",
-      "#define pb                  push_back",
-      "#define mp                  make_pair",
-      "#define se                  second",
-      "#define fi                  first",
-      "#define br                  '\\n'",
-      "$2",
-      "void solve() {$3",
-      "}\n",
-      "int main() {",
-      "\tIO_SPEED;",
-      "\tint tt = 1;",
-      "\tcin >> tt;$1",
-      "\tfor (int nc = 1; nc <= tt; nc++) {",
-      "#ifdef josuerom",
-      "\t\tcout << \"------ Case #\" << nc << \" ------\\n\";",
-      "\t\tsolve();",
-      "#else",
-      "\t\tsolve();",
-      "#endif",
-      "\t}",
-      "\treturn 0;",
-      "}"
-    ],
-    "description": "Plantilla para contests"
-  },
-  "Template 3 ultra-light": {
-    "prefix": "tem3",
     "body": [
       "/**",
       "   ░░█ █▀█ █▀ █░█ █▀▀ █▀█ █▀█ █▀▄▀█",
@@ -344,27 +268,26 @@
     ],
     "description": "Plantilla estándar simple"
   },
-  "Template 4 team 2 Bits()": {
-    "prefix": "tem4",
+  "Template 3 2BITS": {
+    "prefix": "tem3",
     "body": [
       "/**",
-      " *  █▀█  █▀▀▄ ─▀─ ▀▀█▀▀ █▀▀ ▄▀ ▀▄",
-      " *  ─▄▀  █▀▀▄ ▀█▀ ──█── ▀▀█ █─ ─█",
-      " *  █▄▄  ▀▀▀─ ▀▀▀ ──▀── ▀▀▀ ▀▄ ▄▀",
-      " *  created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+      " *   █▀█  █▀▀▄ ─▀─ ▀▀█▀▀ █▀▀ ▄▀ ▀▄",
+      " *   ─▄▀  █▀▀▄ ▀█▀ ──█── ▀▀█ █─ ─█",
+      " *   █▄▄  ▀▀▀─ ▀▀▀ ──▀── ▀▀▀ ▀▄ ▄▀",
+      " *   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
       "**/",
-      "#include <bits/stdc++.h>",
+      "#include <bits/stdc++.h>\n",
       "using namespace std;\n",
-      "#ifdef _2BITS",
-      "#include \"../debug.h\"",
-      "#else",
-      "#define debug(...) 42",
-      "#endif\n",
-      "void solve() {$3",
+      "#define ll  long long",
+      "#define pb  push_back",
+      "#define br  '\\n'",
+      "\n$3\n",
+      "void solve() {",
       "}\n",
       "int main() {",
       "\tios::sync_with_stdio(false);",
-      "\tcin.tie(nullptr); cout.tie(nullptr);",
+      "\tcin.tie(0);",
       "\tint tt = 1;",
       "\tcin >> tt;$1",
       "\tfor (int nc = 1; nc <= tt; nc++) {",
@@ -380,8 +303,8 @@
     ],
     "description": "Plantilla del equipo 2 Bits() RPC"
   },
-  "Template 5 Um_nik CF": {
-    "prefix": "tem5",
+  "Template 4 Um_nik CF": {
+    "prefix": "tem4",
     "body": [
       "/**",
       " *   author:  josuerom",
@@ -403,6 +326,7 @@
       "#include <cassert>",
       "#include <complex>",
       "#include <string>",
+      "#include <functional>",
       "#include <cstring>",
       "#include <chrono>",
       "#include <random>",
@@ -421,16 +345,16 @@
       "using uint = unsigned int;",
       "using ull = unsigned long long;",
       "using pii = pair<int, int>;",
+      "using psi = pair<string, int>;",
       "using pll = pair<ll, ll>;",
       "mt19937_64 rng(chrono::steady_clock::now().time_since_epoch().count());",
       "ll randomNumber(ll B) {",
       "   return (ull)rng() % B;",
       "}",
       "",
-      "#define pb   push_back",
-      "#define mp   make_pair",
-      "#define se   second",
-      "#define fi   first",
+      "#define pb  push_back",
+      "#define se  second",
+      "#define fi  first",
       "",
       "clock_t startTime;",
       "double getSolutionTime() {",
@@ -454,8 +378,8 @@
     ],
     "description": "Plantilla Um_nik C++17"
   },
-  "Template 6 by JHelper": {
-    "prefix": "tem6",
+  "Template 5 by JHelper": {
+    "prefix": "tem5",
     "body": [
       "/**",
       " * Template code generated by JHelper",
