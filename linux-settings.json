@@ -9,7 +9,7 @@
 
   "window.commandCenter": true,
   "window.menuBarVisibility": "compact",
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 1.2,
 
   "java.configuration.runtimes": [
     {
@@ -25,7 +25,7 @@
   },
   "terminal.integrated.defaultProfile.linux": "bash",
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
-  "terminal.integrated.fontSize": 13.8,
+  "terminal.integrated.fontSize": 14.5,
   "terminal.integrated.tabs.focusMode": "singleClick",
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.cursorBlinking": true,
@@ -40,17 +40,17 @@
   "code-runner.cwd": "/home/josuerom/workspace/bin",
   "code-runner.temporaryFileName": "tempErrorFile",
   "code-runner.executorMap": {
-    "cpp": "clear && cd $dir && g++ $fileName -o ~/workspace/bin/vs-sol.out -std=c++17 -march=native -Wall -Wextra -pedantic -Werror -Weffc++ -Wno-sign-conversion -Wvla -Djosuerom -D_2BITS -D_GLIBCXX_DEBUG_PEDANTIC && ~/workspace/bin/vs-sol.out",
+    "cpp": "clear && cd $dir && g++ $fileName -o ~/workspace/bin/exe -std=c++17 -march=native -Wall -Wextra -pedantic -Werror -Weffc++ -Wno-sign-conversion -Wvla -DDEBUG -DLOCAL && ~/workspace/bin/exe",
     "java": "clear && cd $dir && java $fileName",
-    "run cpp": "clear && ~/workspace/bin/vs-sol.out",
-    "run java INP": "clear && java $fileNameWithoutExt < $dirsamples/in1",
-    "run cpp INP": "clear && ~/workspace/bin/vs-sol.out < $dirsamples/in1",
+    "run cpp": "clear && ~/workspace/bin/exe",
+    "run java INP": "clear && java $fileNameWithoutExt < samples/in1",
+    "run cpp INP": "clear && ~/workspace/bin/exe < samples/in1",
     "python": "clear && cd $dir && python -OO -S -B $fileName",
     "javascript": "clear && cd $dir && node $fileName",
     "typescript": "clear && cd $dir && node $fileName",
   },
-  // "workbench.colorTheme": "Default Dark Modern",
-  "workbench.colorTheme": "Monokai",
+  "workbench.colorTheme": "Default Dark Modern",
+  // "workbench.colorTheme": "Monokai",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "none",
   "workbench.sideBar.location": "right",
@@ -92,7 +92,8 @@
   "workbench.editor.labelFormat": "short",
   "cph.general.menuChoices": "cpp java",
   "cph.general.saveLocation": "/home/josuerom/workspace/bin",
-  "cph.language.cpp.Args": "-std=c++17 -Wall -Wextra -Wshadow",
+  "cph.language.cpp.Args": "-std=c++17 -O2 -Wall -Wextra -pedantic -DONLINE_JUDGE",
+  // "cph.language.cpp.Args": "-std=c++11 -DONLINE_JUDGE -fno-asm -lm -s -O2",
   "cph.general.timeOut": 1000,
   "cph.general.autoShowJudge": false,
 }
