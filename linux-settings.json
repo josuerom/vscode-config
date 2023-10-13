@@ -38,7 +38,6 @@
   "code-runner.clearPreviousOutput": true,
   "code-runner.preserveFocus": false,
   "code-runner.cwd": "/home/josuerom/workspace/bin",
-  "code-runner.temporaryFileName": "tempErrorFile",
   "code-runner.executorMap": {
     "cpp": "clear && cd $dir && g++ $fileName -o ~/workspace/bin/exe -std=c++17 -march=native -Wall -Wextra -pedantic -Werror -Weffc++ -Wno-sign-conversion -Wvla -DDEBUG -DLOCAL && ~/workspace/bin/exe",
     "java": "clear && cd $dir && java $fileName",
@@ -93,7 +92,7 @@
   "cph.general.menuChoices": "cpp java",
   "cph.general.saveLocation": "/home/josuerom/workspace/bin",
   "cph.language.cpp.Args": "-std=c++17 -O2 -Wall -Wextra -pedantic -DONLINE_JUDGE",
-  // "cph.language.cpp.Args": "-std=c++11 -DONLINE_JUDGE -fno-asm -lm -s -O2",
+  // "cph.language.cpp.Args": "-std=c++11 -lm -lcrypt -fno-asm -s -O2 -DONLINE_JUDGE",
   "cph.general.timeOut": 1000,
   "cph.general.autoShowJudge": false,
 }
