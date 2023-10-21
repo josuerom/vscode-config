@@ -141,13 +141,13 @@
   "scanf": {
     "prefix": "ss",
     "body": [
-      "scanf(\"%d$1\", &$2);"
+      "scanf(\"%d$1\\n\", &$2);"
     ]
   },
   "printf": {
     "prefix": "pp",
     "body": [
-      "printf(\"%d$1\", $2);"
+      "printf(\"%d\\n$1\", $2);"
     ]
   },
   "cout ternary operator": {
