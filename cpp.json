@@ -85,6 +85,13 @@
       "}",
     ]
   },
+  "void preCalculate": {
+    "prefix": "fpre",
+    "body": [
+      "void preCalculate($3) {",
+      "};"
+    ]
+  },
   "function preCalculate": {
     "prefix": "funpre",
     "body": [
@@ -168,6 +175,18 @@
       "printf(\"%d$1\\n\", ($2 ? $3 : $4));"
     ]
   },
+  "$.begin(), $.end()": {
+    "prefix": "all",
+    "body": [
+      "$1.begin(), $1.end()$2"
+    ]
+  },
+  "$.rbegin(), $.rend()": {
+    "prefix": "rall",
+    "body": [
+      "$1.rbegin(), $1.rend()$2"
+    ]
+  },
   "return": {
     "prefix": "rr",
     "body": [
@@ -225,8 +244,8 @@
       "#else",
       "#define debug(...) 42",
       "#endif\n",
-      "#define long  long long",
-      "#define endl  '\\n'",
+      "#define ll  long long",
+      "#define br  '\\n'",
       "\n$2\n",
       "void solve() {$3",
       "}\n",
@@ -257,8 +276,8 @@
       "   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
       "**/",
       "#include <bits/stdc++.h>\n",
-      "#define long  long long",
-      "#define endl  '\\n'\n",
+      "#define ll  long long",
+      "#define br  '\\n'\n",
       "using namespace std;\n",
       "int main() {",
       "\tios::sync_with_stdio(false);",
@@ -267,7 +286,7 @@
       "\treturn 0;",
       "}",
     ],
-    "description": "Plantilla estándar simple"
+    "description": "Plantilla estándar liviana"
   },
   "Template 2 BITS()": {
     "prefix": "tem3",
@@ -279,21 +298,27 @@
       " *   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
       "**/",
       "#include <bits/stdc++.h>\n",
+      "#define ll  long long",
+      "#define br  '\\n'\n",
       "using namespace std;\n",
-      "const int N = $2 + 100;\n",
-      "void solve() {$3",
-      "}\n",
+      "class ${TM_FILENAME_BASE} {",
+      "public:",
+      "\tstatic const int N = $2 + 10;\n",
+      "\tvoid solve() {",
+      "\t}",
+      "};\n",
       "int main() {",
       "\tios::sync_with_stdio(false);",
       "\tcin.tie(0);",
-      "\tint T = 1;",
-      "\tcin >> T;$1",
-      "\tfor (int nc = 1; nc <= T; nc++) {",
+      "\t${TM_FILENAME_BASE} solver;",
+      "\tint tt = 1, nc = 1;",
+      "\tcin >> tt;$1",
+      "\twhile (tt--) {",
       "#ifdef LOCAL",
-      "\t\tcout << \"Case #\" << nc << \": \";",
-      "\t\tsolve();",
+      "\t\tcout << \"Case #\" << nc++ << \": \";",
+      "\t\tsolver.solve();",
       "#else",
-      "\t\tsolve();",
+      "\t\tsolver.solve();",
       "#endif",
       "\t}",
       "\treturn 0;",
