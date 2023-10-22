@@ -42,24 +42,28 @@
       "getline(cin, s$1);"
     ]
   },
-  "read varius int": {
-    "prefix": "rvi",
+  "read multiple variables": {
+    "prefix": "rmv",
     "body": [
       "cin >> $1 >> $2 >> $3 >> $4;"
+    ]
+  },
+  "output multiple variables": {
+    "prefix": "omv",
+    "body": [
+      "cout << $1 << $2 << $3 << $4;"
     ]
   },
   "for (int i = 0; i < n; i++)": {
     "prefix": "fori",
     "body": [
-      "for (int ${1:i} = 0; ${1:i} < $2; ${1:i}++) $3{",
-      "}"
+      "for (int ${1:i} = 0; ${1:i} < $2; ${1:i}++) {$3}",
     ]
   },
   "for (int i = n; i >= 0; i--)": {
     "prefix": "forr",
     "body": [
-      "for (int ${1:i} = $2 - 1; ${1:i} >= 0; ${1:i}--) $3{",
-      "}"
+      "for (int ${1:i} = $2 - 1; ${1:i} >= 0; ${1:i}--) {$3}",
     ]
   },
   "for (auto $e : con)": {
@@ -85,7 +89,7 @@
       "}",
     ]
   },
-  "void preCalculate": {
+  "void preCalculate()": {
     "prefix": "fpre",
     "body": [
       "void preCalculate($3) {",
@@ -196,7 +200,7 @@
   "set const MAX": {
     "prefix": "N",
     "body": [
-      "const int N = 1e$1 + 7;"
+      "const int N = 1e$1 + 10;"
     ]
   },
   "Header": {
