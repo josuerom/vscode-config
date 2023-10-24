@@ -41,7 +41,12 @@
   "[java]": {
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true,
-    "editor.defaultFormatter": "redhat.java"
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "[cpp]": {
+    "editor.formatOnPaste": true,
+    // "editor.formatOnSave": true,
+    // "editor.defaultFormatter": "redhat.java"
   },
   "[python]": {
     "editor.formatOnSave": true,
@@ -60,11 +65,16 @@
   "code-runner.saveFileBeforeRun": true,
   "code-runner.showExecutionMessage": false,
   "code-runner.showRunCommandInEditorContextMenu": false,
-  "code-runner.clearPreviousOutput": true,
   "code-runner.preserveFocus": false,
+  "code-runner.clearPreviousOutput": true,
   "code-runner.cwd": "d:\\workspace\\bin",
   "code-runner.executorMap": {
-    "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++17 -march=native -Wall -Wextra -pedantic -Werror -Weffc++ -Wno-sign-conversion -Wvla -DDEBUG -DLOCAL && d:\\workspace\\bin\\sol.exe",
+    // "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++17 -Wall -Wno-sign-conversion -DDEBUG -DLOCAL && d:\\workspace\\bin\\sol.exe",
+
+    // "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++17 -Wall -Wno-sign-conversion -DDEBUG -DLOCAL && d:\\workspace\\bin\\sol.exe < input.txt > output.txt",
+
+    "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++17 -Wall -Wno-sign-conversion -DDEBUG -DLOCAL && d:\\workspace\\bin\\sol.exe < input.txt",
+
     "java": "cls && cd $dir && java $fileName",
     "run cpp": "cls && d:\\workspace\\bin\\sol.exe",
     "run cpp INP": "cls && d:\\workspace\\bin\\sol.exe < samples\\in1",
@@ -81,7 +91,7 @@
   "workbench.statusBar.visible": true,
   "workbench.layoutControl.enabled": false,
   "workbench.editor.enablePreview": false,
-  "workbench.editor.showTabs": false,
+  "workbench.editor.showTabs": "single",
   "editor.fontFamily": "JetBrains Mono",
   "editor.fontSize": 14.2,
   "editor.fontLigatures": true,
@@ -91,7 +101,7 @@
   "editor.suggestSelection": "first",
   "editor.wordWrap": "on",
   "editor.minimap.enabled": false,
-  "editor.scrollbar.vertical": "hidden",
+  // "editor.scrollbar.vertical": "hidden",
   "editor.overviewRulerBorder": false,
   "editor.hideCursorInOverviewRuler": true,
   "editor.stickyScroll.enabled": true,
@@ -111,13 +121,13 @@
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.openRepositoryInParentFolders": "never",
-  "cph.general.menuChoices": "cpp java",
+  "cph.general.defaultLanguage": "cpp",
+  // "cph.general.menuChoices": "cpp java",
   "cph.general.saveLocation": "d:\\workspace\\bin",
-  "cph.language.cpp.Args": "-std=c++17 -O2 -Wall -pedantic -Wno-sign-conversion -DONLINE_JUDGE",
-  // "cph.language.cpp.Args": "-std=c++11 -lm -lcrypt -fno-asm -s -O2 -Wall -pedantic",
+  "cph.language.cpp.Args": "-std=c++17 -Wall -Wno-sign-conversion -DONLINE_JUDGE",
+  // "cph.language.cpp.Args": "-std=c++11 -lm -lcrypt -fno-asm -s -Wall -pedantic",
   "cph.general.timeOut": 1000,
   "cph.general.autoShowJudge": false,
-  "trailing-spaces.trimOnSave": true,
   "python.formatting.provider": "none",
   "update.showReleaseNotes": false,
   "notebook.formatOnSave.enabled": true,
