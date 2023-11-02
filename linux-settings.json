@@ -42,17 +42,17 @@
     // BUILD & RUN PROGRAM CODEFORCES C++17 INPUT MANUAL
     "cpp": "clear && cd $dir && g++ $fileName -o ~/workspace/bin/sol.out -std=c++17 -Wall -Wno-sign-conversion -DDEBUG -DLOCAL && ~/workspace/bin/sol.out",
     // BUILD & RUN PROGRAM CODEFORCES C++17 INPUT FILE
-    // "cpp": "clear && cd $dir && g++ $fileName -o ~/workspace/bin/sol.out -std=c++17 -Wall -Wno-sign-conversion -DDEBUG -DLOCAL && ~/workspace/bin/sol.out < samples\in1",
+    // "cpp": "clear && cd $dir && g++ $fileName -o ~/workspace/bin/sol.out -std=c++17 -Wall -Wno-sign-conversion -DDEBUG -DLOCAL && ~/workspace/bin/sol.out < samples/in1",
     // BUILD & RUN PROGRAM C++20 OFF CONSOLE & INPUT
-    // "cpp": "clear && cd $dir && g++ $fileName -o ~/workspace/bin/sol.out -std=c++20 -Wall -Wno-sign-conversion -DDEBUG -DLOCAL && ~/workspace/bin/sol.out < samples\in1 > samples\output",
+    // "cpp": "clear && cd $dir && g++ $fileName -o ~/workspace/bin/sol.out -std=c++20 -Wall -Wno-sign-conversion -DDEBUG -DLOCAL && ~/workspace/bin/sol.out < samples/in1 > samples/output",
     // BUILD & RUN PROGRAM RPC C++11 INPUT FILE
     // "cpp": "clear && cd $dir && g++ $fileName -o $fileNameWithoutExt.out -std=c++11 -Wall -lm -lcrypt -fno-asm -pedantic -Wno-sign-conversion -DDEBUG -DLOCAL && $fileNameWithoutExt.out < in1",
-    // REPEAT EXECUTE FILE.exe
+    // REPEAT EXECUTE FILE.exe INPUT MANUAL
     "run_cpp": "clear && ~/workspace/bin/sol.out",
 
-    // FOR JAVA > 8
+    // BUILD & RUN JAVA > 8 INPUT MANUAL
     "java": "clear && cd $dir && java $fileName",
-    // FOR JAVA 8
+    // BUILD & RUN FOR JAVA 1.8
     // "java": "clear && cd $dir && javac -d ~/workspace/bin $fileName && java -cp ~/workspace/bin $fileNameWithoutExt",
     // REPEAT EXECUTE FILE .class
     // "java": "clear && java -cp ~/workspace/bin $fileNameWithoutExt",
