@@ -69,16 +69,22 @@
   "code-runner.clearPreviousOutput": true,
   "code-runner.cwd": "d:\\workspace\\bin",
   "code-runner.executorMap": {
-    // "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++17 -Wall -Wno-sign-conversion -DDEBUG -DLOCAL && d:\\workspace\\bin\\sol.exe",
+    // BUILD & RUN PROGRAM CODEFORCES C++17 INPUT MANUAL
+    "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++17 -Wall -Wno-sign-conversion -DDEBUG -DLOCAL && d:\\workspace\\bin\\sol.exe",
 
-    // "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++17 -Wall -Wno-sign-conversion -DDEBUG -DLOCAL && d:\\workspace\\bin\\sol.exe < input.txt > output.txt",
+    // BUILD & RUN PROGRAM CODEFORCES C++17 INPUT FILE
+    // "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++17 -Wall -Wno-sign-conversion -DDEBUG -DLOCAL && d:\\workspace\\bin\\sol.exe < samples\in1",
 
-    "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++17 -Wall -Wno-sign-conversion -DDEBUG -DLOCAL && d:\\workspace\\bin\\sol.exe < input.txt",
+    // BUILD & RUN PROGRAM C++20 OFF CONSOLE
+    // "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++20 -Wall -Wno-sign-conversion -DDEBUG -DLOCAL && d:\\workspace\\bin\\sol.exe < samples\in1 > samples\output",
+
+    // BUILD & RUN PROGRAM FOR RPC C++11 WITH INPUT FILE
+    // "cpp": "cls && cd $dir && g++ $fileName -o $fileNameWithoutExt.exe -std=c++11 -lm -lcrypt -fno-asm -s -Wall -pedantic -Wno-sign-conversion -DDEBUG -DLOCAL && $fileNameWithoutExt.exe < in1",
+
+    // RUN PROGRAM .EXE
+    "run_cpp": "cls && D: && d:\\workspace\\bin\\sol.exe",
 
     "java": "cls && cd $dir && java $fileName",
-    "run cpp": "cls && d:\\workspace\\bin\\sol.exe",
-    "run cpp INP": "cls && d:\\workspace\\bin\\sol.exe < samples\\in1",
-    "run java INP": "cls && java $fileName < samples\\in1",
     "python": "cls && cd $dir && python -OO -S -B $fileName",
     "javascript": "cls && cd $dir && node $fileName",
     "typescript": "cls && cd $dir && tsc && node $fileName"
