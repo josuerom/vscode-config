@@ -71,17 +71,13 @@
   "code-runner.executorMap": {
     // BUILD & RUN PROGRAM CODEFORCES C++17 INPUT MANUAL
     "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++17 -Wall -Wno-sign-conversion -DDEBUG -DLOCAL && d:\\workspace\\bin\\sol.exe",
-
     // BUILD & RUN PROGRAM CODEFORCES C++17 INPUT FILE
     // "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++17 -Wall -Wno-sign-conversion -DDEBUG -DLOCAL && d:\\workspace\\bin\\sol.exe < samples\in1",
-
-    // BUILD & RUN PROGRAM C++20 OFF CONSOLE
+    // BUILD & RUN PROGRAM C++20 OFF CONSOLE & INPUT
     // "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++20 -Wall -Wno-sign-conversion -DDEBUG -DLOCAL && d:\\workspace\\bin\\sol.exe < samples\in1 > samples\output",
-
-    // BUILD & RUN PROGRAM FOR RPC C++11 WITH INPUT FILE
-    // "cpp": "cls && cd $dir && g++ $fileName -o $fileNameWithoutExt.exe -std=c++11 -lm -lcrypt -fno-asm -s -Wall -pedantic -Wno-sign-conversion -DDEBUG -DLOCAL && $fileNameWithoutExt.exe < in1",
-
-    // RUN PROGRAM .EXE
+    // BUILD & RUN PROGRAM RPC C++11 INPUT FILE
+    // "cpp": "cls && cd $dir && g++ $fileName -o $fileNameWithoutExt.exe -std=c++11 -Wall -lm -lcrypt -fno-asm -pedantic -Wno-sign-conversion -DDEBUG -DLOCAL && $fileNameWithoutExt.exe < in1",
+    // REPEAT EXECUTE FILE.exe
     "run_cpp": "cls && D: && d:\\workspace\\bin\\sol.exe",
 
     "java": "cls && cd $dir && java $fileName",
