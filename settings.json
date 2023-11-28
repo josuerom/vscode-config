@@ -70,13 +70,13 @@
   "code-runner.cwd": "d:\\workspace\\bin",
   "code-runner.executorMap": {
     // BUILD & RUN PROGRAM CODEFORCES C++17 INPUT MANUAL
-    "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++17 -Wall -Wno-sign-conversion -DDEBUG -DLOCAL && d:\\workspace\\bin\\sol.exe",
+    "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++17 -Wall -Wno-sign-conversion -DLOCAL && d:\\workspace\\bin\\sol.exe",
     // BUILD & RUN PROGRAM CODEFORCES C++17 INPUT FILE
-    // "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++17 -Wall -Wno-sign-conversion -DDEBUG -DLOCAL && d:\\workspace\\bin\\sol.exe < samples\in1",
+    // "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++17 -Wall -Wno-sign-conversion -DLOCAL && d:\\workspace\\bin\\sol.exe < samples\in1",
     // BUILD & RUN PROGRAM C++20 OFF CONSOLE & INPUT
-    // "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++20 -Wall -Wno-sign-conversion -DDEBUG -DLOCAL && d:\\workspace\\bin\\sol.exe < samples\in1 > samples\output",
+    // "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++20 -Wall -Wno-sign-conversion -DLOCAL && d:\\workspace\\bin\\sol.exe < samples\in1 > samples\output",
     // BUILD & RUN PROGRAM RPC C++11 INPUT FILE
-    // "cpp": "cls && cd $dir && g++ $fileName -o $fileNameWithoutExt.exe -std=c++11 -Wall -lm -lcrypt -fno-asm -pedantic -Wno-sign-conversion -DDEBUG -DLOCAL && $fileNameWithoutExt.exe < in1",
+    // "cpp": "cls && cd $dir && g++ $fileName -o $fileNameWithoutExt.exe -std=c++11 -Wall -lm -lcrypt -fno-asm -pedantic -Wno-sign-conversion && $fileNameWithoutExt.exe < in1",
     // REPEAT EXECUTE FILE.exe
     "run_cpp": "cls && D: && d:\\workspace\\bin\\sol.exe",
 
@@ -126,12 +126,15 @@
   "cph.general.defaultLanguage": "cpp",
   // "cph.general.menuChoices": "cpp java",
   "cph.general.saveLocation": "d:\\workspace\\bin",
-  "cph.language.cpp.Args": "-std=c++17 -Wall -Wno-sign-conversion -DONLINE_JUDGE",
-  // "cph.language.cpp.Args": "-std=c++11 -lm -lcrypt -fno-asm -s -Wall -pedantic",
+  "cph.language.cpp.Args": "-std=c++17 -Wno-sign-conversion -DONLINE_JUDGE",
+  // "cph.language.cpp.Args": "-std=c++11 -lm -lcrypt -fno-asm -s -pedantic -Wno-sign-conversion",
   "cph.general.timeOut": 1000,
   "cph.general.autoShowJudge": false,
   "python.formatting.provider": "none",
   "update.showReleaseNotes": false,
   "notebook.formatOnSave.enabled": true,
   "workbench.editor.labelFormat": "short",
+  "security.allowedUNCHosts": [
+    "wsl.localhost"
+  ],
 }
