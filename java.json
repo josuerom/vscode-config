@@ -103,12 +103,12 @@
     "description": "Method I use most often"
   },
   "Method template": {
-    "prefix": "temfun",
+    "prefix": "funpre",
     "body": [
-      "public ${1:static} ${2:void} ${3}($4) {",
+      "public static ${1:void} preCalculate($2) {",
       "}"
     ],
-    "description": "Template for create methods"
+    "description": "Function preCalculate"
   },
   "try catch": {
     "prefix": "try",
@@ -270,8 +270,8 @@
       "double $1 = io.nextDouble();"
     ],
   },
-  "Read int array": {
-    "prefix": "rarr",
+  "Read int[] array": {
+    "prefix": "rai",
     "body": [
       "int[] $1 = io.readArray($2);"
     ],
@@ -282,29 +282,35 @@
       "char[] $2 = io.next().toCharArray();"
     ],
   },
-  "Set constant int": {
-    "prefix": "MAX",
+  "Read long[] array": {
+    "prefix": "ral",
     "body": [
-      "final int MAX = 100000$1_7;"
+      "long[] $2 = io.next().readArray();"
+    ],
+  },
+  "Read double[] array": {
+    "prefix": "rad",
+    "body": [
+      "double[] $2 = io.next().readArray();"
+    ],
+  },
+  "Set constant int": {
+    "prefix": "N",
+    "body": [
+      "static final int N = 1$1_000_000;"
     ],
   },
   "read test cases": {
     "prefix": "tt",
     "body": [
       "int tt = io.nextInt();",
-      "while (tt-- > 0) {",
-      "\t$1",
-      "\tsolve(io, $2);",
-      "}",
+      "while (tt-- > 0) solve(io);",
     ],
   },
-  "read test cases with Scanner": {
-    "prefix": "ttt",
+  "no test cases": {
+    "prefix": "nt",
     "body": [
-      "int tt = sc.nextInt();",
-      "while (tt-- > 0) {",
-      "\t$1",
-      "}"
+      "solve(io);"
     ],
   },
   "style josuerom": {
@@ -330,12 +336,18 @@
       "public class ${TM_FILENAME_BASE} {",
       "   public static void main(String[] args) {",
       "      try (FastReader io = new FastReader()) {",
-      "         $1",
+      "         int tt = 1;",
+      "         // tt = io.nextInt();$1",
+      "         while (tt-- > 0) solve(io);",
       "      }",
       "      System.exit(0);",
       "   }",
       "",
-      "   public static void solve(FastReader io$3) {",
+      "   static final int N = 1$2_000_000 + 20;",
+      "   static int[] a = new int[N];",
+      "   static int n;",
+      "",
+      "   public static void solve(FastReader io) {$3",
       "   }",
       "",
       "   static class FastReader extends PrintWriter {",
@@ -416,12 +428,18 @@
       "public class ${TM_FILENAME_BASE} {",
       "   public static void main(String[] args) {",
       "      try (FastReader io = new FastReader()) {",
-      "         $1",
+      "         int tt = 1;",
+      "         // tt = io.nextInt();$1",
+      "         while (tt-- > 0) solve(io);",
       "      }",
       "      System.exit(0);",
       "   }",
       "",
-      "   public static void solve(FastReader io$3) {",
+      "   static final int N = 1$2_000_000 + 20;",
+      "   static int[] a = new int[N];",
+      "   static int n;",
+      "",
+      "   public static void solve(FastReader io) {$3",
       "   }",
       "",
       "   static class FastReader extends PrintWriter {",
