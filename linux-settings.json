@@ -9,12 +9,12 @@
 
   "window.commandCenter": true,
   "window.menuBarVisibility": "compact",
-  "window.zoomLevel": 1.3,
+  "window.zoomLevel": 1,
 
   "java.configuration.runtimes": [
     {
-      "name": "JavaSE-11",
-      "path": "/usr/lib/jvm/java-11-openjdk-11.0.20.0.8-1.fc38.x86_64/",
+      "name": "JavaSE-21",
+      "path": "/usr/lib/jvm/java-21-openjdk",
       "default": true
     }
   ],
@@ -25,7 +25,7 @@
   },
   "terminal.integrated.defaultProfile.linux": "bash",
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
-  "terminal.integrated.fontSize": 14.85,
+  "terminal.integrated.fontSize": 14.5,
   "terminal.integrated.tabs.focusMode": "singleClick",
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.cursorBlinking": true,
@@ -40,24 +40,24 @@
   "code-runner.cwd": "/home/josuerom/workspace/bin",
   "code-runner.executorMap": {
     // BUILD & RUN PROGRAM CODEFORCES C++17 INPUT MANUAL
-    "cpp": "clear && cd $dir && g++ $fileName -o ~/workspace/bin/sol.out -std=c++17 -Wall -Wno-sign-conversion -DDEBUG -DLOCAL && ~/workspace/bin/sol.out",
-    // BUILD & RUN PROGRAM CODEFORCES C++17 INPUT FILE
-    // "cpp": "clear && cd $dir && g++ $fileName -o ~/workspace/bin/sol.out -std=c++17 -Wall -Wno-sign-conversion -DDEBUG -DLOCAL && ~/workspace/bin/sol.out < samples/in1",
-    // BUILD & RUN PROGRAM C++20 OFF CONSOLE & INPUT
-    // "cpp": "clear && cd $dir && g++ $fileName -o ~/workspace/bin/sol.out -std=c++20 -Wall -Wno-sign-conversion -DDEBUG -DLOCAL && ~/workspace/bin/sol.out < samples/in1 > samples/output",
-    // BUILD & RUN PROGRAM RPC C++11 INPUT FILE
-    // "cpp": "clear && cd $dir && g++ $fileName -o $fileNameWithoutExt.out -std=c++11 -Wall -lm -lcrypt -fno-asm -pedantic -Wno-sign-conversion -DDEBUG -DLOCAL && $fileNameWithoutExt.out < in1",
-    // REPEAT EXECUTE FILE.exe INPUT MANUAL
-    "run_cpp": "clear && ~/workspace/bin/sol.out",
+    "cpp": "clear && cd $dir && g++ $fileName -o ~/workspace/bin/sol -std=c++17 -Wall -Wno-sign-conversion -DLOCAL && ~/workspace/bin/sol",
+    // BUILD & RUN PROGRAM CODEFORCES C++17 FROM INPUT FILE
+    // "cpp": "clear && cd $dir && g++ $fileName -o ~/workspace/bin/sol -std=c++17 -Wall -Wno-sign-conversion -DLOCAL && ~/workspace/bin/sol < samples/in1",
+    // BUILD & RUN PROGRAM C++20 OFF CONSOLE & RESULT IN FILE OUTPUT
+    // "cpp": "clear && cd $dir && g++ $fileName -o ~/workspace/bin/sol -std=c++20 -Wall -Wno-sign-conversion -DLOCAL && ~/workspace/bin/sol < samples/in1 > samples/output",
+    // BUILD & RUN PROGRAM RPC C++11 FROM INPUT FILE
+    // "cpp": "clear && cd $dir && g++ $fileName -o $fileNameWithoutExt -std=c++11 -Wall -lm -lcrypt -fno-asm -pedantic -Wno-sign-conversion -DLOCAL && $fileNameWithoutExt < in1",
+    // REPEAT EXECUTE WITH MANUAL INPUT
+    "run_cpp": "clear && ~/workspace/bin/sol",
 
     // BUILD & RUN JAVA > 8 INPUT MANUAL
     "java": "clear && cd $dir && java $fileName",
-    // BUILD & RUN FOR JAVA 1.8
+    // BUILD & RUN FOR JAVA = 8
     // "java": "clear && cd $dir && javac -d ~/workspace/bin $fileName && java -cp ~/workspace/bin $fileNameWithoutExt",
     // REPEAT EXECUTE FILE .class
     // "java": "clear && java -cp ~/workspace/bin $fileNameWithoutExt",
 
-    "python": "clear && cd $dir && python -OO -S -B $fileName",
+    "python": "clear && cd $dir && python3 -OO -S -B $fileName",
     "javascript": "clear && cd $dir && node $fileName",
     "typescript": "clear && cd $dir && node $fileName",
   },
@@ -71,7 +71,7 @@
   "workbench.editor.enablePreview": false,
   "workbench.editor.showTabs": "single",
   "editor.fontFamily": "JetBrainsMono Nerd Font",
-  "editor.fontSize": 14.5,
+  "editor.fontSize": 14,
   "editor.fontLigatures": true,
   "editor.tabCompletion": "on",
   "editor.tabSize": 3,
@@ -103,7 +103,7 @@
   "workbench.editor.labelFormat": "short",
   "cph.general.menuChoices": "cpp java",
   "cph.general.saveLocation": "/home/josuerom/workspace/bin",
-  "cph.language.cpp.Args": "-std=c++17 -Wall -Wno-sign-conversion -DONLINE_JUDGE",
+  "cph.language.cpp.Args": "-std=c++17 -DONLINE_JUDGE",
   // "cph.language.cpp.Args": "-std=c++11 -lm -lcrypt -fno-asm -s -DONLINE_JUDGE",
   "cph.general.timeOut": 1000,
   "cph.general.autoShowJudge": false,
