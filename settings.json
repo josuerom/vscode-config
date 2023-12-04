@@ -33,28 +33,28 @@
   },
   "java.configuration.runtimes": [
     {
-      "name": "JavaSE-16",
-      "path": "d:\\program files\\compilers\\jdk-16\\",
+      "name": "JavaSE-21",
+      "path": "d:\\compilers\\jdk-21\\",
       "default": true
     }
   ],
   "[java]": {
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true,
-    "editor.defaultFormatter": "ms-vscode.cpptools"
+    "editor.defaultFormatter": "redhat.java"
   },
   "[cpp]": {
-    "editor.formatOnPaste": true,
+    // "editor.formatOnPaste": true,
     // "editor.formatOnSave": true,
     // "editor.defaultFormatter": "redhat.java"
   },
   "[python]": {
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true,
-    "editor.defaultFormatter": "ms-python.autopep8",
+    // "editor.defaultFormatter": "ms-python.autopep8",
   },
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
-  "terminal.integrated.fontFamily": "JetBrains Mono",
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
   "terminal.integrated.fontSize": 14.2,
   "terminal.integrated.tabs.focusMode": "singleClick",
   "terminal.integrated.enableMultiLinePasteWarning": false,
@@ -71,21 +71,27 @@
   "code-runner.executorMap": {
     // BUILD & RUN PROGRAM CODEFORCES C++17 INPUT MANUAL
     "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++17 -Wall -Wno-sign-conversion -DLOCAL && d:\\workspace\\bin\\sol.exe",
-    // BUILD & RUN PROGRAM CODEFORCES C++17 INPUT FILE
-    // "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++17 -Wall -Wno-sign-conversion -DLOCAL && d:\\workspace\\bin\\sol.exe < samples\in1",
-    // BUILD & RUN PROGRAM C++20 OFF CONSOLE & INPUT
-    // "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++20 -Wall -Wno-sign-conversion -DLOCAL && d:\\workspace\\bin\\sol.exe < samples\in1 > samples\output",
+    // BUILD & RUN PROGRAM CODEFORCES C++17 FROM INPUT FILE
+    // "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++17 -Wall -Wno-sign-conversion -DLOCAL && d:\\workspace\\bin\\sol.exe < samples\\in1",
+    // BUILD & RUN PROGRAM C++20 OFF CONSOLE & ANSWER FILE
+    // "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++20 -Wall -Wno-sign-conversion -DLOCAL && d:\\workspace\\bin\\sol.exe < samples\\in1 > samples\\output",
     // BUILD & RUN PROGRAM RPC C++11 INPUT FILE
     // "cpp": "cls && cd $dir && g++ $fileName -o $fileNameWithoutExt.exe -std=c++11 -Wall -lm -lcrypt -fno-asm -pedantic -Wno-sign-conversion && $fileNameWithoutExt.exe < in1",
     // REPEAT EXECUTE FILE.exe
     "run_cpp": "cls && D: && d:\\workspace\\bin\\sol.exe",
 
+    // BUILD & RUN PROGRAM JAVA >= 11 MANUAL INPUT
     "java": "cls && cd $dir && java $fileName",
+    // BUILD & RUN PROGRAM JAVA >= 11 INPUT FILE
+    // "java": "cls && cd $dir && java $fileName < samples\\in1",
+    // BUILD & RUN PROGRAM JAVA >= 11 INPUT FILE AND ANSWER IN FILE
+    // "java": "cls && cd $dir && java $fileName < samples\\in1 > samples\\output",
+
     "python": "cls && cd $dir && python -OO -S -B $fileName",
     "javascript": "cls && cd $dir && node $fileName",
     "typescript": "cls && cd $dir && tsc && node $fileName"
   },
-  "workbench.colorTheme": "Default Dark Modern",
+  "workbench.colorTheme": "Deep Dark",
   // "workbench.colorTheme": "Monokai",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "none",
@@ -94,8 +100,8 @@
   "workbench.layoutControl.enabled": false,
   "workbench.editor.enablePreview": false,
   "workbench.editor.showTabs": "single",
-  "editor.fontFamily": "JetBrains Mono",
-  "editor.fontSize": 14.2,
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.fontSize": 14,
   "editor.fontLigatures": true,
   "editor.tabCompletion": "on",
   "editor.tabSize": 3,
@@ -137,4 +143,4 @@
   "security.allowedUNCHosts": [
     "wsl.localhost"
   ],
-}
+  }
