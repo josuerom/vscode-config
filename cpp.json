@@ -4,14 +4,14 @@
     "body": [
       "#ifndef ONLINE_JUDGE",
       "\tfreopen(\"samples/in1\", \"r\", stdin);",
-      "\tfreopen(\"samples/output\", \"w\", stdout);",
+      "\tfreopen(\"samples/out\", \"w\", stdout);",
       "#endif"
     ]
   },
   "#ifdef LOCAL": {
     "prefix": "local",
     "body": [
-      "#ifdef DEBUG",
+      "#ifdef LOCAL",
       "\tfreopen(\"samples/in1\", \"r\", stdin);",
       "\t// freopen(\"samples/output\", \"w\", stdout);",
       "#endif"
@@ -21,7 +21,7 @@
     "prefix": "ioc",
     "body": [
       "ios::sync_with_stdio(false);",
-      "cin.tie(0);"
+      "cin.tie(0); cout.tie(0);"
     ]
   },
   "using namespace std;": {
@@ -42,62 +42,47 @@
       "getline(cin, s$1);"
     ]
   },
-  "read multiple variables": {
-    "prefix": "rmv",
-    "body": [
-      "cin >> $1 >> $2 >> $3 >> $4;"
-    ]
-  },
-  "output multiple variables": {
-    "prefix": "omv",
-    "body": [
-      "cout << $1 << $2 << $3 << $4;"
-    ]
-  },
   "for (int i = 0; i < n; i++)": {
     "prefix": "fori",
     "body": [
-      "for (int ${1:i} = 0; ${1:i} < $2; ${1:i}++) {$3}",
+      "for (int ${1:i} = 0; ${1:i} < $2; ${1:i}++)$3"
     ]
   },
   "for (int i = n; i >= 0; i--)": {
     "prefix": "forr",
     "body": [
-      "for (int ${1:i} = $2 - 1; ${1:i} >= 0; ${1:i}--) {$3}",
+      "for (int ${1:i} = $2 - 1; ${1:i} >= 0; ${1:i}--)$3"
     ]
   },
-  "for (auto $e : con)": {
+  "for (auto $e : array)": {
     "prefix": "fore",
     "body": [
-      "for (auto &e : $1)",
-      "\tcout << e << \" \";",
-      "cout << br;",
+      "for (auto &e : $1) cout << e << \" \";",
+      "cout << br;"
     ]
   },
-  "for (auto $e : vp)": {
-    "prefix": "forevp",
+  "for (auto $e : container)": {
+    "prefix": "forec",
     "body": [
-      "for (auto &e : $1)",
-      "\tcout << e.fi <<\", \"<< e.se << '\\n';",
-      "cout << br;",
+      "for (auto &e : $1) cout << e.first <<\", \"<< e.second << br;"
     ]
   },
   "while": {
     "prefix": "wh",
     "body": [
       "while ($1) {",
-      "}",
+      "}"
     ]
   },
   "void preCalculate()": {
-    "prefix": "funpre",
+    "prefix": "fpre",
     "body": [
       "void preCalculate($3) {",
       "}"
     ]
   },
   "function preCalculate": {
-    "prefix": "autopre",
+    "prefix": "funpre",
     "body": [
       "function<int$1(int)> preCalculate = [&](int n) {",
       "};"
@@ -125,12 +110,6 @@
       "#include $1"
     ]
   },
-  "typedef": {
-    "prefix": "typ",
-    "body": [
-      "typedef ${1:long long ll};$1"
-    ]
-  },
   "#define": {
     "prefix": "def",
     "body": [
@@ -150,25 +129,25 @@
     ]
   },
   "scanf": {
-    "prefix": "ss",
+    "prefix": "sc",
     "body": [
       "scanf(\"%d$1\\n\", &$2);"
     ]
   },
   "printf": {
-    "prefix": "pp",
+    "prefix": "pr",
     "body": [
       "printf(\"%d\\n$1\", $2);"
     ]
   },
-  "cout ternary operator": {
+  "cout ternary operator 1": {
     "prefix": "cot",
     "body": [
       "cout << ($1 ? $2 : $3) << br;"
     ]
   },
-  "cout ternary operator": {
-    "prefix": "coov",
+  "cout ternary operator 2": {
+    "prefix": "cov",
     "body": [
       "cout << ($1 ? \"YES\" : \"NO\") << br;"
     ]
@@ -198,9 +177,9 @@
     ]
   },
   "set const MAX": {
-    "prefix": "N",
+    "prefix": "cons",
     "body": [
-      "const int N = 1e$1 + 10;"
+      "const int N = 10 + 1e$1;"
     ]
   },
   "Header": {
@@ -224,8 +203,8 @@
       "/**",
       "   ░░█ █▀█ █▀ █░█ █▀▀ █▀█ █▀█ █▀▄▀█",
       "   █▄█ █▄█ ▄█ █▄█ ██▄ █▀▄ █▄█ █░▀░█",
-      "   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}"
-      "**/",
+      "   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+      "**/"
     ]
   },
   "#pragma GCC": {
@@ -256,11 +235,11 @@
       "int main() {",
       "\tios::sync_with_stdio(false);",
       "\tcin.tie(0);",
-      "\tint tt = 1, nc = 0;",
+      "\tint tt = 1, nc = 1;",
       "\tcin >> tt;$1",
       "\twhile (tt--) {",
       "#ifdef LOCAL",
-      "\t\tcout << \"Case #\" << ++nc << \":\\n\";",
+      "\t\tcout << \"Case #\" << n++c << \":\\n\";",
       "\t\tsolve();",
       "#else",
       "\t\tsolve();",
@@ -281,10 +260,11 @@
       "**/",
       "#include <bits/stdc++.h>\n",
       "using namespace std;\n",
+      "const int N = 10 + 1e1$1;\n",
       "int main() {",
       "\tios::sync_with_stdio(false);",
       "\tcin.tie(0);",
-      "\t$1",
+      "\t$2",
       "\treturn 0;",
       "}",
     ],
@@ -304,16 +284,16 @@
       "#define br  '\\n'\n",
       "class ${TM_FILENAME_BASE} {",
       "public:",
-      "\tstatic const int N = 1e1$2 + 20;",
+      "\tstatic const int N = 100 + 1e1$2;",
       "\tint a[N], n;\n",
       "\tvoid Solution() {$3",
       "\t}\n",
-      "\tvoid TestCase() {",
-      "\t\tint tt = 1, nc = 0;",
+      "\tvoid TC() {",
+      "\t\tint tt = 1, nc = 1;",
       "\t\tcin >> tt;",
       "\t\twhile (tt--) {",
       "\t\t#ifdef LOCAL",
-      "\t\t\tcout << \"Case #\" << ++nc << \":\\n\";",
+      "\t\t\tcout << \"Case #\" << nc++ << \":\\n\";",
       "\t\t\tSolution();",
       "\t\t#else",
       "\t\t\tSolution();",
@@ -325,7 +305,7 @@
       "\tios::sync_with_stdio(false);",
       "\tcin.tie(0);",
       "\t${TM_FILENAME_BASE} cp;",
-      "\tcp.TestCase();$1",
+      "\tcp.TC();$1",
       "\t// cp.Solution();$1",
       "\treturn 0;",
       "}"
