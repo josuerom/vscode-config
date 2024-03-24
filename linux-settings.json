@@ -9,22 +9,14 @@
 
   "window.commandCenter": true,
   "window.menuBarVisibility": "compact",
-  "window.zoomLevel": 1,
-
-  "java.configuration.runtimes": [
-    {
-      "name": "JavaSE-21",
-      "path": "/usr/lib/jvm/java-21-openjdk",
-      "default": true
-    }
-  ],
+  "window.zoomLevel": 0.9,
   "[java]": {
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true,
     "editor.defaultFormatter": "redhat.java"
   },
   "terminal.integrated.defaultProfile.linux": "bash",
-  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+  "terminal.integrated.fontFamily": "JetBrains Mono",
   "terminal.integrated.fontSize": 14.5,
   "terminal.integrated.tabs.focusMode": "singleClick",
   "terminal.integrated.enableMultiLinePasteWarning": false,
@@ -45,8 +37,8 @@
     // "cpp": "clear && cd $dir && g++ $fileName -o ~/workspace/bin/sol -std=c++17 -Wall -Wno-sign-conversion -DLOCAL && ~/workspace/bin/sol < samples/in1",
     // BUILD & RUN PROGRAM C++20 OFF CONSOLE & RESULT IN FILE OUTPUT
     // "cpp": "clear && cd $dir && g++ $fileName -o ~/workspace/bin/sol -std=c++20 -Wall -Wno-sign-conversion -DLOCAL && ~/workspace/bin/sol < samples/in1 > samples/output",
-    // BUILD & RUN PROGRAM RPC C++11 FROM INPUT FILE
-    // "cpp": "clear && cd $dir && g++ $fileName -o $fileNameWithoutExt -std=c++11 -Wall -lm -lcrypt -fno-asm -pedantic -Wno-sign-conversion -DLOCAL && $fileNameWithoutExt < in1",
+    // RPC C++11 FROM INPUT FILE
+    // "cpp": "clear && cd $dir && g++ $fileName -o $fileNameWithoutExt -std=c++11 -O2 -Wall -Wno-sign-conversion -DLOCAL && $fileNameWithoutExt < in1",
     // REPEAT EXECUTE WITH MANUAL INPUT
     "run_cpp": "clear && ~/workspace/bin/sol",
 
@@ -63,14 +55,14 @@
   },
   "workbench.colorTheme": "Default Dark Modern",
   // "workbench.colorTheme": "Monokai",
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.iconTheme": "symbols",
   "workbench.startupEditor": "none",
   "workbench.sideBar.location": "right",
   "workbench.statusBar.visible": true,
   "workbench.layoutControl.enabled": false,
   "workbench.editor.enablePreview": false,
   "workbench.editor.showTabs": "single",
-  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.fontFamily": "JetBrains Mono",
   "editor.fontSize": 14,
   "editor.fontLigatures": true,
   "editor.tabCompletion": "on",
@@ -104,8 +96,9 @@
   "cph.general.menuChoices": "cpp java",
   "cph.general.saveLocation": "/home/josuerom/workspace/bin",
   "cph.language.cpp.Args": "-std=c++17 -DONLINE_JUDGE",
-  // "cph.language.cpp.Args": "-std=c++11 -lm -lcrypt -fno-asm -s -DONLINE_JUDGE",
   "cph.general.timeOut": 1000,
   "cph.general.autoShowJudge": false,
   "trailing-spaces.trimOnSave": true,
+  "workbench.productIconTheme": "fluent-icons",
+  "symbols.hidesExplorerArrows": false,
 }
