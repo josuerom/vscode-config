@@ -4,13 +4,12 @@
     "author": "Microsoft"
   ],
   "extension2": [
-    "name": "Python",
-    "author": "Microsoft"
+    "name": "Fluent Icons",
+    "author": "Miguel Solorio"
   ],
-  
   "extension3": [
-    "name": "autopep8",
-    "author": "Microsoft"
+    "name": "Symbols",
+    "author": "Miguel Solorio"
   ],
   "extension4": [
     "name": "Language Support for Java(TM) ",
@@ -21,26 +20,14 @@
     "author": "Maximetinu"
   ],
   "extension6": [
-    "name": "vscode-pdf",
-    "author": "tomoki1207"
-  ],
-  "extension7": [
-    "name": "Trailing Spaces",
-    "author": "Shardul Mahadik"
-  ],
-  "extension8": [
     "name": "tldraw",
     "author": "tldraw"
   ],
-  "extension9": [
-    "name": "Material Icon Theme",
-    "author": "Philipp Kief"
-  ],
-  "extension10": [
+  "extension7": [
     "name": "Code Runner",
     "author": "Jun Han"
   ],
-  "extension11": [
+  "extension8": [
     "name": "Competitive Programming Help",
     "author": "Divyanshu Agrawal"
   ]
