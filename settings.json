@@ -34,7 +34,7 @@
   "java.configuration.runtimes": [
     {
       "name": "JavaSE-21",
-      "path": "d:\\compilers\\jdk-21\\",
+      "path": "d:\\compilers\\openjdk\\",
       "default": true
     }
   ],
@@ -70,18 +70,23 @@
   "code-runner.cwd": "d:\\workspace\\bin",
   "code-runner.executorMap": {
     // BUILD & RUN PROGRAM CODEFORCES C++17 INPUT MANUAL
-    "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++17 -Wall -Wno-sign-conversion -DLOCAL && d:\\workspace\\bin\\sol.exe",
+    "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++17 -DLOCAL && d:\\workspace\\bin\\sol.exe",
+
     // BUILD & RUN PROGRAM CODEFORCES C++17 FROM INPUT FILE
-    // "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++17 -Wall -Wno-sign-conversion -DLOCAL && d:\\workspace\\bin\\sol.exe < samples\\in1",
+    // "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++17 -DLOCAL && d:\\workspace\\bin\\sol.exe < samples\\in1",
+
     // BUILD & RUN PROGRAM C++20 OFF CONSOLE & ANSWER FILE
-    // "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++20 -Wall -Wno-sign-conversion -DLOCAL && d:\\workspace\\bin\\sol.exe < samples\\in1 > samples\\output",
-    // BUILD & RUN PROGRAM RPC C++11 INPUT FILE
-    // "cpp": "cls && cd $dir && g++ $fileName -o $fileNameWithoutExt.exe -std=c++11 -Wall -lm -lcrypt -fno-asm -pedantic -Wno-sign-conversion && $fileNameWithoutExt.exe < in1",
+    // "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++20 -DLOCAL && d:\\workspace\\bin\\sol.exe < samples\\in1 > samples\\output",
+
+    // RPC C++11 INPUT FILE
+    // "cpp": "cls && cd $dir && g++ -std=c++11 -O2 -DLOCAL $fileName -o $fileNameWithoutExt.exe && $fileNameWithoutExt.exe < in1",
+
     // REPEAT EXECUTE FILE.exe
-    "run_cpp": "cls && D: && d:\\workspace\\bin\\sol.exe",
+    "sol.exe": "d: && cls && d:\\workspace\\bin\\sol.exe",
 
     // BUILD & RUN PROGRAM JAVA >= 11 MANUAL INPUT
     "java": "cls && cd $dir && java $fileName",
+
     // BUILD & RUN PROGRAM JAVA >= 11 INPUT FILE
     // "java": "cls && cd $dir && java $fileName < samples\\in1",
     // BUILD & RUN PROGRAM JAVA >= 11 INPUT FILE AND ANSWER IN FILE
@@ -91,9 +96,10 @@
     "javascript": "cls && cd $dir && node $fileName",
     "typescript": "cls && cd $dir && tsc && node $fileName"
   },
-  "workbench.colorTheme": "Deep Dark",
-  // "workbench.colorTheme": "Monokai",
-  "workbench.iconTheme": "material-icon-theme",
+  // "workbench.colorTheme": "Default Dark Modern",
+  "workbench.colorTheme": "Default Dark Modern",
+  "workbench.iconTheme": "symbols",
+  "workbench.productIconTheme": "fluent-icons",
   "workbench.startupEditor": "none",
   "workbench.sideBar.location": "right",
   "workbench.statusBar.visible": true,
@@ -129,11 +135,11 @@
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.openRepositoryInParentFolders": "never",
-  "cph.general.defaultLanguage": "cpp",
-  // "cph.general.menuChoices": "cpp java",
+  // "cph.general.defaultLanguage": "cpp",
+  "cph.general.menuChoices": "cpp java",
   "cph.general.saveLocation": "d:\\workspace\\bin",
-  "cph.language.cpp.Args": "-std=c++17 -Wno-sign-conversion -DONLINE_JUDGE",
-  // "cph.language.cpp.Args": "-std=c++11 -lm -lcrypt -fno-asm -s -pedantic -Wno-sign-conversion",
+  "cph.language.cpp.Args": "-std=c++17 -DONLINE_JUDGE",
+  // "cph.language.cpp.Args": "-std=c++11 -lm -lcrypt -fno-asm -s -pedantic",
   "cph.general.timeOut": 1000,
   "cph.general.autoShowJudge": false,
   "python.formatting.provider": "none",
@@ -143,4 +149,5 @@
   "security.allowedUNCHosts": [
     "wsl.localhost"
   ],
-  }
+  "symbols.hidesExplorerArrows": false,
+}
