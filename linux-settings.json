@@ -3,13 +3,13 @@
   "diffEditor.wordWrap": "on",
   "debug.terminal.clearBeforeReusing": true,
   "extensions.ignoreRecommendations": true,
-  "security.workspace.trust.untrustedFiles": "open",
+  "security.Workspace.trust.untrustedFiles": "open",
   "explorer.confirmDelete": false,
   "redhat.telemetry.enabled": false,
 
   "window.commandCenter": true,
   "window.menuBarVisibility": "compact",
-  "window.zoomLevel": 0.9,
+  "window.zoomLevel": 1,
   "[java]": {
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true,
@@ -17,7 +17,7 @@
   },
   "terminal.integrated.defaultProfile.linux": "bash",
   "terminal.integrated.fontFamily": "JetBrains Mono",
-  "terminal.integrated.fontSize": 14.5,
+  "terminal.integrated.fontSize": 14.2,
   "terminal.integrated.tabs.focusMode": "singleClick",
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.cursorBlinking": true,
@@ -29,33 +29,30 @@
   "code-runner.showRunCommandInEditorContextMenu": false,
   "code-runner.clearPreviousOutput": true,
   "code-runner.preserveFocus": false,
-  "code-runner.cwd": "/home/josuerom/workspace/bin",
+  "code-runner.cwd": "/home/josuerom/Workspace/bin",
   "code-runner.executorMap": {
     // BUILD & RUN PROGRAM CODEFORCES C++17 INPUT MANUAL
-    "cpp": "clear && cd $dir && g++ $fileName -o ~/workspace/bin/sol -std=c++17 -Wall -Wno-sign-conversion -DLOCAL && ~/workspace/bin/sol",
+    "cpp": "clear && cd $dir && g++ $fileName -o ~/Workspace/bin/sol -std=c++17 -Wall -Wno-sign-conversion -DLOCAL && ~/Workspace/bin/sol",
     // BUILD & RUN PROGRAM CODEFORCES C++17 FROM INPUT FILE
-    // "cpp": "clear && cd $dir && g++ $fileName -o ~/workspace/bin/sol -std=c++17 -Wall -Wno-sign-conversion -DLOCAL && ~/workspace/bin/sol < samples/in1",
+    // "cpp": "clear && cd $dir && g++ $fileName -o ~/Workspace/bin/sol -std=c++17 -Wall -Wno-sign-conversion -DLOCAL && ~/Workspace/bin/sol < samples/in1",
     // BUILD & RUN PROGRAM C++20 OFF CONSOLE & RESULT IN FILE OUTPUT
-    // "cpp": "clear && cd $dir && g++ $fileName -o ~/workspace/bin/sol -std=c++20 -Wall -Wno-sign-conversion -DLOCAL && ~/workspace/bin/sol < samples/in1 > samples/output",
+    // "cpp": "clear && cd $dir && g++ $fileName -o ~/Workspace/bin/sol -std=c++20 -Wall -Wno-sign-conversion -DLOCAL && ~/Workspace/bin/sol < samples/in1 > samples/output",
     // RPC C++11 FROM INPUT FILE
     // "cpp": "clear && cd $dir && g++ $fileName -o $fileNameWithoutExt -std=c++11 -O2 -Wall -Wno-sign-conversion -DLOCAL && $fileNameWithoutExt < in1",
     // REPEAT EXECUTE WITH MANUAL INPUT
-    "run_cpp": "clear && ~/workspace/bin/sol",
+    "run_cpp": "clear && ~/Workspace/bin/sol",
 
     // BUILD & RUN JAVA > 8 INPUT MANUAL
     "java": "clear && cd $dir && java $fileName",
     // BUILD & RUN FOR JAVA = 8
-    // "java": "clear && cd $dir && javac -d ~/workspace/bin $fileName && java -cp ~/workspace/bin $fileNameWithoutExt",
+    // "java": "clear && cd $dir && javac -d ~/Workspace/bin $fileName && java -cp ~/Workspace/bin $fileNameWithoutExt",
     // REPEAT EXECUTE FILE .class
-    // "java": "clear && java -cp ~/workspace/bin $fileNameWithoutExt",
+    // "java": "clear && java -cp ~/Workspace/bin $fileNameWithoutExt",
 
     "python": "clear && cd $dir && python3 -OO -S -B $fileName",
     "javascript": "clear && cd $dir && node $fileName",
     "typescript": "clear && cd $dir && node $fileName",
   },
-  "workbench.colorTheme": "Default Dark Modern",
-  // "workbench.colorTheme": "Monokai",
-  "workbench.iconTheme": "symbols",
   "workbench.startupEditor": "none",
   "workbench.sideBar.location": "right",
   "workbench.statusBar.visible": true,
@@ -93,12 +90,17 @@
   "update.showReleaseNotes": false,
   "notebook.formatOnSave.enabled": true,
   "workbench.editor.labelFormat": "short",
-  "cph.general.menuChoices": "cpp java",
-  "cph.general.saveLocation": "/home/josuerom/workspace/bin",
+  "cph.general.menuChoices": "cpp java python",
+  "cph.general.saveLocation": "/home/josuerom/Workspace/bin",
   "cph.language.cpp.Args": "-std=c++17 -DONLINE_JUDGE",
+  "cph.language.python.Args": "-OO -S -B",
+  "cph.language.cpp.SubmissionCompiler": "GNU G++17 9.2.0 (64 bit, msys 2)",
+  "cph.language.java.SubmissionCompiler": "Java 1.8.0_241",
   "cph.general.timeOut": 1000,
   "cph.general.autoShowJudge": false,
   "trailing-spaces.trimOnSave": true,
-  "workbench.productIconTheme": "fluent-icons",
   "symbols.hidesExplorerArrows": false,
+  "workbench.iconTheme": "symbols",
+  "workbench.productIconTheme": "fluent-icons",
+  "editor.rulers": [80]
 }
