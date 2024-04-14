@@ -1,18 +1,18 @@
 { // @author josuerom
   "read int": {
-  "prefix": "rint",
+  "prefix": "ri",
   "body": [
     "${1:n} = int(input())"
   ],
   },
   "read str": {
-  "prefix": "rstr",
+  "prefix": "rs",
   "body": [
    "${1:s} = input()"
   ],
   },
   "read decimal": {
-  "prefix": "rfloat",
+  "prefix": "rf",
   "body": [
     "${1:d} = float(input())"
   ],
@@ -26,19 +26,19 @@
   "read list of int": {
   "prefix": "rli",
   "body": [
-    "li$1 = map(int, input().split())"
+    "li$1 = list(map(int, input().split()))"
   ],
   },
   "read list of float": {
   "prefix": "rlf",
   "body": [
-    "lf$1 = map(float, input().split())"
+    "lf$1 = list(map(float, input().split()))"
   ],
   },
   "read list of chars": {
   "prefix": "rlc",
   "body": [
-    "lc$1 = input().split(\"\")"
+    "lc$1 = list(input().split(\"\"))"
   ],
   },
   "return False": {
@@ -67,7 +67,7 @@
   "body": [
     "tt = int(input())",
     "while tt > 0:",
-    "\tsolve($2)",
+    "\tsolve()",
     "\ttt -= 1"
   ],
   },
@@ -77,12 +77,18 @@
     "print($1)"
   ],
   },
-  "print(f-string)": {
+  "print(f-string) 1": {
   "prefix": "pp",
   "body": [
-    "print(f\"$1\")"
+    "print(f\"{$1}\")"
   ],
   },
+  "print(f-string) 2": {
+    "prefix": "ps",
+    "body": [
+      "print(f\"{$1}\", end=\" \")"
+    ],
+    },
   "print(ternary operator)": {
   "prefix": "po",
   "body": [
@@ -90,7 +96,7 @@
   ],
   },
   "print(veredict YES or NO)": {
-  "prefix": "pyn",
+  "prefix": "pv",
   "body": [
     "print(\"YES\" if $1 else \"NO\")"
   ],
@@ -135,7 +141,6 @@
   "prefix": "tem1",
   "body": [
     "#  author: josuerom - created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
-    "",
     "def solve():",
     "\t$2",
     "",
@@ -146,14 +151,13 @@
   "prefix": "tem2",
   "body": [
     "#  author: josuerom - created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
-  "$1"
+    "$1"
   ],
   },
   "def precalculate()": {
   "prefix": "funpre",
   "body": [
     "def precalculate($1):",
-    "\t"
   ],
   },
   "def solve()": {
