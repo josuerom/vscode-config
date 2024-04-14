@@ -1,153 +1,152 @@
 {
-  // @author: josuerom
-  "files.autoSave": "onFocusChange",
-  "diffEditor.wordWrap": "on",
-  "debug.terminal.clearBeforeReusing": true,
-  "extensions.ignoreRecommendations": true,
-  "security.workspace.trust.untrustedFiles": "open",
-  "explorer.confirmDelete": false,
-  "debug.onTaskErrors": "debugAnyway",
-  "breadcrumbs.enabled": false,
-  "redhat.telemetry.enabled": false,
-  "window.commandCenter": true,
-  "window.menuBarVisibility": "compact",
-  "files.exclude": {
-    "**/.classpath": true,
-    "**/.project": true,
-    "**/.settings": true,
-    "**/.factorypath": true
-  },
-  "terminal.integrated.profiles.windows": {
-    "PowerShell": {
-      "source": "PowerShell",
-      "icon": "terminal-powershell"
+    // @author: josuerom
+    "files.autoSave": "onFocusChange",
+    "diffEditor.wordWrap": "on",
+    "debug.terminal.clearBeforeReusing": true,
+    "extensions.ignoreRecommendations": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "explorer.confirmDelete": false,
+    "debug.onTaskErrors": "debugAnyway",
+    "breadcrumbs.enabled": false,
+    "redhat.telemetry.enabled": false,
+    "window.commandCenter": true,
+    "window.menuBarVisibility": "compact",
+    "files.exclude": {
+      "**/.classpath": true,
+      "**/.project": true,
+      "**/.settings": true,
+      "**/.factorypath": true
     },
-    "Command Prompt": {
-      "path": [
-        "${env:windir}\\Sysnative\\cmd.exe",
-        "${env:windir}\\System32\\cmd.exe"
-      ],
-      "args": [],
-      "icon": "terminal-cmd"
-    }
-  },
-  "java.configuration.runtimes": [
-    {
-      "name": "JavaSE-21",
-      "path": "d:\\compilers\\openjdk\\",
-      "default": true
-    }
-  ],
-  "[java]": {
-    "editor.formatOnSave": true,
-    "editor.formatOnPaste": true,
-    "editor.defaultFormatter": "redhat.java"
-  },
-  "[cpp]": {
-    // "editor.formatOnPaste": true,
-    // "editor.formatOnSave": true,
-    // "editor.defaultFormatter": "redhat.java"
-  },
-  "[python]": {
-    "editor.formatOnSave": true,
-    "editor.formatOnPaste": true,
-    // "editor.defaultFormatter": "ms-python.autopep8",
-  },
-  "terminal.integrated.defaultProfile.windows": "Command Prompt",
-  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
-  "terminal.integrated.fontSize": 14.2,
-  "terminal.integrated.tabs.focusMode": "singleClick",
-  "terminal.integrated.enableMultiLinePasteWarning": false,
-  "terminal.integrated.cursorBlinking": true,
-  "terminal.integrated.cursorStyle": "line",
-  "terminal.integrated.gpuAcceleration": "off",
-  "code-runner.runInTerminal": true,
-  "code-runner.saveFileBeforeRun": true,
-  "code-runner.showExecutionMessage": false,
-  "code-runner.showRunCommandInEditorContextMenu": false,
-  "code-runner.preserveFocus": false,
-  "code-runner.clearPreviousOutput": true,
-  "code-runner.cwd": "d:\\workspace\\bin",
-  "code-runner.executorMap": {
-    // BUILD & RUN PROGRAM CODEFORCES C++17 INPUT MANUAL
-    "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++17 -DLOCAL && d:\\workspace\\bin\\sol.exe",
-
-    // BUILD & RUN PROGRAM CODEFORCES C++17 FROM INPUT FILE
-    // "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++17 -DLOCAL && d:\\workspace\\bin\\sol.exe < samples\\in1",
-
-    // BUILD & RUN PROGRAM C++20 OFF CONSOLE & ANSWER FILE
-    // "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++20 -DLOCAL && d:\\workspace\\bin\\sol.exe < samples\\in1 > samples\\output",
-
-    // RPC C++11 INPUT FILE
-    // "cpp": "cls && cd $dir && g++ -std=c++11 -O2 -DLOCAL $fileName -o $fileNameWithoutExt.exe && $fileNameWithoutExt.exe < in1",
-
-    // REPEAT EXECUTE FILE.exe
-    "sol.exe": "d: && cls && d:\\workspace\\bin\\sol.exe",
-
-    // BUILD & RUN PROGRAM JAVA >= 11 MANUAL INPUT
-    "java": "cls && cd $dir && java $fileName",
-
-    // BUILD & RUN PROGRAM JAVA >= 11 INPUT FILE
-    // "java": "cls && cd $dir && java $fileName < samples\\in1",
-    // BUILD & RUN PROGRAM JAVA >= 11 INPUT FILE AND ANSWER IN FILE
-    // "java": "cls && cd $dir && java $fileName < samples\\in1 > samples\\output",
-
-    "python": "cls && cd $dir && python -OO -S -B $fileName",
-    "javascript": "cls && cd $dir && node $fileName",
-    "typescript": "cls && cd $dir && tsc && node $fileName"
-  },
-  // "workbench.colorTheme": "Default Dark Modern",
-  "workbench.colorTheme": "Default Dark Modern",
-  "workbench.iconTheme": "symbols",
-  "workbench.productIconTheme": "fluent-icons",
-  "workbench.startupEditor": "none",
-  "workbench.sideBar.location": "right",
-  "workbench.statusBar.visible": true,
-  "workbench.layoutControl.enabled": false,
-  "workbench.editor.enablePreview": false,
-  "workbench.editor.showTabs": "single",
-  "editor.fontFamily": "JetBrainsMono Nerd Font",
-  "editor.fontSize": 14,
-  "editor.fontLigatures": true,
-  "editor.tabCompletion": "on",
-  "editor.tabSize": 3,
-  "editor.padding.bottom": 0,
-  "editor.suggestSelection": "first",
-  "editor.wordWrap": "on",
-  "editor.minimap.enabled": false,
-  // "editor.scrollbar.vertical": "hidden",
-  "editor.overviewRulerBorder": false,
-  "editor.hideCursorInOverviewRuler": true,
-  "editor.stickyScroll.enabled": true,
-  "editor.renderWhitespace": "none",
-  "editor.renderControlCharacters": false,
-  "editor.cursorBlinking": "expand",
-  "editor.inlineSuggest.enabled": true,
-  "editor.unicodeHighlight.invisibleCharacters": false,
-  "editor.cursorSmoothCaretAnimation": "on",
-  "editor.linkedEditing": true,
-  "editor.guides.bracketPairs": true,
-  "editor.matchBrackets": "never",
-  "editor.glyphMargin": false,
-  "editor.accessibilitySupport": "off",
-  "editor.hover.sticky": false,
-  "git.enableSmartCommit": true,
-  "git.autofetch": true,
-  "git.confirmSync": false,
-  "git.openRepositoryInParentFolders": "never",
-  // "cph.general.defaultLanguage": "cpp",
-  "cph.general.menuChoices": "cpp java",
-  "cph.general.saveLocation": "d:\\workspace\\bin",
-  "cph.language.cpp.Args": "-std=c++17 -DONLINE_JUDGE",
-  // "cph.language.cpp.Args": "-std=c++11 -lm -lcrypt -fno-asm -s -pedantic",
-  "cph.general.timeOut": 1000,
-  "cph.general.autoShowJudge": false,
-  "python.formatting.provider": "none",
-  "update.showReleaseNotes": false,
-  "notebook.formatOnSave.enabled": true,
-  "workbench.editor.labelFormat": "short",
-  "security.allowedUNCHosts": [
-    "wsl.localhost"
-  ],
-  "symbols.hidesExplorerArrows": false,
-}
+    "terminal.integrated.profiles.windows": {
+      "PowerShell": {
+        "source": "PowerShell",
+        "icon": "terminal-powershell"
+      },
+      "Command Prompt": {
+        "path": [
+          "${env:windir}\\Sysnative\\cmd.exe",
+          "${env:windir}\\System32\\cmd.exe"
+        ],
+        "args": [],
+        "icon": "terminal-cmd"
+      }
+    },
+    "java.configuration.runtimes": [
+      {
+        "name": "JavaSE-21",
+        "path": "d:\\compilers\\openjdk\\",
+        "default": true
+      }
+    ],
+    "[java]": {
+      // "editor.formatOnSave": true,
+      // "editor.formatOnPaste": true,
+      // "editor.defaultFormatter": "redhat.java"
+    },
+    "[cpp]": {
+      // "editor.formatOnPaste": true,
+      // "editor.formatOnSave": true,
+      // "editor.defaultFormatter": "redhat.java"
+    },
+    "[python]": {
+      // "editor.formatOnSave": true,
+      // "editor.formatOnPaste": true,
+      // "editor.defaultFormatter": "ms-python.autopep8",
+    },
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "terminal.integrated.fontFamily": "JetBrains Mono",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.tabs.focusMode": "singleClick",
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.gpuAcceleration": "off",
+    "code-runner.runInTerminal": true,
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.showExecutionMessage": false,
+    "code-runner.showRunCommandInEditorContextMenu": false,
+    "code-runner.preserveFocus": false,
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.cwd": "d:\\workspace\\bin",
+    "code-runner.executorMap": {
+      // BUILD & RUN PROGRAM CODEFORCES C++17 INPUT MANUAL
+      "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++17 -DLOCAL && d:\\workspace\\bin\\sol.exe",
+  
+      // BUILD & RUN PROGRAM CODEFORCES C++17 FROM INPUT FILE
+      // "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++17 -DLOCAL && d:\\workspace\\bin\\sol.exe < samples\\in1",
+  
+      // BUILD & RUN PROGRAM C++20 OFF CONSOLE & ANSWER FILE
+      // "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++20 -DLOCAL && d:\\workspace\\bin\\sol.exe < samples\\in1 > samples\\output",
+  
+      // RPC C++11 INPUT FILE
+      // "cpp": "cls && cd $dir && g++ -std=c++11 -O2 -DLOCAL $fileName -o $fileNameWithoutExt.exe && $fileNameWithoutExt.exe < in1",
+  
+      // REPEAT EXECUTE FILE.exe
+      "sol.exe": "d: && cls && d:\\workspace\\bin\\sol.exe",
+  
+      // BUILD & RUN PROGRAM JAVA >= 11 MANUAL INPUT
+      "java": "cls && cd $dir && java $fileName",
+  
+      // BUILD & RUN PROGRAM JAVA >= 11 INPUT FILE
+      // "java": "cls && cd $dir && java $fileName < samples\\in1",
+      // BUILD & RUN PROGRAM JAVA >= 11 INPUT FILE AND ANSWER IN FILE
+      // "java": "cls && cd $dir && java $fileName < samples\\in1 > samples\\output",
+  
+      "python": "cls && cd $dir && python -OO -S -B $fileName",
+      "javascript": "cls && cd $dir && node $fileName",
+      "typescript": "cls && cd $dir && tsc && node $fileName"
+    },
+    // "workbench.colorTheme": "Default Dark Modern",
+    "workbench.colorTheme": "Default Dark Modern",
+    "workbench.iconTheme": "symbols",
+    "workbench.productIconTheme": "fluent-icons",
+    "workbench.startupEditor": "none",
+    "workbench.sideBar.location": "right",
+    "workbench.statusBar.visible": true,
+    "workbench.layoutControl.enabled": false,
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.showTabs": "single",
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontSize": 14,
+    "editor.fontLigatures": true,
+    "editor.tabCompletion": "on",
+    "editor.tabSize": 3,
+    "editor.padding.bottom": 0,
+    "editor.suggestSelection": "first",
+    "editor.wordWrap": "on",
+    "editor.minimap.enabled": false,
+    // "editor.scrollbar.vertical": "hidden",
+    "editor.overviewRulerBorder": false,
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.stickyScroll.enabled": true,
+    "editor.renderWhitespace": "none",
+    "editor.renderControlCharacters": false,
+    "editor.cursorBlinking": "expand",
+    "editor.inlineSuggest.enabled": true,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.linkedEditing": true,
+    "editor.guides.bracketPairs": true,
+    "editor.matchBrackets": "never",
+    "editor.glyphMargin": false,
+    "editor.accessibilitySupport": "off",
+    "editor.hover.sticky": false,
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.openRepositoryInParentFolders": "never",
+    // "cph.general.defaultLanguage": "cpp",
+    "cph.general.menuChoices": "cpp java python",
+    "cph.general.saveLocation": "d:\\workspace\\bin",
+    "cph.language.cpp.Args": "-std=c++17 -DONLINE_JUDGE",
+    "cph.language.python.Args": "-OO -S -B",
+    "cph.general.timeOut": 1000,
+    "cph.general.autoShowJudge": false,
+    "update.showReleaseNotes": false,
+    "notebook.formatOnSave.enabled": true,
+    "workbench.editor.labelFormat": "short",
+    "symbols.hidesExplorerArrows": false,
+    "security.allowedUNCHosts": [
+      "wsl.localhost"
+    ],
+  }
