@@ -8,35 +8,26 @@
       "#endif"
     ]
   },
-  "#ifdef LOCAL": {
-    "prefix": "local",
-    "body": [
-      "#ifdef LOCAL",
-      "\tfreopen(\"samples/in1\", \"r\", stdin);",
-      "\t// freopen(\"samples/output\", \"w\", stdout);",
-      "#endif"
-    ]
-  },
-  "ios::sync_with_stdio(false); cin.tie(0);": {
-    "prefix": "ioc",
+  "ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);": {
+    "prefix": "ios",
     "body": [
       "ios::sync_with_stdio(false);",
       "cin.tie(0); cout.tie(0);"
     ]
   },
   "using namespace std;": {
-    "prefix": "uu",
+    "prefix": "usin",
     "body": [
       "using namespace std;$1"
     ]
   },
-  "read char[]": {
+  "read char[] with space": {
     "prefix": "rac",
     "body": [
       "cin.getline(s$1, n$2, '\\n');"
     ]
   },
-  "read line": {
+  "read string with space": {
     "prefix": "rln",
     "body": [
       "getline(cin, s$1);"
@@ -54,23 +45,17 @@
       "for (int ${1:i} = $2 - 1; ${1:i} >= 0; ${1:i}--)$3"
     ]
   },
-  "for (auto $e : array)": {
+  "for (auto &e : container)": {
     "prefix": "fore",
     "body": [
       "for (auto &e : $1) cout << e << \" \";",
       "cout << br;"
     ]
   },
-  "for (auto $e : container)": {
-    "prefix": "forec",
+  "for (auto &[] : container<pair>)": {
+    "prefix": "forc",
     "body": [
-      "for (auto &e : $1) cout << e.first <<\", \"<< e.second << br;"
-    ]
-  },
-  "while": {
-    "prefix": "wh",
-    "body": [
-      "while ($1) {",
+      "for (auto &[f, s] : $1) {",
       "}"
     ]
   },
@@ -99,15 +84,9 @@
     ]
   },
   "#include <bits/stdc++.h>": {
-    "prefix": "ii",
+    "prefix": "incl",
     "body": [
       "#include <bits/stdc++.h>$1"
-    ]
-  },
-  "#include": {
-    "prefix": "in",
-    "body": [
-      "#include $1"
     ]
   },
   "#define": {
@@ -116,13 +95,13 @@
       "#define $1"
     ]
   },
-  "cin >>": {
+  "simple input": {
     "prefix": "cii",
     "body": [
       "cin >> $1;"
     ]
   },
-  "cout <<": {
+  "simple output": {
     "prefix": "coo",
     "body": [
       "cout << $1;"
@@ -140,46 +119,46 @@
       "printf(\"%d\\n$1\", $2);"
     ]
   },
-  "cout ternary operator 1": {
-    "prefix": "cot",
-    "body": [
-      "cout << ($1 ? $2 : $3) << br;"
-    ]
-  },
-  "cout ternary operator 2": {
-    "prefix": "cov",
-    "body": [
-      "cout << ($1 ? \"YES\" : \"NO\") << br;"
-    ]
-  },
   "printf ternary operator": {
     "prefix": "pot",
     "body": [
       "printf(\"%d$1\\n\", ($2 ? $3 : $4));"
     ]
   },
-  "$.begin(), $.end()": {
-    "prefix": "all",
+  "cout ternary operator 1": {
+    "prefix": "coot",
     "body": [
-      "$1.begin(), $1.end()$2"
+      "cout << ($1 ? $2 : $3) << br;"
     ]
   },
-  "$.rbegin(), $.rend()": {
+  "cout ternary operator 2": {
+    "prefix": "coov",
+    "body": [
+      "cout << ($1 ? \"YES\" : \"NO\") << br;"
+    ]
+  },
+  ".begin() & .end()": {
+    "prefix": "all",
+    "body": [
+      "$1.begin(), $1.end()"
+    ]
+  },
+  ".rbegin() & .rend()": {
     "prefix": "rall",
     "body": [
-      "$1.rbegin(), $1.rend()$2"
+      "$1.rbegin(), $1.rend()"
     ]
   },
   "return": {
-    "prefix": "rr",
+    "prefix": "ret",
     "body": [
       "return$1;"
     ]
   },
-  "set const MAX": {
-    "prefix": "cons",
+  "set const N": {
+    "prefix": "scN",
     "body": [
-      "const int N = 10 + 1e$1;"
+      "const int N = int(1e$1) + 10;"
     ]
   },
   "Header": {
@@ -213,7 +192,7 @@
       "#pragma GCC optimize(\"Ofast\")",
     ]
   },
-  "Template for codeforces": {
+  "Codeforces template": {
     "prefix": "tem1",
     "body": [
       "/**",
@@ -250,7 +229,7 @@
     ],
     "description": "Plantilla especial para CF"
   },
-  "Template Ultra-Light": {
+  "Ultra light template": {
     "prefix": "tem2",
     "body": [
       "/**",
@@ -267,9 +246,9 @@
       "\treturn 0;",
       "}",
     ],
-    "description": "Plantilla estándar Ultra-Liviana"
+    "description": "Plantilla estándar ultra liviana"
   },
-  "Template 2 BITS()": {
+  "2 Bits() team template": {
     "prefix": "tem3",
     "body": [
       "/**",
@@ -283,7 +262,7 @@
       "#define br  '\\n'\n",
       "class ${TM_FILENAME_BASE} {",
       "public:",
-      "\tstatic const int N = 30 + 1e$2;",
+      "\tstatic const int N = 30 + int(1e$2);",
       "\tint a[N], n;\n",
       "\tvoid Solution() {$3",
       "\t}\n",
@@ -310,7 +289,7 @@
     ],
     "description": "Plantilla equipo 2 BITS()"
   },
-  "Template Um_nik CF": {
+  "Um_nik template": {
     "prefix": "tem4",
     "body": [
       "/**",
@@ -364,7 +343,7 @@
     ],
     "description": "Plantilla de Um_nik C++17"
   },
-  "Template JHelper Petr": {
+  "Petr template": {
     "prefix": "tem5",
     "body": [
       "/**",
@@ -1445,30 +1424,32 @@
       "      return calc(n);",
       "   }",
       "}\n",
-      "/* Now the solution to the problem begins */$2",
+      "/* Now the solution to the problem begins */",
       "",
       "class ${TM_FILENAME_BASE} {",
       "public:",
-      "\tvoid solve() {$3",
+      "\tstatic const int N = int(1e6$2) + 10;",
+      "\tint a[N], n;\n",
+      "\tvoid solve() {",
       "\t}",
       "};\n",
       "int main() {",
       "\tios::sync_with_stdio(false);",
       "\tcin.tie(0); cout.tie(0);",
-      "\t${TM_FILENAME_BASE} solver;",
-      "\tint tt = 1;",
-      "\tcin >> tt;$1",
-      "\tfor (int nc = 1; nc <= tt; nc++) {",
+      "\t${TM_FILENAME_BASE} cp;",
+      "\tint T = 1;",
+      "\tcin >> T;$1",
+      "\tfor (int nc = 1; nc <= T; nc++) {",
       "#ifdef LOCAL",
       "\t\tcout << \"Case #\" << nc << \": \";",
-      "\t\tsolver.solve();",
+      "\t\tcp.solve();",
       "#else",
-      "\t\tsolver.solve();",
+      "\t\tcp.solve();",
       "#endif",
       "\t}",
       "\treturn 0;",
       "}"
     ],
-    "description": "Plantilla con todo por JHelper Petr"
+    "description": "Plantilla de Petr C++20"
   }
 }
