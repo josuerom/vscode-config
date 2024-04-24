@@ -101,10 +101,22 @@
       "cin >> $1;"
     ]
   },
+  "multiple input": {
+    "prefix": "ciim",
+    "body": [
+      "cin >> $1 >> $2 >> $3 >> $4;"
+    ]
+  },
   "simple output": {
     "prefix": "coo",
     "body": [
       "cout << $1;"
+    ]
+  },
+  "multiple output": {
+    "prefix": "coom",
+    "body": [
+      "cout << $1 << $2 << $3 << $4;"
     ]
   },
   "scanf": {
@@ -156,7 +168,7 @@
     ]
   },
   "set const N": {
-    "prefix": "scN",
+    "prefix": "setn",
     "body": [
       "const int N = int(1e$1) + 10;"
     ]
@@ -187,7 +199,7 @@
     ]
   },
   "#pragma GCC": {
-    "prefix": "gcc",
+    "prefix": "ofast",
     "body": [
       "#pragma GCC optimize(\"Ofast\")",
     ]
@@ -214,16 +226,17 @@
       "int main() {",
       "\tios::sync_with_stdio(false);",
       "\tcin.tie(0);",
-      "\tint tt = 1, nc = 1;",
+      "\tint tt = 1;",
       "\tcin >> tt;$1",
-      "\twhile (tt--) {",
       "#ifdef LOCAL",
+      "\tint nc = 1;",
+      "\twhile (tt--) {",
       "\t\tcout << \"Case #\" << nc++ << \":\\n\";",
       "\t\tsolve();",
-      "#else",
-      "\t\tsolve();",
-      "#endif",
       "\t}",
+      "#else",
+      "\twhile (tt--) solve();",
+      "#endif",
       "\treturn 0;",
       "}"
     ],
@@ -269,7 +282,15 @@
       "\tvoid tcReading() {",
       "\t\tint tt;",
       "\t\tcin >> tt;",
+      "#ifdef LOCAL",
+      "\t\tint nc = 1;",
+      "\t\twhile (tt--) {",
+      "\t\t\tcout << \"Case #\" << nc++ << \":\\n\";",
+      "\t\t\tsolveOne();",
+      "\t\t}",
+      "#else",
       "\t\twhile (tt--) solveOne();",
+      "#endif",
       "\t}",
       "};\n",
       "int main() {",
