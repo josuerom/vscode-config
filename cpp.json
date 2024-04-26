@@ -3,8 +3,8 @@
     "prefix": "online",
     "body": [
       "#ifndef ONLINE_JUDGE",
-      "\tfreopen(\"samples/in1\", \"r\", stdin);",
-      "\tfreopen(\"samples/out\", \"w\", stdout);",
+      "\tfreopen(\"../samples/in1\", \"r\", stdin);",
+      "\tfreopen(\"../samples/output\", \"w\", stdout);",
       "#endif"
     ]
   },
@@ -66,10 +66,10 @@
       "}"
     ]
   },
-  "function preCalculate": {
-    "prefix": "funpre",
+  "function<>": {
+    "prefix": "func",
     "body": [
-      "function<int$1(int)> preCalculate = [&](int n) {",
+      "function<int$1(int)> $2 = [&](int n) {",
       "};"
     ]
   },
@@ -199,9 +199,19 @@
     ]
   },
   "#pragma GCC": {
-    "prefix": "ofast",
+    "prefix": "gcc",
     "body": [
       "#pragma GCC optimize(\"Ofast\")",
+    ]
+  },
+  "LOCAL debugger": {
+    "prefix": "debug",
+    "body": [
+      "#ifdef LOCAL",
+      "#include \"../debug/debug.h\"",
+      "#else",
+      "#define debug(...) 42",
+      "#endif\n",
     ]
   },
   "Codeforces template": {
@@ -213,11 +223,6 @@
       "**/",
       "#include <bits/stdc++.h>",
       "using namespace std;\n",
-      "#ifdef LOCAL",
-      "#include \"../auto/debug.h\"",
-      "#else",
-      "#define debug(...) 42",
-      "#endif\n",
       "#define ll  long long",
       "#define br  '\\n'",
       "\n$2\n",
