@@ -30,27 +30,36 @@
   "code-runner.cwd": "/home/josuerom/Workspace/bin",
   "code-runner.executorMap": {
     // BUILD & RUN PROGRAM CODEFORCES C++17 INPUT MANUAL
-    "cpp": "clear && cd $dir && g++ $fileName -o ~/Workspace/bin/sol -std=c++17 -Wall -Wno-sign-conversion -DLOCAL && ~/Workspace/bin/sol",
-    // BUILD & RUN PROGRAM CODEFORCES C++17 FROM INPUT FILE
-    // "cpp": "clear && cd $dir && g++ $fileName -o ~/Workspace/bin/sol -std=c++17 -Wall -Wno-sign-conversion -DLOCAL && ~/Workspace/bin/sol < samples/in1",
-    // BUILD & RUN PROGRAM C++20 OFF CONSOLE & RESULT IN FILE OUTPUT
-    // "cpp": "clear && cd $dir && g++ $fileName -o ~/Workspace/bin/sol -std=c++20 -Wall -Wno-sign-conversion -DLOCAL && ~/Workspace/bin/sol < samples/in1 > samples/output",
-    // RPC C++11 FROM INPUT FILE
-    // "cpp": "clear && cd $dir && g++ $fileName -o $fileNameWithoutExt -std=c++11 -O2 -Wall -DLOCAL && $fileNameWithoutExt < in1",
-    // REPEAT EXECUTE WITH MANUAL INPUT
-    "run_cpp": "clear && ~/Workspace/bin/sol",
+    "cpp": "clear && cd $dir && g++ $fileName -o ~/Workspace/bin/sol -std=c++17 -Wall -DLOCAL && ~/Workspace/bin/sol",
 
-    // BUILD & RUN JAVA > 8 INPUT MANUAL
-    "java": "clear && cd $dir && java $fileName",
-    // BUILD & RUN FOR JAVA = 8
+    // // compile and execute C++17 program, with input per file
+    // "cpp": "clear && cd $dir && g++ $fileName -o ~/Workspace/bin/sol -std=c++17 -Wall -DLOCAL && ~/Workspace/bin/sol < ../samples/in1",
+
+    // // compile and execute C++20 program, with input per file and output per file
+    // "cpp": "clear && cd $dir && g++ $fileName -o ~/Workspace/bin/sol -std=c++20 -Wall -DLOCAL && ~/Workspace/bin/sol < ../samples/input.in > ../samples/output.out",
+
+    // // compile and run C++11 program for RPC, with input per file
+    // "cpp": "clear && cd $dir && g++ $fileName -o $fileNameWithoutExt -std=c++11 -O2 -Wall -DLOCAL && $fileNameWithoutExt < in1",
+    
+    // // compile and run java version = 8 program, with manual entry
     // "java": "clear && cd $dir && javac -d ~/Workspace/bin $fileName && java -cp ~/Workspace/bin $fileNameWithoutExt",
-    // REPEAT EXECUTE FILE .class
-    // "java": "clear && java -cp ~/Workspace/bin $fileNameWithoutExt",
+    
+    // // rerun binary file .class java version = 8
+    // "rerun_java": "clear && java -cp ~/Workspace/bin $fileNameWithoutExt",
+
+    // compile and run java programs versions greater than > 8, with manual entry
+    "java": "clear && cd $dir && java $fileName",
+    
+    "rerun_class": "clear && cd $dir && java $fileName < ../samples/in1",
+    "rerun_sol": "clear && ~/Workspace/bin/sol",
 
     "python": "clear && cd $dir && python3 -OO -S -B $fileName",
     "javascript": "clear && cd $dir && node $fileName",
     "typescript": "clear && cd $dir && node $fileName",
   },
+  "workbench.colorTheme": "Default Dark Modern",
+  "workbench.iconTheme": "symbols",
+  "workbench.productIconTheme": "fluent-icons",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   "workbench.statusBar.visible": true,
@@ -97,8 +106,6 @@
   "cph.general.timeOut": 1000,
   "cph.general.autoShowJudge": false,
   "symbols.hidesExplorerArrows": false,
-  "workbench.iconTheme": "symbols",
-  "workbench.productIconTheme": "fluent-icons",
   "editor.rulers": [
     90
   ],
