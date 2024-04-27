@@ -1467,5 +1467,7 @@
   "\twhile (tt--) cp.solveOne();",
   "#endif",
   "}"
-  }
+  ],
+  "description": "Plantilla de Petr C++20"
+  },
 }
