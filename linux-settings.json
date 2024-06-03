@@ -29,7 +29,7 @@
   "code-runner.preserveFocus": false,
   "code-runner.cwd": "/home/josuerom/Workspace/bin",
   "code-runner.executorMap": {
-    // BUILD & RUN PROGRAM CODEFORCES C++17 INPUT MANUAL
+    // compile and execute C++17 program, with manual entry
     "cpp": "clear && cd $dir && g++ $fileName -o ~/Workspace/bin/sol -std=c++17 -Wall -DLOCAL && ~/Workspace/bin/sol",
 
     // // compile and execute C++17 program, with input per file
@@ -39,7 +39,7 @@
     // "cpp": "clear && cd $dir && g++ $fileName -o ~/Workspace/bin/sol -std=c++20 -Wall -DLOCAL && ~/Workspace/bin/sol < ../samples/input.in > ../samples/output.out",
 
     // // compile and run C++11 program for RPC, with input per file
-    // "cpp": "clear && cd $dir && g++ $fileName -o $fileNameWithoutExt -std=c++11 -O2 -Wall -DLOCAL && $fileNameWithoutExt < in1",
+    // "cpp": "clear && cd $dir && g++ $fileName -o $fileNameWithoutExt -std=c++11 -O2 -DLOCAL && ./$fileNameWithoutExt < in1",
     
     // // compile and run java version = 8 program, with manual entry
     // "java": "clear && cd $dir && javac -d ~/Workspace/bin $fileName && java -cp ~/Workspace/bin $fileNameWithoutExt",
@@ -99,15 +99,15 @@
   "workbench.editor.labelFormat": "short",
   "cph.general.menuChoices": "cpp java python",
   "cph.general.saveLocation": "/home/josuerom/Workspace/bin",
-  "cph.language.cpp.Args": "-std=c++17 -DONLINE_JUDGE",
+  "cph.language.cpp.Args": "-std=c++17",
   "cph.language.cpp.SubmissionCompiler": "GNU G++17 9.2.0 (64 bit, msys 2)",
   "cph.language.java.SubmissionCompiler": "Java 1.8.0_241",
   "cph.language.python.SubmissionCompiler": "PyPy 3.9.10 (7.3.9, 64bit)",
   "cph.general.timeOut": 1000,
   "cph.general.autoShowJudge": false,
   "symbols.hidesExplorerArrows": false,
-  "editor.rulers": [
-    90
-  ],
-  "security.workspace.trust.untrustedFiles": "open"
+  "editor.rulers": [90],
+  "security.workspace.trust.untrustedFiles": "open",
+  "cppref.lang": "es",
+  "cppref.searchEngine": "Google"
 }
