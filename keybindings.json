@@ -96,7 +96,7 @@
     "command": "code-runner.runCustomCommand"
   },
   {
-    "key": "ctrl+s ctrl+p",
+    "key": "ctrl+shift+s ctrl+shift+p",
     "command": "workbench.profiles.actions.switchProfile",
     "when": "profiles.enabled"
   },
