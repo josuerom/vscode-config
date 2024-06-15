@@ -117,4 +117,9 @@
     "command": "-editor.action.copyLinesDownAction",
     "when": "editorTextFocus && !editorReadonly"
   },
+  {
+    "key": "ctrl+s ctrl+p",
+    "command": "workbench.profiles.actions.switchProfile",
+    "when": "profiles.enabled"
+  },
 ]
