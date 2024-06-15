@@ -94,5 +94,10 @@
   {
     "key": "ctrl+alt+v",
     "command": "code-runner.runCustomCommand"
-  }
+  },
+  {
+    "key": "ctrl+s ctrl+p",
+    "command": "workbench.profiles.actions.switchProfile",
+    "when": "profiles.enabled"
+  },
 ]
