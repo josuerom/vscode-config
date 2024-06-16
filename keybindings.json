@@ -69,10 +69,6 @@
     "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "ctrl+shift+oem_comma",
-    "command": "workbench.action.openApplicationSettingsJson"
-  },
-  {
     "key": "ctrl+alt+oem_3",
     "command": "workbench.action.terminal.openNativeConsole",
     "when": "!terminalFocus"
@@ -94,6 +90,10 @@
   {
     "key": "ctrl+alt+v",
     "command": "code-runner.runCustomCommand"
+  },
+  {
+    "key": "ctrl+shift+oem_comma",
+    "command": "workbench.action.openSettingsJson"
   },
   {
     "key": "ctrl+shift+s ctrl+shift+p",
