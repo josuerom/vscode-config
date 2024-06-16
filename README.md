@@ -1,1 +1,0 @@
-# Configuración ligera de VSCode
