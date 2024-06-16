@@ -9,7 +9,6 @@
   "breadcrumbs.enabled": false,
   "redhat.telemetry.enabled": false,
   "window.commandCenter": true,
-  "window.menuBarVisibility": "compact",
   "files.exclude": {
     "**/.classpath": true,
     "**/.project": true,
@@ -42,16 +41,6 @@
     // "editor.formatOnPaste": true,
     // "editor.defaultFormatter": "redhat.java"
   },
-  "[cpp]": {
-    // "editor.formatOnPaste": true,
-    // "editor.formatOnSave": true,
-    // "editor.defaultFormatter": "redhat.java"
-  },
-  "[python]": {
-    // "editor.formatOnSave": true,
-    // "editor.formatOnPaste": true,
-    // "editor.defaultFormatter": "ms-python.autopep8",
-  },
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
   "terminal.integrated.fontFamily": "JetBrains Mono",
   "terminal.integrated.fontSize": 14,
@@ -69,37 +58,34 @@
   "code-runner.cwd": "d:\\workspace\\bin",
   "code-runner.executorMap": {
     // compile and execute C++17 program, with manual entry
-    "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++17 -DLOCAL && d:\\workspace\\bin\\sol.exe",
+    "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++17 -O2 -DLOCAL && d:\\workspace\\bin\\sol.exe",
   
     // // compile and execute C++17 program, with input per file
-    // "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++17 -DLOCAL && d:\\workspace\\bin\\sol.exe < ..\\samples\\in1",
+    // "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++17 -O2 -DLOCAL && d:\\workspace\\bin\\sol.exe < ..\\samples\\in1",
 
     // // compile and execute C++20 program, with input per file and output per file
-    // "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++20 -DLOCAL && d:\\workspace\\bin\\sol.exe < ..\\samples\\input.in > ..\\samples\\output.out",
+    // "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++20 -O2 -DLOCAL && d:\\workspace\\bin\\sol.exe < ..\\samples\\input.in > ..\\samples\\output.out",
 
     // // compile and run C++11 program for RPC, with input per file
     // "cpp": "cls && cd $dir && g++ $fileName -o $fileNameWithoutExt -std=c++11 -Wall -O2 -DLOCAL && $fileNameWithoutExt < in1",
     
     // // compile and run java version = 8 program, with manual entry
     // "java": "cls && cd $dir && javac -d d:\\workspace\\bin $fileName && java -cp d:\\workspace\\bin $fileNameWithoutExt",
-    
-    // // rerun binary file .class java version = 8
     // "rerun_java": "cls && java -cp d:\\workspace\\bin $fileNameWithoutExt",
 
     // compile and run java programs versions greater than > 8, with manual entry
     "java": "cls && cd $dir && java $fileName",
+    "rep_java": "cls && cd $dir && java $fileName < ..\\samples\\in1",
     
-    "rerun_class": "cls && cd $dir && java $fileName < ..\\samples\\in1",
-    "rerun_sol": "cls && d:\\workspace\\bin\\sol.exe",
+    "rep_cpp": "cls && d:\\workspace\\bin\\sol.exe",
 
-    "python": "cls && cd $dir && python3 -OO -S -B $fileName",
+    "python": "cls && cd $dir && python -OO -S -B $fileName",
     "javascript": "cls && cd $dir && node $fileName",
     "typescript": "cls && cd $dir && node $fileName",
   },
   // "workbench.colorTheme": "Default Dark Modern",
   "workbench.colorTheme": "Default Dark Modern",
   "workbench.iconTheme": "symbols",
-  "workbench.productIconTheme": "fluent-icons",
   "workbench.startupEditor": "none",
   "workbench.sideBar.location": "right",
   "workbench.statusBar.visible": true,
@@ -137,13 +123,8 @@
   "git.openRepositoryInParentFolders": "never",
   "cph.general.menuChoices": "cpp java python",
   "cph.general.saveLocation": "d:\\workspace\\bin",
-  "cph.language.cpp.Args": "-std=c++17 -DONLINE_JUDGE",
-  "cph.language.cpp.SubmissionCompiler": "GNU G++17 9.2.0 (64 bit, msys 2)",
-  "cph.language.java.SubmissionCompiler": "Java 1.8.0_241",
-  "cph.language.python.SubmissionCompiler": "PyPy 3.9.10 (7.3.9, 64bit)",
-  "cph.general.timeOut": 1000,
+  "cph.general.timeOut": 1100,
   "cph.general.autoShowJudge": false,
-  "symbols.hidesExplorerArrows": false,
   "editor.rulers": [90],
-  "security.workspace.trust.untrustedFiles": "open"
+  "symbols.hidesExplorerArrows": false,
 }
