@@ -41,10 +41,6 @@
     "command": "cph.judgeView.focus"
   },
   {
-    "key": "ctrl+shift+[Comma]",
-    "command": "workbench.action.openApplicationSettingsJson"
-  },
-  {
     "key": "ctrl+shift+[Semicolon]",
     "command": "workbench.action.createTerminalEditorSide"
   },
@@ -116,6 +112,10 @@
     "key": "ctrl+shift+alt+down",
     "command": "-editor.action.copyLinesDownAction",
     "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+[Comma]",
+    "command": "workbench.action.openSettingsJson"
   },
   {
     "key": "ctrl+shift+s ctrl+shift+p",
