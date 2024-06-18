@@ -1,41 +1,11 @@
-{
-  // @author: josuerom
+{ // @author: josuerom
   "files.autoSave": "onFocusChange",
   "diffEditor.wordWrap": "on",
   "debug.terminal.clearBeforeReusing": true,
   "extensions.ignoreRecommendations": true,
   "explorer.confirmDelete": false,
-  "debug.onTaskErrors": "debugAnyway",
-  "breadcrumbs.enabled": false,
   "redhat.telemetry.enabled": false,
   "window.commandCenter": true,
-  "files.exclude": {
-    "**/.classpath": true,
-    "**/.project": true,
-    "**/.settings": true,
-    "**/.factorypath": true
-  },
-  "terminal.integrated.profiles.windows": {
-    "PowerShell": {
-    "source": "PowerShell",
-    "icon": "terminal-powershell"
-    },
-    "Command Prompt": {
-    "path": [
-    "${env:windir}\\Sysnative\\cmd.exe",
-    "${env:windir}\\System32\\cmd.exe"
-    ],
-    "args": [],
-    "icon": "terminal-cmd"
-    }
-  },
-  "java.configuration.runtimes": [
-    {
-    "name": "JavaSE-21",
-    "path": "d:\\compilers\\openjdk\\",
-    "default": true
-    }
-  ],
   "[java]": {
     // "editor.formatOnSave": true,
     // "editor.formatOnPaste": true,
@@ -43,9 +13,9 @@
   },
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
   "terminal.integrated.fontFamily": "JetBrains Mono",
-  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontSize": 14.2,
   "terminal.integrated.tabs.focusMode": "singleClick",
-  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.gpuAcceleration": "off",
@@ -53,41 +23,46 @@
   "code-runner.saveFileBeforeRun": true,
   "code-runner.showExecutionMessage": false,
   "code-runner.showRunCommandInEditorContextMenu": false,
-  "code-runner.preserveFocus": false,
   "code-runner.clearPreviousOutput": true,
-  "code-runner.cwd": "d:\\workspace\\bin",
+  "code-runner.preserveFocus": false,
+  "code-runner.cwd": "D:\\Workspace\\bin",
   "code-runner.executorMap": {
     // compile and execute C++17 program, with manual entry
-    "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++17 -O2 -DLOCAL && d:\\workspace\\bin\\sol.exe",
-  
+    "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++17 -O2 -Wall -Wl,--stack=536870912 -Wextra -pedantic -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -fmax-errors=1 -D_GLIBCXX_DEBUG -DLOCAL && d:\\workspace\\bin\\sol.exe",
+
+    /* ALL FLAGS C++:
+      -std=c++17 -O2 -Wall -Wl,--stack=536870912 -Wextra -pedantic -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -fmax-errors=1 -D_GLIBCXX_DEBUG -DLOCAL
+    */
+
     // // compile and execute C++17 program, with input per file
     // "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++17 -O2 -DLOCAL && d:\\workspace\\bin\\sol.exe < ..\\samples\\in1",
 
     // // compile and execute C++20 program, with input per file and output per file
-    // "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++20 -O2 -DLOCAL && d:\\workspace\\bin\\sol.exe < ..\\samples\\input.in > ..\\samples\\output.out",
+    // "cpp": "cls && cd $dir && g++ $fileName -o d:\\workspace\\bin\\sol.exe -std=c++20 -O2 -Wall -Wl,--stack=536870912 -Wextra -pedantic -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -fmax-errors=1 -D_GLIBCXX_DEBUG -DLOCAL && d:\\workspace\\bin\\sol.exe < ..\\samples\\input.in > ..\\samples\\output.out",
 
     // // compile and run C++11 program for RPC, with input per file
-    // "cpp": "cls && cd $dir && g++ $fileName -o $fileNameWithoutExt -std=c++11 -Wall -O2 -DLOCAL && $fileNameWithoutExt < in1",
+    // "cpp": "cls && cd $dir && g++ $fileName -o $fileNameWithoutExt -std=c++11 -O2 -Wall -Wextra -pedantic -Wshadow -Wformat=2 -DLOCAL && ./$fileNameWithoutExt < in1",
     
     // // compile and run java version = 8 program, with manual entry
     // "java": "cls && cd $dir && javac -d d:\\workspace\\bin $fileName && java -cp d:\\workspace\\bin $fileNameWithoutExt",
-    // "rerun_java": "cls && java -cp d:\\workspace\\bin $fileNameWithoutExt",
+    // "rep_java": "cls && java -cp d:\\workspace\\bin $fileNameWithoutExt < ..\\samples\\in1",
 
     // compile and run java programs versions greater than > 8, with manual entry
     "java": "cls && cd $dir && java $fileName",
     "rep_java": "cls && cd $dir && java $fileName < ..\\samples\\in1",
     
-    "rep_cpp": "cls && d:\\workspace\\bin\\sol.exe",
+    "rep_cpp": "cls && d:\\workspace\\bin\\sol.exe < ..\\samples\\in1",
 
     "python": "cls && cd $dir && python -OO -S -B $fileName",
+    "rep_python": "cls && cd $dir && python -OO -S -B $fileName < ..\\samples\\in1",
+
     "javascript": "cls && cd $dir && node $fileName",
     "typescript": "cls && cd $dir && node $fileName",
   },
-  // "workbench.colorTheme": "Default Dark Modern",
   "workbench.colorTheme": "Default Dark Modern",
   "workbench.iconTheme": "symbols",
-  "workbench.startupEditor": "none",
   "workbench.sideBar.location": "right",
+  "workbench.startupEditor": "none",
   "workbench.statusBar.visible": true,
   "workbench.layoutControl.enabled": false,
   "workbench.editor.enablePreview": false,
@@ -101,7 +76,6 @@
   "editor.suggestSelection": "first",
   "editor.wordWrap": "on",
   "editor.minimap.enabled": false,
-  // "editor.scrollbar.vertical": "hidden",
   "editor.overviewRulerBorder": false,
   "editor.hideCursorInOverviewRuler": true,
   "editor.stickyScroll.enabled": true,
@@ -121,10 +95,14 @@
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.openRepositoryInParentFolders": "never",
+  "notebook.formatOnSave.enabled": true,
+  "workbench.editor.labelFormat": "short",
   "cph.general.menuChoices": "cpp java python",
   "cph.general.saveLocation": "d:\\workspace\\bin",
   "cph.general.timeOut": 1100,
   "cph.general.autoShowJudge": false,
-  "editor.rulers": [90],
   "symbols.hidesExplorerArrows": false,
+  "editor.rulers": [90],
+  "cppref.lang": "es",
+  "cppref.searchEngine": "Google",
 }
