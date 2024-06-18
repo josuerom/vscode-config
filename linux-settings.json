@@ -6,7 +6,6 @@
   "explorer.confirmDelete": false,
   "redhat.telemetry.enabled": false,
   "window.commandCenter": true,
-  "window.zoomLevel": 1,
   "[java]": {
     // "editor.formatOnSave": true,
     // "editor.formatOnPaste": true,
@@ -29,28 +28,30 @@
   "code-runner.cwd": "/home/josuerom/Workspace/bin",
   "code-runner.executorMap": {
     // compile and execute C++17 program, with manual entry
-    "cpp": "clear && cd $dir && g++ $fileName -o ~/Workspace/bin/sol -std=c++17 -O2 -DLOCAL && ~/Workspace/bin/sol",
+    "cpp": "clear && cd $dir && g++ $fileName -o ~/Workspace/bin/sol -std=c++17 -O2 -Wall -Wl,--stack=536870912 -Wextra -pedantic -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -fmax-errors=1 -D_GLIBCXX_DEBUG -DLOCAL && ~/Workspace/bin/sol ",
 
     // // compile and execute C++17 program, with input per file
-    // "cpp": "clear && cd $dir && g++ $fileName -o ~/Workspace/bin/sol -std=c++17 -O2 -DLOCAL && ~/Workspace/bin/sol < ../samples/in1",
+    // "cpp": "clear && cd $dir && g++ $fileName -o ~/Workspace/bin/sol -std=c++17 -O2 -Wall -Wl,--stack=536870912 -Wextra -pedantic -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -fmax-errors=1 -D_GLIBCXX_DEBUG -DLOCAL && ~/Workspace/bin/sol < ../samples/in1",
 
     // // compile and execute C++20 program, with input per file and output per file
-    // "cpp": "clear && cd $dir && g++ $fileName -o ~/Workspace/bin/sol -std=c++20 -O2 -DLOCAL && ~/Workspace/bin/sol < ../samples/input.in > ../samples/output.out",
+    // "cpp": "clear && cd $dir && g++ $fileName -o ~/Workspace/bin/sol -std=c++20 -O3 -DLOCAL && ~/Workspace/bin/sol < ../samples/input.in > ../samples/output.out",
 
     // // compile and run C++11 program for RPC, with input per file
-    // "cpp": "clear && cd $dir && g++ $fileName -o $fileNameWithoutExt -std=c++11 -O2 -DLOCAL && ./$fileNameWithoutExt < in1",
+    // "cpp": "clear && cd $dir && g++ $fileName -o $fileNameWithoutExt -std=c++11 -Wall -O2 -DLOCAL && ./$fileNameWithoutExt < in1",
     
     // // compile and run java version = 8 program, with manual entry
     // "java": "clear && cd $dir && javac -d ~/Workspace/bin $fileName && java -cp ~/Workspace/bin $fileNameWithoutExt",
-    // "rep_java": "clear && java -cp ~/Workspace/bin $fileNameWithoutExt",
+    // "rep_java": "clear && java -cp ~/Workspace/bin $fileNameWithoutExt < ../samples/in1",
 
     // compile and run java programs versions greater than > 8, with manual entry
     "java": "clear && cd $dir && java $fileName",
     "rep_java": "clear && cd $dir && java $fileName < ../samples/in1",
   
-    "rep_cpp": "clear && ~/Workspace/bin/sol",
+    "rep_cpp": "clear && ~/Workspace/bin/sol < ../samples/in1",
 
     "python": "clear && cd $dir && python3 -OO -S -B $fileName",
+    "rep_python": "clear && cd $dir && python3 -OO -S -B $fileName < ../samples/in1",
+
     "javascript": "clear && cd $dir && node $fileName",
     "typescript": "clear && cd $dir && node $fileName",
   },
