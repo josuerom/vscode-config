@@ -1,6 +1,7 @@
 # Importar Configuración de VSCode
 
-Este manual explica cómo importar toda tu configuración de Visual Studio Code, incluyendo extensiones, preferencias de usuario, atajos de teclado y snippets.
+Este manual explica cómo importar toda mi configuración de Visual Studio Code, en tu máquina incluyendo extensiones, perfiles de usuario, atajos de teclado y snippets.
+
 ---
 
 ## ✅ Método 1: Usando la Extensión **Settings Sync** (oficial de Microsoft)
@@ -20,7 +21,7 @@ Este manual explica cómo importar toda tu configuración de Visual Studio Code,
      - `settings.json`
      - `keybindings.json`
      - Extensiones instaladas
-     - Snippets personalizados
+     - Snippets creados
      - Configuración del espacio de trabajo
 
 4. **Recuperación en otro equipo:**
@@ -31,7 +32,7 @@ Este manual explica cómo importar toda tu configuración de Visual Studio Code,
 
 ## ✅ Método 2: Importación Manual
 
-### 1. Importar configuración (settings.json)
+### 1. Importar configuración
 
 Para esto debes descargar el archivo comprimido de está en el repositorio con nombre `User.zip`.
 
@@ -51,7 +52,7 @@ Para esto debes descargar el archivo comprimido de está en el repositorio con n
 
 ---
 
-### 2. Instalar las mismas extensiones
+### 2. Instalar las extensiones
 
 Ubicado dentro del path `C:\Users\<TuUsuarioLocal>\AppData\Roaming\Code\User` en su terminal debe ejecutar:
 
